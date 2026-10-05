@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Shared primitives for human review evidence and explicit promotion events."""
+"""Shared deterministic primitives for human review evidence and explicit promotion events."""
 from __future__ import annotations
 
 import hashlib
