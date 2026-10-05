@@ -1,0 +1,26 @@
+{
+  "id": "t0825-taisho",
+  "work_id": "t0825",
+  "title": "佛說甚深大迴向經",
+  "language": "lzh",
+  "script": "Chinese",
+  "witness_type": "edition",
+  "relation_to_work": "complete",
+  "dates": {
+    "composition_estimate": null,
+    "manuscript": null,
+    "translation": null,
+    "catalog_attestation": null,
+    "edition": "Taishō Shinshū Daizōkyō"
+  },
+  "source": {
+    "project": "CBETA / Taishō",
+    "identifier": "T0825",
+    "url": "https://cbetaonline.dila.edu.tw/",
+    "revision": "CBETA 2026.R2",
+    "retrieved": "2026-10-05",
+    "license_note": "Reference metadata; consult CBETA copyright/usage terms for redistribution."
+  },
+  "confidence": "high",
+  "notes": "Modern critical canonical edition witness, useful for variant readings. Do not confuse with the 589 CE Dunhuang manuscript."
+}
