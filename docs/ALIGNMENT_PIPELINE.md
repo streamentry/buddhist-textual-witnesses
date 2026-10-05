@@ -280,7 +280,7 @@ The initial nine model-reviewed passage alignments cover:
 8. family/clan names with an explicit Sanskrit textual-loss locus;
 9. Bodhi trees with an explicit Sanskrit textual-loss locus.
 
-The validator resolves every cited source-unit ID against generated Pāli, Chinese, and Sanskrit source layers. An `established` multi-witness alignment requires an accepted human review. A member marked `coverage: lost_text_marker` must resolve to a source unit that explicitly signals textual loss; the marker cannot be used as a generic stand-in for missing data.
+The validator resolves every cited source-unit ID against generated Pāli, Chinese, and Sanskrit source layers. Multi-witness case-study rows are never allowed to set `status: established` directly; `established` is a derived state produced only from an evidence-bound accepted human review plus a separate explicit promotion event. A member marked `coverage: lost_text_marker` must resolve to a source unit that explicitly signals textual loss; the marker cannot be used as a generic stand-in for missing data.
 
 The generated human-readable report is:
 
@@ -309,18 +309,77 @@ The DN 14 slice now includes two Sanskrit loss loci from SF 36:
 
 In both cases the edited Sanskrit source explicitly states that the text is completely lost. The alignment layer keeps those loci in the graph with `coverage: lost_text_marker`, allowing surviving Pāli and Chinese witnesses to remain comparable without inventing Sanskrit wording.
 
-## Human review handoff
+## Human review and explicit promotion
 
-Model review and human review are intentionally separate data layers.
+Model review, human review, and establishment are three intentionally separate layers.
 
 Human decisions live under:
 
-data/reviews/dn14-mahapadana/
+`data/reviews/dn14-mahapadana/`
 
-The committed reviews file starts with zero reviews. A human review must identify a real human reviewer, reference an existing alignment, and assess source-unit boundaries, relation type, variant notes, and editorial handling.
+Explicit promotion events live under:
 
-The generated review surface is:
+`data/promotions/dn14-mahapadana/`
 
-generated/review-packets/dn14-mahapadana.md
+The current ledgers intentionally begin empty. A human review must identify a real human reviewer with a stable `reviewer_id`, reference an existing alignment, and assess source-unit boundaries, relation type, variant notes, and editorial handling. Review schema v2 also binds the exact alignment claim and the exact source-unit views shown to the reviewer using SHA-256 digests.
 
-It shows all source-backed passages and model variant claims, followed by a review worksheet for each alignment. Accepted human reviews make an alignment eligible for a later explicit promotion, but no pipeline step silently changes model_reviewed to established.
+The preferred review surface is the self-contained offline UI:
+
+`generated/review-ui/dn14-mahapadana/index.html`
+
+The Markdown packet at `generated/review-packets/dn14-mahapadana.md` remains a plain-text audit surface. The HTML UI computes the evidence snapshot from the exact embedded source views in the browser. It cannot write to the repository or promote anything.
+
+The state transition is deliberately two-phase:
+
+```text
+model_reviewed
+      ↓
+accepted fresh human review
+      ↓
+promotion_required
+      ↓
+explicit human promotion event
+      ↓
+established
+```
+
+The following are hard invariants:
+
+- model reviews never count as human reviews, regardless of quantity;
+- `accepted` requires all four human assessments to be `agree`;
+- an accepted review is not itself an establishment event;
+- review and promotion ledgers are append-only in CI;
+- a corrected human review is appended as a new record with `supersedes_review_id`; the previous record is not edited;
+- each promotion binds one exact review record and its evidence digest;
+- if an alignment claim, source text, source locator, or pinned revision changes, the affected review becomes stale for current promotion purposes;
+- historical review and promotion events remain in the audit trail after drift;
+- a superseded review cannot be used for a new promotion;
+- `status: established` is rejected inside curated case-study rows.
+
+Current state is derived into:
+
+`generated/promotion-state/dn14-mahapadana.json`
+
+Possible current states are:
+
+- `model_reviewed` — no active accepted human review;
+- `promotion_required` — an active accepted review is fresh but has no matching current promotion;
+- `established` — an explicit promotion references an active, fresh accepted review;
+- `review_stale` — historical review/promotion evidence exists but no longer binds the current source/claim state.
+
+Validate the ledgers and rebuild derived state with:
+
+```bash
+make validate-human-reviews
+make validate-promotions
+make promotion-state
+```
+
+To prepare an explicit promotion, run `scripts/promote_alignment.py` without `--write`. The command prints the event but does not mutate the ledger. Supplying `--write` is the explicit mutation boundary. It refuses stale, rejected, model-authored, or superseded reviews.
+
+There is intentionally no transition of the form:
+
+```text
+AI confidence
+→ established
+```
