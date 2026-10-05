@@ -13,3 +13,5 @@ Files under this directory are reproducible derived data.
 Do not hand-edit generated files. Change source configuration, scripts, source pins, curated crosswalks, or the curated human-review layer and rebuild.
 
 Current Indic snapshot: SF 36 contributes 943 edited Sanskrit segments grouped into 396 auditable source units. The availability registry audits all 61 Sanskrit/SHT witness IDs in the first-20 benchmark and keeps unavailable-in-this-upstream distinct from nonexistent.
+
+- review-packets/ contains generated human-review surfaces. They are derived from curated case-study data and human review records; they are not themselves review decisions.

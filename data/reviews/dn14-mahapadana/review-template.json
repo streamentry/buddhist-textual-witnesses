@@ -1,0 +1,21 @@
+{
+  "review_id": "review:replace-me",
+  "case_study_id": "dn14-mahapadana-multiwitness",
+  "alignment_id": "mw:replace-me",
+  "reviewer": {
+    "reviewer_type": "human",
+    "name": "REPLACE_ME",
+    "affiliation": null,
+    "identifier": null
+  },
+  "decision": "needs_work",
+  "assessments": {
+    "source_units": "uncertain",
+    "relation_type": "uncertain",
+    "variant_notes": "uncertain",
+    "editorial_handling": "uncertain"
+  },
+  "reviewed_on": "YYYY-MM-DD",
+  "notes": "",
+  "proposed_changes": null
+}

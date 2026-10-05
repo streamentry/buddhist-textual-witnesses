@@ -10,6 +10,7 @@ on:
       - "data/crosswalks/**"
       - "data/alignments/**"
       - "data/case-studies/**"
+      - "data/reviews/**"
       - ".github/workflows/ci.yml"
   pull_request:
     paths:
@@ -42,3 +43,8 @@ jobs:
             --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
             --indic-units generated/alignment-source/indic/units.jsonl \
             --case-study data/case-studies/dn14-mahapadana/alignments.json
+      - name: Validate human reviews
+        run: |
+          python scripts/validate_human_reviews.py \
+            --case-study data/case-studies/dn14-mahapadana/alignments.json \
+            --reviews data/reviews/dn14-mahapadana/reviews.json

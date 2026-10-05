@@ -308,3 +308,19 @@ The DN 14 slice now includes two Sanskrit loss loci from SF 36:
 - **Bodhi Trees** → `SF 36#p0020`
 
 In both cases the edited Sanskrit source explicitly states that the text is completely lost. The alignment layer keeps those loci in the graph with `coverage: lost_text_marker`, allowing surviving Pāli and Chinese witnesses to remain comparable without inventing Sanskrit wording.
+
+## Human review handoff
+
+Model review and human review are intentionally separate data layers.
+
+Human decisions live under:
+
+data/reviews/dn14-mahapadana/
+
+The committed reviews file starts with zero reviews. A human review must identify a real human reviewer, reference an existing alignment, and assess source-unit boundaries, relation type, variant notes, and editorial handling.
+
+The generated review surface is:
+
+generated/review-packets/dn14-mahapadana.md
+
+It shows all source-backed passages and model variant claims, followed by a review worksheet for each alignment. Accepted human reviews make an alignment eligible for a later explicit promotion, but no pipeline step silently changes model_reviewed to established.

@@ -14,8 +14,11 @@ on:
       - "scripts/validate_alignments.py"
       - "scripts/validate_multiwitness_alignments.py"
       - "scripts/render_multiwitness_case_study.py"
+      - "scripts/validate_human_reviews.py"
+      - "scripts/build_human_review_packet.py"
       - "schemas/alignment.schema.json"
       - "schemas/multiwitness-alignment.schema.json"
+      - "schemas/human-review.schema.json"
       - "tests/test_pali_units.py"
       - "tests/test_indic_source_units.py"
       - "tests/test_chinese_alignment_units.py"
@@ -23,9 +26,11 @@ on:
       - "tests/test_anchor_window_candidates.py"
       - "tests/test_multiwitness_alignments.py"
       - "tests/test_render_multiwitness_case_study.py"
+      - "tests/test_human_reviews.py"
       - "config/indic-source-units.json"
       - "data/alignments/**"
       - "data/case-studies/**"
+      - "data/reviews/**"
       - "generated/crosswalks/first-20-resolved.json"
       - "sources/lock.json"
       - ".gitmodules"
@@ -154,6 +159,22 @@ jobs:
             --case-study data/case-studies/dn14-mahapadana/alignments.json \
             --output generated/case-studies/dn14-mahapadana.md
 
+      - name: Validate human reviews
+        run: |
+          python scripts/validate_human_reviews.py \
+            --case-study data/case-studies/dn14-mahapadana/alignments.json \
+            --reviews data/reviews/dn14-mahapadana/reviews.json
+
+      - name: Build DN 14 human review packet
+        run: |
+          python scripts/build_human_review_packet.py \
+            --pali-units generated/alignment-source/pali/units.jsonl \
+            --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+            --indic-units generated/alignment-source/indic/units.jsonl \
+            --case-study data/case-studies/dn14-mahapadana/alignments.json \
+            --reviews data/reviews/dn14-mahapadana/reviews.json \
+            --output generated/review-packets/dn14-mahapadana.md
+
       - uses: actions/upload-artifact@v4
         with:
           name: alignment-source-units
@@ -161,6 +182,7 @@ jobs:
             generated/alignment-source/
             generated/alignments/
             generated/case-studies/
+            generated/review-packets/
 
       - name: Commit generated alignment layer
         shell: bash
@@ -168,7 +190,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add generated/alignment-source generated/alignments generated/case-studies
+          git add generated/alignment-source generated/alignments generated/case-studies generated/review-packets
           if git diff --cached --quiet; then
             echo "Generated alignment layer is unchanged"
             exit 0

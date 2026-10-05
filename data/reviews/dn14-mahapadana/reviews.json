@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "case_study_id": "dn14-mahapadana-multiwitness",
+  "promotion_policy": "Human reviews are stored separately from model-reviewed alignments. An accepted human review makes an alignment eligible for explicit promotion, but no script silently mutates the curated case-study status.",
+  "reviews": []
+}

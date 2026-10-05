@@ -38,6 +38,8 @@ This repository supports textual-critical study of Buddhist sources across multi
 30. Preserve witness-specific numerical variants. Never harmonize numbers across recensions merely because a majority reading exists.
 31. In rendered Sanskrit, visual brackets for supplied text are presentation only. The source record must retain upstream editorial markup and supplied letters must never be silently treated as directly attested.
 32. `lost_text_marker` is valid only when the cited source unit explicitly records textual loss. Never use it merely because a witness has not yet been ingested or aligned.
+33. Human reviews must live in the dedicated review layer and identify a real human reviewer. A model must never populate `reviewer_type: human` or fabricate reviewer identity.
+34. An accepted human review makes an alignment eligible for explicit promotion; no generator may silently mutate `model_reviewed` to `established`.
 
 ## Preferred workflow
 
