@@ -201,6 +201,37 @@ class ReviewPromotionTests(unittest.TestCase):
         )
         self.assertEqual(state["derived_status"], "established")
 
+    def test_review_revisions_must_explicitly_supersede_latest(self):
+        first = self.review()
+        second = copy.deepcopy(first)
+        second["review_id"] = "review:alice:mw-test:2"
+        second["reviewed_at"] = "2026-10-05T16:00:00Z"
+        errors = core.validate_review_lineage([first, second])
+        self.assertTrue(any("must supersede latest review" in error for error in errors))
+
+        second["supersedes_review_id"] = first["review_id"]
+        self.assertEqual(core.validate_review_lineage([first, second]), [])
+        self.assertEqual(core.active_review_ids([first, second]), {second["review_id"]})
+
+    def test_superseded_promoted_review_requires_new_promotion(self):
+        first = self.review()
+        promotion = self.promotion(first)
+        second = copy.deepcopy(first)
+        second["review_id"] = "review:alice:mw-test:2"
+        second["reviewed_at"] = "2026-10-05T16:00:00Z"
+        second["supersedes_review_id"] = first["review_id"]
+
+        state = core.derived_alignment_status(
+            "mw:test",
+            [first, second],
+            [promotion],
+            self.case_id,
+            self.alignments,
+            self.indexes,
+        )
+        self.assertEqual(state["derived_status"], "promotion_required")
+        self.assertIn(first["review_id"], state["superseded_review_ids"])
+
     def test_source_drift_demotes_current_derived_state_to_review_stale(self):
         review = self.review()
         promotion = self.promotion(review)
