@@ -17,7 +17,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-NUM_RE = re.compile(r"^\s*(\d+)(?:\s+|$)")
+NUM_RE = re.compile(r"^\s*(\d+)")
 SKIP_TEXT = {
     "mulu", "head", "jhead", "juan", "byline", "trailer",
     "note", "rdg", "anchor", "pb", "milestone",
