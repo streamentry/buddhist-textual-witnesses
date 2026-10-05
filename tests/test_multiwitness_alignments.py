@@ -75,11 +75,17 @@ class MultiWitnessValidatorTests(unittest.TestCase):
     def test_model_reviewed_resolves(self):
         self.assertEqual(mod.validate_alignment(self.base(), self.indexes), [])
 
-    def test_established_requires_human(self):
+    def test_established_must_come_from_promotion_ledger(self):
         row = self.base()
         row["status"] = "established"
+        row["review"] = {
+            "status": "reviewed",
+            "reviewer_type": "human",
+            "reviewer": "real-human",
+            "decision": "accepted",
+        }
         errors = mod.validate_alignment(row, self.indexes)
-        self.assertTrue(any("requires human reviewer" in e for e in errors))
+        self.assertTrue(any("derived from the promotion ledger" in e for e in errors))
 
     def test_lost_text_marker_requires_explicit_loss_source(self):
         row = self.base()
