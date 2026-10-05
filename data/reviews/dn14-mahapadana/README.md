@@ -14,3 +14,5 @@ Use the generated review packet at:
 generated/review-packets/dn14-mahapadana.md
 
 The packet displays the pinned Pāli, Chinese, and Sanskrit source units, preserves Sanskrit supplied text visibly, and surfaces model variant claims for checking.
+
+Current review status: 0 human reviews, 0 established alignments.
