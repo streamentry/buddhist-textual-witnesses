@@ -72,6 +72,146 @@
       "publisher": "Harrassowitz",
       "evidence_url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn23.html",
       "note": "SuttaCentral explicitly notes that this Prākrit witness belongs to the Jain canon."
+    },
+    "sc-dn1-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 1 Brahmajāla",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn1.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn2-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 2 Sāmaññaphala",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn2.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn3-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 3 Ambaṭṭha",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn3.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn4-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 4 Soṇadaṇḍa",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn4.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn5-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 5 Kūṭadanta",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn5.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn8-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 8 Mahāsīhanāda",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn8.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn11-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 11 Kevaddha",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn11.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn12-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 12 Lohicca",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn12.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn14-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 14 Mahāpadāna",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn14.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn15-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 15 Mahānidāna",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn15.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn16-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 16 Mahāparinibbāna",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn16.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn18-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 18 Janavasabha",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn18.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn19-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 19 Mahāgovinda",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn19.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn20-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 20 Mahāsamaya",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn20.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn21-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 21 Sakkapañha",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn21.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn22-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 22 Mahāsatipaṭṭhāna",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn22.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn23-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 23 Pāyāsi",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn23.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn24-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 24 Pāṭika",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn24.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn26-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 26 Cakkavattisīhanāda",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn26.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
+    },
+    "sc-dn27-detail-2016": {
+      "type": "research_database_record",
+      "title": "SuttaCentral comparative detail record for DN 27 Aggañña",
+      "project": "SuttaCentral",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn27.html",
+      "note": "Record-level evidence for the parallel and manuscript-witness identifiers used in this crosswalk."
     }
   }
 }

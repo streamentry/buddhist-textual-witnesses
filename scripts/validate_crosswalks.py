@@ -103,6 +103,10 @@ def validate(root: Path) -> list[str]:
         for ref in record.get("bibliography", []):
             if ref not in bib_ids:
                 errors.append(f"{rid}: unresolved bibliography id {ref}")
+        for evidence in record.get("evidence", []):
+            source_id = evidence.get("source_id")
+            if source_id not in bib_ids:
+                errors.append(f"{rid}: unresolved evidence source_id {source_id}")
         for w in all_witnesses(record):
             for ref in w.get("bibliography", []):
                 if ref not in bib_ids:
