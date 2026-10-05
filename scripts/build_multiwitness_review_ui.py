@@ -418,12 +418,12 @@ def main(argv: list[str] | None = None) -> int:
     args.output.write_text(page, encoding="utf-8")
     print(
         json.dumps(
-            {{
+            {
                 "case_study": payload["case_study_id"],
                 "alignments": len(payload["alignments"]),
                 "existing_human_reviews": payload["review_count"],
                 "output": str(args.output),
-            }},
+            },
             indent=2,
         )
     )
