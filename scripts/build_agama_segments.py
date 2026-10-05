@@ -85,13 +85,15 @@ def render_text(elem: ET.Element) -> str:
     if name == "g" and not (elem.text or "").strip():
         return f"[gaiji:{elem.attrib.get('ref', '?')}]"
 
-    pieces = [elem.text or ""]
+    # CBETA XML is pretty-printed. Strip only chunk-edge whitespace so XML
+    # indentation does not become artificial spaces inside Chinese running text.
+    pieces = [(elem.text or "").strip()]
     for child in elem:
         if local(child.tag) == "lb":
             pieces.append("\n")
         else:
             pieces.append(render_text(child))
-        pieces.append(child.tail or "")
+        pieces.append((child.tail or "").strip())
     return "".join(pieces)
 
 
