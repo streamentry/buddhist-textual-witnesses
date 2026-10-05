@@ -296,3 +296,145 @@ Note: Prose gives 80k/70k/60k/40k/30k/20k; the verse is fragmentary/supplied in 
 ### Review note
 
 The numerical disagreement is preserved as witness evidence; no harmonized value is selected.
+
+## 7. Caste Of The Seven Buddhas
+
+- Alignment: mw:dn14:caste:07
+- Relation: **parallel_passage**
+- Status: **model_reviewed**
+- Review confidence: **high**
+
+### DN 14 · pli · full
+
+Units: DN 14#p0010
+
+> Vipassī, bhikkhave, bhagavā arahaṁ sammāsambuddho khattiyo jātiyā ahosi, khattiyakule udapādi. Sikhī, bhikkhave, bhagavā arahaṁ sammāsambuddho khattiyo jātiyā ahosi, khattiyakule udapādi. Vessabhū, bhikkhave, bhagavā arahaṁ sammāsambuddho khattiyo jātiyā ahosi, khattiyakule udapādi. Kakusandho, bhikkhave, bhagavā arahaṁ sammāsambuddho brāhmaṇo jātiyā ahosi, brāhmaṇakule udapādi. Koṇāgamano, bhikkhave, bhagavā arahaṁ sammāsambuddho brāhmaṇo jātiyā ahosi, brāhmaṇakule udapādi. Kassapo, bhikkhave, bhagavā arahaṁ sammāsambuddho brāhmaṇo jātiyā ahosi, brāhmaṇakule udapādi. Ahaṁ, bhikkhave, etarahi arahaṁ sammāsambuddho khattiyo jātiyā ahosiṁ, khattiyakule uppanno.
+
+Note: First three and the present Buddha are kṣatriya; the middle three are brāhmaṇa.
+
+### DA 1 · lzh · full
+
+Units: DA 1#b0015
+
+> 「毘婆尸佛，出剎利種，姓拘利若；尸棄佛、毘 舍婆佛，種、姓亦爾。拘樓孫佛，出婆羅門種， 姓迦葉；拘那含佛、迦葉佛，種、姓亦爾。我今如 來、至真，出剎利種，姓名曰瞿曇。」佛時頌曰：
+
+Note: Same caste pattern, with clan-name information embedded in the same prose block.
+
+### EA 48.4 · lzh · full
+
+Units: EA 48.4#b0012
+
+> 「毘婆尸如來者出剎利種，式詰如來亦出剎 利種，毘舍羅婆如來亦出剎利種，拘屢孫如 來出婆羅門種，拘那含牟尼如來出婆羅門 種，迦葉如來出婆羅門種，如我今出剎利 種。」
+
+Note: Same caste pattern in a dedicated prose block.
+
+### SF 36 · san · full
+
+Units: SF 36#p0017
+
+> ⟦Vipaśyī⟧ samyaksaṃbuddhaḥ kṣatriyo ⟦jātyābhūt Śikhī samyaksaṃbuddhaḥ kṣatriyo jātyābhūd Viśvabhuk ca |⟧ ⟦Krakasundaḥ samyaksaṃbuddho brāhmaṇo jātyābhūt Kana⟧kamuniḥ ⟦Kāś⟧y⟦apaś ca |⟧ ⟦asmāka⟧m apy etarhi kṣatriyā jāti⟦r bhavati iyam atra dharmatā tasmād idam ucyate ||⟧
+
+Note: Same caste pattern; all three Sanskrit leaf segments contain supplied reconstruction.
+
+### Variant notes
+
+- **addition**: DA 1 combines caste and clan-name information in the same prose block, while the selected Pāli, EA 48.4, and SF 36 units here isolate the caste pattern more cleanly.
+
+### Review note
+
+The caste sequence is stable across the selected witnesses; DA 1 packages extra clan information into the same block.
+
+## 8. Family Or Clan Names With Sanskrit Textual Loss
+
+- Alignment: mw:dn14:family-name-loss:08
+- Relation: **recension_divergence**
+- Status: **model_reviewed**
+- Review confidence: **medium_high**
+
+### DN 14 · pli · full
+
+Units: DN 14#p0011
+
+> Vipassī, bhikkhave, bhagavā arahaṁ sammāsambuddho koṇḍañño gottena ahosi. Sikhī, bhikkhave, bhagavā arahaṁ sammāsambuddho koṇḍañño gottena ahosi. Vessabhū, bhikkhave, bhagavā arahaṁ sammāsambuddho koṇḍañño gottena ahosi. Kakusandho, bhikkhave, bhagavā arahaṁ sammāsambuddho kassapo gottena ahosi. Koṇāgamano, bhikkhave, bhagavā arahaṁ sammāsambuddho kassapo gottena ahosi. Kassapo, bhikkhave, bhagavā arahaṁ sammāsambuddho kassapo gottena ahosi. Ahaṁ, bhikkhave, etarahi arahaṁ sammāsambuddho gotamo gottena ahosiṁ.
+
+Note: Koṇḍañña for the first three, Kassapa for the middle three, Gotama for the present Buddha.
+
+### DA 1 · lzh · full
+
+Units: DA 1#b0015
+
+> 「毘婆尸佛，出剎利種，姓拘利若；尸棄佛、毘 舍婆佛，種、姓亦爾。拘樓孫佛，出婆羅門種， 姓迦葉；拘那含佛、迦葉佛，種、姓亦爾。我今如 來、至真，出剎利種，姓名曰瞿曇。」佛時頌曰：
+
+Note: Clan names appear in the same prose block as caste.
+
+### EA 48.4 · lzh · partial
+
+Units: EA 48.4#b0015, EA 48.4#b0018
+
+> 「毘婆尸如來姓瞿曇，式詰如來亦出瞿曇， 比舍羅婆亦出瞿曇，迦葉如來出迦葉姓， 拘樓孫、拘那含牟尼亦出迦葉姓，同上 而無異，我今如來姓瞿曇。」 「比丘當知，毘婆尸如來姓拘鄰若，式詰如 來亦出拘鄰若，毘舍羅婆如來亦出拘鄰 若，拘屢孫如來出婆羅墮，拘那含牟尼如來 亦出婆羅墮，迦葉如來亦出婆羅墮，如 我今如來、至真、等正覺出於拘鄰若。」
+
+Note: EA preserves two distinct nearby clan-name statements that are not identical to each other.
+
+### SF 36 · san · lost_text_marker
+
+Units: SF 36#p0019
+
+> Sanskrit text is completely lost
+
+Note: The edited source unit explicitly states that the Sanskrit text is completely lost under the Family Name subsection.
+
+### Variant notes
+
+- **textual_loss**: SF 36 has no surviving Sanskrit wording for the Family Name subsection in the selected edition; the source unit explicitly marks the text as completely lost.
+- **structural**: EA 48.4 preserves more than one nearby clan-name statement, while the selected Pāli and DA 1 prose present one main sequence.
+
+### Review note
+
+Alignment is to the thematic subsection. Sanskrit is represented by an explicit loss marker, not reconstructed wording.
+
+## 9. Bodhi Trees With Sanskrit Textual Loss
+
+- Alignment: mw:dn14:bodhi-tree-loss:09
+- Relation: **parallel_passage**
+- Status: **model_reviewed**
+- Review confidence: **high**
+
+### DN 14 · pli · full
+
+Units: DN 14#p0013
+
+> Vipassī, bhikkhave, bhagavā arahaṁ sammāsambuddho pāṭaliyā mūle abhisambuddho. Sikhī, bhikkhave, bhagavā arahaṁ sammāsambuddho puṇḍarīkassa mūle abhisambuddho. Vessabhū, bhikkhave, bhagavā arahaṁ sammāsambuddho sālassa mūle abhisambuddho. Kakusandho, bhikkhave, bhagavā arahaṁ sammāsambuddho sirīsassa mūle abhisambuddho. Koṇāgamano, bhikkhave, bhagavā arahaṁ sammāsambuddho udumbarassa mūle abhisambuddho. Kassapo, bhikkhave, bhagavā arahaṁ sammāsambuddho nigrodhassa mūle abhisambuddho. Ahaṁ, bhikkhave, etarahi arahaṁ sammāsambuddho assatthassa mūle abhisambuddho.
+
+Note: Lists the awakening trees for the seven Buddhas.
+
+### DA 1 · lzh · full
+
+Units: DA 1#b0017
+
+> 「毘婆尸佛坐波波羅樹下成最正覺，尸棄 佛坐分陀利樹下成最正覺，毘舍婆佛 坐娑羅樹下成最正覺，拘樓孫佛坐尸 利沙樹下成最正覺，拘那含佛坐烏暫婆 羅門樹下成最正覺，迦葉佛坐尼拘律樹 下成最正覺。我今如來、至真，坐鉢多樹下 成最正覺。」佛時頌曰：
+
+Note: Chinese list of awakening trees.
+
+### EA 48.4 · lzh · full
+
+Units: EA 48.4#b0021
+
+> 「毘婆尸如來坐波羅利華樹下而成佛道， 式詰如來坐分陀利樹下而成佛道，毘 舍羅婆如來坐波羅樹下而成佛道，拘屢 孫如來坐尸利沙樹下而成佛道，拘那 含牟尼如來坐優頭跋羅樹下而成佛 道，迦葉如來坐尼拘留樹下而成道果，如 我今日如來坐吉祥樹下而成佛道。」
+
+Note: Chinese list of awakening trees.
+
+### SF 36 · san · lost_text_marker
+
+Units: SF 36#p0020
+
+> Sanskrit text is completely lost
+
+Note: The edited source unit explicitly states that the Sanskrit text is completely lost under the Bodhi Trees subsection.
+
+### Variant notes
+
+- **textual_loss**: SF 36 preserves the Bodhi Trees subsection as a locus, but the selected edition marks the Sanskrit text itself as completely lost.
+
+### Review note
+
+Pāli and both Chinese witnesses preserve the list; the Sanskrit edition contributes a documented loss locus rather than reconstructed content.
