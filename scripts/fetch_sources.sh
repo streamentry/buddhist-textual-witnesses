@@ -2,8 +2,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VENDOR="$ROOT/vendor"
-mkdir -p "$VENDOR"
+cd "$ROOT"
 
 need() {
   command -v "$1" >/dev/null 2>&1 || {
@@ -13,34 +12,21 @@ need() {
 }
 
 need git
-need curl
-need unzip
 
-echo "==> Fetching SuttaCentral Bilara (published branch)"
-if [ ! -d "$VENDOR/suttacentral/.git" ]; then
-  git clone --depth 1 --branch published --filter=blob:none --sparse \
-    https://github.com/suttacentral/bilara-data.git "$VENDOR/suttacentral"
-  git -C "$VENDOR/suttacentral" sparse-checkout set root/san root/pra root/lzh
-else
-  git -C "$VENDOR/suttacentral" fetch --depth 1 origin published
-  git -C "$VENDOR/suttacentral" checkout published
-  git -C "$VENDOR/suttacentral" reset --hard origin/published
-fi
+echo "==> Syncing submodule definitions"
+git submodule sync --recursive
 
-echo "==> Fetching CBETA XML-P5"
-if [ ! -d "$VENDOR/cbeta/.git" ]; then
-  git clone --depth 1 https://github.com/cbeta-git/xml-p5.git "$VENDOR/cbeta"
-else
-  git -C "$VENDOR/cbeta" pull --ff-only
-fi
+echo "==> Fetching pinned upstream corpora"
+git submodule update --init --recursive --depth 1
 
 echo
-echo "GRETIL note:"
-echo "  The repository registers GRETIL, but its cumulative archive URLs can move between"
-echo "  institutional mirrors. Add a pinned URL + checksum before automating the bulk fetch."
+echo "Pinned sources now available:"
+echo "  upstream/suttacentral-bilara"
+echo "  upstream/cbeta-xml-p5"
+echo "  upstream/gretil-mirror"
 echo
-echo "Not bulk-mirrored:"
-echo "  - Gandhari.org"
-echo "  - DSBC"
+echo "External research sources intentionally not bulk-mirrored:"
+echo "  Gandhari.org"
+echo "  Digital Sanskrit Buddhist Canon (DSBC)"
 echo
-echo "Done."
+echo "Exact pins: sources/lock.json"

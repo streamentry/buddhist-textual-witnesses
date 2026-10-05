@@ -1,33 +1,40 @@
-version: 1
+version: 2
 sources:
   - id: gretil
     name: GRETIL
     kind: corpus
     languages: [san, pra]
-    acquisition: bulk
-    destination: vendor/gretil
-    notes: Prefer official cumulative archives or their maintained institutional mirror.
+    acquisition: git_submodule
+    repository: https://github.com/INDOLOGY/GRETIL-mirror.git
+    ref: main
+    destination: upstream/gretil-mirror
+    redistribution: upstream_terms
+    notes: Archival mirror; preserve per-text bibliography and rights metadata.
 
   - id: suttacentral-bilara
     name: SuttaCentral Bilara Data
     kind: repository
     languages: [san, pra, lzh]
-    acquisition: git
+    acquisition: git_submodule
     repository: https://github.com/suttacentral/bilara-data.git
     ref: published
     include:
       - root/san
       - root/pra
       - root/lzh
-    destination: vendor/suttacentral
+    destination: upstream/suttacentral-bilara
+    redistribution: per_file_or_publication_terms
 
   - id: cbeta-xml
     name: CBETA XML-P5
     kind: repository
     languages: [lzh]
-    acquisition: git
-    destination: vendor/cbeta
-    notes: Select principal Agama witnesses after fetch.
+    acquisition: git_submodule
+    repository: https://github.com/cbeta-org/xml-p5.git
+    ref: master
+    destination: upstream/cbeta-xml-p5
+    redistribution: cbeta_terms
+    notes: Official current XML-P5 repository; select principal Agama witnesses as needed.
 
   - id: gandhari
     name: Gandhari.org

@@ -22,47 +22,67 @@ Tibetan can be added later using the same witness model.
 
 A manuscript, edition, Chinese translation, Sanskrit fragment, and modern reconstruction are different kinds of evidence. This project keeps those distinctions visible.
 
+## Included upstream corpora
+
+Large public upstream corpora are pinned as Git submodules so the exact scholarly source revision is reproducible without copying gigabytes into this repository's own Git history:
+
+- `upstream/suttacentral-bilara` — SuttaCentral Bilara, published branch
+- `upstream/cbeta-xml-p5` — official CBETA XML-P5
+- `upstream/gretil-mirror` — archival GRETIL mirror
+
+The exact SHAs are recorded in `sources/lock.json`.
+
+**Gandhari.org** and **DSBC** are registered research sources but are not bulk-mirrored because this project does not currently have sufficiently clear redistribution permission for their complete compilations.
+
+## Clone everything
+
+```bash
+git clone --recurse-submodules https://github.com/streamentry/buddhist-textual-witnesses.git
+cd buddhist-textual-witnesses
+./scripts/fetch_sources.sh
+```
+
+For an existing clone:
+
+```bash
+git pull
+git submodule sync --recursive
+git submodule update --init --recursive --depth 1
+```
+
+The upstream datasets are large. Expect a multi-gigabyte checkout.
+
 ## Repository layout
 
 ```text
 .
+├── upstream/
+│   ├── suttacentral-bilara/
+│   ├── cbeta-xml-p5/
+│   └── gretil-mirror/
 ├── sources/
-│   └── manifest.yaml          # source registry and acquisition policy
+│   ├── manifest.yaml
+│   └── lock.json
 ├── schemas/
-│   └── witness.schema.json    # metadata contract for a textual witness
+│   └── witness.schema.json
 ├── scripts/
-│   └── fetch_sources.sh       # reproducible downloader for permitted bulk sources
+│   └── fetch_sources.sh
 ├── docs/
-│   └── METHODOLOGY.md         # textual-critical rules and confidence model
+│   └── METHODOLOGY.md
 ├── data/
-│   └── README.md              # normalized-data conventions
-├── SOURCES.md                 # human-readable provenance and licensing notes
-├── AGENTS.md                  # rules for humans and AI agents editing this repo
-└── .gitignore
+│   └── texts/
+├── SOURCES.md
+├── AGENTS.md
+└── .gitmodules
 ```
 
-Large upstream corpora are intentionally **not committed**. Run the fetch script to place them under `vendor/`, which is git-ignored.
+## First case study
 
-## Quick start
+`data/texts/t0825/` models **T0825 佛說甚深大迴向經** without pretending that a Sanskrit original has been identified. It separates the dated Dunhuang witness S.2154, the Korean canonical witness K0507, and Taishō/CBETA T0825.
 
-Requirements: `bash`, `git`, `curl`, and `unzip`.
+## Research target
 
-```bash
-chmod +x scripts/fetch_sources.sh
-./scripts/fetch_sources.sh
-```
-
-This currently acquires the sources that have clear bulk/repository access:
-
-1. **GRETIL** cumulative Sanskrit and Prakrit archives.
-2. **SuttaCentral Bilara** Sanskrit, Prakrit, and Classical Chinese root texts from the published branch.
-3. **CBETA XML-P5** with the Taishō volumes containing the principal Chinese Āgamas.
-
-**Gandhari.org** and **DSBC** remain registered as authoritative research sources but are not bulk-mirrored by this repository unless their redistribution terms clearly permit it.
-
-## First research target
-
-The first useful milestone is not "download everything". It is a small set of high-confidence parallel maps:
+The long-term value is not merely storing texts. It is building auditable parallel maps:
 
 ```text
 Pāli sutta
@@ -86,10 +106,6 @@ Each link should record provenance, relationship type, scholarly basis, and unce
 - Prefer stable identifiers over filenames.
 - Every normalized text must be traceable to an upstream source and retrieval revision.
 
-## Status
-
-**Bootstrap / research infrastructure.** Corpus acquisition and witness mapping are being built incrementally.
-
 ## Upstream rights
 
-Upstream texts retain their own copyright, license, and attribution requirements. See [SOURCES.md](SOURCES.md) before redistributing any fetched material.
+Upstream texts retain their own copyright, license, attribution, and usage requirements. A Git submodule is a pinned reference to the upstream repository, not a relicensing of its contents. See [SOURCES.md](SOURCES.md).

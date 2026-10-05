@@ -1,0 +1,15 @@
+[submodule "upstream/suttacentral-bilara"]
+	path = upstream/suttacentral-bilara
+	url = https://github.com/suttacentral/bilara-data.git
+	branch = published
+	shallow = true
+[submodule "upstream/cbeta-xml-p5"]
+	path = upstream/cbeta-xml-p5
+	url = https://github.com/cbeta-org/xml-p5.git
+	branch = master
+	shallow = true
+[submodule "upstream/gretil-mirror"]
+	path = upstream/gretil-mirror
+	url = https://github.com/INDOLOGY/GRETIL-mirror.git
+	branch = main
+	shallow = true

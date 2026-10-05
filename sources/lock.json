@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "generated": "2026-10-05",
+  "sources": {
+    "suttacentral-bilara": {
+      "repository": "https://github.com/suttacentral/bilara-data.git",
+      "ref": "published",
+      "commit": "f5ce35f517ae7c1cd9994c33f62c99860c200064",
+      "commit_date": "2026-10-03T13:34:23Z"
+    },
+    "cbeta-xml": {
+      "repository": "https://github.com/cbeta-org/xml-p5.git",
+      "ref": "master",
+      "commit": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+      "commit_date": "2026-09-05T18:53:36Z",
+      "release_note": "CBETA 2026.R2"
+    },
+    "gretil": {
+      "repository": "https://github.com/INDOLOGY/GRETIL-mirror.git",
+      "ref": "main",
+      "commit": "0baf718d8e450821eb0403c03aacc9a4a82316d7",
+      "commit_date": "2026-02-21T22:36:37Z"
+    }
+  }
+}
