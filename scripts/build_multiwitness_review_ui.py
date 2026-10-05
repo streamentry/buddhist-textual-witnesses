@@ -9,7 +9,6 @@ import re
 from pathlib import Path
 from typing import Any
 
-from review_promotion_core import build_source_indexes, evidence_for_alignment
 
 SUPPLIED_RE = re.compile(r"<supplied>(.*?)</supplied>", re.S)
 TAG_RE = re.compile(r"<[^>]+>")
@@ -85,7 +84,6 @@ def case_payload(
     case: dict[str, Any],
     reviews: dict[str, Any],
     idx: dict[str, dict[str, Any]],
-    source_indexes: dict[str, dict[str, dict[str, Any]]],
 ) -> dict[str, Any]:
     review_map: dict[str, list[dict[str, Any]]] = {}
     for review in reviews.get("reviews", []):
@@ -112,9 +110,6 @@ def case_payload(
                 "members": members,
                 "existing_reviews": review_map.get(
                     alignment["alignment_id"], []
-                ),
-                "review_evidence": evidence_for_alignment(
-                    alignment, source_indexes
                 ),
             }
         )
@@ -265,6 +260,54 @@ function slug(value) {{
     .normalize("NFKD").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"") || "reviewer";
 }}
 
+function canonical(value) {{
+  if (value === null || typeof value !== "object") return JSON.stringify(value);
+  if (Array.isArray(value)) return "[" + value.map(canonical).join(",") + "]";
+  return "{{" + Object.keys(value).sort().map(k => JSON.stringify(k) + ":" + canonical(value[k])).join(",") + "}}";
+}}
+
+async function digest(value) {{
+  const bytes = new TextEncoder().encode(canonical(value));
+  const hash = new Uint8Array(await crypto.subtle.digest("SHA-256", bytes));
+  return "sha256:" + Array.from(hash).map(b => b.toString(16).padStart(2,"0")).join("");
+}}
+
+function alignmentClaimPayload(a) {{
+  const out = {{}};
+  Object.keys(a).forEach(k => {{
+    if (["status","review","existing_reviews","review_evidence"].includes(k)) return;
+    if (k === "members") {{
+      out.members = a.members.map(m => {{
+        const member = {{}};
+        Object.keys(m).forEach(mk => {{ if (mk !== "units") member[mk] = m[mk]; }});
+        return member;
+      }});
+    }} else {{
+      out[k] = a[k];
+    }}
+  }});
+  return out;
+}}
+
+async function evidenceForAlignment(a) {{
+  const source_units = [];
+  for (const member of a.members) {{
+    for (const unit of member.units) {{
+      source_units.push({{
+        language: member.language,
+        witness_id: member.witness_id,
+        source_unit_id: unit.source_id,
+        digest: await digest({{source_id:unit.source_id,text_html:unit.text_html,meta:unit.meta}})
+      }});
+    }}
+  }}
+  return {{
+    evidence_version: 1,
+    alignment_claim_digest: await digest(alignmentClaimPayload(a)),
+    source_units
+  }};
+}}
+
 function unitMeta(unit) {{
   const m = unit.meta || {{}};
   const bits = [];
@@ -333,7 +376,7 @@ function renderAlignment(a) {{
     '</section>';
 }}
 
-function buildReview(alignmentId) {{
+async function buildReview(alignmentId) {{
   const form = document.querySelector('[data-review-form="' + CSS.escape(alignmentId) + '"]');
   const alignment = DATA.alignments.find(a => a.alignment_id === alignmentId);
   const value = name => form.querySelector('[data-f="' + name + '"]').value.trim();
@@ -355,9 +398,10 @@ function buildReview(alignmentId) {{
   }}
   const now = new Date().toISOString();
   const date = now.slice(0,10);
+  const stamp = now.replace(/[^0-9]/g,"").slice(0,14);
   const review = {{
     review_schema_version: 2,
-    review_id: "review:" + slug(reviewerId) + ":" + alignmentId + ":" + date,
+    review_id: "review:" + slug(reviewerId) + ":" + alignmentId + ":" + stamp,
     case_study_id: DATA.case_study_id,
     alignment_id: alignmentId,
     reviewer: {{
@@ -372,7 +416,7 @@ function buildReview(alignmentId) {{
     reviewed_at: now,
     notes: value("notes"),
     proposed_changes: null,
-    evidence: alignment.review_evidence
+    evidence: await evidenceForAlignment(alignment)
   }};
   form.querySelector('[data-json="' + CSS.escape(alignmentId) + '"]').value = JSON.stringify(review,null,2);
 }}
@@ -403,10 +447,10 @@ document.getElementById("reviewCount").textContent = DATA.review_count + " commi
 renderNav("");
 if (activeId) selectAlignment(activeId);
 document.getElementById("filter").addEventListener("input", e => renderNav(e.target.value));
-document.querySelectorAll("[data-build]").forEach(btn => btn.addEventListener("click", () => buildReview(btn.dataset.build)));
+document.querySelectorAll("[data-build]").forEach(btn => btn.addEventListener("click", async () => await buildReview(btn.dataset.build)));
 document.querySelectorAll("[data-copy]").forEach(btn => btn.addEventListener("click", async () => {{
   const out = document.querySelector('[data-json="' + CSS.escape(btn.dataset.copy) + '"]');
-  if (!out.value.trim()) buildReview(btn.dataset.copy);
+  if (!out.value.trim()) await buildReview(btn.dataset.copy);
   if (out.value.trim()) {{
     try {{ await navigator.clipboard.writeText(out.value); btn.textContent = "Copied"; setTimeout(() => btn.textContent = "Copy JSON",1200); }}
     catch (_) {{ out.focus(); out.select(); }}
@@ -429,12 +473,9 @@ def main(argv: list[str] | None = None) -> int:
     args = p.parse_args(argv)
 
     idx = build_index(args.pali_units, args.chinese_blocks, args.indic_units)
-    source_indexes = build_source_indexes(
-        args.pali_units, args.chinese_blocks, args.indic_units
-    )
     case = json.loads(args.case_study.read_text(encoding="utf-8"))
     reviews = json.loads(args.reviews.read_text(encoding="utf-8"))
-    payload = case_payload(case, reviews, idx, source_indexes)
+    payload = case_payload(case, reviews, idx)
     page = build_page(payload)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(page, encoding="utf-8")
