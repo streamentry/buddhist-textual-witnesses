@@ -1,0 +1,82 @@
+name: Refresh Agama segments
+
+on:
+  push:
+    paths:
+      - "config/agama-segmentation.json"
+      - "scripts/build_agama_segments.py"
+      - "scripts/resolve_crosswalk_segments.py"
+      - "scripts/extract_agama_segment.py"
+      - "scripts/fetch_cbeta_agamas.sh"
+      - "tests/test_agama_segments.py"
+      - "tests/test_resolve_crosswalk_segments.py"
+      - "schemas/agama-segment.schema.json"
+      - "data/crosswalks/first-20.json"
+      - "sources/lock.json"
+      - ".gitmodules"
+      - ".github/workflows/refresh-agama-segments.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Fetch exactly the pinned Agama XML files
+        run: ./scripts/fetch_cbeta_agamas.sh .cache/cbeta-agamas
+
+      - name: Build exact discourse segment metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          CBETA_SHA="$(git ls-files -s upstream/cbeta-xml-p5 | awk '{print $2}')"
+          rm -rf generated/agama-segments
+          python scripts/build_agama_segments.py             --cbeta-root .cache/cbeta-agamas             --config config/agama-segmentation.json             --revision "$CBETA_SHA"             --output generated/agama-segments             --strict
+
+      - name: Resolve the first 20 crosswalks to local segments
+        run: |
+          python scripts/resolve_crosswalk_segments.py             --segments generated/agama-segments             --input data/crosswalks/first-20.json             --output generated/crosswalks/first-20-resolved.json             --strict
+
+      - name: Smoke-test exact extraction
+        shell: bash
+        run: |
+          set -euo pipefail
+          for ID in "DA 21" "MA 98" "SA 1192" "SA2 105" "EA 48.4"; do
+            python scripts/extract_agama_segment.py               --cbeta-root .cache/cbeta-agamas               --segments generated/agama-segments               --id "$ID"               --format metadata >/dev/null
+          done
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: agama-segment-catalog
+          path: |
+            generated/agama-segments/
+            generated/crosswalks/first-20-resolved.json
+
+      - name: Commit generated metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add generated/agama-segments generated/crosswalks/first-20-resolved.json
+          if git diff --cached --quiet; then
+            echo "Generated Agama segment metadata is unchanged"
+            exit 0
+          fi
+          git commit -m "Refresh CBETA Agama discourse segments"
+          git push

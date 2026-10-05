@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "collections": {
+    "T0001": {
+      "prefix": "DA",
+      "path": "T/T01/T01n0001.xml",
+      "id_mode": "global",
+      "expected_segments": 30
+    },
+    "T0026": {
+      "prefix": "MA",
+      "path": "T/T01/T01n0026.xml",
+      "id_mode": "global",
+      "expected_segments": 222
+    },
+    "T0099": {
+      "prefix": "SA",
+      "path": "T/T02/T02n0099.xml",
+      "id_mode": "global",
+      "expected_segments": 1355
+    },
+    "T0100": {
+      "prefix": "SA2",
+      "path": "T/T02/T02n0100.xml",
+      "id_mode": "global",
+      "expected_segments": 364
+    },
+    "T0125": {
+      "prefix": "EA",
+      "path": "T/T02/T02n0125.xml",
+      "id_mode": "chapter.item",
+      "expected_segments": 472
+    }
+  }
+}
