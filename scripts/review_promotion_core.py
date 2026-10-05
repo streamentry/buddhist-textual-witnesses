@@ -441,10 +441,10 @@ def derived_alignment_status(
 
     if any(fresh for _, fresh in valid_promotions):
         status = "established"
-    elif valid_promotions:
-        status = "review_stale"
     elif fresh_eligible:
         status = "promotion_required"
+    elif valid_promotions:
+        status = "review_stale"
     elif stale_accepted:
         status = "review_stale"
     else:
