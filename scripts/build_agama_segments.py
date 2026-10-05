@@ -142,6 +142,7 @@ class WalkState:
     last_lb: str | None = None
     juan: str | None = None
     segment_ordinal: int = 0
+    supplement_ordinal: int = 0
 
 
 def build_collection(
@@ -199,6 +200,7 @@ def build_collection(
             end_lb = state.last_lb
             end_juan = state.juan
 
+            record_kind = "canonical"
             if cfg["id_mode"] == "chapter.item":
                 pin = next(
                     (
@@ -209,11 +211,19 @@ def build_collection(
                     None,
                 )
                 if not pin or pin.get("number") is None:
-                    raise ValueError(
-                        f"Cannot derive chapter for {cfg['prefix']} discourse "
-                        f"{number} in {xml_path}"
+                    # T0125 contains one source-labelled 卷末附文 encoded with
+                    # mulu/@type=經 but outside every 品. Preserve it as a
+                    # structural supplement without inventing an EA x.y ID.
+                    state.supplement_ordinal += 1
+                    record_kind = "supplement"
+                    canonical_id = (
+                        f"{cfg['container_id']} supplement "
+                        f"{state.supplement_ordinal}"
                     )
-                canonical_id = f"{cfg['prefix']} {pin['number']}.{number}"
+                else:
+                    canonical_id = (
+                        f"{cfg['prefix']} {pin['number']}.{number}"
+                    )
             else:
                 canonical_id = f"{cfg['prefix']} {number}"
 
@@ -228,6 +238,7 @@ def build_collection(
             segments.append(
                 {
                     "canonical_id": canonical_id,
+                    "record_kind": record_kind,
                     "collection": cfg["prefix"],
                     "container_id": cfg["container_id"],
                     "number": number,
@@ -283,7 +294,32 @@ def validate_collection(
     expected = cfg.get("expected_segments")
     if expected is not None and len(records) != expected:
         errors.append(
-            f"{cfg['container_id']}: expected {expected} segments, got {len(records)}"
+            f"{cfg['container_id']}: expected {expected} structural segments, "
+            f"got {len(records)}"
+        )
+
+    canonical_count = sum(
+        record.get("record_kind") == "canonical" for record in records
+    )
+    supplement_count = sum(
+        record.get("record_kind") == "supplement" for record in records
+    )
+    expected_canonical = cfg.get(
+        "expected_canonical_segments", expected
+    )
+    if (
+        expected_canonical is not None
+        and canonical_count != expected_canonical
+    ):
+        errors.append(
+            f"{cfg['container_id']}: expected {expected_canonical} canonical "
+            f"segments, got {canonical_count}"
+        )
+    expected_supplements = cfg.get("expected_supplements", 0)
+    if supplement_count != expected_supplements:
+        errors.append(
+            f"{cfg['container_id']}: expected {expected_supplements} "
+            f"supplements, got {supplement_count}"
         )
 
     for record in records:
@@ -326,6 +362,8 @@ def main(argv: list[str] | None = None) -> int:
         "source_revision": args.revision,
         "collections": {},
         "total_segments": 0,
+        "total_canonical_segments": 0,
+        "total_supplements": 0,
     }
     lookup: dict[str, Any] = {}
     all_errors: list[str] = []
@@ -353,7 +391,13 @@ def main(argv: list[str] | None = None) -> int:
                 "xpath": row["locator"]["xpath"],
             }
 
-        numbers = sorted(row["number"] for row in rows)
+        canonical_rows = [
+            row for row in rows if row["record_kind"] == "canonical"
+        ]
+        supplement_rows = [
+            row for row in rows if row["record_kind"] == "supplement"
+        ]
+        numbers = sorted(row["number"] for row in canonical_rows)
         missing: list[int] = []
         if cfg["id_mode"] == "global" and numbers:
             present = set(numbers)
@@ -367,12 +411,25 @@ def main(argv: list[str] | None = None) -> int:
             "container_id": container_id,
             "file": filename,
             "segments": len(rows),
-            "canonical_first": rows[0]["canonical_id"] if rows else None,
-            "canonical_last": rows[-1]["canonical_id"] if rows else None,
+            "canonical_segments": len(canonical_rows),
+            "supplements": len(supplement_rows),
+            "canonical_first": (
+                canonical_rows[0]["canonical_id"]
+                if canonical_rows else None
+            ),
+            "canonical_last": (
+                canonical_rows[-1]["canonical_id"]
+                if canonical_rows else None
+            ),
+            "supplement_ids": [
+                row["canonical_id"] for row in supplement_rows
+            ],
             "source_path": cfg["path"],
             "missing_numbers": missing,
         }
         manifest["total_segments"] += len(rows)
+        manifest["total_canonical_segments"] += len(canonical_rows)
+        manifest["total_supplements"] += len(supplement_rows)
 
     args.output.mkdir(parents=True, exist_ok=True)
     (args.output / "manifest.json").write_text(
