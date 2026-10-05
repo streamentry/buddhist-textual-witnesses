@@ -152,6 +152,36 @@ def evidence_for_alignment(
     }
 
 
+def is_sha256_digest(value: Any) -> bool:
+    return isinstance(value, str) and re.fullmatch(r"sha256:[0-9a-f]{64}", value) is not None
+
+
+def validate_evidence_shape(evidence: Any, rid: str) -> list[str]:
+    errors: list[str] = []
+    if not isinstance(evidence, dict):
+        return [f"{rid}: evidence snapshot is required"]
+    if evidence.get("evidence_version") != 1:
+        errors.append(f"{rid}: evidence_version must be 1")
+    if not is_sha256_digest(evidence.get("alignment_claim_digest")):
+        errors.append(f"{rid}: alignment_claim_digest must be sha256:<64 lowercase hex>")
+    source_units = evidence.get("source_units")
+    if not isinstance(source_units, list):
+        errors.append(f"{rid}: evidence source_units must be an array")
+        return errors
+    for index, unit in enumerate(source_units):
+        if not isinstance(unit, dict):
+            errors.append(f"{rid}: evidence source_units[{index}] must be an object")
+            continue
+        for key in ("language", "witness_id", "source_unit_id"):
+            if not str(unit.get(key) or "").strip():
+                errors.append(f"{rid}: evidence source_units[{index}].{key} is required")
+        if not is_sha256_digest(unit.get("digest")):
+            errors.append(
+                f"{rid}: evidence source_units[{index}].digest must be sha256:<64 lowercase hex>"
+            )
+    return errors
+
+
 def parse_timestamp(value: Any) -> bool:
     if not isinstance(value, str) or not value.strip():
         return False
@@ -209,17 +239,15 @@ def validate_review_record(
         errors.append(f"{rid}: reviewed_at must be an offset-aware ISO-8601 timestamp")
 
     evidence = review.get("evidence")
-    if not isinstance(evidence, dict):
-        errors.append(f"{rid}: evidence snapshot is required")
-        fresh = False
-    elif alignment is None:
+    errors.extend(validate_evidence_shape(evidence, rid))
+    if not isinstance(evidence, dict) or alignment is None:
         fresh = False
     else:
         try:
             expected = evidence_for_alignment(alignment, indexes)
-        except KeyError as exc:
-            errors.append(f"{rid}: unresolved source unit while computing evidence: {exc}")
+        except KeyError:
             fresh = False
+            stale_reasons.append("current_source_unit_unresolved")
         else:
             fresh = evidence == expected
             if not fresh:
