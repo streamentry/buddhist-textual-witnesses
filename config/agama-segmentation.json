@@ -29,7 +29,9 @@
       "prefix": "EA",
       "path": "T/T02/T02n0125.xml",
       "id_mode": "chapter.item",
-      "expected_segments": 472
+      "expected_segments": 472,
+      "expected_canonical_segments": 471,
+      "expected_supplements": 1
     }
   }
 }
