@@ -1,0 +1,225 @@
+{
+  "version": 1,
+  "scope": "DN 1 ↔ DA 21 initial comparative review",
+  "reviewer_policy": "These are model-reviewed comparative claims. They are not human-established alignments.",
+  "alignments": [
+    {
+      "alignment_id": "review:dn1-da21:opening-01",
+      "work_id": "DN 1",
+      "chinese_witness_id": "DA 21",
+      "status": "reviewed",
+      "assertion": "reviewed_claim",
+      "relation_type": "parallel_passage",
+      "scope": "opening_narrative",
+      "pali_unit_ids": [
+        "DN 1#p0001",
+        "DN 1#p0002"
+      ],
+      "chinese_unit_ids": [
+        "DA 21#b0001",
+        "DA 21#b0002"
+      ],
+      "method": {
+        "name": "manual_comparative_review_v1",
+        "kind": "manual",
+        "ranking_score": 1,
+        "signals": {
+          "shared_opening_formula": [
+            "Evaṁ me sutaṁ",
+            "如是我聞"
+          ],
+          "shared_sequence": [
+            "Buddha travelling/staying with monastic retinue",
+            "teacher and disciple follow",
+            "teacher criticizes Buddha/Dhamma/Saṅgha",
+            "disciple praises Buddha/Dhamma/Saṅgha"
+          ],
+          "named_correspondences": [
+            "Suppiya ↔ 善念",
+            "Brahmadatta ↔ 梵摩達"
+          ]
+        },
+        "limitations": "The Chinese witness compresses material distributed across two Pāli paragraphs and differs in itinerary, lodging detail, and retinue count. This is a passage correspondence, not verbal identity."
+      },
+      "review": {
+        "status": "reviewed",
+        "reviewer_type": "model",
+        "reviewer": "GPT-5.6 Sol",
+        "decision": "accepted",
+        "confidence": "high",
+        "reviewed_on": "2026-10-05",
+        "notes": "Accepted as a strong narrative passage correspondence. Structural compression and substantive recension variants are preserved in the note; no claim of exact wording or archetype identity."
+      }
+    },
+    {
+      "alignment_id": "review:dn1-da21:monks-discussion-02",
+      "work_id": "DN 1",
+      "chinese_witness_id": "DA 21",
+      "status": "reviewed",
+      "assertion": "reviewed_claim",
+      "relation_type": "parallel_passage",
+      "scope": "monks_discuss_teacher_disciple_contrast",
+      "pali_unit_ids": [
+        "DN 1#p0003",
+        "DN 1#p0004"
+      ],
+      "chinese_unit_ids": [
+        "DA 21#b0003"
+      ],
+      "method": {
+        "name": "manual_comparative_review_v1",
+        "kind": "manual",
+        "ranking_score": 1,
+        "signals": {
+          "shared_sequence": [
+            "monks gather after/before rest period",
+            "express wonder at Buddha's knowledge of dispositions",
+            "repeat teacher criticism versus disciple praise"
+          ],
+          "named_correspondences": [
+            "Suppiya ↔ 善念",
+            "Brahmadatta ↔ 梵摩達"
+          ]
+        },
+        "limitations": "The Chinese witness presents the discussion as one block and compresses wording. Temporal framing also differs in detail."
+      },
+      "review": {
+        "status": "reviewed",
+        "reviewer_type": "model",
+        "reviewer": "GPT-5.6 Sol",
+        "decision": "accepted",
+        "confidence": "high",
+        "reviewed_on": "2026-10-05",
+        "notes": "Accepted as a strong passage-level correspondence based on sequence, actors, and distinctive praise/blame contrast."
+      }
+    },
+    {
+      "alignment_id": "review:dn1-da21:buddha-enters-hall-03",
+      "work_id": "DN 1",
+      "chinese_witness_id": "DA 21",
+      "status": "reviewed",
+      "assertion": "reviewed_claim",
+      "relation_type": "parallel_passage",
+      "scope": "buddha_hears_asks_and_monks_report",
+      "pali_unit_ids": [
+        "DN 1#p0005",
+        "DN 1#p0006"
+      ],
+      "chinese_unit_ids": [
+        "DA 21#b0004",
+        "DA 21#b0005"
+      ],
+      "method": {
+        "name": "manual_comparative_review_v1",
+        "kind": "manual",
+        "ranking_score": 1,
+        "signals": {
+          "shared_sequence": [
+            "Buddha becomes aware of the monks' discussion",
+            "Buddha goes to the assembly hall and asks what they were discussing",
+            "monks repeat the same teacher/disciple praise-blame discussion"
+          ]
+        },
+        "limitations": "The Chinese witness explicitly attributes hearing to the purified divine ear, while the Pāli wording here says the Buddha knew the discussion; this is a recension-level difference inside an otherwise clear narrative correspondence."
+      },
+      "review": {
+        "status": "reviewed",
+        "reviewer_type": "model",
+        "reviewer": "GPT-5.6 Sol",
+        "decision": "accepted",
+        "confidence": "high",
+        "reviewed_on": "2026-10-05",
+        "notes": "Accepted as a strong narrative passage correspondence with a notable difference in how the Buddha's awareness of the discussion is expressed."
+      }
+    },
+    {
+      "alignment_id": "review:dn1-da21:reaction-to-praise-blame-04",
+      "work_id": "DN 1",
+      "chinese_witness_id": "DA 21",
+      "status": "reviewed",
+      "assertion": "reviewed_claim",
+      "relation_type": "partial_overlap",
+      "scope": "instruction_on_reaction_to_criticism_and_praise",
+      "pali_unit_ids": [
+        "DN 1#p0007",
+        "DN 1#p0008",
+        "DN 1#p0009",
+        "DN 1#p0010"
+      ],
+      "chinese_unit_ids": [
+        "DA 21#b0006"
+      ],
+      "method": {
+        "name": "manual_comparative_review_v1",
+        "kind": "manual",
+        "ranking_score": 0.9,
+        "signals": {
+          "shared_doctrine": [
+            "do not become angry when Buddha/Dhamma/Saṅgha are criticized",
+            "do not become elated when Buddha/Dhamma/Saṅgha are praised"
+          ],
+          "shared_transition": "moves from reactions to praise/blame toward the topic of minor morality"
+        },
+        "limitations": "The Chinese block omits or compresses the Pāli question-and-answer and the explicit instructions to refute what is false and acknowledge what is true. It therefore preserves only part of the Pāli passage's articulated sequence."
+      },
+      "review": {
+        "status": "reviewed",
+        "reviewer_type": "model",
+        "reviewer": "GPT-5.6 Sol",
+        "decision": "accepted",
+        "confidence": "medium_high",
+        "reviewed_on": "2026-10-05",
+        "notes": "Accepted specifically as partial overlap, not as a full paragraph equivalence."
+      }
+    },
+    {
+      "alignment_id": "review:dn1-da21:minor-morality-05",
+      "work_id": "DN 1",
+      "chinese_witness_id": "DA 21",
+      "status": "reviewed",
+      "assertion": "reviewed_claim",
+      "relation_type": "parallel_passage",
+      "scope": "minor_morality_opening_and_speech_precepts",
+      "pali_unit_ids": [
+        "DN 1#p0011",
+        "DN 1#p0012",
+        "DN 1#p0013",
+        "DN 1#p0014",
+        "DN 1#p0015",
+        "DN 1#p0016",
+        "DN 1#p0017",
+        "DN 1#p0018"
+      ],
+      "chinese_unit_ids": [
+        "DA 21#b0007"
+      ],
+      "method": {
+        "name": "manual_comparative_review_v1",
+        "kind": "manual",
+        "ranking_score": 1,
+        "signals": {
+          "shared_sequence": [
+            "minor morality introduced as what an ordinary person praises",
+            "abstention from killing",
+            "abstention from taking what is not given",
+            "celibacy/sexual restraint",
+            "truthful speech",
+            "no divisive speech",
+            "no harsh speech",
+            "no frivolous speech"
+          ]
+        },
+        "limitations": "The Chinese witness compresses eight Pāli paragraph units into one block and phrases individual virtues differently. The correspondence is sequential and doctrinal-textual, not verbatim."
+      },
+      "review": {
+        "status": "reviewed",
+        "reviewer_type": "model",
+        "reviewer": "GPT-5.6 Sol",
+        "decision": "accepted",
+        "confidence": "high",
+        "reviewed_on": "2026-10-05",
+        "notes": "Accepted as a strong sequential passage correspondence covering the opening of the minor-morality section through the speech precepts."
+      }
+    }
+  ]
+}

@@ -78,7 +78,7 @@ validate-alignments:
 		--candidates \
 			generated/alignments/shared-formula-candidates.jsonl \
 			generated/alignments/monotonic-candidates.jsonl \
-		--reviewed data/alignments/reviewed.json
+		--reviewed data/alignments/reviewed.json data/alignments/model-reviewed.json
 
 alignment: test alignment-candidates validate-alignments
 	@echo "Pāli-Chinese alignment source layer and candidate queue are valid."

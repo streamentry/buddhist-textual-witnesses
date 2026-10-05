@@ -26,6 +26,10 @@ This repository supports textual-critical study of Buddhist sources across multi
 18. For T0099, canonical SA numbering comes from visible `mulu` text, not `mulu/@n`.
 19. For T0125, a `mulu type="經"` outside every `品` is not automatically an EA canonical discourse; preserve source-labelled supplements separately.
 20. Do not hand-edit files under `generated/`; regenerate them from pinned upstream data and curated inputs.
+21. Source-unit alignments are many-to-many. Never force 1↔1 when a recension merges, splits, omits, or reorders material.
+22. A model-reviewed alignment is not an established alignment. Only an accepted human review may set `status=established`.
+23. A shared stock formula such as `Evaṁ me sutaṁ ↔ 如是我聞` establishes only the formula-level correspondence unless additional passage evidence is reviewed.
+24. Positional/length similarity is a review-queue heuristic, not textual evidence. Structural-ranking output may never be promoted directly to `established`.
 
 ## Preferred workflow
 
@@ -41,4 +45,4 @@ This repository supports textual-critical study of Buddhist sources across multi
 
 ## Current priority
 
-Segment Chinese Āgama containers into individual discourse records so the first 20 curated crosswalks resolve to local source spans, then move to segment-level alignment.
+Build reviewed many-to-many source-unit alignments on top of the resolved Pāli/Chinese source layer, then ingest directly attested Sanskrit/BHS/Gāndhārī fragment text where provenance and redistribution allow.

@@ -53,6 +53,41 @@ class AlignmentCandidateTests(unittest.TestCase):
         self.assertEqual(row["relation_type"], "shared_formula")
         self.assertEqual(row["status"], "machine_candidate")
         self.assertEqual(row["assertion"], "not_established")
+        self.assertEqual(row["pali_unit_ids"], ["DN 1#p0001"])
+        self.assertEqual(row["chinese_unit_ids"], ["DA 21#b0001"])
+        errors = valid.validate_candidate(
+            row,
+            {p["unit_id"]: p for p in self.pali},
+            {c["block_id"]: c for c in self.chinese},
+        )
+        self.assertEqual(errors, [])
+
+    def test_many_to_many_reviewed_alignment_is_valid(self):
+        row = {
+            "alignment_id": "review:test",
+            "work_id": "DN 1",
+            "chinese_witness_id": "DA 21",
+            "status": "reviewed",
+            "assertion": "reviewed_claim",
+            "relation_type": "parallel_passage",
+            "scope": "passage",
+            "pali_unit_ids": ["DN 1#p0001", "DN 1#p0002"],
+            "chinese_unit_ids": ["DA 21#b0001", "DA 21#b0002"],
+            "method": {
+                "name": "manual_review",
+                "kind": "manual",
+                "ranking_score": 1.0,
+                "signals": {},
+                "limitations": "Model review is not human establishment.",
+            },
+            "review": {
+                "status": "reviewed",
+                "reviewer_type": "model",
+                "reviewer": "test-model",
+                "decision": "accepted",
+                "notes": "Synthetic test.",
+            },
+        }
         errors = valid.validate_candidate(
             row,
             {p["unit_id"]: p for p in self.pali},

@@ -84,8 +84,8 @@ def formula_candidates(
                     "assertion": "not_established",
                     "relation_type": "shared_formula",
                     "scope": "formula_within_source_units",
-                    "pali_unit_id": p_row["unit_id"],
-                    "chinese_unit_id": c_row["block_id"],
+                    "pali_unit_ids": [p_row["unit_id"]],
+                    "chinese_unit_ids": [c_row["block_id"]],
                     "method": {
                         "name": "shared_formula_v1",
                         "kind": "lexical_rule",
@@ -151,8 +151,8 @@ def monotonic_candidates(
                 "assertion": "not_established",
                 "relation_type": "possible_parallel_passage",
                 "scope": "source_unit",
-                "pali_unit_id": p_row["unit_id"],
-                "chinese_unit_id": c_row["block_id"],
+                "pali_unit_ids": [p_row["unit_id"]],
+                "chinese_unit_ids": [c_row["block_id"]],
                 "method": {
                     "name": "monotonic_position_v1",
                     "kind": "structural_ranking",

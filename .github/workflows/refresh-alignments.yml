@@ -65,7 +65,7 @@ jobs:
 
       - name: Validate epistemic guardrails
         run: |
-          python scripts/validate_alignments.py             --pali-units generated/alignment-source/pali/units.jsonl             --chinese-blocks generated/alignment-source/chinese/blocks.jsonl             --candidates               generated/alignments/shared-formula-candidates.jsonl               generated/alignments/monotonic-candidates.jsonl             --reviewed data/alignments/reviewed.json
+          python scripts/validate_alignments.py             --pali-units generated/alignment-source/pali/units.jsonl             --chinese-blocks generated/alignment-source/chinese/blocks.jsonl             --candidates               generated/alignments/shared-formula-candidates.jsonl               generated/alignments/monotonic-candidates.jsonl             --reviewed data/alignments/reviewed.json data/alignments/model-reviewed.json
 
       - uses: actions/upload-artifact@v4
         with:

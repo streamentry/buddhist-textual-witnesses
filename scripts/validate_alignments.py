@@ -40,13 +40,27 @@ def validate_candidate(
 ) -> list[str]:
     errors = []
     aid = row.get("alignment_id", "<missing>")
-    pid = row.get("pali_unit_id")
-    cid = row.get("chinese_unit_id")
+    pids = row.get("pali_unit_ids")
+    cids = row.get("chinese_unit_ids")
 
-    if pid not in pali:
-        errors.append(f"{aid}: unresolved Pāli unit {pid}")
-    if cid not in chinese:
-        errors.append(f"{aid}: unresolved Chinese unit {cid}")
+    if not isinstance(pids, list) or not pids:
+        errors.append(f"{aid}: pali_unit_ids must be a non-empty list")
+        pids = []
+    if not isinstance(cids, list) or not cids:
+        errors.append(f"{aid}: chinese_unit_ids must be a non-empty list")
+        cids = []
+
+    if len(set(pids)) != len(pids):
+        errors.append(f"{aid}: duplicate Pāli unit in alignment")
+    if len(set(cids)) != len(cids):
+        errors.append(f"{aid}: duplicate Chinese unit in alignment")
+
+    for pid in pids:
+        if pid not in pali:
+            errors.append(f"{aid}: unresolved Pāli unit {pid}")
+    for cid in cids:
+        if cid not in chinese:
+            errors.append(f"{aid}: unresolved Chinese unit {cid}")
 
     status = row.get("status")
     if status not in {"machine_candidate", "reviewed", "established", "rejected"}:
@@ -66,10 +80,18 @@ def validate_candidate(
     if status == "machine_candidate" and row.get("assertion") != "not_established":
         errors.append(f"{aid}: machine candidate must say not_established")
 
-    if row.get("relation_type") == "shared_formula" and pid in pali and cid in chinese:
-        if PALI_FORMULA not in pali[pid]["text"].lower():
+    if row.get("relation_type") == "shared_formula":
+        resolved_p = [pali[pid] for pid in pids if pid in pali]
+        resolved_c = [chinese[cid] for cid in cids if cid in chinese]
+        if resolved_p and not any(
+            PALI_FORMULA in item["text"].lower() for item in resolved_p
+        ):
             errors.append(f"{aid}: Pāli shared-formula evidence absent")
-        if not any(formula in chinese[cid]["text"] for formula in CHINESE_FORMULAS):
+        if resolved_c and not any(
+            formula in item["text"]
+            for item in resolved_c
+            for formula in CHINESE_FORMULAS
+        ):
             errors.append(f"{aid}: Chinese shared-formula evidence absent")
 
     method = row.get("method") or {}
@@ -85,7 +107,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--pali-units", type=Path, required=True)
     p.add_argument("--chinese-blocks", type=Path, required=True)
     p.add_argument("--candidates", type=Path, nargs="+", required=True)
-    p.add_argument("--reviewed", type=Path)
+    p.add_argument("--reviewed", type=Path, nargs="*")
     args = p.parse_args(argv)
 
     pali = index(load_jsonl(args.pali_units), "unit_id")
@@ -93,13 +115,14 @@ def main(argv: list[str] | None = None) -> int:
     rows = []
     for path in args.candidates:
         rows.extend(load_jsonl(path))
-    if args.reviewed:
-        reviewed_data = json.loads(args.reviewed.read_text(encoding="utf-8"))
+    for reviewed_path in args.reviewed or []:
+        reviewed_data = json.loads(reviewed_path.read_text(encoding="utf-8"))
         rows.extend(reviewed_data.get("alignments", []))
 
     errors = []
     seen = set()
     established = 0
+    reviewed = 0
     for row in rows:
         aid = row.get("alignment_id")
         if not aid:
@@ -111,6 +134,8 @@ def main(argv: list[str] | None = None) -> int:
         errors.extend(validate_candidate(row, pali, chinese))
         if row.get("status") == "established":
             established += 1
+        if row.get("status") == "reviewed":
+            reviewed += 1
 
     if errors:
         for error in errors:
@@ -121,6 +146,7 @@ def main(argv: list[str] | None = None) -> int:
         json.dumps(
             {
                 "alignments_checked": len(rows),
+                "reviewed_alignments": reviewed,
                 "established_alignments": established,
                 "pali_units": len(pali),
                 "chinese_units": len(chinese),

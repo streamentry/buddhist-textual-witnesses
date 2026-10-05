@@ -16,7 +16,7 @@ Bilara Pāli segment IDs / paragraphs
 CBETA paragraph and verse blocks
 ```
 
-The pipeline deliberately separates **source segmentation**, **machine candidates**, and **reviewed scholarly assertions**.
+The pipeline deliberately separates **source segmentation**, **machine candidates**, **model review**, and **human-established scholarly assertions**. Alignment records are many-to-many: one passage may contain several Pāli units and several Chinese blocks.
 
 ## 1. Pāli source units
 
@@ -129,7 +129,20 @@ generated/alignments/
 └── manifest.json
 ```
 
-## 4. Human-review boundary
+## 4. Many-to-many alignment model
+
+Alignment records use arrays:
+
+```json
+{
+  "pali_unit_ids": ["DN 1#p0001", "DN 1#p0002"],
+  "chinese_unit_ids": ["DA 21#b0001", "DA 21#b0002"]
+}
+```
+
+This is essential because recensions frequently merge, split, omit, or reorder material. The schema does not force a false 1↔1 geometry onto the witnesses.
+
+## 5. Review boundary
 
 All generated records have:
 
@@ -142,6 +155,8 @@ A record may become `established` only when a human reviewer explicitly records 
 
 `data/alignments/reviewed.json`
 
+Model-assisted comparative reviews are kept separately in `data/alignments/model-reviewed.json`. They may be `status: reviewed`, but **never** `status: established` unless a human accepts them.
+
 The validator rejects:
 
 - unresolved source-unit references
@@ -151,6 +166,18 @@ The validator rejects:
 - shared-formula candidates whose claimed formulas are absent from the source units
 
 This boundary is intentional. Similar position is not textual evidence, and a shared stock formula is not proof of paragraph identity.
+
+## Initial model-reviewed batch
+
+The first curated comparison is **DN 1 ↔ DA 21**. Five passage alignments have been reviewed at source-unit level and stored as model-reviewed claims:
+
+1. opening narrative, including Suppiya/善念 and Brahmadatta/梵摩達;
+2. monks discuss the teacher/disciple praise-blame contrast;
+3. Buddha enters the hall, asks, and the monks report their discussion;
+4. partial overlap in the instruction about reacting to criticism and praise;
+5. the opening of the minor-morality section, where eight Pāli paragraphs are compressed into one Chinese block.
+
+These reviews explicitly preserve differences and compression. They are not human-established.
 
 ## Commands
 

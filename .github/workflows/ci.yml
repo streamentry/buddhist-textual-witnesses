@@ -8,6 +8,7 @@ on:
       - "config/**"
       - "schemas/**"
       - "data/crosswalks/**"
+      - "data/alignments/**"
       - ".github/workflows/ci.yml"
   pull_request:
     paths:
@@ -16,6 +17,7 @@ on:
       - "config/**"
       - "schemas/**"
       - "data/crosswalks/**"
+      - "data/alignments/**"
       - ".github/workflows/ci.yml"
 
 jobs:

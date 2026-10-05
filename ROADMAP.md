@@ -35,11 +35,19 @@ Build a small, high-confidence benchmark before scaling.
 
 ## Phase 3 — Alignment
 
-- [ ] Define segment-level alignment schema
-- [ ] Preserve source segmentation
-- [ ] Add normalized search text as a derived layer
-- [ ] Add automated candidate matching
-- [ ] Require human-reviewed status before treating a match as established
+- [x] Define many-to-many source-unit alignment schema
+- [x] Preserve Bilara leaf/paragraph and CBETA block segmentation
+- [x] Add normalized Pāli/Chinese search text as a derived layer
+- [x] Add lexical-formula and monotonic structural candidate generation
+- [x] Require human-reviewed acceptance before treating a match as established
+
+### Next alignment milestones
+
+- [x] First model-reviewed many-to-many batch: DN 1 ↔ DA 21
+- [ ] First human-reviewed established batch
+- [ ] Add reviewed bilingual anchor lexicon for names, places, formulas, and doctrinal terms
+- [ ] Add candidate windows / sequence alignment stronger than single-block positional ranking
+- [ ] Add Sanskrit/BHS/Gāndhārī source units where edited text can be reproduced and cited safely
 
 ## Phase 4 — Research interface
 

@@ -154,6 +154,36 @@ python3 scripts/extract_agama_segment.py \
   --format text
 ```
 
+## Pāli ↔ Chinese source-unit alignment
+
+The repository now has a reproducible alignment layer for the first 20 Dīgha anchors.
+
+Current generated source units:
+
+- **9,990** Bilara Pāli leaf segments
+- **3,031** Pāli paragraph units
+- **42** benchmark-relevant Chinese discourse segments
+- **2,189** CBETA Chinese text blocks
+- Chinese block extraction coverage: **98.01% minimum**, **99.77% mean**
+
+Current machine review queue:
+
+- **31** shared-opening-formula candidates
+- **4,468** monotonic structural candidates
+- **0** machine candidates treated as established
+
+Alignment records are **many-to-many** so recension-level splitting and compression remain visible.
+
+The first five model-reviewed passage alignments are in `data/alignments/model-reviewed.json` for **DN 1 ↔ DA 21**. They are explicitly `reviewer_type: model` and are not human-established.
+
+Run:
+
+```bash
+make alignment
+```
+
+See `docs/ALIGNMENT_PIPELINE.md`.
+
 ## Repository layout
 
 ```text
@@ -178,19 +208,27 @@ python3 scripts/extract_agama_segment.py \
 │   ├── resolve_crosswalk_segments.py
 │   ├── extract_agama_segment.py
 │   ├── fetch_cbeta_agamas.sh
+│   ├── build_pali_units.py
+│   ├── build_chinese_alignment_units.py
+│   ├── generate_alignment_candidates.py
+│   ├── validate_alignments.py
 │   ├── validate_crosswalks.py
 │   └── render_crosswalks.py
 ├── docs/
 │   ├── METHODOLOGY.md
 │   ├── CATALOG_PIPELINE.md
-│   └── AGAMA_SEGMENTATION.md
+│   ├── AGAMA_SEGMENTATION.md
+│   └── ALIGNMENT_PIPELINE.md
 ├── catalog/
 │   └── README.md
 ├── data/
+│   ├── alignments/
 │   ├── crosswalks/
 │   └── texts/
 ├── generated/
 │   ├── agama-segments/
+│   ├── alignment-source/
+│   ├── alignments/
 │   └── crosswalks/
 ├── tests/
 ├── Makefile

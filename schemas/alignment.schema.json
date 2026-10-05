@@ -10,20 +10,39 @@
     "assertion",
     "relation_type",
     "scope",
-    "pali_unit_id",
-    "chinese_unit_id",
+    "pali_unit_ids",
+    "chinese_unit_ids",
     "method",
     "review"
   ],
   "properties": {
-    "alignment_id": {"type": "string", "minLength": 1},
-    "work_id": {"type": "string", "minLength": 1},
-    "chinese_witness_id": {"type": "string", "minLength": 1},
+    "alignment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "work_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "chinese_witness_id": {
+      "type": "string",
+      "minLength": 1
+    },
     "status": {
-      "enum": ["machine_candidate", "reviewed", "established", "rejected"]
+      "enum": [
+        "machine_candidate",
+        "reviewed",
+        "established",
+        "rejected"
+      ]
     },
     "assertion": {
-      "enum": ["not_established", "reviewed_claim", "established_claim", "rejected"]
+      "enum": [
+        "not_established",
+        "reviewed_claim",
+        "established_claim",
+        "rejected"
+      ]
     },
     "relation_type": {
       "enum": [
@@ -34,33 +53,112 @@
         "shared_passage"
       ]
     },
-    "scope": {"type": "string"},
-    "pali_unit_id": {"type": "string"},
-    "chinese_unit_id": {"type": "string"},
+    "scope": {
+      "type": "string"
+    },
+    "pali_unit_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "chinese_unit_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
     "method": {
       "type": "object",
-      "required": ["name", "kind", "ranking_score", "signals", "limitations"],
+      "required": [
+        "name",
+        "kind",
+        "ranking_score",
+        "signals",
+        "limitations"
+      ],
       "properties": {
-        "name": {"type": "string"},
-        "kind": {"enum": ["lexical_rule", "structural_ranking", "manual"]},
-        "ranking_score": {"type": "number", "minimum": 0, "maximum": 1},
-        "signals": {"type": "object"},
-        "limitations": {"type": "string"}
+        "name": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "lexical_rule",
+            "structural_ranking",
+            "manual"
+          ]
+        },
+        "ranking_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "signals": {
+          "type": "object"
+        },
+        "limitations": {
+          "type": "string"
+        }
       },
       "additionalProperties": false
     },
     "review": {
       "type": "object",
-      "required": ["status", "reviewer_type", "reviewer", "decision", "notes"],
+      "required": [
+        "status",
+        "reviewer_type",
+        "reviewer",
+        "decision",
+        "notes"
+      ],
       "properties": {
-        "status": {"enum": ["unreviewed", "reviewed"]},
-        "reviewer_type": {"type": ["string", "null"], "enum": ["human", "model", null]},
-        "reviewer": {"type": ["string", "null"]},
-        "decision": {
-          "type": ["string", "null"],
-          "enum": ["accepted", "rejected", "needs_work", null]
+        "status": {
+          "enum": [
+            "unreviewed",
+            "reviewed"
+          ]
         },
-        "notes": {"type": ["string", "null"]}
+        "reviewer_type": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "human",
+            "model",
+            null
+          ]
+        },
+        "reviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "decision": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "accepted",
+            "rejected",
+            "needs_work",
+            null
+          ]
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       },
       "additionalProperties": true
     }
