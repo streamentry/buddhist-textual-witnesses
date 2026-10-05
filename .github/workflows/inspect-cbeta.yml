@@ -38,4 +38,4 @@ jobs:
         with:
           python-version: "3.12"
       - name: Probe structure
-        run: python scripts/inspect_cbeta_agama_structure.py .cache/cbeta --events 160
+        run: python scripts/inspect_cbeta_agama_structure.py .cache/cbeta
