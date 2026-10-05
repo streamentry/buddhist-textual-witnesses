@@ -10,7 +10,7 @@ Human review records are deliberately separate from model-reviewed case-study al
 - every review binds the exact alignment claim and exact source-unit views through SHA-256 evidence digests.
 - an accepted review requires all four assessments to be agree.
 - accepted does not mean established.
-- committed reviews are historical records. Do not silently edit one after it has been referenced by a promotion. Create a new review record instead.
+- committed reviews are historical records and the ledger is append-only in CI. Do not edit an existing record; create a new record with `supersedes_review_id` pointing to the latest review by the same reviewer for that alignment.
 - if the alignment claim or displayed source evidence changes later, the old review remains part of the audit history but becomes stale for current promotion purposes.
 
 Files:
