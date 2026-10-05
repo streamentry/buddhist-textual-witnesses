@@ -17,6 +17,7 @@ from review_promotion_core import (
     evidence_digest,
     review_digest,
     review_is_promotion_eligible,
+    validate_promotion_record,
     validate_review_record,
 )
 
@@ -56,6 +57,10 @@ def main(argv: list[str] | None = None) -> int:
     reviews_by_id = {
         row["review_id"]: row for row in review_doc.get("reviews", []) if row.get("review_id")
     }
+
+    if not args.promoter_name.strip() or not args.promoter_id.strip():
+        print("ERROR: promoter name and stable promoter ID are required", file=sys.stderr)
+        return 1
 
     if args.alignment_id not in alignments:
         print(f"ERROR: unknown alignment_id {args.alignment_id}", file=sys.stderr)
@@ -100,13 +105,18 @@ def main(argv: list[str] | None = None) -> int:
 
     promoted_at = args.promoted_at or datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     stamp = re.sub(r"[^0-9]", "", promoted_at)[:14]
+    review_hash = review_digest(review)
+    review_key = review_hash.split(":", 1)[-1][:12]
     event = {
         "promotion_schema_version": PROMOTION_SCHEMA_VERSION,
-        "promotion_id": f"promotion:{slug(args.promoter_id)}:{slug(args.alignment_id)}:{stamp}",
+        "promotion_id": (
+            f"promotion:{slug(args.promoter_id)}:{slug(args.alignment_id)}:"
+            f"{review_key}:{stamp}"
+        ),
         "case_study_id": case_id,
         "alignment_id": args.alignment_id,
         "review_id": args.review_id,
-        "review_digest": review_digest(review),
+        "review_digest": review_hash,
         "evidence_digest": evidence_digest(review),
         "decision": "established",
         "promoter": {
@@ -118,6 +128,19 @@ def main(argv: list[str] | None = None) -> int:
         "policy_version": PROMOTION_POLICY_VERSION,
         "notes": args.notes,
     }
+
+    event_errors, event_fresh = validate_promotion_record(
+        event,
+        case_id,
+        alignments,
+        reviews_by_id,
+        indexes,
+        require_current_fresh=True,
+    )
+    if event_errors or not event_fresh:
+        for error in event_errors:
+            print(f"ERROR: {error}", file=sys.stderr)
+        return 1
 
     if not args.write:
         print(json.dumps({"mode": "preview", "event": event}, ensure_ascii=False, indent=2))
