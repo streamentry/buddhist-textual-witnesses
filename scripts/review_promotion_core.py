@@ -255,6 +255,70 @@ def review_digest(review: dict[str, Any]) -> str:
     return digest(review)
 
 
+def validate_review_lineage(reviews: list[dict[str, Any]]) -> list[str]:
+    """Require same-reviewer revisions to append and supersede the latest record."""
+    errors: list[str] = []
+    seen_ids: dict[str, dict[str, Any]] = {}
+    latest_by_reviewer_alignment: dict[tuple[str, str], str] = {}
+
+    for review in reviews:
+        rid = str(review.get("review_id") or "")
+        reviewer = review.get("reviewer") or {}
+        reviewer_id = str(reviewer.get("reviewer_id") or "")
+        alignment_id = str(review.get("alignment_id") or "")
+        supersedes = review.get("supersedes_review_id")
+        key = (reviewer_id, alignment_id)
+
+        if not rid:
+            continue
+        if rid in seen_ids:
+            errors.append(f"duplicate review_id: {rid}")
+            continue
+
+        previous = latest_by_reviewer_alignment.get(key) if reviewer_id and alignment_id else None
+        if previous is None:
+            if supersedes not in (None, ""):
+                errors.append(
+                    f"{rid}: supersedes_review_id has no earlier review for the same "
+                    "reviewer_id/alignment"
+                )
+        elif supersedes != previous:
+            errors.append(
+                f"{rid}: revision by the same reviewer must supersede latest review "
+                f"{previous}"
+            )
+
+        if supersedes:
+            target = seen_ids.get(str(supersedes))
+            if target is None:
+                errors.append(f"{rid}: supersedes unknown or later review {supersedes}")
+            else:
+                target_reviewer = target.get("reviewer") or {}
+                if target.get("alignment_id") != review.get("alignment_id"):
+                    errors.append(f"{rid}: superseded review belongs to another alignment")
+                if target_reviewer.get("reviewer_id") != reviewer.get("reviewer_id"):
+                    errors.append(f"{rid}: superseded review belongs to another reviewer_id")
+
+        seen_ids[rid] = review
+        if reviewer_id and alignment_id:
+            latest_by_reviewer_alignment[key] = rid
+
+    return errors
+
+
+def active_review_ids(reviews: list[dict[str, Any]]) -> set[str]:
+    superseded = {
+        str(review.get("supersedes_review_id"))
+        for review in reviews
+        if review.get("supersedes_review_id")
+    }
+    return {
+        str(review.get("review_id"))
+        for review in reviews
+        if review.get("review_id") and str(review.get("review_id")) not in superseded
+    }
+
+
 def evidence_digest(review: dict[str, Any]) -> str:
     return digest(review.get("evidence"))
 
@@ -332,7 +396,19 @@ def derived_alignment_status(
     indexes: dict[str, dict[str, dict[str, Any]]],
 ) -> dict[str, Any]:
     reviews_by_id = {str(r.get("review_id")): r for r in reviews if r.get("review_id")}
-    matching_reviews = [r for r in reviews if r.get("alignment_id") == alignment_id]
+    active_ids = active_review_ids(reviews)
+    matching_reviews = [
+        r for r in reviews
+        if r.get("alignment_id") == alignment_id
+        and str(r.get("review_id")) in active_ids
+    ]
+    superseded_review_ids = [
+        str(r.get("review_id"))
+        for r in reviews
+        if r.get("alignment_id") == alignment_id
+        and r.get("review_id")
+        and str(r.get("review_id")) not in active_ids
+    ]
     fresh_eligible: list[str] = []
     stale_accepted: list[str] = []
     for review in matching_reviews:
@@ -359,7 +435,9 @@ def derived_alignment_status(
             require_current_fresh=False,
         )
         if not errors:
-            valid_promotions.append((promotion["promotion_id"], fresh))
+            review_id = str(promotion.get("review_id") or "")
+            current = fresh and review_id in active_ids
+            valid_promotions.append((promotion["promotion_id"], current))
 
     if any(fresh for _, fresh in valid_promotions):
         status = "established"
@@ -377,5 +455,6 @@ def derived_alignment_status(
         "derived_status": status,
         "fresh_accepted_review_ids": fresh_eligible,
         "stale_accepted_review_ids": stale_accepted,
+        "superseded_review_ids": superseded_review_ids,
         "valid_promotion_ids": [pid for pid, _ in valid_promotions],
     }
