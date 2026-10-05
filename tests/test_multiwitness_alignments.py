@@ -29,7 +29,13 @@ class MultiWitnessValidatorTests(unittest.TestCase):
                 "SF 36#p0001": {
                     "unit_id": "SF 36#p0001",
                     "witness_id": "SF 36",
-                }
+                    "search_text": "evaṃ mayā śrutam",
+                },
+                "SF 36#p0019": {
+                    "unit_id": "SF 36#p0019",
+                    "witness_id": "SF 36",
+                    "search_text": "Sanskrit text is completely lost",
+                },
             },
         }
 
@@ -74,6 +80,18 @@ class MultiWitnessValidatorTests(unittest.TestCase):
         row["status"] = "established"
         errors = mod.validate_alignment(row, self.indexes)
         self.assertTrue(any("requires human reviewer" in e for e in errors))
+
+    def test_lost_text_marker_requires_explicit_loss_source(self):
+        row = self.base()
+        row["members"][1]["coverage"] = "lost_text_marker"
+        errors = mod.validate_alignment(row, self.indexes)
+        self.assertTrue(
+            any("does not explicitly indicate textual loss" in e for e in errors)
+        )
+
+        row["members"][1]["source_unit_ids"] = ["SF 36#p0019"]
+        errors = mod.validate_alignment(row, self.indexes)
+        self.assertEqual(errors, [])
 
     def test_unknown_variant_member_fails(self):
         row = self.base()
