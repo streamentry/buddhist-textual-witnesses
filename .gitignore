@@ -1,0 +1,5 @@
+vendor/
+.cache/
+.DS_Store
+*.zip
+*.tar.gz
