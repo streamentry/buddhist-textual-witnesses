@@ -41,6 +41,10 @@ def main(argv: list[str] | None = None) -> int:
 
     errors: list[str] = []
     errors.extend(validate_review_lineage(review_rows))
+    if review_doc.get("version") != 2:
+        errors.append("review document version must be 2")
+    if review_doc.get("case_study_id") != case_id:
+        errors.append("review document case_study_id does not match case study")
     if promotion_doc.get("version") != 1:
         errors.append("promotion document version must be 1")
     if promotion_doc.get("case_study_id") != case_id:
