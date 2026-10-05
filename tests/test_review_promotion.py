@@ -133,6 +133,26 @@ class ReviewPromotionTests(unittest.TestCase):
         self.assertIn("source_unit_evidence_changed", reasons)
         self.assertFalse(core.review_is_promotion_eligible(review, fresh))
 
+    def test_malformed_evidence_is_invalid_not_merely_stale(self):
+        review = self.review()
+        review["evidence"]["alignment_claim_digest"] = "not-a-digest"
+        errors, fresh, _ = core.validate_review_record(
+            review, self.case_id, self.alignments, self.indexes
+        )
+        self.assertFalse(fresh)
+        self.assertTrue(any("alignment_claim_digest" in error for error in errors))
+
+    def test_unresolved_current_source_marks_history_stale(self):
+        review = self.review()
+        missing = copy.deepcopy(self.indexes)
+        del missing["pli"]["DN 14#p1"]
+        errors, fresh, reasons = core.validate_review_record(
+            review, self.case_id, self.alignments, missing
+        )
+        self.assertEqual(errors, [])
+        self.assertFalse(fresh)
+        self.assertIn("current_source_unit_unresolved", reasons)
+
     def test_accepted_requires_all_assessments_agree(self):
         review = self.review()
         review["assessments"]["variant_notes"] = "uncertain"
