@@ -268,16 +268,19 @@ Current witnesses:
 - EA 48.4, Ekottarika Āgama Chinese parallel;
 - SF 36, Sanskrit edited fragmentary witness.
 
-The initial six model-reviewed passage alignments cover:
+The initial nine model-reviewed passage alignments cover:
 
 1. opening formula and setting;
 2. monks' discussion of past Buddhas;
 3. Buddha hearing, approaching, and asking;
 4. the monks' report of their discussion;
 5. seven Buddhas and kalpa chronology;
-6. lifespans of the seven Buddhas.
+6. lifespans of the seven Buddhas;
+7. caste pattern across the seven Buddhas;
+8. family/clan names with an explicit Sanskrit textual-loss locus;
+9. Bodhi trees with an explicit Sanskrit textual-loss locus.
 
-The validator resolves every cited source-unit ID against generated Pāli, Chinese, and Sanskrit source layers. An `established` multi-witness alignment requires an accepted human review.
+The validator resolves every cited source-unit ID against generated Pāli, Chinese, and Sanskrit source layers. An `established` multi-witness alignment requires an accepted human review. A member marked `coverage: lost_text_marker` must resolve to a source unit that explicitly signals textual loss; the marker cannot be used as a generic stand-in for missing data.
 
 The generated human-readable report is:
 
@@ -296,3 +299,12 @@ The lifespan passage intentionally preserves disagreement:
 - EA 48.4 prose: 84k / 70k / 60k / 50k / 40k / 20k.
 
 No harmonized value is emitted.
+
+### Textual loss as first-class evidence
+
+The DN 14 slice now includes two Sanskrit loss loci from SF 36:
+
+- **Family Name** → `SF 36#p0019`
+- **Bodhi Trees** → `SF 36#p0020`
+
+In both cases the edited Sanskrit source explicitly states that the text is completely lost. The alignment layer keeps those loci in the graph with `coverage: lost_text_marker`, allowing surviving Pāli and Chinese witnesses to remain comparable without inventing Sanskrit wording.
