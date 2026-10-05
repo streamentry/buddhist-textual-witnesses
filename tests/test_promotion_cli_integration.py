@@ -1,3 +1,4 @@
+import copy
 import json
 import subprocess
 import sys
@@ -236,6 +237,75 @@ class PromotionCliIntegrationTests(unittest.TestCase):
         state = json.loads(self.state.read_text(encoding="utf-8"))
         self.assertEqual(state["counts"], {"established": 1})
         self.assertEqual(state["alignments"][0]["derived_status"], "established")
+
+
+    def test_superseded_promoted_review_is_historical_not_current(self):
+        promote_args = (
+            "--reviews",
+            str(self.reviews),
+            "--promotions",
+            str(self.promotions),
+            "--alignment-id",
+            "mw:test",
+            "--review-id",
+            "review:alice:mw-test:1",
+            "--promoter-name",
+            "Maintainer",
+            "--promoter-id",
+            "github:maintainer",
+            "--promoted-at",
+            "2026-10-05T15:00:00Z",
+            "--write",
+        )
+        written = self.run_script("promote_alignment.py", *promote_args)
+        self.assertEqual(written.returncode, 0, written.stderr)
+
+        review_doc = json.loads(self.reviews.read_text(encoding="utf-8"))
+        first = review_doc["reviews"][0]
+        second = copy.deepcopy(first)
+        second["review_id"] = "review:alice:mw-test:2"
+        second["reviewed_at"] = "2026-10-05T16:00:00Z"
+        second["supersedes_review_id"] = first["review_id"]
+        review_doc["reviews"].append(second)
+        self.reviews.write_text(
+            json.dumps(review_doc, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+
+        review_validation = self.run_script(
+            "validate_human_reviews.py",
+            "--reviews",
+            str(self.reviews),
+            "--require-fresh",
+        )
+        self.assertEqual(review_validation.returncode, 0, review_validation.stderr)
+
+        promotion_validation = self.run_script(
+            "validate_promotions.py",
+            "--reviews",
+            str(self.reviews),
+            "--promotions",
+            str(self.promotions),
+            "--require-current-fresh",
+        )
+        self.assertNotEqual(promotion_validation.returncode, 0)
+        self.assertIn("stale or superseded", promotion_validation.stderr)
+
+        built = self.run_script(
+            "build_promotion_state.py",
+            "--reviews",
+            str(self.reviews),
+            "--promotions",
+            str(self.promotions),
+            "--output",
+            str(self.state),
+        )
+        self.assertEqual(built.returncode, 0, built.stderr)
+        state = json.loads(self.state.read_text(encoding="utf-8"))
+        self.assertEqual(state["counts"], {"promotion_required": 1})
+        self.assertEqual(
+            state["alignments"][0]["derived_status"], "promotion_required"
+        )
 
 
 if __name__ == "__main__":
