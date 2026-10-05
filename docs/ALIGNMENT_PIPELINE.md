@@ -231,7 +231,9 @@ The next layer should add stronger signals without weakening the epistemic bound
 
 The alignment layer now has a separate Indic ingestion path. It only materializes witnesses whose **actual edited text** is available in a pinned, reproducible upstream.
 
-For the current first-20 benchmark, the pinned Bilara snapshot exposes segmented Sanskrit text for **SF 36**, a DN 14 witness. Other Sanskrit/SHT witness IDs remain in the crosswalk graph, but are labeled `not_textualized_in_selected_upstream` in this source layer rather than being silently dropped or treated as nonexistent.
+For the current first-20 benchmark, the pinned Bilara snapshot exposes segmented Sanskrit text for **SF 36**, a DN 14 witness. The generated source layer contains **943 SF 36 segments**; **496** retain explicit `<supplied>` editorial markup. No generated segment currently contains `<gap>` or `<unclear>` in this upstream edition snapshot.
+
+The availability audit covers all **61** Sanskrit/SHT witness IDs selected by the first-20 benchmark. Exactly **1** is currently `text_available` from the selected pinned Bilara source and **60** are `not_textualized_in_selected_upstream`. The latter means only “not ingestible from this selected reproducible upstream”, never “no edition exists elsewhere”.
 
 Outputs:
 

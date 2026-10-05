@@ -10,3 +10,5 @@ Files under this directory are reproducible derived data.
 - `alignments/` contains **machine candidates only**. These are not established textual alignments.
 
 Do not hand-edit generated files. Change source configuration, scripts, source pins, curated crosswalks, or the curated human-review layer and rebuild.
+
+Current Indic snapshot: SF 36 contributes 943 edited Sanskrit segments. The availability registry audits all 61 Sanskrit/SHT witness IDs in the first-20 benchmark and keeps unavailable-in-this-upstream distinct from nonexistent.

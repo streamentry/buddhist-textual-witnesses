@@ -164,7 +164,7 @@ Current generated source units:
 - **3,031** Pāli paragraph units
 - **42** benchmark-relevant Chinese discourse segments
 - **2,189** CBETA Chinese text blocks
-- reproducible Indic edited-text units where actual pinned text exists, beginning with **SF 36**
+- **SF 36 (DN 14)** as the first reproducible Sanskrit edited-text witness: **943 segments**, including **496 segments with explicit `<supplied>` editorial markup**
 - Chinese block extraction coverage: **98.01% minimum**, **99.77% mean**
 
 Current machine review queue:
@@ -179,6 +179,8 @@ The 26-entry seed lexicon retrieves the correct model-reviewed DN 1 ↔ DA 21 re
 Alignment records are **many-to-many** so recension-level splitting and compression remain visible.
 
 The first five model-reviewed passage alignments are in `data/alignments/model-reviewed.json` for **DN 1 ↔ DA 21**. They are explicitly `reviewer_type: model` and are not human-established.
+
+The Indic availability audit currently covers all **61** Sanskrit/SHT witness IDs in the first-20 benchmark: **1** has actual edited text in the selected pinned Bilara upstream (SF 36), while **60** are marked `not_textualized_in_selected_upstream`. That status is intentionally narrower than “no edition exists”.
 
 Run:
 
