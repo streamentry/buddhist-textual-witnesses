@@ -1,0 +1,26 @@
+{
+  "id": "k0507",
+  "work_id": "t0825",
+  "title": "佛說甚深大迴向經",
+  "language": "lzh",
+  "script": "Chinese",
+  "witness_type": "edition",
+  "relation_to_work": "complete",
+  "dates": {
+    "composition_estimate": null,
+    "manuscript": null,
+    "translation": null,
+    "catalog_attestation": null,
+    "edition": "Tripiṭaka Koreana canonical witness"
+  },
+  "source": {
+    "project": "Dongguk University Buddhist Studies / Tripiṭaka Koreana",
+    "identifier": "K0507",
+    "url": "https://kabc.dongguk.edu/content/view?dataId=ABC_IT_K0507_T_001",
+    "revision": null,
+    "retrieved": "2026-10-05",
+    "license_note": "Reference metadata; preserve upstream usage terms."
+  },
+  "confidence": "high",
+  "notes": "Korean canonical witness. Catalog identifies the translator as lost/unknown (失譯)."
+}
