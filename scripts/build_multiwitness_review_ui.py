@@ -399,11 +399,15 @@ async function buildReview(alignmentId) {{
   const now = new Date().toISOString();
   const date = now.slice(0,10);
   const stamp = now.replace(/[^0-9]/g,"").slice(0,14);
+  const previous = (alignment.existing_reviews || [])
+    .filter(r => ((r.reviewer || {}).reviewer_id || "") === reviewerId)
+    .slice(-1)[0] || null;
   const review = {{
     review_schema_version: 2,
     review_id: "review:" + slug(reviewerId) + ":" + alignmentId + ":" + stamp,
     case_study_id: DATA.case_study_id,
     alignment_id: alignmentId,
+    supersedes_review_id: previous ? previous.review_id : null,
     reviewer: {{
       reviewer_type: "human",
       name: reviewerName,
