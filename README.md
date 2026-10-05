@@ -196,7 +196,7 @@ The first Pāli–Chinese–Sanskrit vertical slice is now curated under:
 
 `data/case-studies/dn14-mahapadana/alignments.json`
 
-It currently contains **6 model-reviewed multi-witness passage alignments** across:
+It currently contains **9 model-reviewed multi-witness passage alignments** across:
 
 - DN 14 (Pāli)
 - DA 1 (Classical Chinese)
@@ -206,6 +206,8 @@ It currently contains **6 model-reviewed multi-witness passage alignments** acro
 The generated report is `generated/case-studies/dn14-mahapadana.md`.
 
 A particularly useful variant is the seven-Buddha lifespan list: DN 14, SF 36 prose, and DA 1 prose agree on **80k/70k/60k/40k/30k/20k**; DA 1's verse changes Vipassī to **84k**, while EA 48.4 prose gives **84k/70k/60k/50k/40k/20k**. The project preserves all readings rather than harmonizing them.
+
+The slice also models **textual loss as evidence**: SF 36 explicitly marks the *Family Name* and *Bodhi Trees* Sanskrit text as completely lost. Those loci remain aligned through `coverage: lost_text_marker` rather than being omitted or silently reconstructed.
 
 ## Repository layout
 
