@@ -79,6 +79,30 @@ def validate_alignment(
                     f"{actual_witness}, not {expected_witness}"
                 )
 
+        if member.get("coverage") == "lost_text_marker":
+            resolved_rows = [
+                indexes[language][source_id]
+                for source_id in source_ids
+                if source_id in indexes[language]
+            ]
+            if not resolved_rows:
+                errors.append(
+                    f"{aid}/{mid}: lost_text_marker has no resolved source units"
+                )
+            elif not any(
+                "lost" in (
+                    row.get("search_text")
+                    or row.get("text")
+                    or row.get("edition_text")
+                    or ""
+                ).lower()
+                for row in resolved_rows
+            ):
+                errors.append(
+                    f"{aid}/{mid}: lost_text_marker source does not explicitly "
+                    "indicate textual loss"
+                )
+
     if len(languages) < 2:
         errors.append(f"{aid}: alignment must contain at least two languages")
 
