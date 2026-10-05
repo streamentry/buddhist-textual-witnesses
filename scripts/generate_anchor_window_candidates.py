@@ -38,36 +38,92 @@ def norm_lzh(text: str) -> str:
     return re.sub(r"\s+", "", text)
 
 
+def compile_lexicon(
+    entries: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    compiled = []
+    for entry in entries:
+        compiled.append(
+            {
+                **entry,
+                "_pali_forms": [
+                    (form, norm_pali(form))
+                    for form in entry.get("pali", [])
+                ],
+                "_lzh_forms": [
+                    (form, norm_lzh(form))
+                    for form in entry.get("lzh", [])
+                ],
+            }
+        )
+    return compiled
+
+
+def match_lexicon_side(
+    text: str,
+    entries: list[dict[str, Any]],
+    side: str,
+) -> dict[str, str]:
+    if side == "pali":
+        normalized = norm_pali(text)
+        forms_key = "_pali_forms"
+    elif side == "lzh":
+        normalized = norm_lzh(text)
+        forms_key = "_lzh_forms"
+    else:
+        raise ValueError(f"Unsupported lexicon side: {side}")
+
+    hits: dict[str, str] = {}
+    for entry in entries:
+        hit = next(
+            (
+                original
+                for original, normalized_form in entry.get(forms_key, [])
+                if normalized_form in normalized
+            ),
+            None,
+        )
+        if hit:
+            hits[entry["id"]] = hit
+    return hits
+
+
+def signals_from_hits(
+    pali_hits: dict[str, str],
+    chinese_hits: dict[str, str],
+    entries: list[dict[str, Any]],
+) -> tuple[float, list[dict[str, Any]]]:
+    matched = []
+    total = 0.0
+    shared = set(pali_hits) & set(chinese_hits)
+    for entry in entries:
+        entry_id = entry["id"]
+        if entry_id not in shared:
+            continue
+        weight = float(entry.get("weight", 1.0))
+        total += weight
+        matched.append(
+            {
+                "id": entry_id,
+                "pali": pali_hits[entry_id],
+                "lzh": chinese_hits[entry_id],
+                "weight": weight,
+            }
+        )
+    return total, matched
+
+
 def lexicon_signals(
     pali_text: str,
     chinese_text: str,
     entries: list[dict[str, Any]],
 ) -> tuple[float, list[dict[str, Any]]]:
-    p = norm_pali(pali_text)
-    c = norm_lzh(chinese_text)
-    matched = []
-    total = 0.0
-    for entry in entries:
-        p_hit = next(
-            (form for form in entry.get("pali", []) if norm_pali(form) in p),
-            None,
-        )
-        c_hit = next(
-            (form for form in entry.get("lzh", []) if norm_lzh(form) in c),
-            None,
-        )
-        if p_hit and c_hit:
-            weight = float(entry.get("weight", 1.0))
-            total += weight
-            matched.append(
-                {
-                    "id": entry["id"],
-                    "pali": p_hit,
-                    "lzh": c_hit,
-                    "weight": weight,
-                }
-            )
-    return total, matched
+    compiled = compile_lexicon(entries)
+    return signals_from_hits(
+        match_lexicon_side(pali_text, compiled, "pali"),
+        match_lexicon_side(chinese_text, compiled, "lzh"),
+        compiled,
+    )
 
 
 def cumulative_centers(rows: list[dict[str, Any]]) -> dict[str, float]:
@@ -92,22 +148,17 @@ def windows(rows: list[dict[str, Any]], max_width: int) -> list[list[dict[str, A
     return out
 
 
-def score_window(
-    pali_row: dict[str, Any],
-    chinese_window: list[dict[str, Any]],
+def score_window_precomputed(
+    pali_hits: dict[str, str],
+    chinese_hits: dict[str, str],
     p_center: float,
-    c_centers: dict[str, float],
+    c_center: float,
+    window_width: int,
     lexicon: list[dict[str, Any]],
 ) -> tuple[float, dict[str, Any]]:
-    chinese_text = " ".join(row["text"] for row in chinese_window)
-    lexical_weight, anchors = lexicon_signals(
-        pali_row["text"], chinese_text, lexicon
+    lexical_weight, anchors = signals_from_hits(
+        pali_hits, chinese_hits, lexicon
     )
-    first = chinese_window[0]["block_id"]
-    last = chinese_window[-1]["block_id"]
-    c_center = (
-        c_centers[first] + c_centers[last]
-    ) / 2
     position_delta = abs(p_center - c_center)
     position_similarity = max(0.0, 1.0 - position_delta)
 
@@ -121,7 +172,7 @@ def score_window(
         "pali_relative_center": round(p_center, 6),
         "chinese_relative_center": round(c_center, 6),
         "position_delta": round(position_delta, 6),
-        "window_width": len(chinese_window),
+        "window_width": window_width,
     }
 
 
@@ -136,18 +187,44 @@ def candidate_windows(
 ) -> list[dict[str, Any]]:
     p_centers = cumulative_centers(pali_rows)
     c_centers = cumulative_centers(chinese_rows)
-    c_windows = windows(chinese_rows, max_width)
+    compiled_lexicon = compile_lexicon(lexicon)
+
+    pali_hits = {
+        row["unit_id"]: match_lexicon_side(
+            row["text"], compiled_lexicon, "pali"
+        )
+        for row in pali_rows
+    }
+
+    prepared_windows = []
+    for c_window in windows(chinese_rows, max_width):
+        first = c_window[0]["block_id"]
+        last = c_window[-1]["block_id"]
+        c_center = (c_centers[first] + c_centers[last]) / 2
+        chinese_text = " ".join(row["text"] for row in c_window)
+        prepared_windows.append(
+            {
+                "rows": c_window,
+                "center": c_center,
+                "hits": match_lexicon_side(
+                    chinese_text, compiled_lexicon, "lzh"
+                ),
+            }
+        )
+
     out = []
 
     for p_row in pali_rows:
         scored = []
-        for c_window in c_windows:
-            score, signals = score_window(
-                p_row,
-                c_window,
+        for prepared in prepared_windows:
+            c_window = prepared["rows"]
+            score, signals = score_window_precomputed(
+                pali_hits[p_row["unit_id"]],
+                prepared["hits"],
                 p_centers[p_row["unit_id"]],
-                c_centers,
-                lexicon,
+                prepared["center"],
+                len(c_window),
+                compiled_lexicon,
             )
             scored.append((score, c_window, signals))
         scored.sort(
