@@ -6,6 +6,12 @@
   "segments_with_supplied": 496,
   "segments_with_unclear": 0,
   "source_revision": "f5ce35f517ae7c1cd9994c33f62c99860c200064",
+  "unit_count": 396,
+  "unit_types": {
+    "block": 38,
+    "heading": 83,
+    "paragraph": 275
+  },
   "witnesses_with_text": [
     "SF 36"
   ]
