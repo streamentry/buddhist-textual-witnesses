@@ -1,6 +1,8 @@
 {
   "version": 1,
   "case_study_id": "dn14-mahapadana-multiwitness",
+  "policy_version": "human-review-promotion-v1",
+  "review_schema_version": 2,
   "derivation": "Current status is derived from immutable review evidence plus explicit promotion events; case-study rows are never mutated to established.",
   "counts": {
     "model_reviewed": 9
