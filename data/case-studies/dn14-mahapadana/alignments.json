@@ -469,6 +469,220 @@
         "reviewed_on": "2026-10-05",
         "notes": "The numerical disagreement is preserved as witness evidence; no harmonized value is selected."
       }
+    },
+    {
+      "alignment_id": "mw:dn14:caste:07",
+      "work_id": "DN 14",
+      "status": "model_reviewed",
+      "relation_type": "parallel_passage",
+      "scope": "caste_of_the_seven_buddhas",
+      "members": [
+        {
+          "member_id": "pli",
+          "language": "pli",
+          "witness_id": "DN 14",
+          "source_unit_ids": [
+            "DN 14#p0010"
+          ],
+          "coverage": "full",
+          "notes": "First three and the present Buddha are kṣatriya; the middle three are brāhmaṇa."
+        },
+        {
+          "member_id": "da",
+          "language": "lzh",
+          "witness_id": "DA 1",
+          "source_unit_ids": [
+            "DA 1#b0015"
+          ],
+          "coverage": "full",
+          "notes": "Same caste pattern, with clan-name information embedded in the same prose block."
+        },
+        {
+          "member_id": "ea",
+          "language": "lzh",
+          "witness_id": "EA 48.4",
+          "source_unit_ids": [
+            "EA 48.4#b0012"
+          ],
+          "coverage": "full",
+          "notes": "Same caste pattern in a dedicated prose block."
+        },
+        {
+          "member_id": "sf",
+          "language": "san",
+          "witness_id": "SF 36",
+          "source_unit_ids": [
+            "SF 36#p0017"
+          ],
+          "coverage": "full",
+          "notes": "Same caste pattern; all three Sanskrit leaf segments contain supplied reconstruction."
+        }
+      ],
+      "variants": [
+        {
+          "type": "addition",
+          "statement": "DA 1 combines caste and clan-name information in the same prose block, while the selected Pāli, EA 48.4, and SF 36 units here isolate the caste pattern more cleanly.",
+          "member_ids": [
+            "da",
+            "pli",
+            "ea",
+            "sf"
+          ]
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer_type": "model",
+        "reviewer": "GPT-5.6 Sol",
+        "decision": "accepted",
+        "confidence": "high",
+        "reviewed_on": "2026-10-05",
+        "notes": "The caste sequence is stable across the selected witnesses; DA 1 packages extra clan information into the same block."
+      }
+    },
+    {
+      "alignment_id": "mw:dn14:family-name-loss:08",
+      "work_id": "DN 14",
+      "status": "model_reviewed",
+      "relation_type": "recension_divergence",
+      "scope": "family_or_clan_names_with_sanskrit_textual_loss",
+      "members": [
+        {
+          "member_id": "pli",
+          "language": "pli",
+          "witness_id": "DN 14",
+          "source_unit_ids": [
+            "DN 14#p0011"
+          ],
+          "coverage": "full",
+          "notes": "Koṇḍañña for the first three, Kassapa for the middle three, Gotama for the present Buddha."
+        },
+        {
+          "member_id": "da",
+          "language": "lzh",
+          "witness_id": "DA 1",
+          "source_unit_ids": [
+            "DA 1#b0015"
+          ],
+          "coverage": "full",
+          "notes": "Clan names appear in the same prose block as caste."
+        },
+        {
+          "member_id": "ea",
+          "language": "lzh",
+          "witness_id": "EA 48.4",
+          "source_unit_ids": [
+            "EA 48.4#b0015",
+            "EA 48.4#b0018"
+          ],
+          "coverage": "partial",
+          "notes": "EA preserves two distinct nearby clan-name statements that are not identical to each other."
+        },
+        {
+          "member_id": "sf",
+          "language": "san",
+          "witness_id": "SF 36",
+          "source_unit_ids": [
+            "SF 36#p0019"
+          ],
+          "coverage": "lost_text_marker",
+          "notes": "The edited source unit explicitly states that the Sanskrit text is completely lost under the Family Name subsection."
+        }
+      ],
+      "variants": [
+        {
+          "type": "textual_loss",
+          "statement": "SF 36 has no surviving Sanskrit wording for the Family Name subsection in the selected edition; the source unit explicitly marks the text as completely lost.",
+          "member_ids": [
+            "sf"
+          ]
+        },
+        {
+          "type": "structural",
+          "statement": "EA 48.4 preserves more than one nearby clan-name statement, while the selected Pāli and DA 1 prose present one main sequence.",
+          "member_ids": [
+            "ea",
+            "pli",
+            "da"
+          ]
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer_type": "model",
+        "reviewer": "GPT-5.6 Sol",
+        "decision": "accepted",
+        "confidence": "medium_high",
+        "reviewed_on": "2026-10-05",
+        "notes": "Alignment is to the thematic subsection. Sanskrit is represented by an explicit loss marker, not reconstructed wording."
+      }
+    },
+    {
+      "alignment_id": "mw:dn14:bodhi-tree-loss:09",
+      "work_id": "DN 14",
+      "status": "model_reviewed",
+      "relation_type": "parallel_passage",
+      "scope": "bodhi_trees_with_sanskrit_textual_loss",
+      "members": [
+        {
+          "member_id": "pli",
+          "language": "pli",
+          "witness_id": "DN 14",
+          "source_unit_ids": [
+            "DN 14#p0013"
+          ],
+          "coverage": "full",
+          "notes": "Lists the awakening trees for the seven Buddhas."
+        },
+        {
+          "member_id": "da",
+          "language": "lzh",
+          "witness_id": "DA 1",
+          "source_unit_ids": [
+            "DA 1#b0017"
+          ],
+          "coverage": "full",
+          "notes": "Chinese list of awakening trees."
+        },
+        {
+          "member_id": "ea",
+          "language": "lzh",
+          "witness_id": "EA 48.4",
+          "source_unit_ids": [
+            "EA 48.4#b0021"
+          ],
+          "coverage": "full",
+          "notes": "Chinese list of awakening trees."
+        },
+        {
+          "member_id": "sf",
+          "language": "san",
+          "witness_id": "SF 36",
+          "source_unit_ids": [
+            "SF 36#p0020"
+          ],
+          "coverage": "lost_text_marker",
+          "notes": "The edited source unit explicitly states that the Sanskrit text is completely lost under the Bodhi Trees subsection."
+        }
+      ],
+      "variants": [
+        {
+          "type": "textual_loss",
+          "statement": "SF 36 preserves the Bodhi Trees subsection as a locus, but the selected edition marks the Sanskrit text itself as completely lost.",
+          "member_ids": [
+            "sf"
+          ]
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer_type": "model",
+        "reviewer": "GPT-5.6 Sol",
+        "decision": "accepted",
+        "confidence": "high",
+        "reviewed_on": "2026-10-05",
+        "notes": "Pāli and both Chinese witnesses preserve the list; the Sanskrit edition contributes a documented loss locus rather than reconstructed content."
+      }
     }
   ]
 }
