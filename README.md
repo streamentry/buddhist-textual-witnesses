@@ -52,6 +52,31 @@ git submodule update --init --recursive --depth 1
 
 The upstream datasets are large. Expect a multi-gigabyte checkout.
 
+## Build the unified catalog
+
+```bash
+make test
+make catalog
+```
+
+The pipeline filters only the relevant material and emits a deterministic metadata catalog:
+
+```text
+canonical work
+  -> language
+    -> witness
+      -> source + exact revision
+```
+
+Generated outputs live in `catalog/`:
+
+- `catalog.json` — nested work/language/witness graph
+- `catalog.jsonl` — one witness per line
+- `catalog.csv` — spreadsheet-friendly index
+- `stats.json` — counts by source and language
+
+BHS is labeled only when explicit metadata or a reviewed override supports that classification. Similar titles are never automatically treated as the same text. See `docs/CATALOG_PIPELINE.md`.
+
 ## Repository layout
 
 ```text
@@ -60,17 +85,27 @@ The upstream datasets are large. Expect a multi-gigabyte checkout.
 │   ├── suttacentral-bilara/
 │   ├── cbeta-xml-p5/
 │   └── gretil-mirror/
+├── config/
+│   └── catalog.json
 ├── sources/
 │   ├── manifest.yaml
 │   └── lock.json
 ├── schemas/
-│   └── witness.schema.json
+│   ├── witness.schema.json
+│   └── catalog.schema.json
 ├── scripts/
-│   └── fetch_sources.sh
+│   ├── fetch_sources.sh
+│   └── build_catalog.py
 ├── docs/
-│   └── METHODOLOGY.md
+│   ├── METHODOLOGY.md
+│   └── CATALOG_PIPELINE.md
+├── catalog/
+│   └── README.md
+├── tests/
+│   └── test_build_catalog.py
 ├── data/
 │   └── texts/
+├── Makefile
 ├── SOURCES.md
 ├── AGENTS.md
 └── .gitmodules

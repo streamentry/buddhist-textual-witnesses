@@ -1,0 +1,45 @@
+name: Refresh catalog
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch pinned corpora
+        run: ./scripts/fetch_sources.sh
+      - name: Test pipeline
+        run: python -m unittest discover -s tests -v
+      - name: Build catalog
+        run: python scripts/build_catalog.py --strict
+      - uses: actions/upload-artifact@v4
+        with:
+          name: buddhist-textual-witnesses-catalog
+          path: |
+            catalog/catalog.json
+            catalog/catalog.jsonl
+            catalog/catalog.csv
+            catalog/stats.json
+      - name: Commit refreshed catalog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add catalog/catalog.json catalog/catalog.jsonl catalog/catalog.csv catalog/stats.json
+          if git diff --cached --quiet; then
+            echo "Catalog unchanged"
+            exit 0
+          fi
+          git commit -m "Refresh unified textual witness catalog"
+          git push

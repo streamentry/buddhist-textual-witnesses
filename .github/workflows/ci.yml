@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    paths:
+      - "scripts/**"
+      - "tests/**"
+      - "config/**"
+      - "schemas/**"
+      - ".github/workflows/ci.yml"
+  pull_request:
+    paths:
+      - "scripts/**"
+      - "tests/**"
+      - "config/**"
+      - "schemas/**"
+      - ".github/workflows/ci.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m unittest discover -s tests -v

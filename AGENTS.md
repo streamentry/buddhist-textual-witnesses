@@ -16,16 +16,20 @@ This repository supports textual-critical study of Buddhist sources across multi
 8. Prefer stable upstream identifiers over local filenames.
 9. Record uncertainty instead of resolving it by guesswork.
 10. When evidence conflicts, keep both readings and document the disagreement.
+11. Never merge two upstream IDs into one `work_id` solely because their titles look similar. Add a reviewed crosswalk with bibliographic support.
+12. Label a witness `bhs` only from explicit upstream metadata or a reviewed language override, not from heuristic language guessing.
 
 ## Preferred workflow
 
-- Register source.
-- Fetch or link source according to licensing.
-- Preserve raw witness.
+- Register and pin the source.
+- Fetch according to licensing.
+- Preserve raw witness upstream.
+- Build the metadata catalog with `make catalog`.
 - Normalize into a separate derived record.
 - Map parallels with explicit relationship type.
 - Add confidence and bibliographic support.
-- Validate schema before merge.
+- Run `make test` before merge.
+- Rebuild the catalog after source pins, language overrides, or crosswalks change.
 
 ## Current priority
 

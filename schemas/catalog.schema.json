@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Buddhist Textual Witness Unified Catalog",
+  "type": "object",
+  "required": ["schema_version", "source_revisions", "works"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "source_revisions": {
+      "type": "object",
+      "additionalProperties": {"type": "string"}
+    },
+    "works": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["languages"],
+        "properties": {
+          "languages": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {"$ref": "#/$defs/witness"}
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "$defs": {
+    "witness": {
+      "type": "object",
+      "required": [
+        "work_id", "canonical_id", "canonical_namespace", "language", "witness_id",
+        "title", "witness_kind", "source_project", "source_identifier", "source_path",
+        "source_revision", "source_url"
+      ],
+      "properties": {
+        "work_id": {"type": "string"},
+        "canonical_id": {"type": "string"},
+        "canonical_namespace": {"type": "string"},
+        "language": {"enum": ["san", "bhs", "pra", "gdh", "lzh", "pli", "bo", "other"]},
+        "witness_id": {"type": "string"},
+        "title": {"type": "string"},
+        "witness_kind": {"type": "string"},
+        "source_project": {"type": "string"},
+        "source_identifier": {"type": "string"},
+        "source_path": {"type": "string"},
+        "source_revision": {"type": "string"},
+        "source_url": {"type": "string"},
+        "license": {"type": "string"},
+        "notes": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

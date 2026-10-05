@@ -5,11 +5,14 @@
 - [x] Repository architecture
 - [x] Witness metadata schema
 - [x] Provenance and licensing rules
-- [x] SuttaCentral / CBETA fetch bootstrap
+- [x] Pin SuttaCentral, CBETA, and GRETIL as exact upstream revisions
+- [x] Add source revisions to a machine-readable lockfile
+- [x] Unified Buddhist Sanskrit/Prakrit/Āgama catalog pipeline
+- [x] Unit-test catalog filtering and grouping in CI
+- [x] Manual workflow to rebuild and commit the generated catalog
 - [x] First case study: T0825
-- [ ] Pin GRETIL institutional download URLs and checksums
-- [ ] Add source revisions to a machine-readable lockfile
-- [ ] Validate all witness JSON against schema in CI
+- [ ] Validate curated witness JSON against schema in CI
+- [ ] Add reviewed BHS language overrides where scholarship supports them
 
 ## Phase 2 — Early Buddhist parallel graph
 
@@ -19,6 +22,7 @@ Build a small, high-confidence benchmark before scaling.
 - [ ] Add Sanskrit/BHS witnesses where extant
 - [ ] Add Gāndhārī/Prakrit witnesses where extant
 - [ ] Record bibliographic support for every parallel link
+- [ ] Add curated `crosswalks` that group equivalent upstream IDs into shared work IDs
 - [ ] Distinguish exact, partial, shared-passage, and doctrinal parallels
 
 ## Phase 3 — Alignment

@@ -1,0 +1,12 @@
+{
+  "language_overrides": {},
+  "crosswalks": {},
+  "cbeta_agamas": [
+    {"id": "T0001", "path": "T/T01/T01n0001.xml", "title": "長阿含經", "notes": "Dīrgha Āgama"},
+    {"id": "T0026", "path": "T/T01/T01n0026.xml", "title": "中阿含經", "notes": "Madhyama Āgama"},
+    {"id": "T0099", "path": "T/T02/T02n0099.xml", "title": "雜阿含經", "notes": "Saṃyukta Āgama"},
+    {"id": "T0100", "path": "T/T02/T02n0100.xml", "title": "別譯雜阿含經", "notes": "Alternate Saṃyukta Āgama"},
+    {"id": "T0101", "path": "T/T02/T02n0101.xml", "title": "雜阿含經", "notes": "Short Saṃyukta Āgama witness"},
+    {"id": "T0125", "path": "T/T02/T02n0125.xml", "title": "增壹阿含經", "notes": "Ekottarika Āgama"}
+  ]
+}
