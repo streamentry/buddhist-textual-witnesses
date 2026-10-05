@@ -133,6 +133,16 @@ It keeps the top 3 windows. This explicitly supports one-to-many retrieval when 
 
 The current model-reviewed DN 1 ↔ DA 21 batch is used only as a falsification/retrieval diagnostic. The pipeline reports `overlap@3`, `full-cover@3`, and overlap MRR. These metrics do **not** create scholarly confidence.
 
+On the current 18 reviewed Pāli seed units, the 26-entry lexicon/window retriever returns:
+
+```text
+overlap@3:              1.0  (18/18)
+full-cover@3:           1.0  (18/18)
+mean reciprocal rank:  1.0
+```
+
+This is deliberately labeled a **self-consistency sanity check**, not a benchmark accuracy score. The lexicon was itself developed from the DN 1 seed, so the evaluation is not independent and should not be used to claim generalization to other suttas.
+
 Outputs:
 
 ```text

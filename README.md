@@ -170,7 +170,10 @@ Current machine review queue:
 
 - **31** shared-opening-formula candidates
 - **4,468** monotonic structural candidates
+- **13,404** lexicon-assisted 1–3-block window candidates
 - **0** machine candidates treated as established
+
+The 26-entry seed lexicon retrieves the correct model-reviewed DN 1 ↔ DA 21 region in the top 3 for **18/18 seed Pāli units** (`overlap@3 = 1.0`, `full-cover@3 = 1.0`). This is a self-consistency sanity check against the same model-reviewed seed used to design the lexicon, **not** an independent accuracy estimate.
 
 Alignment records are **many-to-many** so recension-level splitting and compression remain visible.
 
@@ -211,6 +214,7 @@ See `docs/ALIGNMENT_PIPELINE.md`.
 │   ├── build_pali_units.py
 │   ├── build_chinese_alignment_units.py
 │   ├── generate_alignment_candidates.py
+│   ├── generate_anchor_window_candidates.py
 │   ├── validate_alignments.py
 │   ├── validate_crosswalks.py
 │   └── render_crosswalks.py

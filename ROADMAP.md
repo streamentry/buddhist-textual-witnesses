@@ -45,8 +45,8 @@ Build a small, high-confidence benchmark before scaling.
 
 - [x] First model-reviewed many-to-many batch: DN 1 ↔ DA 21
 - [ ] First human-reviewed established batch
-- [ ] Add reviewed bilingual anchor lexicon for names, places, formulas, and doctrinal terms
-- [ ] Add candidate windows / sequence alignment stronger than single-block positional ranking
+- [x] Add model-reviewed bilingual retrieval-anchor lexicon for names, formulas, doctrinal terms, and precepts
+- [x] Add lexicon-assisted 1–3-block candidate windows and seed retrieval diagnostics
 - [ ] Add Sanskrit/BHS/Gāndhārī source units where edited text can be reproduced and cited safely
 
 ## Phase 4 — Research interface

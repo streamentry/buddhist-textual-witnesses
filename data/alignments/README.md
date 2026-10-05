@@ -36,3 +36,9 @@ A model review, positional score, shared opening formula, or discourse-level par
 ## Current reviewed batch
 
 `model-reviewed.json` contains the first five source-unit comparisons for **DN 1 ↔ DA 21**. They are deliberately labeled `reviewer_type: model`.
+
+## Seed-retrieval diagnostic
+
+The current 26-entry lexicon plus 1–3-block window retriever recovers all 18 model-reviewed DN 1 seed units within top 3, with full gold-window coverage in top 3.
+
+This is **not an independent benchmark** because the lexicon was informed by the same DN 1 review set. Treat it only as a regression/sanity test that the retriever can express known many-to-many alignments.
