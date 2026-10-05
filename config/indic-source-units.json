@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "sources": {
+    "SF 36": {
+      "work_id": "DN 14",
+      "language": "san",
+      "provider": "SuttaCentral Bilara",
+      "root_path": "root/san/sutta/sf/sf36_root-san.json",
+      "html_path": "html/san/sutta/sf/sf36_html.json",
+      "status": "text_available"
+    }
+  },
+  "policy": {
+    "absent_status": "not_textualized_in_selected_upstream",
+    "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere."
+  }
+}

@@ -32,6 +32,8 @@ This repository supports textual-critical study of Buddhist sources across multi
 24. Positional/length similarity is a review-queue heuristic, not textual evidence. Structural-ranking output may never be promoted directly to `established`.
 25. Bilingual lexicon entries are retrieval anchors only. Never treat a lexicon match as proof of textual descent, translation equivalence in every context, or an established passage alignment.
 26. Retrieval evaluation against model-reviewed seed alignments is a diagnostic, not a human gold standard and not a scholarly confidence score.
+27. For Indic edited texts, preserve upstream editorial markup such as supplied, gap, and unclear annotations in the witness-facing field. Derived plain/search text must never replace the edition text.
+28. `not_textualized_in_selected_upstream` means only that this repository's selected reproducible source layer has no ingestible text for that witness. It is not a claim that no scholarly edition exists.
 
 ## Preferred workflow
 

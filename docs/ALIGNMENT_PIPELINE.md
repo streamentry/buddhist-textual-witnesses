@@ -226,3 +226,25 @@ The next layer should add stronger signals without weakening the epistemic bound
 1. Sanskrit/BHS/Gāndhārī fragment source units where actual edited text is legally and reproducibly available;
 2. stronger sequence/window retrieval with a larger independently reviewed seed set;
 3. a human review UI showing Pāli, Chinese, Indic witnesses, provenance, and variant notes side by side.
+
+## Indic edited-text source units
+
+The alignment layer now has a separate Indic ingestion path. It only materializes witnesses whose **actual edited text** is available in a pinned, reproducible upstream.
+
+For the current first-20 benchmark, the pinned Bilara snapshot exposes segmented Sanskrit text for **SF 36**, a DN 14 witness. Other Sanskrit/SHT witness IDs remain in the crosswalk graph, but are labeled `not_textualized_in_selected_upstream` in this source layer rather than being silently dropped or treated as nonexistent.
+
+Outputs:
+
+```text
+generated/alignment-source/indic/
+├── segments.jsonl
+├── availability.json
+└── manifest.json
+```
+
+Each Indic segment stores two distinct forms:
+
+- `edition_text`: the upstream scholarly edition exactly enough to preserve editorial tags such as `<supplied>`;
+- `search_text`: a derived text-only form for retrieval/alignment.
+
+This distinction is non-negotiable. Reconstructed/supplied letters must remain visible as editorial intervention in the witness layer even if the search layer strips markup.

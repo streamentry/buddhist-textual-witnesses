@@ -47,7 +47,8 @@ Build a small, high-confidence benchmark before scaling.
 - [ ] First human-reviewed established batch
 - [x] Add model-reviewed bilingual retrieval-anchor lexicon for names, formulas, doctrinal terms, and precepts
 - [x] Add lexicon-assisted 1–3-block candidate windows and seed retrieval diagnostics
-- [ ] Add Sanskrit/BHS/Gāndhārī source units where edited text can be reproduced and cited safely
+- [x] Add first reproducible Sanskrit edited-text source units (SF 36) with editorial markup preserved
+- [ ] Expand Sanskrit/BHS/Gāndhārī source units beyond SF 36 where edited text can be reproduced and cited safely
 
 ## Phase 4 — Research interface
 

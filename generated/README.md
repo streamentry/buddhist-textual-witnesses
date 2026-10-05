@@ -6,6 +6,7 @@ Files under this directory are reproducible derived data.
 - `crosswalks/first-20-resolved.json` is generated from the curated crosswalk benchmark plus the Āgama segment index.
 - `alignment-source/pali/` is generated from pinned SuttaCentral Bilara Pāli root + HTML segmentation files.
 - `alignment-source/chinese/` contains normalized source blocks for only the Chinese discourses used by the current benchmark.
+- `alignment-source/indic/` contains only Indic edited-text units actually available from selected pinned upstreams, plus an explicit availability audit for benchmark witness IDs.
 - `alignments/` contains **machine candidates only**. These are not established textual alignments.
 
 Do not hand-edit generated files. Change source configuration, scripts, source pins, curated crosswalks, or the curated human-review layer and rebuild.

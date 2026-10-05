@@ -164,6 +164,7 @@ Current generated source units:
 - **3,031** Pāli paragraph units
 - **42** benchmark-relevant Chinese discourse segments
 - **2,189** CBETA Chinese text blocks
+- reproducible Indic edited-text units where actual pinned text exists, beginning with **SF 36**
 - Chinese block extraction coverage: **98.01% minimum**, **99.77% mean**
 
 Current machine review queue:
@@ -212,6 +213,7 @@ See `docs/ALIGNMENT_PIPELINE.md`.
 │   ├── extract_agama_segment.py
 │   ├── fetch_cbeta_agamas.sh
 │   ├── build_pali_units.py
+│   ├── build_indic_source_units.py
 │   ├── build_chinese_alignment_units.py
 │   ├── generate_alignment_candidates.py
 │   ├── generate_anchor_window_candidates.py
@@ -231,7 +233,7 @@ See `docs/ALIGNMENT_PIPELINE.md`.
 │   └── texts/
 ├── generated/
 │   ├── agama-segments/
-│   ├── alignment-source/
+│   ├── alignment-source/   # Pāli, Chinese, Indic derived source units
 │   ├── alignments/
 │   └── crosswalks/
 ├── tests/

@@ -4,16 +4,21 @@ on:
   push:
     paths:
       - "scripts/fetch_pali_bilara.sh"
+      - "scripts/fetch_indic_bilara.sh"
+      - "scripts/fetch_cbeta_agamas.sh"
       - "scripts/build_pali_units.py"
+      - "scripts/build_indic_source_units.py"
       - "scripts/build_chinese_alignment_units.py"
       - "scripts/generate_alignment_candidates.py"
       - "scripts/generate_anchor_window_candidates.py"
       - "scripts/validate_alignments.py"
       - "schemas/alignment.schema.json"
       - "tests/test_pali_units.py"
+      - "tests/test_indic_source_units.py"
       - "tests/test_chinese_alignment_units.py"
       - "tests/test_alignment_candidates.py"
       - "tests/test_anchor_window_candidates.py"
+      - "config/indic-source-units.json"
       - "data/alignments/**"
       - "generated/crosswalks/first-20-resolved.json"
       - "sources/lock.json"
@@ -44,6 +49,9 @@ jobs:
       - name: Fetch pinned Pāli Bilara files
         run: ./scripts/fetch_pali_bilara.sh .cache/bilara-pali
 
+      - name: Fetch pinned Indic Bilara files
+        run: ./scripts/fetch_indic_bilara.sh .cache/bilara-indic
+
       - name: Fetch pinned CBETA Āgama files
         run: ./scripts/fetch_cbeta_agamas.sh .cache/cbeta-agamas
 
@@ -53,17 +61,45 @@ jobs:
           set -euo pipefail
           BILARA_SHA="$(git ls-files -s upstream/suttacentral-bilara | awk '{print $2}')"
           rm -rf generated/alignment-source/pali
-          python scripts/build_pali_units.py             --bilara-root .cache/bilara-pali             --crosswalks data/crosswalks/first-20.json             --revision "$BILARA_SHA"             --output generated/alignment-source/pali             --strict
+          python scripts/build_pali_units.py \
+            --bilara-root .cache/bilara-pali \
+            --crosswalks data/crosswalks/first-20.json \
+            --revision "$BILARA_SHA" \
+            --output generated/alignment-source/pali \
+            --strict
+
+      - name: Build reproducible Indic source units
+        shell: bash
+        run: |
+          set -euo pipefail
+          BILARA_SHA="$(git ls-files -s upstream/suttacentral-bilara | awk '{print $2}')"
+          rm -rf generated/alignment-source/indic
+          python scripts/build_indic_source_units.py \
+            --bilara-root .cache/bilara-indic \
+            --config config/indic-source-units.json \
+            --crosswalks data/crosswalks/first-20.json \
+            --revision "$BILARA_SHA" \
+            --output generated/alignment-source/indic \
+            --strict
 
       - name: Build Chinese source units
         run: |
           rm -rf generated/alignment-source/chinese
-          python scripts/build_chinese_alignment_units.py             --cbeta-root .cache/cbeta-agamas             --resolved-crosswalks generated/crosswalks/first-20-resolved.json             --output generated/alignment-source/chinese             --strict
+          python scripts/build_chinese_alignment_units.py \
+            --cbeta-root .cache/cbeta-agamas \
+            --resolved-crosswalks generated/crosswalks/first-20-resolved.json \
+            --output generated/alignment-source/chinese \
+            --strict
 
       - name: Generate non-established alignment candidates
         run: |
           rm -rf generated/alignments
-          python scripts/generate_alignment_candidates.py             --pali-units generated/alignment-source/pali/units.jsonl             --chinese-blocks generated/alignment-source/chinese/blocks.jsonl             --resolved-crosswalks generated/crosswalks/first-20-resolved.json             --output generated/alignments             --strict
+          python scripts/generate_alignment_candidates.py \
+            --pali-units generated/alignment-source/pali/units.jsonl \
+            --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+            --resolved-crosswalks generated/crosswalks/first-20-resolved.json \
+            --output generated/alignments \
+            --strict
 
       - name: Generate lexicon-assisted candidate windows
         run: |
@@ -80,7 +116,16 @@ jobs:
 
       - name: Validate epistemic guardrails
         run: |
-          python scripts/validate_alignments.py             --pali-units generated/alignment-source/pali/units.jsonl             --chinese-blocks generated/alignment-source/chinese/blocks.jsonl             --candidates               generated/alignments/shared-formula-candidates.jsonl               generated/alignments/monotonic-candidates.jsonl             --reviewed data/alignments/reviewed.json data/alignments/model-reviewed.json
+          python scripts/validate_alignments.py \
+            --pali-units generated/alignment-source/pali/units.jsonl \
+            --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+            --candidates \
+              generated/alignments/shared-formula-candidates.jsonl \
+              generated/alignments/monotonic-candidates.jsonl \
+              generated/alignments/anchor-window-candidates.jsonl \
+            --reviewed \
+              data/alignments/reviewed.json \
+              data/alignments/model-reviewed.json
 
       - uses: actions/upload-artifact@v4
         with:
@@ -100,5 +145,5 @@ jobs:
             echo "Generated alignment layer is unchanged"
             exit 0
           fi
-          git commit -m "Refresh Pali-Chinese alignment source units"
+          git commit -m "Refresh Pali-Chinese-Indic alignment source units"
           git push

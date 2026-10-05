@@ -1,4 +1,4 @@
-.PHONY: test catalog fetch validate-crosswalks render-crosswalks benchmark agama-fetch agama-segments resolve-crosswalks agama pali-fetch pali-units chinese-alignment-units alignment-candidates anchor-window-candidates validate-alignments alignment
+.PHONY: test catalog fetch validate-crosswalks render-crosswalks benchmark agama-fetch agama-segments resolve-crosswalks agama pali-fetch pali-units indic-fetch indic-units chinese-alignment-units alignment-candidates anchor-window-candidates validate-alignments alignment
 
 fetch:
 	./scripts/fetch_sources.sh
@@ -54,6 +54,20 @@ pali-units: pali-fetch
 		--output generated/alignment-source/pali \
 		--strict
 
+indic-fetch:
+	./scripts/fetch_indic_bilara.sh .cache/bilara-indic
+
+indic-units: indic-fetch
+	@BILARA_SHA="$$(git ls-files -s upstream/suttacentral-bilara | awk '{print $$2}')"; \
+	rm -rf generated/alignment-source/indic; \
+	python3 scripts/build_indic_source_units.py \
+		--bilara-root .cache/bilara-indic \
+		--config config/indic-source-units.json \
+		--crosswalks data/crosswalks/first-20.json \
+		--revision "$$BILARA_SHA" \
+		--output generated/alignment-source/indic \
+		--strict
+
 chinese-alignment-units: agama-fetch
 	rm -rf generated/alignment-source/chinese
 	python3 scripts/build_chinese_alignment_units.py \
@@ -91,7 +105,9 @@ validate-alignments:
 			generated/alignments/shared-formula-candidates.jsonl \
 			generated/alignments/monotonic-candidates.jsonl \
 			generated/alignments/anchor-window-candidates.jsonl \
-		--reviewed data/alignments/reviewed.json data/alignments/model-reviewed.json
+		--reviewed \
+			data/alignments/reviewed.json \
+			data/alignments/model-reviewed.json
 
-alignment: test anchor-window-candidates validate-alignments
-	@echo "Pāli-Chinese alignment source layer and candidate queue are valid."
+alignment: test indic-units anchor-window-candidates validate-alignments
+	@echo "Pāli-Chinese-Indic alignment source layer and candidate queue are valid."
