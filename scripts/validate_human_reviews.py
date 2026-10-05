@@ -7,7 +7,11 @@ import json
 import sys
 from pathlib import Path
 
-from review_promotion_core import build_source_indexes, validate_review_record
+from review_promotion_core import (
+    build_source_indexes,
+    validate_review_lineage,
+    validate_review_record,
+)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -33,7 +37,6 @@ def main(argv: list[str] | None = None) -> int:
         errors.append("review document version must be 2")
 
     seen_review_ids: set[str] = set()
-    seen_reviewer_alignment: set[tuple[str, str]] = set()
     accepted = 0
     fresh_accepted = 0
     stale_accepted = 0
@@ -46,13 +49,6 @@ def main(argv: list[str] | None = None) -> int:
         if rid in seen_review_ids:
             errors.append(f"duplicate review_id: {rid}")
         seen_review_ids.add(rid)
-
-        reviewer = review.get("reviewer") or {}
-        reviewer_key = str(reviewer.get("reviewer_id") or "")
-        pair = (reviewer_key, str(review.get("alignment_id")))
-        if reviewer_key and pair in seen_reviewer_alignment:
-            errors.append(f"{rid}: same reviewer_id has duplicate review for alignment")
-        seen_reviewer_alignment.add(pair)
 
         review_errors, fresh, _ = validate_review_record(
             review,
@@ -68,6 +64,8 @@ def main(argv: list[str] | None = None) -> int:
                 fresh_accepted += 1
             else:
                 stale_accepted += 1
+
+    errors.extend(validate_review_lineage(doc.get("reviews", [])))
 
     if errors:
         for error in errors:
