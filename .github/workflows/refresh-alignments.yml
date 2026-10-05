@@ -126,8 +126,7 @@ jobs:
             --pali-units generated/alignment-source/pali/units.jsonl \
             --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
             --candidates \
-              generated/alignments/
-            generated/case-studies/shared-formula-candidates.jsonl \
+              generated/alignments/shared-formula-candidates.jsonl \
               generated/alignments/monotonic-candidates.jsonl \
               generated/alignments/anchor-window-candidates.jsonl \
             --reviewed \
@@ -157,6 +156,7 @@ jobs:
           path: |
             generated/alignment-source/
             generated/alignments/
+            generated/case-studies/
 
       - name: Commit generated alignment layer
         shell: bash
