@@ -262,7 +262,7 @@ async function buildReview(alignmentId) {
     return;
   }
   const now = new Date().toISOString();
-  const stamp = now.replace(/[^0-9]/g,"").slice(0,14);
+  const stamp = now.replace(/[^0-9]/g,"").slice(0,17);
   const previous = (alignment.existing_reviews || [])
     .filter(r => ((r.reviewer || {}).reviewer_id || "") === reviewerId)
     .slice(-1)[0] || null;
