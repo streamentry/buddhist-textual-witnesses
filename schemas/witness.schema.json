@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Buddhist Textual Witness",
+  "type": "object",
+  "required": [
+    "id",
+    "work_id",
+    "language",
+    "witness_type",
+    "source"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "work_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "pli",
+        "san",
+        "bhs",
+        "pra",
+        "gdh",
+        "lzh",
+        "bo",
+        "other"
+      ]
+    },
+    "script": {
+      "type": "string"
+    },
+    "witness_type": {
+      "type": "string",
+      "enum": [
+        "manuscript",
+        "inscription",
+        "canonical_translation",
+        "edition",
+        "fragment",
+        "reconstruction",
+        "other"
+      ]
+    },
+    "relation_to_work": {
+      "type": "string",
+      "enum": [
+        "complete",
+        "partial",
+        "fragmentary",
+        "parallel",
+        "uncertain"
+      ]
+    },
+    "dates": {
+      "type": "object",
+      "properties": {
+        "composition_estimate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "manuscript": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "translation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "catalog_attestation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "edition": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "project",
+        "identifier"
+      ],
+      "properties": {
+        "project": {
+          "type": "string"
+        },
+        "identifier": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "revision": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "retrieved": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "license_note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low",
+        "unknown"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
