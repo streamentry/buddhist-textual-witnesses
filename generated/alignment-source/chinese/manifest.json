@@ -1,0 +1,556 @@
+{
+  "block_count": 2189,
+  "discourse_count": 42,
+  "discourses": {
+    "DA 1": {
+      "blocks": 131,
+      "coverage": 0.992256,
+      "segment_ordinal": 1,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 1",
+          "work_id": "DN 14"
+        }
+      ]
+    },
+    "DA 13": {
+      "blocks": 73,
+      "coverage": 0.998203,
+      "segment_ordinal": 13,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 13",
+          "work_id": "DN 15"
+        }
+      ]
+    },
+    "DA 14": {
+      "blocks": 67,
+      "coverage": 0.99781,
+      "segment_ordinal": 14,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 14",
+          "work_id": "DN 21"
+        }
+      ]
+    },
+    "DA 15": {
+      "blocks": 35,
+      "coverage": 0.999458,
+      "segment_ordinal": 15,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 15",
+          "work_id": "DN 24"
+        }
+      ]
+    },
+    "DA 19": {
+      "blocks": 30,
+      "coverage": 0.993071,
+      "segment_ordinal": 19,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 19",
+          "work_id": "DN 20"
+        }
+      ]
+    },
+    "DA 2": {
+      "blocks": 395,
+      "coverage": 0.996508,
+      "segment_ordinal": 2,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 2",
+          "work_id": "DN 16"
+        }
+      ]
+    },
+    "DA 20": {
+      "blocks": 123,
+      "coverage": 0.999129,
+      "segment_ordinal": 20,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 20",
+          "work_id": "DN 3"
+        }
+      ]
+    },
+    "DA 21": {
+      "blocks": 43,
+      "coverage": 0.999805,
+      "segment_ordinal": 21,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 21",
+          "work_id": "DN 1"
+        }
+      ]
+    },
+    "DA 22": {
+      "blocks": 48,
+      "coverage": 0.999789,
+      "segment_ordinal": 22,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 22",
+          "work_id": "DN 4"
+        }
+      ]
+    },
+    "DA 23": {
+      "blocks": 82,
+      "coverage": 0.998795,
+      "segment_ordinal": 23,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 23",
+          "work_id": "DN 5"
+        }
+      ]
+    },
+    "DA 24": {
+      "blocks": 25,
+      "coverage": 0.999221,
+      "segment_ordinal": 24,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 24",
+          "work_id": "DN 11"
+        }
+      ]
+    },
+    "DA 25": {
+      "blocks": 34,
+      "coverage": 0.999419,
+      "segment_ordinal": 25,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 25",
+          "work_id": "DN 8"
+        }
+      ]
+    },
+    "DA 27": {
+      "blocks": 66,
+      "coverage": 0.999185,
+      "segment_ordinal": 27,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 27",
+          "work_id": "DN 2"
+        }
+      ]
+    },
+    "DA 29": {
+      "blocks": 55,
+      "coverage": 0.999622,
+      "segment_ordinal": 29,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 29",
+          "work_id": "DN 12"
+        }
+      ]
+    },
+    "DA 3": {
+      "blocks": 68,
+      "coverage": 0.994241,
+      "segment_ordinal": 3,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 3",
+          "work_id": "DN 19"
+        }
+      ]
+    },
+    "DA 4": {
+      "blocks": 27,
+      "coverage": 0.997604,
+      "segment_ordinal": 4,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 4",
+          "work_id": "DN 18"
+        }
+      ]
+    },
+    "DA 5": {
+      "blocks": 30,
+      "coverage": 0.998497,
+      "segment_ordinal": 5,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 5",
+          "work_id": "DN 27"
+        }
+      ]
+    },
+    "DA 6": {
+      "blocks": 31,
+      "coverage": 0.999835,
+      "segment_ordinal": 6,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 6",
+          "work_id": "DN 26"
+        }
+      ]
+    },
+    "DA 7": {
+      "blocks": 106,
+      "coverage": 0.99905,
+      "segment_ordinal": 7,
+      "source_path": "T/T01/T01n0001.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "DA 7",
+          "work_id": "DN 23"
+        }
+      ]
+    },
+    "EA 12.1": {
+      "blocks": 23,
+      "coverage": 0.999235,
+      "segment_ordinal": 83,
+      "source_path": "T/T02/T02n0125.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "EA 12.1",
+          "work_id": "DN 22"
+        }
+      ]
+    },
+    "EA 40.1": {
+      "blocks": 39,
+      "coverage": 0.998442,
+      "segment_ordinal": 355,
+      "source_path": "T/T02/T02n0125.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "EA 40.1",
+          "work_id": "DN 27"
+        }
+      ]
+    },
+    "EA 43.7": {
+      "blocks": 81,
+      "coverage": 0.996099,
+      "segment_ordinal": 386,
+      "source_path": "T/T02/T02n0125.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "EA 43.7",
+          "work_id": "DN 2"
+        }
+      ]
+    },
+    "EA 48.4": {
+      "blocks": 41,
+      "coverage": 0.992434,
+      "segment_ordinal": 431,
+      "source_path": "T/T02/T02n0125.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "EA 48.4",
+          "work_id": "DN 14"
+        }
+      ]
+    },
+    "MA 134": {
+      "blocks": 104,
+      "coverage": 0.997245,
+      "segment_ordinal": 134,
+      "source_path": "T/T01/T01n0026.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "MA 134",
+          "work_id": "DN 21"
+        }
+      ]
+    },
+    "MA 154": {
+      "blocks": 44,
+      "coverage": 0.998929,
+      "segment_ordinal": 154,
+      "source_path": "T/T01/T01n0026.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "MA 154",
+          "work_id": "DN 27"
+        }
+      ]
+    },
+    "MA 31": {
+      "blocks": 28,
+      "coverage": 0.998701,
+      "segment_ordinal": 31,
+      "source_path": "T/T01/T01n0026.xml",
+      "used_by": [
+        {
+          "relation_class": "partial_textual_parallel",
+          "witness_id": "MA 31",
+          "work_id": "DN 22"
+        }
+      ]
+    },
+    "MA 70": {
+      "blocks": 38,
+      "coverage": 0.999634,
+      "segment_ordinal": 70,
+      "source_path": "T/T01/T01n0026.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "MA 70",
+          "work_id": "DN 26"
+        }
+      ]
+    },
+    "MA 71": {
+      "blocks": 118,
+      "coverage": 0.998374,
+      "segment_ordinal": 71,
+      "source_path": "T/T01/T01n0026.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "MA 71",
+          "work_id": "DN 23"
+        }
+      ]
+    },
+    "MA 97": {
+      "blocks": 116,
+      "coverage": 0.998619,
+      "segment_ordinal": 97,
+      "source_path": "T/T01/T01n0026.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "MA 97",
+          "work_id": "DN 15"
+        }
+      ]
+    },
+    "MA 98": {
+      "blocks": 25,
+      "coverage": 0.999254,
+      "segment_ordinal": 98,
+      "source_path": "T/T01/T01n0026.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "MA 98",
+          "work_id": "DN 22"
+        }
+      ]
+    },
+    "SA 1192": {
+      "blocks": 12,
+      "coverage": 0.9801,
+      "segment_ordinal": 1185,
+      "source_path": "T/T02/T02n0099.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "SA 1192",
+          "work_id": "DN 20"
+        }
+      ]
+    },
+    "SA 154": {
+      "blocks": 4,
+      "coverage": 1.0,
+      "segment_ordinal": 152,
+      "source_path": "T/T02/T02n0099.xml",
+      "used_by": [
+        {
+          "relation_class": "partial_textual_parallel",
+          "witness_id": "SA 154–163",
+          "work_id": "DN 2"
+        }
+      ]
+    },
+    "SA 155": {
+      "blocks": 4,
+      "coverage": 1.0,
+      "segment_ordinal": 153,
+      "source_path": "T/T02/T02n0099.xml",
+      "used_by": [
+        {
+          "relation_class": "partial_textual_parallel",
+          "witness_id": "SA 154–163",
+          "work_id": "DN 2"
+        }
+      ]
+    },
+    "SA 156": {
+      "blocks": 4,
+      "coverage": 1.0,
+      "segment_ordinal": 154,
+      "source_path": "T/T02/T02n0099.xml",
+      "used_by": [
+        {
+          "relation_class": "partial_textual_parallel",
+          "witness_id": "SA 154–163",
+          "work_id": "DN 2"
+        }
+      ]
+    },
+    "SA 157": {
+      "blocks": 4,
+      "coverage": 1.0,
+      "segment_ordinal": 155,
+      "source_path": "T/T02/T02n0099.xml",
+      "used_by": [
+        {
+          "relation_class": "partial_textual_parallel",
+          "witness_id": "SA 154–163",
+          "work_id": "DN 2"
+        }
+      ]
+    },
+    "SA 158": {
+      "blocks": 4,
+      "coverage": 1.0,
+      "segment_ordinal": 156,
+      "source_path": "T/T02/T02n0099.xml",
+      "used_by": [
+        {
+          "relation_class": "partial_textual_parallel",
+          "witness_id": "SA 154–163",
+          "work_id": "DN 2"
+        }
+      ]
+    },
+    "SA 159": {
+      "blocks": 4,
+      "coverage": 1.0,
+      "segment_ordinal": 157,
+      "source_path": "T/T02/T02n0099.xml",
+      "used_by": [
+        {
+          "relation_class": "partial_textual_parallel",
+          "witness_id": "SA 154–163",
+          "work_id": "DN 2"
+        }
+      ]
+    },
+    "SA 160": {
+      "blocks": 4,
+      "coverage": 1.0,
+      "segment_ordinal": 158,
+      "source_path": "T/T02/T02n0099.xml",
+      "used_by": [
+        {
+          "relation_class": "partial_textual_parallel",
+          "witness_id": "SA 154–163",
+          "work_id": "DN 2"
+        }
+      ]
+    },
+    "SA 161": {
+      "blocks": 4,
+      "coverage": 1.0,
+      "segment_ordinal": 159,
+      "source_path": "T/T02/T02n0099.xml",
+      "used_by": [
+        {
+          "relation_class": "partial_textual_parallel",
+          "witness_id": "SA 154–163",
+          "work_id": "DN 2"
+        }
+      ]
+    },
+    "SA 162": {
+      "blocks": 4,
+      "coverage": 1.0,
+      "segment_ordinal": 160,
+      "source_path": "T/T02/T02n0099.xml",
+      "used_by": [
+        {
+          "relation_class": "partial_textual_parallel",
+          "witness_id": "SA 154–163",
+          "work_id": "DN 2"
+        }
+      ]
+    },
+    "SA 163": {
+      "blocks": 4,
+      "coverage": 1.0,
+      "segment_ordinal": 161,
+      "source_path": "T/T02/T02n0099.xml",
+      "used_by": [
+        {
+          "relation_class": "partial_textual_parallel",
+          "witness_id": "SA 154–163",
+          "work_id": "DN 2"
+        }
+      ]
+    },
+    "SA2 105": {
+      "blocks": 11,
+      "coverage": 0.984032,
+      "segment_ordinal": 105,
+      "source_path": "T/T02/T02n0100.xml",
+      "used_by": [
+        {
+          "relation_class": "full_textual_parallel",
+          "witness_id": "SA2 105",
+          "work_id": "DN 20"
+        }
+      ]
+    }
+  },
+  "errors": [],
+  "mean_coverage": 0.997681,
+  "minimum_coverage": 0.9801,
+  "schema_version": 1
+}

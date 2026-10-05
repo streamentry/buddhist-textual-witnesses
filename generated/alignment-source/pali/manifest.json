@@ -1,0 +1,231 @@
+{
+  "errors": [],
+  "leaf_segment_count": 9990,
+  "paragraph_count": 3031,
+  "schema_version": 1,
+  "source_revision": "f5ce35f517ae7c1cd9994c33f62c99860c200064",
+  "unit_count": 3345,
+  "work_count": 20,
+  "works": {
+    "DN 1": {
+      "first_segment": "dn1:0.1",
+      "last_segment": "dn1:3.74.7",
+      "leaf_segments": 662,
+      "unit_types": {
+        "heading": 25,
+        "metadata": 1,
+        "paragraph": 223
+      },
+      "units": 249
+    },
+    "DN 11": {
+      "first_segment": "dn11:0.1",
+      "last_segment": "dn11:85.30",
+      "leaf_segments": 199,
+      "unit_types": {
+        "heading": 6,
+        "metadata": 1,
+        "paragraph": 47
+      },
+      "units": 54
+    },
+    "DN 12": {
+      "first_segment": "dn12:0.1",
+      "last_segment": "dn12:78.8",
+      "leaf_segments": 189,
+      "unit_types": {
+        "heading": 4,
+        "metadata": 1,
+        "paragraph": 59
+      },
+      "units": 64
+    },
+    "DN 14": {
+      "first_segment": "dn14:0.1",
+      "last_segment": "dn14:3.33.7",
+      "leaf_segments": 851,
+      "unit_types": {
+        "heading": 18,
+        "metadata": 1,
+        "paragraph": 255
+      },
+      "units": 274
+    },
+    "DN 15": {
+      "first_segment": "dn15:0.1",
+      "last_segment": "dn15:36.6",
+      "leaf_segments": 277,
+      "unit_types": {
+        "heading": 7,
+        "metadata": 1,
+        "paragraph": 121
+      },
+      "units": 129
+    },
+    "DN 16": {
+      "first_segment": "dn16:0.1",
+      "last_segment": "dn16:6.28.21",
+      "leaf_segments": 1664,
+      "unit_types": {
+        "heading": 41,
+        "metadata": 1,
+        "paragraph": 559
+      },
+      "units": 601
+    },
+    "DN 18": {
+      "first_segment": "dn18:0.1",
+      "last_segment": "dn18:29.5",
+      "leaf_segments": 299,
+      "unit_types": {
+        "heading": 10,
+        "metadata": 1,
+        "paragraph": 80
+      },
+      "units": 91
+    },
+    "DN 19": {
+      "first_segment": "dn19:0.1",
+      "last_segment": "dn19:62.8",
+      "leaf_segments": 559,
+      "unit_types": {
+        "heading": 15,
+        "metadata": 1,
+        "paragraph": 156
+      },
+      "units": 172
+    },
+    "DN 2": {
+      "first_segment": "dn2:0.1",
+      "last_segment": "dn2:102.7",
+      "leaf_segments": 650,
+      "unit_types": {
+        "heading": 37,
+        "metadata": 1,
+        "paragraph": 152
+      },
+      "units": 190
+    },
+    "DN 20": {
+      "first_segment": "dn20:0.1",
+      "last_segment": "dn20:22.15",
+      "leaf_segments": 337,
+      "unit_types": {
+        "heading": 2,
+        "metadata": 1,
+        "paragraph": 80
+      },
+      "units": 83
+    },
+    "DN 21": {
+      "first_segment": "dn21:0.1",
+      "last_segment": "dn21:2.10.14",
+      "leaf_segments": 515,
+      "unit_types": {
+        "heading": 8,
+        "metadata": 1,
+        "paragraph": 160
+      },
+      "units": 169
+    },
+    "DN 22": {
+      "first_segment": "dn22:0.1",
+      "last_segment": "dn22:22.28",
+      "leaf_segments": 454,
+      "unit_types": {
+        "heading": 20,
+        "metadata": 1,
+        "paragraph": 162
+      },
+      "units": 183
+    },
+    "DN 23": {
+      "first_segment": "dn23:0.1",
+      "last_segment": "dn23:35.7",
+      "leaf_segments": 715,
+      "unit_types": {
+        "heading": 21,
+        "metadata": 1,
+        "paragraph": 189
+      },
+      "units": 211
+    },
+    "DN 24": {
+      "first_segment": "dn24:0.1",
+      "last_segment": "dn24:2.21.17",
+      "leaf_segments": 581,
+      "unit_types": {
+        "heading": 7,
+        "metadata": 1,
+        "paragraph": 154
+      },
+      "units": 162
+    },
+    "DN 26": {
+      "first_segment": "dn26:0.1",
+      "last_segment": "dn26:28.32",
+      "leaf_segments": 355,
+      "unit_types": {
+        "heading": 12,
+        "metadata": 1,
+        "paragraph": 92
+      },
+      "units": 105
+    },
+    "DN 27": {
+      "first_segment": "dn27:0.1",
+      "last_segment": "dn27:32.14",
+      "leaf_segments": 323,
+      "unit_types": {
+        "heading": 16,
+        "metadata": 1,
+        "paragraph": 73
+      },
+      "units": 90
+    },
+    "DN 3": {
+      "first_segment": "dn3:0.1",
+      "last_segment": "dn3:2.22.9",
+      "leaf_segments": 437,
+      "unit_types": {
+        "heading": 15,
+        "metadata": 1,
+        "paragraph": 170
+      },
+      "units": 186
+    },
+    "DN 4": {
+      "first_segment": "dn4:0.1",
+      "last_segment": "dn4:27.2",
+      "leaf_segments": 297,
+      "unit_types": {
+        "heading": 8,
+        "metadata": 1,
+        "paragraph": 89
+      },
+      "units": 98
+    },
+    "DN 5": {
+      "first_segment": "dn5:0.1",
+      "last_segment": "dn5:30.11",
+      "leaf_segments": 374,
+      "unit_types": {
+        "heading": 14,
+        "metadata": 1,
+        "paragraph": 145
+      },
+      "units": 160
+    },
+    "DN 8": {
+      "first_segment": "dn8:0.1",
+      "last_segment": "dn8:24.8",
+      "leaf_segments": 252,
+      "unit_types": {
+        "heading": 8,
+        "metadata": 1,
+        "paragraph": 65
+      },
+      "units": 74
+    }
+  }
+}

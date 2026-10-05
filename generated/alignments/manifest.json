@@ -1,0 +1,353 @@
+{
+  "epistemic_rule": "Generated candidates are not established alignments. Human review is required before a candidate may be promoted.",
+  "errors": [],
+  "established_alignments": 0,
+  "monotonic_candidates": 4468,
+  "pair_count": 31,
+  "pairs": {
+    "DN 1 ↔ DA 21": {
+      "chinese_blocks": 43,
+      "chinese_segments": [
+        "DA 21"
+      ],
+      "chinese_witness_id": "DA 21",
+      "monotonic_candidates": 223,
+      "pali_paragraphs": 223,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 1"
+    },
+    "DN 11 ↔ DA 24": {
+      "chinese_blocks": 25,
+      "chinese_segments": [
+        "DA 24"
+      ],
+      "chinese_witness_id": "DA 24",
+      "monotonic_candidates": 47,
+      "pali_paragraphs": 47,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 11"
+    },
+    "DN 12 ↔ DA 29": {
+      "chinese_blocks": 55,
+      "chinese_segments": [
+        "DA 29"
+      ],
+      "chinese_witness_id": "DA 29",
+      "monotonic_candidates": 59,
+      "pali_paragraphs": 59,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 12"
+    },
+    "DN 14 ↔ DA 1": {
+      "chinese_blocks": 131,
+      "chinese_segments": [
+        "DA 1"
+      ],
+      "chinese_witness_id": "DA 1",
+      "monotonic_candidates": 255,
+      "pali_paragraphs": 255,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 14"
+    },
+    "DN 14 ↔ EA 48.4": {
+      "chinese_blocks": 41,
+      "chinese_segments": [
+        "EA 48.4"
+      ],
+      "chinese_witness_id": "EA 48.4",
+      "monotonic_candidates": 255,
+      "pali_paragraphs": 255,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 14"
+    },
+    "DN 15 ↔ DA 13": {
+      "chinese_blocks": 73,
+      "chinese_segments": [
+        "DA 13"
+      ],
+      "chinese_witness_id": "DA 13",
+      "monotonic_candidates": 121,
+      "pali_paragraphs": 121,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 15"
+    },
+    "DN 15 ↔ MA 97": {
+      "chinese_blocks": 116,
+      "chinese_segments": [
+        "MA 97"
+      ],
+      "chinese_witness_id": "MA 97",
+      "monotonic_candidates": 121,
+      "pali_paragraphs": 121,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 15"
+    },
+    "DN 16 ↔ DA 2": {
+      "chinese_blocks": 395,
+      "chinese_segments": [
+        "DA 2"
+      ],
+      "chinese_witness_id": "DA 2",
+      "monotonic_candidates": 559,
+      "pali_paragraphs": 559,
+      "shared_formula_candidates": 2,
+      "work_id": "DN 16"
+    },
+    "DN 18 ↔ DA 4": {
+      "chinese_blocks": 27,
+      "chinese_segments": [
+        "DA 4"
+      ],
+      "chinese_witness_id": "DA 4",
+      "monotonic_candidates": 80,
+      "pali_paragraphs": 80,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 18"
+    },
+    "DN 19 ↔ DA 3": {
+      "chinese_blocks": 68,
+      "chinese_segments": [
+        "DA 3"
+      ],
+      "chinese_witness_id": "DA 3",
+      "monotonic_candidates": 156,
+      "pali_paragraphs": 156,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 19"
+    },
+    "DN 2 ↔ DA 27": {
+      "chinese_blocks": 66,
+      "chinese_segments": [
+        "DA 27"
+      ],
+      "chinese_witness_id": "DA 27",
+      "monotonic_candidates": 152,
+      "pali_paragraphs": 152,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 2"
+    },
+    "DN 2 ↔ EA 43.7": {
+      "chinese_blocks": 81,
+      "chinese_segments": [
+        "EA 43.7"
+      ],
+      "chinese_witness_id": "EA 43.7",
+      "monotonic_candidates": 152,
+      "pali_paragraphs": 152,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 2"
+    },
+    "DN 20 ↔ DA 19": {
+      "chinese_blocks": 30,
+      "chinese_segments": [
+        "DA 19"
+      ],
+      "chinese_witness_id": "DA 19",
+      "monotonic_candidates": 80,
+      "pali_paragraphs": 80,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 20"
+    },
+    "DN 20 ↔ SA 1192": {
+      "chinese_blocks": 12,
+      "chinese_segments": [
+        "SA 1192"
+      ],
+      "chinese_witness_id": "SA 1192",
+      "monotonic_candidates": 80,
+      "pali_paragraphs": 80,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 20"
+    },
+    "DN 20 ↔ SA2 105": {
+      "chinese_blocks": 11,
+      "chinese_segments": [
+        "SA2 105"
+      ],
+      "chinese_witness_id": "SA2 105",
+      "monotonic_candidates": 80,
+      "pali_paragraphs": 80,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 20"
+    },
+    "DN 21 ↔ DA 14": {
+      "chinese_blocks": 67,
+      "chinese_segments": [
+        "DA 14"
+      ],
+      "chinese_witness_id": "DA 14",
+      "monotonic_candidates": 160,
+      "pali_paragraphs": 160,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 21"
+    },
+    "DN 21 ↔ MA 134": {
+      "chinese_blocks": 104,
+      "chinese_segments": [
+        "MA 134"
+      ],
+      "chinese_witness_id": "MA 134",
+      "monotonic_candidates": 160,
+      "pali_paragraphs": 160,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 21"
+    },
+    "DN 22 ↔ EA 12.1": {
+      "chinese_blocks": 23,
+      "chinese_segments": [
+        "EA 12.1"
+      ],
+      "chinese_witness_id": "EA 12.1",
+      "monotonic_candidates": 162,
+      "pali_paragraphs": 162,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 22"
+    },
+    "DN 22 ↔ MA 98": {
+      "chinese_blocks": 25,
+      "chinese_segments": [
+        "MA 98"
+      ],
+      "chinese_witness_id": "MA 98",
+      "monotonic_candidates": 162,
+      "pali_paragraphs": 162,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 22"
+    },
+    "DN 23 ↔ DA 7": {
+      "chinese_blocks": 106,
+      "chinese_segments": [
+        "DA 7"
+      ],
+      "chinese_witness_id": "DA 7",
+      "monotonic_candidates": 189,
+      "pali_paragraphs": 189,
+      "shared_formula_candidates": 0,
+      "work_id": "DN 23"
+    },
+    "DN 23 ↔ MA 71": {
+      "chinese_blocks": 118,
+      "chinese_segments": [
+        "MA 71"
+      ],
+      "chinese_witness_id": "MA 71",
+      "monotonic_candidates": 189,
+      "pali_paragraphs": 189,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 23"
+    },
+    "DN 24 ↔ DA 15": {
+      "chinese_blocks": 35,
+      "chinese_segments": [
+        "DA 15"
+      ],
+      "chinese_witness_id": "DA 15",
+      "monotonic_candidates": 154,
+      "pali_paragraphs": 154,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 24"
+    },
+    "DN 26 ↔ DA 6": {
+      "chinese_blocks": 31,
+      "chinese_segments": [
+        "DA 6"
+      ],
+      "chinese_witness_id": "DA 6",
+      "monotonic_candidates": 92,
+      "pali_paragraphs": 92,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 26"
+    },
+    "DN 26 ↔ MA 70": {
+      "chinese_blocks": 38,
+      "chinese_segments": [
+        "MA 70"
+      ],
+      "chinese_witness_id": "MA 70",
+      "monotonic_candidates": 92,
+      "pali_paragraphs": 92,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 26"
+    },
+    "DN 27 ↔ DA 5": {
+      "chinese_blocks": 30,
+      "chinese_segments": [
+        "DA 5"
+      ],
+      "chinese_witness_id": "DA 5",
+      "monotonic_candidates": 73,
+      "pali_paragraphs": 73,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 27"
+    },
+    "DN 27 ↔ EA 40.1": {
+      "chinese_blocks": 39,
+      "chinese_segments": [
+        "EA 40.1"
+      ],
+      "chinese_witness_id": "EA 40.1",
+      "monotonic_candidates": 73,
+      "pali_paragraphs": 73,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 27"
+    },
+    "DN 27 ↔ MA 154": {
+      "chinese_blocks": 44,
+      "chinese_segments": [
+        "MA 154"
+      ],
+      "chinese_witness_id": "MA 154",
+      "monotonic_candidates": 73,
+      "pali_paragraphs": 73,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 27"
+    },
+    "DN 3 ↔ DA 20": {
+      "chinese_blocks": 123,
+      "chinese_segments": [
+        "DA 20"
+      ],
+      "chinese_witness_id": "DA 20",
+      "monotonic_candidates": 170,
+      "pali_paragraphs": 170,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 3"
+    },
+    "DN 4 ↔ DA 22": {
+      "chinese_blocks": 48,
+      "chinese_segments": [
+        "DA 22"
+      ],
+      "chinese_witness_id": "DA 22",
+      "monotonic_candidates": 89,
+      "pali_paragraphs": 89,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 4"
+    },
+    "DN 5 ↔ DA 23": {
+      "chinese_blocks": 82,
+      "chinese_segments": [
+        "DA 23"
+      ],
+      "chinese_witness_id": "DA 23",
+      "monotonic_candidates": 145,
+      "pali_paragraphs": 145,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 5"
+    },
+    "DN 8 ↔ DA 25": {
+      "chinese_blocks": 34,
+      "chinese_segments": [
+        "DA 25"
+      ],
+      "chinese_witness_id": "DA 25",
+      "monotonic_candidates": 65,
+      "pali_paragraphs": 65,
+      "shared_formula_candidates": 1,
+      "work_id": "DN 8"
+    }
+  },
+  "schema_version": 1,
+  "shared_formula_candidates": 31,
+  "status": "machine_candidates_only"
+}
