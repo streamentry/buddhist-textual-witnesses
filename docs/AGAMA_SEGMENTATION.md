@@ -36,6 +36,13 @@ Use the **visible leading number in the `mulu` text** as the canonical discourse
 
 This matters for T0099. CBETA has 1,355 discourse nodes, but visible canonical numbering extends to SA 1362 because seven numbers are absent. Late in the file, internal `mulu/@n` and visible numbering diverge.
 
+
+For the pinned 2026.R2 witness, the missing canonical numbers are:
+
+```text
+141, 144, 756, 757, 773, 774, 812
+```
+
 ### EA
 
 EA numbering is local to a `品` chapter. The canonical ID is:
@@ -144,3 +151,28 @@ Ranges such as `SA 154–163` are expanded into individual segment records and f
 ## Epistemic boundary
 
 Segmentation identifies **where a discourse lives in the pinned Chinese witness**. It does not by itself prove that a Pāli and Chinese discourse are exact textual equivalents. Parallel classification continues to come from the curated crosswalk evidence layer.
+
+## Verified benchmark resolution
+
+The first-20 curated benchmark currently contains **33** Chinese collection references in the DA/MA/SA/SA2/EA namespaces. Strict resolution against the generated index produced:
+
+```text
+collection_witnesses: 33
+resolved_witnesses:   33
+resolved_segments:    42
+unresolved_witnesses: 0
+```
+
+The segment count is larger than the witness count because ranges such as `SA 154–163` expand to individual discourse segments.
+
+## Verified source revision
+
+All generated records in the current committed snapshot derive from:
+
+```text
+CBETA XML-P5
+commit dbdea41071e1e260ad84b72faefd4587333cf76d
+release lineage: 2026.R2
+```
+
+Changing the upstream pin requires regenerating the metadata and re-verifying the structural fingerprints.

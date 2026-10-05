@@ -109,6 +109,51 @@ make benchmark
 
 The benchmark deliberately uses `full_textual_parallel`, not `exact_parallel`. Independent recensions may share a common ancestor while differing in wording and structure.
 
+
+## Exact CBETA Āgama discourse segments
+
+The five principal Chinese Āgama containers are now segmented into reproducible discourse-level records against the pinned CBETA 2026.R2 source:
+
+| Collection | Container | Canonical segments | Notes |
+|---|---|---:|---|
+| DA | T0001 | 30 | DA 1–30 |
+| MA | T0026 | 222 | MA 1–222 |
+| SA | T0099 | 1,355 | SA numbering reaches 1362 with seven missing numbers |
+| SA2 | T0100 | 364 | discourse divs are encoded as `type="other"` in this source |
+| EA | T0125 | 471 | plus one explicitly labelled volume-end supplement |
+
+**2,443 structural segments = 2,442 canonical discourse segments + 1 supplement.**
+
+The seven absent SA canonical numbers in the pinned witness are:
+
+`141, 144, 756, 757, 773, 774, 812`.
+
+Generated metadata is under `generated/agama-segments/`. It does not duplicate the raw Chinese corpus. Each segment records the exact CBETA commit, source path, structural XPath, Taishō line span, juan span, structural hash, and normalized-text hash.
+
+The first 20 benchmark crosswalks are also fully resolved:
+
+- **33** DA/MA/SA/SA2/EA witness references
+- **42** exact local segments after range expansion
+- **0 unresolved**
+
+See `generated/crosswalks/first-20-resolved.json` and `docs/AGAMA_SEGMENTATION.md`.
+
+Build and verify locally:
+
+```bash
+make agama
+```
+
+Extract one source segment on demand:
+
+```bash
+python3 scripts/extract_agama_segment.py \
+  --cbeta-root .cache/cbeta-agamas \
+  --segments generated/agama-segments \
+  --id "DA 21" \
+  --format text
+```
+
 ## Repository layout
 
 ```text
@@ -129,16 +174,24 @@ The benchmark deliberately uses `full_textual_parallel`, not `exact_parallel`. I
 ├── scripts/
 │   ├── fetch_sources.sh
 │   ├── build_catalog.py
+│   ├── build_agama_segments.py
+│   ├── resolve_crosswalk_segments.py
+│   ├── extract_agama_segment.py
+│   ├── fetch_cbeta_agamas.sh
 │   ├── validate_crosswalks.py
 │   └── render_crosswalks.py
 ├── docs/
 │   ├── METHODOLOGY.md
-│   └── CATALOG_PIPELINE.md
+│   ├── CATALOG_PIPELINE.md
+│   └── AGAMA_SEGMENTATION.md
 ├── catalog/
 │   └── README.md
 ├── data/
 │   ├── crosswalks/
 │   └── texts/
+├── generated/
+│   ├── agama-segments/
+│   └── crosswalks/
 ├── tests/
 ├── Makefile
 ├── SOURCES.md

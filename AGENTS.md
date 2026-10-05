@@ -22,6 +22,10 @@ This repository supports textual-critical study of Buddhist sources across multi
 14. A fragmentary manuscript witness is not automatically a `partial_textual_parallel`. Fragmentary describes physical/textual survival; partial describes the relationship between discourse contents.
 15. A Chinese discourse ID such as `DA 21` must not be collapsed into its whole canonical container `T0001`.
 16. Cross-tradition witnesses must retain their tradition label. In particular, the DN 23 Prākrit Paesi witness must remain marked as Jain.
+17. Chinese Āgama discourse IDs must resolve through generated segment metadata, not by assuming the whole Taishō container is the discourse.
+18. For T0099, canonical SA numbering comes from visible `mulu` text, not `mulu/@n`.
+19. For T0125, a `mulu type="經"` outside every `品` is not automatically an EA canonical discourse; preserve source-labelled supplements separately.
+20. Do not hand-edit files under `generated/`; regenerate them from pinned upstream data and curated inputs.
 
 ## Preferred workflow
 

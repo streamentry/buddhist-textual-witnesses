@@ -26,8 +26,11 @@ Build a small, high-confidence benchmark before scaling.
 - [x] Distinguish full, partial, fragmentary, shared-passage, and doctrinal relations
 - [x] Add automated validation preventing “exact parallel” overclaiming
 - [x] Preserve Chinese discourse IDs separately from their Taishō container IDs
-- [ ] Segment DA/MA/SA/EA CBETA XML into individual discourse records
-- [ ] Resolve the first 20 crosswalk IDs directly to local segment-level source paths
+- [x] Segment DA/MA/SA/SA2/EA CBETA XML into individual discourse records
+- [x] Resolve the first 20 crosswalk IDs directly to local segment-level source paths
+- [x] Verify 2,443 CBETA structural segments against pinned 2026.R2 source
+- [x] Record exact XPath, Taishō line spans, juan spans, and hashes
+- [x] Resolve all 33 collection references in the first-20 benchmark to 42 local segments with 0 unresolved
 - [ ] Extend the benchmark to 50 high-confidence works after the segment layer is stable
 
 ## Phase 3 — Alignment
