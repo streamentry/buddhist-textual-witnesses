@@ -1,0 +1,79 @@
+{
+  "collections": {
+    "DA": {
+      "canonical_first": "DA 1",
+      "canonical_last": "DA 30",
+      "canonical_segments": 30,
+      "container_id": "T0001",
+      "file": "da.jsonl",
+      "missing_numbers": [],
+      "segments": 30,
+      "source_path": "T/T01/T01n0001.xml",
+      "supplement_ids": [],
+      "supplements": 0
+    },
+    "EA": {
+      "canonical_first": "EA 2.1",
+      "canonical_last": "EA 52.9",
+      "canonical_segments": 471,
+      "container_id": "T0125",
+      "file": "ea.jsonl",
+      "missing_numbers": [],
+      "segments": 472,
+      "source_path": "T/T02/T02n0125.xml",
+      "supplement_ids": [
+        "T0125 supplement 1"
+      ],
+      "supplements": 1
+    },
+    "MA": {
+      "canonical_first": "MA 1",
+      "canonical_last": "MA 222",
+      "canonical_segments": 222,
+      "container_id": "T0026",
+      "file": "ma.jsonl",
+      "missing_numbers": [],
+      "segments": 222,
+      "source_path": "T/T01/T01n0026.xml",
+      "supplement_ids": [],
+      "supplements": 0
+    },
+    "SA": {
+      "canonical_first": "SA 1",
+      "canonical_last": "SA 1362",
+      "canonical_segments": 1355,
+      "container_id": "T0099",
+      "file": "sa.jsonl",
+      "missing_numbers": [
+        141,
+        144,
+        756,
+        757,
+        773,
+        774,
+        812
+      ],
+      "segments": 1355,
+      "source_path": "T/T02/T02n0099.xml",
+      "supplement_ids": [],
+      "supplements": 0
+    },
+    "SA2": {
+      "canonical_first": "SA2 1",
+      "canonical_last": "SA2 364",
+      "canonical_segments": 364,
+      "container_id": "T0100",
+      "file": "sa2.jsonl",
+      "missing_numbers": [],
+      "segments": 364,
+      "source_path": "T/T02/T02n0100.xml",
+      "supplement_ids": [],
+      "supplements": 0
+    }
+  },
+  "schema_version": 1,
+  "source_revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+  "total_canonical_segments": 2442,
+  "total_segments": 2443,
+  "total_supplements": 1
+}

@@ -1,0 +1,3921 @@
+{
+  "created": "2026-10-05",
+  "crosswalks": [
+    {
+      "anchor": {
+        "canonical_id": "DN 1",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn1",
+        "title": "Brahmajāla"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn1-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn1.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "T 21",
+            "confidence": "high",
+            "container_id": "T0021",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "DA 21",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 21",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 21
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（二一）第三分梵動經第二",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 3,
+                      "text": "3 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "014",
+                    "end_lb": "0094a13",
+                    "end_ref": "T01n0001_p0094a13",
+                    "normalized_text_chars": 10273,
+                    "normalized_text_sha256": "77d670cc0e0dda5397cead8c5cc466ac2e73d9754f274c2bff5b7f1371baae7f",
+                    "segment_ordinal": 21,
+                    "start_juan": "014",
+                    "start_lb": "0088b12",
+                    "start_ref": "T01n0001_p0088b12",
+                    "xml_sha256": "76eada3a66746b01bd97cc655f48cf5e49f8724d94678adf9e2dcf17cab3a087",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[21]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "梵動經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": []
+      },
+      "id": "work:dn1",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SF 41",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 48",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SHT Sutta 16",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [
+        {
+          "canonical_id": "T 1548.126",
+          "confidence": "high",
+          "container_id": "T1548.126",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "lzh",
+          "relation_class": "partial_textual_parallel"
+        }
+      ],
+      "rank": 1,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 2",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn2",
+        "title": "Sāmaññaphala"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn2-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn2.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "EA 43.7",
+            "confidence": "high",
+            "container_id": "T0125",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "EA 43.7",
+                  "catalog": {
+                    "file": "ea.jsonl",
+                    "line": 386
+                  },
+                  "container_id": "T0125",
+                  "head_text": "（七）",
+                  "hierarchy": [
+                    {
+                      "div_type": "pin",
+                      "mulu_type": "品",
+                      "number": 43,
+                      "text": "43 馬血天子問八政品"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "039",
+                    "end_lb": "0764b12",
+                    "end_ref": "T02n0125_p0764b12",
+                    "normalized_text_chars": 4101,
+                    "normalized_text_sha256": "73ac5bf2e621d84525f2338fc447e8f3ea0066e217c07f0eb226b5ea7b424e7f",
+                    "segment_ordinal": 386,
+                    "start_juan": "039",
+                    "start_lb": "0762a07",
+                    "start_ref": "T02n0125_p0762a07",
+                    "xml_sha256": "43f3f62dbc97e43603788f8dbaa75a90169c523621ab9dd08fcfe9fd78741a64",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[386]"
+                  },
+                  "source": {
+                    "path": "T/T02/T02n0125.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T02/T02n0125.xml"
+                  },
+                  "title": null
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "T 22",
+            "confidence": "high",
+            "container_id": "T0022",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "DA 27",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 27",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 27
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（二七）第三分沙門果經第八",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 3,
+                      "text": "3 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "017",
+                    "end_lb": "0109c21",
+                    "end_ref": "T01n0001_p0109c21",
+                    "normalized_text_chars": 4909,
+                    "normalized_text_sha256": "d88b8c84db972cae2b6366d142d6cf022e5d4a8d3ee7b5070ae8094cd148c63a",
+                    "segment_ordinal": 27,
+                    "start_juan": "017",
+                    "start_lb": "0107a20",
+                    "start_ref": "T01n0001_p0107a20",
+                    "xml_sha256": "2991cff7169a6b7d9f16383880f9d2e0c01f031426ebe6a8b152411b49c25507",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[27]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "沙門果經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": []
+      },
+      "id": "work:dn2",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SF 288",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 1",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SHT Sutta 58",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [
+        {
+          "canonical_id": "SA 154–163",
+          "confidence": "high",
+          "container_id": "T0099",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "lzh",
+          "local_resolution": {
+            "segments": [
+              {
+                "canonical_id": "SA 154",
+                "catalog": {
+                  "file": "sa.jsonl",
+                  "line": 152
+                },
+                "container_id": "T0099",
+                "head_text": "（一五四）",
+                "hierarchy": [
+                  {
+                    "div_type": "other",
+                    "mulu_type": "其他",
+                    "number": null,
+                    "text": "七"
+                  }
+                ],
+                "locator": {
+                  "end_juan": "007",
+                  "end_lb": "0043c29",
+                  "end_ref": "T02n0099_p0043c29",
+                  "normalized_text_chars": 195,
+                  "normalized_text_sha256": "72f331eda3521bce5f2029c681998b276d0fcc4b77d55d2507d52b3267b62f7b",
+                  "segment_ordinal": 152,
+                  "start_juan": "007",
+                  "start_lb": "0043c21",
+                  "start_ref": "T02n0099_p0043c21",
+                  "xml_sha256": "22705ace8ac32e82f882ad62fca6e4007cabaeeaf47c6a16bb2fe12180c0f614",
+                  "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[152]"
+                },
+                "source": {
+                  "path": "T/T02/T02n0099.xml",
+                  "project": "CBETA XML-P5 / Taishō",
+                  "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                  "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T02/T02n0099.xml"
+                },
+                "title": null
+              },
+              {
+                "canonical_id": "SA 155",
+                "catalog": {
+                  "file": "sa.jsonl",
+                  "line": 153
+                },
+                "container_id": "T0099",
+                "head_text": "（一五五）",
+                "hierarchy": [
+                  {
+                    "div_type": "other",
+                    "mulu_type": "其他",
+                    "number": null,
+                    "text": "七"
+                  }
+                ],
+                "locator": {
+                  "end_juan": "007",
+                  "end_lb": "0044a10",
+                  "end_ref": "T02n0099_p0044a10",
+                  "normalized_text_chars": 201,
+                  "normalized_text_sha256": "523dce52a929309cceb719c6d74d7ece91d154c3b70c8095c6a1da9b6b21c603",
+                  "segment_ordinal": 153,
+                  "start_juan": "007",
+                  "start_lb": "0044a01",
+                  "start_ref": "T02n0099_p0044a01",
+                  "xml_sha256": "166a28e3c40d9a1eb57916b61888ab2b44ce4ed727a18d41f4658fc62a66ba62",
+                  "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[153]"
+                },
+                "source": {
+                  "path": "T/T02/T02n0099.xml",
+                  "project": "CBETA XML-P5 / Taishō",
+                  "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                  "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T02/T02n0099.xml"
+                },
+                "title": null
+              },
+              {
+                "canonical_id": "SA 156",
+                "catalog": {
+                  "file": "sa.jsonl",
+                  "line": 154
+                },
+                "container_id": "T0099",
+                "head_text": "（一五六）",
+                "hierarchy": [
+                  {
+                    "div_type": "other",
+                    "mulu_type": "其他",
+                    "number": null,
+                    "text": "七"
+                  }
+                ],
+                "locator": {
+                  "end_juan": "007",
+                  "end_lb": "0044a21",
+                  "end_ref": "T02n0099_p0044a21",
+                  "normalized_text_chars": 230,
+                  "normalized_text_sha256": "791bde0e739740a08b8d43ed08924085106fd8497f6351fa7010e0e36102e0f8",
+                  "segment_ordinal": 154,
+                  "start_juan": "007",
+                  "start_lb": "0044a11",
+                  "start_ref": "T02n0099_p0044a11",
+                  "xml_sha256": "02b9e4611035e9a748e88356561a569ac24f9f56eebcfe95007dd0c400b8334a",
+                  "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[154]"
+                },
+                "source": {
+                  "path": "T/T02/T02n0099.xml",
+                  "project": "CBETA XML-P5 / Taishō",
+                  "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                  "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T02/T02n0099.xml"
+                },
+                "title": null
+              },
+              {
+                "canonical_id": "SA 157",
+                "catalog": {
+                  "file": "sa.jsonl",
+                  "line": 155
+                },
+                "container_id": "T0099",
+                "head_text": "（一五七）",
+                "hierarchy": [
+                  {
+                    "div_type": "other",
+                    "mulu_type": "其他",
+                    "number": null,
+                    "text": "七"
+                  }
+                ],
+                "locator": {
+                  "end_juan": "007",
+                  "end_lb": "0044a27",
+                  "end_ref": "T02n0099_p0044a27",
+                  "normalized_text_chars": 115,
+                  "normalized_text_sha256": "a54020ade95f884d496af87ce4f5119429cc69a7dd6a032127aeb66b95ac0632",
+                  "segment_ordinal": 155,
+                  "start_juan": "007",
+                  "start_lb": "0044a22",
+                  "start_ref": "T02n0099_p0044a22",
+                  "xml_sha256": "a492d736e8d229a2ede13c9c3bd1ada897c2e0189beba4d8cfba025936ec8a25",
+                  "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[155]"
+                },
+                "source": {
+                  "path": "T/T02/T02n0099.xml",
+                  "project": "CBETA XML-P5 / Taishō",
+                  "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                  "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T02/T02n0099.xml"
+                },
+                "title": null
+              },
+              {
+                "canonical_id": "SA 158",
+                "catalog": {
+                  "file": "sa.jsonl",
+                  "line": 156
+                },
+                "container_id": "T0099",
+                "head_text": "（一五八）",
+                "hierarchy": [
+                  {
+                    "div_type": "other",
+                    "mulu_type": "其他",
+                    "number": null,
+                    "text": "七"
+                  }
+                ],
+                "locator": {
+                  "end_juan": "007",
+                  "end_lb": "0044b04",
+                  "end_ref": "T02n0099_p0044b04",
+                  "normalized_text_chars": 115,
+                  "normalized_text_sha256": "8813632002e3799f95295ced39c57740b4b1db9b0c46ba5d29a2cb89965cdd44",
+                  "segment_ordinal": 156,
+                  "start_juan": "007",
+                  "start_lb": "0044a28",
+                  "start_ref": "T02n0099_p0044a28",
+                  "xml_sha256": "fc8d13b7196fe2e75c87b14d1347afa780a1274c03ac98ccb5cee7773af69173",
+                  "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[156]"
+                },
+                "source": {
+                  "path": "T/T02/T02n0099.xml",
+                  "project": "CBETA XML-P5 / Taishō",
+                  "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                  "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T02/T02n0099.xml"
+                },
+                "title": null
+              },
+              {
+                "canonical_id": "SA 159",
+                "catalog": {
+                  "file": "sa.jsonl",
+                  "line": 157
+                },
+                "container_id": "T0099",
+                "head_text": "（一五九）",
+                "hierarchy": [
+                  {
+                    "div_type": "other",
+                    "mulu_type": "其他",
+                    "number": null,
+                    "text": "七"
+                  }
+                ],
+                "locator": {
+                  "end_juan": "007",
+                  "end_lb": "0044b10",
+                  "end_ref": "T02n0099_p0044b10",
+                  "normalized_text_chars": 119,
+                  "normalized_text_sha256": "d9ffbda59269b68c22880ee0e2dd0e622139df507870734675731ed39875d94a",
+                  "segment_ordinal": 157,
+                  "start_juan": "007",
+                  "start_lb": "0044b05",
+                  "start_ref": "T02n0099_p0044b05",
+                  "xml_sha256": "73efaabcbdb1fb789b92b7d7bc1c5c54ba121bea2e3522480c988e81d78bd166",
+                  "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[157]"
+                },
+                "source": {
+                  "path": "T/T02/T02n0099.xml",
+                  "project": "CBETA XML-P5 / Taishō",
+                  "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                  "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T02/T02n0099.xml"
+                },
+                "title": null
+              },
+              {
+                "canonical_id": "SA 160",
+                "catalog": {
+                  "file": "sa.jsonl",
+                  "line": 158
+                },
+                "container_id": "T0099",
+                "head_text": "（一六〇）",
+                "hierarchy": [
+                  {
+                    "div_type": "other",
+                    "mulu_type": "其他",
+                    "number": null,
+                    "text": "七"
+                  }
+                ],
+                "locator": {
+                  "end_juan": "007",
+                  "end_lb": "0044b15",
+                  "end_ref": "T02n0099_p0044b15",
+                  "normalized_text_chars": 103,
+                  "normalized_text_sha256": "85741025cccfa33e8909746c97fe66d46930917505f31f1c24e59247abec7fac",
+                  "segment_ordinal": 158,
+                  "start_juan": "007",
+                  "start_lb": "0044b11",
+                  "start_ref": "T02n0099_p0044b11",
+                  "xml_sha256": "fd8b95176519053e94729c287b36204489a30222a997e86f4082380d76a190d5",
+                  "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[158]"
+                },
+                "source": {
+                  "path": "T/T02/T02n0099.xml",
+                  "project": "CBETA XML-P5 / Taishō",
+                  "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                  "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T02/T02n0099.xml"
+                },
+                "title": null
+              },
+              {
+                "canonical_id": "SA 161",
+                "catalog": {
+                  "file": "sa.jsonl",
+                  "line": 159
+                },
+                "container_id": "T0099",
+                "head_text": "（一六一）",
+                "hierarchy": [
+                  {
+                    "div_type": "other",
+                    "mulu_type": "其他",
+                    "number": null,
+                    "text": "七"
+                  }
+                ],
+                "locator": {
+                  "end_juan": "007",
+                  "end_lb": "0044b28",
+                  "end_ref": "T02n0099_p0044b28",
+                  "normalized_text_chars": 289,
+                  "normalized_text_sha256": "872fdddf158b24d35918adeb12dba569a35fa0519fe4d5be1d89ad201dcd6f7a",
+                  "segment_ordinal": 159,
+                  "start_juan": "007",
+                  "start_lb": "0044b16",
+                  "start_ref": "T02n0099_p0044b16",
+                  "xml_sha256": "280013ea295bb912fe143182d5e4262e366de3f8c9c456271855a46af47c184d",
+                  "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[159]"
+                },
+                "source": {
+                  "path": "T/T02/T02n0099.xml",
+                  "project": "CBETA XML-P5 / Taishō",
+                  "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                  "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T02/T02n0099.xml"
+                },
+                "title": null
+              },
+              {
+                "canonical_id": "SA 162",
+                "catalog": {
+                  "file": "sa.jsonl",
+                  "line": 160
+                },
+                "container_id": "T0099",
+                "head_text": "（一六二）",
+                "hierarchy": [
+                  {
+                    "div_type": "other",
+                    "mulu_type": "其他",
+                    "number": null,
+                    "text": "七"
+                  }
+                ],
+                "locator": {
+                  "end_juan": "007",
+                  "end_lb": "0044c11",
+                  "end_ref": "T02n0099_p0044c11",
+                  "normalized_text_chars": 261,
+                  "normalized_text_sha256": "24ca89f21e3c1bf760161ca897a9cecf70b292038be6e6252162918172d0aaf2",
+                  "segment_ordinal": 160,
+                  "start_juan": "007",
+                  "start_lb": "0044b29",
+                  "start_ref": "T02n0099_p0044b29",
+                  "xml_sha256": "e571d8670177c6823b61bffb38cd7fc36278c21c83e1404c8dd6f316ece43b97",
+                  "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[160]"
+                },
+                "source": {
+                  "path": "T/T02/T02n0099.xml",
+                  "project": "CBETA XML-P5 / Taishō",
+                  "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                  "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T02/T02n0099.xml"
+                },
+                "title": null
+              },
+              {
+                "canonical_id": "SA 163",
+                "catalog": {
+                  "file": "sa.jsonl",
+                  "line": 161
+                },
+                "container_id": "T0099",
+                "head_text": "（一六三）",
+                "hierarchy": [
+                  {
+                    "div_type": "other",
+                    "mulu_type": "其他",
+                    "number": null,
+                    "text": "七"
+                  }
+                ],
+                "locator": {
+                  "end_juan": "007",
+                  "end_lb": "0045a01",
+                  "end_ref": "T02n0099_p0045a01",
+                  "normalized_text_chars": 394,
+                  "normalized_text_sha256": "b922c3b8a6828b8dbf2afea35e0c6282985d4d18b833e0c9d12c1021f96c766c",
+                  "segment_ordinal": 161,
+                  "start_juan": "007",
+                  "start_lb": "0044c12",
+                  "start_ref": "T02n0099_p0044c12",
+                  "xml_sha256": "63d4f667ba1f0ed1f46dc1d87c03809d446569df69e96b554ab348d0e4ad61ab",
+                  "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[161]"
+                },
+                "source": {
+                  "path": "T/T02/T02n0099.xml",
+                  "project": "CBETA XML-P5 / Taishō",
+                  "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                  "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T02/T02n0099.xml"
+                },
+                "title": null
+              }
+            ],
+            "status": "resolved"
+          },
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "T 1444.1",
+          "confidence": "high",
+          "container_id": "T1444.1",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "lzh",
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "T 1442.13",
+          "confidence": "high",
+          "container_id": "T1442.13",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "lzh",
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "T 1450.10",
+          "confidence": "high",
+          "container_id": "T1450.10",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "lzh",
+          "relation_class": "partial_textual_parallel"
+        }
+      ],
+      "rank": 2,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 3",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn3",
+        "title": "Ambaṭṭha"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn3-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn3.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "T 20",
+            "confidence": "high",
+            "container_id": "T0020",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "DA 20",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 20",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 20
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（二〇）第三分阿摩晝經第一",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 3,
+                      "text": "3 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "013",
+                    "end_lb": "0088b07",
+                    "end_ref": "T01n0001_p0088b07",
+                    "normalized_text_chars": 11486,
+                    "normalized_text_sha256": "d1a15615ed974ed33739ad5b810c971ed08c23ec028eb337872cca92aa95d82d",
+                    "segment_ordinal": 20,
+                    "start_juan": "013",
+                    "start_lb": "0082a06",
+                    "start_ref": "T01n0001_p0082a06",
+                    "xml_sha256": "8e8d2c863feff848cee3a582415ff268e31c3e9fda273e19a41cb8222bf66cf2",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[20]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "阿摩晝經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": []
+      },
+      "id": "work:dn3",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SF 43",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SHT Sutta 26",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [],
+      "rank": 3,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 4",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn4",
+        "title": "Soṇadaṇḍa"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn4-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn4.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "DA 22",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 22",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 22
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（二二）第三分種德經第三",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 3,
+                      "text": "3 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "015",
+                    "end_lb": "0096c15",
+                    "end_ref": "T01n0001_p0096c15",
+                    "normalized_text_chars": 4739,
+                    "normalized_text_sha256": "6d5b9bf8dc9cb8cfce82c7ffeb1a129386d01a933382d2ede4d73afc709ac1f4",
+                    "segment_ordinal": 22,
+                    "start_juan": "015",
+                    "start_lb": "0094a18",
+                    "start_ref": "T01n0001_p0094a18",
+                    "xml_sha256": "ab89d2f7d12ea4c4c30777bce081115f30d1db268dc656b86603297b1171470a",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[22]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "種德經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": []
+      },
+      "id": "work:dn4",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SF 42",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SHT Sutta 56",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [],
+      "rank": 4,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 5",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn5",
+        "title": "Kūṭadanta"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn5-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn5.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "DA 23",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 23",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 23
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（二三）佛說長阿含第三分究羅檀頭經第四",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 3,
+                      "text": "3 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "015",
+                    "end_lb": "0101b08",
+                    "end_ref": "T01n0001_p0101b08",
+                    "normalized_text_chars": 8300,
+                    "normalized_text_sha256": "713c30dd164ad54445140dbebc29fb9c43989fbb17853bc9654a295b03e8eb8c",
+                    "segment_ordinal": 23,
+                    "start_juan": "015",
+                    "start_lb": "0096c16",
+                    "start_ref": "T01n0001_p0096c16",
+                    "xml_sha256": "f08c3842f253716dbb79dd937b636e1efb0be4eec2dec3f5cba4071723a42818",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[23]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "究羅檀頭經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": []
+      },
+      "id": "work:dn5",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SF 52",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SHT Sutta 30",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [],
+      "rank": 5,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 8",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn8",
+        "title": "Mahāsīhanāda"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn8-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn8.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "DA 25",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 25",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 25
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（二五）佛說長阿含第三分倮形梵志經第六",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 3,
+                      "text": "3 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "016",
+                    "end_lb": "0104c15",
+                    "end_ref": "T01n0001_p0104c15",
+                    "normalized_text_chars": 3445,
+                    "normalized_text_sha256": "b4ea5987f5c4a12eb8fd84e36859e8d2b43ba3e333d86bc870fa9141f0a7c2c0",
+                    "segment_ordinal": 25,
+                    "start_juan": "016",
+                    "start_lb": "0102c24",
+                    "start_ref": "T01n0001_p0102c24",
+                    "xml_sha256": "f4ea6fcf3520cb146a3c35e4f878da62fc6ce1371ab0ebd17c30ec3e481c3241",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[25]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "倮形梵志經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": []
+      },
+      "id": "work:dn8",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SF 295",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 51",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SHT Sutta 50",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [],
+      "rank": 6,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 11",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn11",
+        "title": "Kevaddha"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn11-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn11.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "DA 24",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 24",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 24
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（二四）第三分堅固經第五",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 3,
+                      "text": "3 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "016",
+                    "end_lb": "0102c23",
+                    "end_ref": "T01n0001_p0102c23",
+                    "normalized_text_chars": 2568,
+                    "normalized_text_sha256": "032a7bf3fc102f139d37f981f3ba7ac575ac3cc78f91ac928d07f15a51b3f336",
+                    "segment_ordinal": 24,
+                    "start_juan": "016",
+                    "start_lb": "0101b14",
+                    "start_ref": "T01n0001_p0101b14",
+                    "xml_sha256": "a50b9641fbb6509e6f2024899ee44e06b3498f5fb04e255595baf5802c13eb5c",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[24]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "堅固經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": []
+      },
+      "id": "work:dn11",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SHT Sutta 81",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [],
+      "rank": 7,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 12",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn12",
+        "title": "Lohicca"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn12-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn12.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "DA 29",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 29",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 29
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（二九）佛說長阿含第三分露遮經第十",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 3,
+                      "text": "3 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "017",
+                    "end_lb": "0114b01",
+                    "end_ref": "T01n0001_p0114b01",
+                    "normalized_text_chars": 2649,
+                    "normalized_text_sha256": "e47c714d53515230a22158cefcaa49e9b77083101d84485e51e26a20280b15fa",
+                    "segment_ordinal": 29,
+                    "start_juan": "017",
+                    "start_lb": "0112c20",
+                    "start_ref": "T01n0001_p0112c20",
+                    "xml_sha256": "7232642c2d5fc73cf83e442faa4fccb6610d91855dc709434eac84d4ef772097",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[29]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "露遮經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": []
+      },
+      "id": "work:dn12",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SHT Sutta 20",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [],
+      "rank": 8,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 14",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn14",
+        "title": "Mahāpadāna"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn14-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn14.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "EA 48.4",
+            "confidence": "high",
+            "container_id": "T0125",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "EA 48.4",
+                  "catalog": {
+                    "file": "ea.jsonl",
+                    "line": 431
+                  },
+                  "container_id": "T0125",
+                  "head_text": "（四）",
+                  "hierarchy": [
+                    {
+                      "div_type": "pin",
+                      "mulu_type": "品",
+                      "number": 48,
+                      "text": "48 十不善品"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "045",
+                    "end_lb": "0791b29",
+                    "end_ref": "T02n0125_p0791b29",
+                    "normalized_text_chars": 2379,
+                    "normalized_text_sha256": "2317b6d3fdf79d71c9ddefff719b6c8c4b596f6483894fc3394a7daa5b480c44",
+                    "segment_ordinal": 431,
+                    "start_juan": "045",
+                    "start_lb": "0790a07",
+                    "start_ref": "T02n0125_p0790a07",
+                    "xml_sha256": "15b9b67155a26b19bfd48f66cf21a17c0ffc328de0b39438671a40725203aaec",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[431]"
+                  },
+                  "source": {
+                    "path": "T/T02/T02n0125.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T02/T02n0125.xml"
+                  },
+                  "title": null
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "T 3",
+            "confidence": "high",
+            "container_id": "T0003",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "T 2",
+            "confidence": "high",
+            "container_id": "T0002",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "T 4",
+            "confidence": "high",
+            "container_id": "T0004",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "DA 1",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 1",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 1
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（一）第一分初大本經第一",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 1,
+                      "text": "1 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "001",
+                    "end_lb": "0010c29",
+                    "end_ref": "T01n0001_p0010c29",
+                    "normalized_text_chars": 13818,
+                    "normalized_text_sha256": "3f951c067a815fcfcd066d8cd34dd1ce332fb4da711fdc24dc684b59a69c4ac2",
+                    "segment_ordinal": 1,
+                    "start_juan": "001",
+                    "start_lb": "0001b11",
+                    "start_ref": "T01n0001_p0001b11",
+                    "xml_sha256": "8d62f315c57ac903a27143dbb1ec0e2a30f5341b2f57d1e30baf5ba4254a9970",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[1]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "大本經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": [
+          {
+            "canonical_id": "SN 12.65",
+            "confidence": "high",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "pli",
+            "relation_class": "full_textual_parallel"
+          }
+        ]
+      },
+      "id": "work:dn14",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SF 34",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 29",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 30",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 31",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 32",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 28",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 33",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 250",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 36",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 296",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 56",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SHT Sutta 1",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [],
+      "rank": 9,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 15",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn15",
+        "title": "Mahānidāna"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn15-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn15.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "T 14",
+            "confidence": "high",
+            "container_id": "T0014",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "T 52",
+            "confidence": "high",
+            "container_id": "T0052",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "MA 97",
+            "confidence": "high",
+            "container_id": "T0026",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "MA 97",
+                  "catalog": {
+                    "file": "ma.jsonl",
+                    "line": 97
+                  },
+                  "container_id": "T0026",
+                  "head_text": "（九七）中阿含因品大因經第一",
+                  "hierarchy": [
+                    {
+                      "div_type": "other",
+                      "mulu_type": "其他",
+                      "number": null,
+                      "text": "小土城頌"
+                    },
+                    {
+                      "div_type": "pin",
+                      "mulu_type": "品",
+                      "number": 4,
+                      "text": "4 因品"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "024",
+                    "end_lb": "0582b06",
+                    "end_ref": "T01n0026_p0582b06",
+                    "normalized_text_chars": 7243,
+                    "normalized_text_sha256": "0762498a1004c1dda6e33e77dc465fb14cfce818648a605fac48f2dddf014f54",
+                    "segment_ordinal": 97,
+                    "start_juan": "024",
+                    "start_lb": "0578b07",
+                    "start_ref": "T01n0026_p0578b07",
+                    "xml_sha256": "6c9d8785ca9a0ef5d81324398f9349f706d65408117f1f6c98b437cdfc02f92b",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[97]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0026.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0026.xml"
+                  },
+                  "title": "大因經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "DA 13",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 13",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 13
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（一三）佛說長阿含第二分大緣方便經第九",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 2,
+                      "text": "2 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "010",
+                    "end_lb": "0062b27",
+                    "end_ref": "T01n0001_p0062b27",
+                    "normalized_text_chars": 4451,
+                    "normalized_text_sha256": "90a99cf949a826bb8d13cf055caa8c1da31597d259e0a9cb8f4402a67760496f",
+                    "segment_ordinal": 13,
+                    "start_juan": "010",
+                    "start_lb": "0060a28",
+                    "start_ref": "T01n0001_p0060a28",
+                    "xml_sha256": "04d365077e865811f63242fc24803b5d9fae93140483bffac743965506919138",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[13]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "大緣方便經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": []
+      },
+      "id": "work:dn15",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SF 240",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 138",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SHT Sutta 23",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [],
+      "rank": 10,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 16",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn16",
+        "title": "Mahāparinibbāna"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions",
+        "allon-salomon-2000",
+        "gandhari-ckm14"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn16-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn16.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "T 5",
+            "confidence": "high",
+            "container_id": "T0005",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "T 6",
+            "confidence": "high",
+            "container_id": "T0006",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "T 7",
+            "confidence": "high",
+            "container_id": "T0007",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "T 1451.35",
+            "confidence": "high",
+            "container_id": "T1451.35",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "DA 2",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 2",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 2
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（二）第一分遊行經第二初",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 1,
+                      "text": "1 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "004",
+                    "end_lb": "0030b04",
+                    "end_ref": "T01n0001_p0030b04",
+                    "normalized_text_chars": 32935,
+                    "normalized_text_sha256": "1aa4ad3af6069595aaf5fde1ff4c6b09d3de1db652397176f5b3982019815b3e",
+                    "segment_ordinal": 2,
+                    "start_juan": "002",
+                    "start_lb": "0011a07",
+                    "start_ref": "T01n0001_p0011a07",
+                    "xml_sha256": "eece1eea61098e658fa8dde8209104e6107fe1d9d95d64225a3ec0a678773232",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[2]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "遊行經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": []
+      },
+      "id": "work:dn16",
+      "indic_witnesses": {
+        "gandhari_prakrit": [
+          {
+            "bibliography": [
+              "allon-salomon-2000",
+              "gandhari-ckm14"
+            ],
+            "canonical_id": "Gandh frgm",
+            "confidence": "high",
+            "evidence_basis": "Gāndhārī Mahāparinirvāṇasūtra fragments identified and edited by Allon & Salomon (2000); independently catalogued at Gandhari.org.",
+            "language": "gdh",
+            "relation_class": "fragmentary_textual_parallel",
+            "tradition": "Buddhist",
+            "witness_extent": "fragment"
+          }
+        ],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SF 54",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 268",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 289",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 245",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 285",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 272",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SHT Sutta 5",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [
+        {
+          "canonical_id": "SN 47.9",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "pli",
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "SN 51.10",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "pli",
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "AN 4.180",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "pli",
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "AN 4.76",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "pli",
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "AN 7.22–27",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "pli",
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "AN 8.70",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "pli",
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "AN 8.65",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "pli",
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "AN 8.66",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "pli",
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "AN 8.68–70",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "pli",
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "AN 8.69",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "pli",
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "Ud 6.1",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "pli",
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "Ud 8.5",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "pli",
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "Ud 8.6",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "pli",
+          "relation_class": "partial_textual_parallel"
+        }
+      ],
+      "rank": 11,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "identified",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 18",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn18",
+        "title": "Janavasabha"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn18-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn18.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "T 9",
+            "confidence": "high",
+            "container_id": "T0009",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "DA 4",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 4",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 4
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（四）佛說長阿含第一分闍尼沙經第四",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 1,
+                      "text": "1 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "005",
+                    "end_lb": "0036b22",
+                    "end_ref": "T01n0001_p0036b22",
+                    "normalized_text_chars": 3757,
+                    "normalized_text_sha256": "07ee5b82b8d41f8cd48d92839382c5b84bc240261d8780d9b40a50d267d89906",
+                    "segment_ordinal": 4,
+                    "start_juan": "005",
+                    "start_lb": "0034b04",
+                    "start_ref": "T01n0001_p0034b04",
+                    "xml_sha256": "3e94ea57dab5908d077614532783770dbff99887445f07762645568114d91115",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[4]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "闍尼沙經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": []
+      },
+      "id": "work:dn18",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SHT Sutta 37",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [],
+      "rank": 12,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 19",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn19",
+        "title": "Mahāgovinda"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn19-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn19.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "T 8",
+            "confidence": "high",
+            "container_id": "T0008",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "DA 3",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 3",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 3
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（三）第一分典尊經第三",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 1,
+                      "text": "1 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "005",
+                    "end_lb": "0034b03",
+                    "end_ref": "T01n0001_p0034b03",
+                    "normalized_text_chars": 6598,
+                    "normalized_text_sha256": "cc48187584ef84906cc8f3ac05b0530a0be6b992e941c831169aeacaa9e17f9c",
+                    "segment_ordinal": 3,
+                    "start_juan": "005",
+                    "start_lb": "0030b10",
+                    "start_ref": "T01n0001_p0030b10",
+                    "xml_sha256": "dcd61a4a9da80143cad685107cc4ea8dd5239bb5d0f04d74b8dc7342f4a3f109",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[3]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "典尊經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": []
+      },
+      "id": "work:dn19",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SF 39",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 292",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 53",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 144",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SHT Sutta 38",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [],
+      "rank": 13,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 20",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn20",
+        "title": "Mahāsamaya"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn20-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn20.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "SA 1192",
+            "confidence": "high",
+            "container_id": "T0099",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "SA 1192",
+                  "catalog": {
+                    "file": "sa.jsonl",
+                    "line": 1185
+                  },
+                  "container_id": "T0099",
+                  "head_text": "（一一九二）",
+                  "hierarchy": [
+                    {
+                      "div_type": "other",
+                      "mulu_type": "其他",
+                      "number": null,
+                      "text": "四四"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "044",
+                    "end_lb": "0323b08",
+                    "end_ref": "T02n0099_p0323b08",
+                    "normalized_text_chars": 402,
+                    "normalized_text_sha256": "7e78ed99afde6d61d3ef3a680f79e7a542d6fbc682f40ac0f195e2d6d1c0ce79",
+                    "segment_ordinal": 1185,
+                    "start_juan": "044",
+                    "start_lb": "0323a12",
+                    "start_ref": "T02n0099_p0323a12",
+                    "xml_sha256": "5ffe71e9b0cf1403a502baa3c1aa5fccf5be471cdb01c945436c6af772b2a743",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[1185]"
+                  },
+                  "source": {
+                    "path": "T/T02/T02n0099.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T02/T02n0099.xml"
+                  },
+                  "title": null
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "T 19",
+            "confidence": "high",
+            "container_id": "T0019",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "DA 19",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 19",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 19
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（一九）佛說長阿含第二分大會經第十五",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 2,
+                      "text": "2 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "012",
+                    "end_lb": "0081b29",
+                    "end_ref": "T01n0001_p0081b29",
+                    "normalized_text_chars": 3175,
+                    "normalized_text_sha256": "ebe1fdb25b05167726068f561b46cba345765d6d806e3ce279b0b4e0ee200cc7",
+                    "segment_ordinal": 19,
+                    "start_juan": "012",
+                    "start_lb": "0079b01",
+                    "start_ref": "T01n0001_p0079b01",
+                    "xml_sha256": "7a895244acf8de1bb3c6bd5f841ef5f8d86fe6261d09d127718232d4e4edea84",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[19]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "大會經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "SA2 105",
+            "confidence": "high",
+            "container_id": "T0100",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "SA2 105",
+                  "catalog": {
+                    "file": "sa2.jsonl",
+                    "line": 105
+                  },
+                  "container_id": "T0100",
+                  "head_text": "（一〇五）",
+                  "hierarchy": [
+                    {
+                      "div_type": "other",
+                      "mulu_type": "其他",
+                      "number": 5,
+                      "text": "5 初誦"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "005",
+                    "end_lb": "0411b23",
+                    "end_ref": "T02n0100_p0411b23",
+                    "normalized_text_chars": 501,
+                    "normalized_text_sha256": "da08e38ad65d3c1399ca5c79084332e441cc1c194a01a86beb6b422a4b03a523",
+                    "segment_ordinal": 105,
+                    "start_juan": "005",
+                    "start_lb": "0411a24",
+                    "start_ref": "T02n0100_p0411a24",
+                    "xml_sha256": "4ba4e40a4709ebb8b869f2fe97572aa992b181332d577466af99aff2417586a2",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[105]"
+                  },
+                  "source": {
+                    "path": "T/T02/T02n0100.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T02/T02n0100.xml"
+                  },
+                  "title": null
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": [
+          {
+            "canonical_id": "SN 1.37",
+            "confidence": "high",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "pli",
+            "relation_class": "full_textual_parallel"
+          }
+        ]
+      },
+      "id": "work:dn20",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SF 140",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 108",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 242",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 282",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 55",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SHT Sutta 8",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [],
+      "rank": 14,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 21",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn21",
+        "title": "Sakkapañha"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn21-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn21.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "T 15",
+            "confidence": "high",
+            "container_id": "T0015",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "T 203.73",
+            "confidence": "high",
+            "container_id": "T0203.73",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "DA 14",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 14",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 14
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（一四）佛說長阿含第二分釋提桓因問經第十",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 2,
+                      "text": "2 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "010",
+                    "end_lb": "0066a03",
+                    "end_ref": "T01n0001_p0066a03",
+                    "normalized_text_chars": 5480,
+                    "normalized_text_sha256": "05269ba1466db81b43810b9ca7c1cd639a3f877dcad6f92f08c367ea94a1fb58",
+                    "segment_ordinal": 14,
+                    "start_juan": "010",
+                    "start_lb": "0062b28",
+                    "start_ref": "T01n0001_p0062b28",
+                    "xml_sha256": "2c2764d3f155f366bece683ee6e6c092d1dcce07d68f83c397e4a37290dd2340",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[14]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "釋提桓因問經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "MA 134",
+            "confidence": "high",
+            "container_id": "T0026",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "MA 134",
+                  "catalog": {
+                    "file": "ma.jsonl",
+                    "line": 134
+                  },
+                  "container_id": "T0026",
+                  "head_text": "（一三四）大品釋問經第十八第三念誦",
+                  "hierarchy": [
+                    {
+                      "div_type": "other",
+                      "mulu_type": "其他",
+                      "number": null,
+                      "text": "念誦"
+                    },
+                    {
+                      "div_type": "pin",
+                      "mulu_type": "品",
+                      "number": 1,
+                      "text": "1 大品"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "033",
+                    "end_lb": "0638c05",
+                    "end_ref": "T01n0026_p0638c05",
+                    "normalized_text_chars": 9801,
+                    "normalized_text_sha256": "81c576dc86a40c142622c3fbb7add99944a9bf7d71ef0c31e6879d49e4ae3de5",
+                    "segment_ordinal": 134,
+                    "start_juan": "033",
+                    "start_lb": "0632c27",
+                    "start_ref": "T01n0026_p0632c27",
+                    "xml_sha256": "375787d092f8894c1e1efd3b95b0db284e402eeca477ee5c9a89668a5f495825",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[134]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0026.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0026.xml"
+                  },
+                  "title": "釋問經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": []
+      },
+      "id": "work:dn21",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SF 241",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 139",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SHT Sutta 54",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [],
+      "rank": 15,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 22",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn22",
+        "title": "Mahāsatipaṭṭhāna"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn22-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn22.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "EA 12.1",
+            "confidence": "high",
+            "container_id": "T0125",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "EA 12.1",
+                  "catalog": {
+                    "file": "ea.jsonl",
+                    "line": 83
+                  },
+                  "container_id": "T0125",
+                  "head_text": "（一）",
+                  "hierarchy": [
+                    {
+                      "div_type": "pin",
+                      "mulu_type": "品",
+                      "number": 12,
+                      "text": "12 壹入道品"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "005",
+                    "end_lb": "0569b12",
+                    "end_ref": "T02n0125_p0569b12",
+                    "normalized_text_chars": 2614,
+                    "normalized_text_sha256": "fbc4506abb73855e4147e1ccc508a59cf4b450999a50f610fa5c9972545a7ccf",
+                    "segment_ordinal": 83,
+                    "start_juan": "005",
+                    "start_lb": "0568a01",
+                    "start_ref": "T02n0125_p0568a01",
+                    "xml_sha256": "652d1c573f48289dc452729908eb308ed907d52495e5b98cb9e9eb474a83febf",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[83]"
+                  },
+                  "source": {
+                    "path": "T/T02/T02n0125.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T02/T02n0125.xml"
+                  },
+                  "title": null
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "MA 98",
+            "confidence": "high",
+            "container_id": "T0026",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "MA 98",
+                  "catalog": {
+                    "file": "ma.jsonl",
+                    "line": 98
+                  },
+                  "container_id": "T0026",
+                  "head_text": "（九八）中阿含因品念處經第二第二小土城誦",
+                  "hierarchy": [
+                    {
+                      "div_type": "other",
+                      "mulu_type": "其他",
+                      "number": null,
+                      "text": "小土城頌"
+                    },
+                    {
+                      "div_type": "pin",
+                      "mulu_type": "品",
+                      "number": 4,
+                      "text": "4 因品"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "024",
+                    "end_lb": "0584b29",
+                    "end_ref": "T01n0026_p0584b29",
+                    "normalized_text_chars": 4020,
+                    "normalized_text_sha256": "f43854792490e7efd3a62aaec057978e297a8b9fc3f85cdb932e78aa541c8ca8",
+                    "segment_ordinal": 98,
+                    "start_juan": "024",
+                    "start_lb": "0582b07",
+                    "start_ref": "T01n0026_p0582b07",
+                    "xml_sha256": "a95b0cf07b7f403dc139d2ae57cc97faa148154fc2fa1c9de740505811fb62de",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[98]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0026.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0026.xml"
+                  },
+                  "title": "念處經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": [
+          {
+            "canonical_id": "MN 10",
+            "confidence": "high",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "pli",
+            "relation_class": "full_textual_parallel"
+          }
+        ]
+      },
+      "id": "work:dn22",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SHT Sutta 11",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [
+        {
+          "canonical_id": "T 32",
+          "confidence": "high",
+          "container_id": "T0032",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "lzh",
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "MA 31",
+          "confidence": "high",
+          "container_id": "T0026",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "lzh",
+          "local_resolution": {
+            "segments": [
+              {
+                "canonical_id": "MA 31",
+                "catalog": {
+                  "file": "ma.jsonl",
+                  "line": 31
+                },
+                "container_id": "T0026",
+                "head_text": "（三一）中阿含舍梨子相應品分別聖諦經第 十一初一日誦",
+                "hierarchy": [
+                  {
+                    "div_type": "pin",
+                    "mulu_type": "品",
+                    "number": 3,
+                    "text": "3 舍梨子相應品"
+                  }
+                ],
+                "locator": {
+                  "end_juan": "007",
+                  "end_lb": "0469c12",
+                  "end_ref": "T01n0026_p0469c12",
+                  "normalized_text_chars": 4619,
+                  "normalized_text_sha256": "b0fe12cf1f30d0b7bedeacc982b1d6f130c2853d08f0a22c409cda49d444a1c4",
+                  "segment_ordinal": 31,
+                  "start_juan": "007",
+                  "start_lb": "0467a28",
+                  "start_ref": "T01n0026_p0467a28",
+                  "xml_sha256": "7923817020b4dacf234b7da0502b88f84ffe27a38905ae979d3786a008bb146b",
+                  "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[31]"
+                },
+                "source": {
+                  "path": "T/T01/T01n0026.xml",
+                  "project": "CBETA XML-P5 / Taishō",
+                  "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                  "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0026.xml"
+                },
+                "title": "分別聖諦經"
+              }
+            ],
+            "status": "resolved"
+          },
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "MN 141",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "pli",
+          "relation_class": "partial_textual_parallel"
+        },
+        {
+          "canonical_id": "MN 119",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table.",
+          "language": "pli",
+          "relation_class": "partial_textual_parallel"
+        }
+      ],
+      "rank": 16,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 23",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn23",
+        "title": "Pāyāsi"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "bollee-2002"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn23-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn23.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "T 45",
+            "confidence": "high",
+            "container_id": "T0045",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "MA 71",
+            "confidence": "high",
+            "container_id": "T0026",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "MA 71",
+                  "catalog": {
+                    "file": "ma.jsonl",
+                    "line": 71
+                  },
+                  "container_id": "T0026",
+                  "head_text": "（七一）中阿含王相應品蜱肆經第七第 二小土城誦",
+                  "hierarchy": [
+                    {
+                      "div_type": "other",
+                      "mulu_type": "其他",
+                      "number": null,
+                      "text": "小土城頌"
+                    },
+                    {
+                      "div_type": "pin",
+                      "mulu_type": "品",
+                      "number": 1,
+                      "text": "1 王相應品"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "016",
+                    "end_lb": "0532b26",
+                    "end_ref": "T01n0026_p0532b26",
+                    "normalized_text_chars": 13526,
+                    "normalized_text_sha256": "077d8b3059f151e265fed65d4f0ef5d1a5d92733ef460f47f8d64d0d73e8bdf6",
+                    "segment_ordinal": 71,
+                    "start_juan": "016",
+                    "start_lb": "0525a10",
+                    "start_ref": "T01n0026_p0525a10",
+                    "xml_sha256": "7b35f053d574208b01beaf3f80493da5dfd60e0eb47e6c28984dc60823d5f707",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[71]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0026.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0026.xml"
+                  },
+                  "title": "蜱肆經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "DA 7",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 7",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 7
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（七）第二分弊宿經第三",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 2,
+                      "text": "2 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "007",
+                    "end_lb": "0047a12",
+                    "end_ref": "T01n0001_p0047a12",
+                    "normalized_text_chars": 8425,
+                    "normalized_text_sha256": "7456b5b6e5e9feaacc0cefb953cf129307a681285dde99751f0dc53f81fb05b1",
+                    "segment_ordinal": 7,
+                    "start_juan": "007",
+                    "start_lb": "0042b24",
+                    "start_ref": "T01n0001_p0042b24",
+                    "xml_sha256": "4f6ebde8b9a5bd468f24afa9e936fe32db4bff1e7984ce09621f21afc3bfbe2b",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[7]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "弊宿經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": []
+      },
+      "id": "work:dn23",
+      "indic_witnesses": {
+        "gandhari_prakrit": [
+          {
+            "bibliography": [
+              "bollee-2002"
+            ],
+            "canonical_id": "Prak frgm",
+            "confidence": "high",
+            "evidence_basis": "SuttaCentral lists Bollée's Prākrit Paesi text as an unstarred full parallel and explicitly notes that it belongs to the Jain canon.",
+            "language": "pra",
+            "relation_class": "full_textual_parallel",
+            "tradition": "Jain",
+            "witness_extent": "unspecified_in_index"
+          }
+        ],
+        "sanskrit_bhs": []
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [],
+      "rank": 17,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "identified",
+        "sanskrit_bhs": "not_identified_in_selected_sources"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 24",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn24",
+        "title": "Pāṭika"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn24-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn24.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "DA 15",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 15",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 15
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（一五）第二分阿㝹夷經第十一",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 2,
+                      "text": "2 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "011",
+                    "end_lb": "0070a18",
+                    "end_ref": "T01n0001_p0070a18",
+                    "normalized_text_chars": 7382,
+                    "normalized_text_sha256": "1bca62978ca32d47e06a820adb7264107513d5c84186bdf947e6b02faab9a954",
+                    "segment_ordinal": 15,
+                    "start_juan": "011",
+                    "start_lb": "0066a09",
+                    "start_ref": "T01n0001_p0066a09",
+                    "xml_sha256": "275d711a472ad2d11e5d83ea4f360b6425d910361fa454aa01538646cec85769",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[15]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "阿㝹夷經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": []
+      },
+      "id": "work:dn24",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SF 46",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SF 298",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SHT Sutta 32",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [],
+      "rank": 18,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 26",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn26",
+        "title": "Cakkavattisīhanāda"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn26-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn26.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "DA 6",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 6",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 6
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（六）佛說長阿含第二分轉輪聖王修行經第二",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 2,
+                      "text": "2 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "006",
+                    "end_lb": "0042b19",
+                    "end_ref": "T01n0001_p0042b19",
+                    "normalized_text_chars": 6065,
+                    "normalized_text_sha256": "acec1851b7016c47b083add5d02b4ad58f21d5cdb9549a48d762999fe8a51dfe",
+                    "segment_ordinal": 6,
+                    "start_juan": "006",
+                    "start_lb": "0039a21",
+                    "start_ref": "T01n0001_p0039a21",
+                    "xml_sha256": "16cd5a3894adf3633924c62d3ce29ddcbbec7ddc0f7286277d7c94555c37faaa",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[6]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "轉輪聖王修行經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "MA 70",
+            "confidence": "high",
+            "container_id": "T0026",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "MA 70",
+                  "catalog": {
+                    "file": "ma.jsonl",
+                    "line": 70
+                  },
+                  "container_id": "T0026",
+                  "head_text": "（七〇）中阿含王相應品轉輪王經第六第 二小土城誦",
+                  "hierarchy": [
+                    {
+                      "div_type": "other",
+                      "mulu_type": "其他",
+                      "number": null,
+                      "text": "小土城頌"
+                    },
+                    {
+                      "div_type": "pin",
+                      "mulu_type": "品",
+                      "number": 1,
+                      "text": "1 王相應品"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "015",
+                    "end_lb": "0525a03",
+                    "end_ref": "T01n0026_p0525a03",
+                    "normalized_text_chars": 8198,
+                    "normalized_text_sha256": "d398ef249e49b8af7082131e34087a8f4515055d31f579cc8aea687d2d3ad8d3",
+                    "segment_ordinal": 70,
+                    "start_juan": "015",
+                    "start_lb": "0520b16",
+                    "start_ref": "T01n0026_p0520b16",
+                    "xml_sha256": "1b0435648de1237afa3ff3f64d2e906096ca8bcd17d13f63802cf3da82fa07c4",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[70]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0026.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0026.xml"
+                  },
+                  "title": "轉輪王經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": []
+      },
+      "id": "work:dn26",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SHT Sutta 62",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [],
+      "rank": 19,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    },
+    {
+      "anchor": {
+        "canonical_id": "DN 27",
+        "language": "pli",
+        "relation_class": "anchor",
+        "source_url": "https://suttacentral.net/dn27",
+        "title": "Aggañña"
+      },
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "doctrinal_parallels": [],
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn27-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn27.html"
+        }
+      ],
+      "full_parallels": {
+        "chinese": [
+          {
+            "canonical_id": "EA 40.1",
+            "confidence": "high",
+            "container_id": "T0125",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "EA 40.1",
+                  "catalog": {
+                    "file": "ea.jsonl",
+                    "line": 355
+                  },
+                  "container_id": "T0125",
+                  "head_text": "（一）",
+                  "hierarchy": [
+                    {
+                      "div_type": "pin",
+                      "mulu_type": "品",
+                      "number": 40,
+                      "text": "40 七日品"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "034",
+                    "end_lb": "0738a10",
+                    "end_ref": "T02n0125_p0738a10",
+                    "normalized_text_chars": 4494,
+                    "normalized_text_sha256": "776a488b5dcaccc80d6590052e55083303086fbed11a96fb88015bad67019ffa",
+                    "segment_ordinal": 355,
+                    "start_juan": "034",
+                    "start_lb": "0735b20",
+                    "start_ref": "T02n0125_p0735b20",
+                    "xml_sha256": "b12f15eb2358e89f150130dfabb10688cc7f17ac0e1927f239f2e093b407a643",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[355]"
+                  },
+                  "source": {
+                    "path": "T/T02/T02n0125.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T02/T02n0125.xml"
+                  },
+                  "title": null
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "T 10",
+            "confidence": "high",
+            "container_id": "T0010",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "MA 154",
+            "confidence": "high",
+            "container_id": "T0026",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "MA 154",
+                  "catalog": {
+                    "file": "ma.jsonl",
+                    "line": 154
+                  },
+                  "container_id": "T0026",
+                  "head_text": "（一五四）梵志品婆羅婆堂經第三第四分 別誦",
+                  "hierarchy": [
+                    {
+                      "div_type": "other",
+                      "mulu_type": "其他",
+                      "number": null,
+                      "text": "分別誦"
+                    },
+                    {
+                      "div_type": "pin",
+                      "mulu_type": "品",
+                      "number": 1,
+                      "text": "1 梵志品"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "039",
+                    "end_lb": "0677a07",
+                    "end_ref": "T01n0026_p0677a07",
+                    "normalized_text_chars": 6534,
+                    "normalized_text_sha256": "c9055ec19e7befbe434a5f31133c5b8221d610b347ecc86febe38c41384126c3",
+                    "segment_ordinal": 154,
+                    "start_juan": "039",
+                    "start_lb": "0673b04",
+                    "start_ref": "T01n0026_p0673b04",
+                    "xml_sha256": "947b56200db6997b493f4f28c3d36695cf618c5127cd20dc3761c7341c511432",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[154]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0026.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0026.xml"
+                  },
+                  "title": "婆羅婆堂經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          },
+          {
+            "canonical_id": "DA 5",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "lzh",
+            "local_resolution": {
+              "segments": [
+                {
+                  "canonical_id": "DA 5",
+                  "catalog": {
+                    "file": "da.jsonl",
+                    "line": 5
+                  },
+                  "container_id": "T0001",
+                  "head_text": "（五）第二分初小緣經第一",
+                  "hierarchy": [
+                    {
+                      "div_type": "fen",
+                      "mulu_type": "分",
+                      "number": 2,
+                      "text": "2 分"
+                    }
+                  ],
+                  "locator": {
+                    "end_juan": "006",
+                    "end_lb": "0039a20",
+                    "end_ref": "T01n0001_p0039a20",
+                    "normalized_text_chars": 4657,
+                    "normalized_text_sha256": "69529774a1d10ed79b2e4913fb485590fc8460af0d9da543a7f825e0fb70b97b",
+                    "segment_ordinal": 5,
+                    "start_juan": "006",
+                    "start_lb": "0036b28",
+                    "start_ref": "T01n0001_p0036b28",
+                    "xml_sha256": "41affc98a8e9590e18cd2bff2ad66e9a00d375b10cde2c1646ddc4c017b61e6f",
+                    "xpath": "(//*[local-name()='div'][*[local-name()='mulu' and @type='經']])[5]"
+                  },
+                  "source": {
+                    "path": "T/T01/T01n0001.xml",
+                    "project": "CBETA XML-P5 / Taishō",
+                    "revision": "dbdea41071e1e260ad84b72faefd4587333cf76d",
+                    "url": "https://github.com/cbeta-org/xml-p5/blob/dbdea41071e1e260ad84b72faefd4587333cf76d/T/T01/T01n0001.xml"
+                  },
+                  "title": "小緣經"
+                }
+              ],
+              "status": "resolved"
+            },
+            "relation_class": "full_textual_parallel"
+          }
+        ],
+        "other_pali": [
+          {
+            "canonical_id": "AN 7.66",
+            "confidence": "high",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table.",
+            "language": "pli",
+            "relation_class": "full_textual_parallel"
+          }
+        ]
+      },
+      "id": "work:dn27",
+      "indic_witnesses": {
+        "gandhari_prakrit": [],
+        "sanskrit_bhs": [
+          {
+            "canonical_id": "SF 277",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          },
+          {
+            "canonical_id": "SHT Sutta 65",
+            "confidence": "high",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship.",
+            "language": "san",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment"
+          }
+        ]
+      },
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed.",
+      "overall_confidence": "high",
+      "partial_parallels": [],
+      "rank": 20,
+      "shared_passages": [],
+      "status": {
+        "chinese": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources",
+        "sanskrit_bhs": "identified"
+      }
+    }
+  ],
+  "epistemic_policy": {
+    "absent_witness_rule": "not_identified_in_selected_sources means only that this benchmark did not identify a witness in its selected evidence set; it is not evidence of non-existence.",
+    "bhs_rule": "No witness is labeled Buddhist Hybrid Sanskrit merely from linguistic appearance. Use bhs only when an edition or scholarly source explicitly supports that classification.",
+    "exact_parallel_term": "not_used",
+    "reason": "Independent recensions are not assumed to be verbatim. The dataset uses full_textual_parallel, partial_textual_parallel, fragmentary_textual_parallel, shared_passage, and doctrinal_parallel."
+  },
+  "local_resolution": {
+    "note": "Only DA/MA/SA/SA2/EA collection references are resolved here. Standalone Taishō T-texts remain bibliographic references outside this segmentation scope.",
+    "schema_version": 1,
+    "source": "generated/agama-segments",
+    "summary": {
+      "collection_witnesses": 33,
+      "resolved_segments": 42,
+      "resolved_witnesses": 33,
+      "unresolved_witnesses": 0
+    }
+  },
+  "relation_classes": {
+    "doctrinal_parallel": "A conceptual/doctrinal similarity only; not evidence of textual descent by itself.",
+    "fragmentary_textual_parallel": "A surviving manuscript fragment securely identified with the work/recension. This is orthogonal to full-vs-partial discourse correspondence.",
+    "full_textual_parallel": "Whole-discourse correspondence in the comparative source. The texts may still differ substantially in wording and content.",
+    "partial_textual_parallel": "Markedly incomplete whole-discourse agreement; only a limited portion corresponds.",
+    "shared_passage": "A passage-level correspondence without a whole-discourse claim."
+  },
+  "scope": "benchmark-20",
+  "selection_rationale": "This benchmark starts with Dīgha Nikāya because SuttaCentral explicitly reports that its DN and MN correspondences had been thoroughly checked for accuracy and completeness. Every selected work has at least one Chinese full parallel plus an independent non-Pāli Indic witness identified in the comparative source: Sanskrit manuscript fragments for 19 works, a Gāndhārī Mahāparinirvāṇasūtra witness for DN 16, and a cross-tradition Prākrit Paesi witness for DN 23.",
+  "title": "First 20 high-confidence Early Buddhist textual crosswalks",
+  "version": 1
+}
