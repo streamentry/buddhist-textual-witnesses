@@ -1,0 +1,26 @@
+{
+  "id": "s2154",
+  "work_id": "t0825",
+  "title": "佛說甚深大迴向經",
+  "language": "lzh",
+  "script": "Chinese",
+  "witness_type": "manuscript",
+  "relation_to_work": "complete",
+  "dates": {
+    "composition_estimate": null,
+    "manuscript": "589 CE",
+    "translation": null,
+    "catalog_attestation": null,
+    "edition": null
+  },
+  "source": {
+    "project": "International Dunhuang Project / British Library",
+    "identifier": "Or.8210/S.2154",
+    "url": "https://idp.bl.uk/",
+    "revision": null,
+    "retrieved": "2026-10-05",
+    "license_note": "Metadata/source registration only; verify reproduction rights before mirroring manuscript images."
+  },
+  "confidence": "high",
+  "notes": "Dunhuang Chinese manuscript witness. This is not a Sanskrit or Indic-language original."
+}
