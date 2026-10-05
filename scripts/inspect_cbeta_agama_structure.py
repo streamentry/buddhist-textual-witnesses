@@ -56,7 +56,17 @@ def main() -> int:
             walk(child,depth+1,next_anc)
     walk(root)
     print("events",len(events))
-    for i,item in enumerate(events[:140],1):
+    no_pin=[
+        {"event_index":i, **item}
+        for i,item in enumerate(events,1)
+        if item.get("mulu_type")=="經" and not item.get("pin_ancestors")
+    ]
+    print("jing_without_pin_ancestor",len(no_pin))
+    for item in no_pin:
+        print("NO_PIN",item)
+    print("last_events")
+    start=max(1,len(events)-100)
+    for i,item in enumerate(events[-100:],start):
         print(i,item)
     return 0
 
