@@ -69,7 +69,6 @@ Reviewer:
 Stable reviewer ID (required):
 
 Affiliation / identifier:
-
 Notes / proposed changes:
 
 ---
@@ -131,7 +130,6 @@ Reviewer:
 Stable reviewer ID (required):
 
 Affiliation / identifier:
-
 Notes / proposed changes:
 
 ---
@@ -192,7 +190,6 @@ Reviewer:
 Stable reviewer ID (required):
 
 Affiliation / identifier:
-
 Notes / proposed changes:
 
 ---
@@ -253,7 +250,6 @@ Reviewer:
 Stable reviewer ID (required):
 
 Affiliation / identifier:
-
 Notes / proposed changes:
 
 ---
@@ -310,7 +306,6 @@ Reviewer:
 Stable reviewer ID (required):
 
 Affiliation / identifier:
-
 Notes / proposed changes:
 
 ---
@@ -372,7 +367,6 @@ Reviewer:
 Stable reviewer ID (required):
 
 Affiliation / identifier:
-
 Notes / proposed changes:
 
 ---
@@ -433,7 +427,6 @@ Reviewer:
 Stable reviewer ID (required):
 
 Affiliation / identifier:
-
 Notes / proposed changes:
 
 ---
@@ -495,7 +488,6 @@ Reviewer:
 Stable reviewer ID (required):
 
 Affiliation / identifier:
-
 Notes / proposed changes:
 
 ---
@@ -556,7 +548,6 @@ Reviewer:
 Stable reviewer ID (required):
 
 Affiliation / identifier:
-
 Notes / proposed changes:
 
 ---
