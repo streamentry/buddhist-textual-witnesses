@@ -37,6 +37,7 @@ This repository supports textual-critical study of Buddhist sources across multi
 29. Multi-witness alignments may mark a member as `context` when a witness signals that speech occurred but does not reproduce it. Do not mislabel narrative compression as textual absence.
 30. Preserve witness-specific numerical variants. Never harmonize numbers across recensions merely because a majority reading exists.
 31. In rendered Sanskrit, visual brackets for supplied text are presentation only. The source record must retain upstream editorial markup and supplied letters must never be silently treated as directly attested.
+32. `lost_text_marker` is valid only when the cited source unit explicitly records textual loss. Never use it merely because a witness has not yet been ingested or aligned.
 
 ## Preferred workflow
 
