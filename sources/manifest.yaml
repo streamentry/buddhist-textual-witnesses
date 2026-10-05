@@ -1,0 +1,46 @@
+version: 1
+sources:
+  - id: gretil
+    name: GRETIL
+    kind: corpus
+    languages: [san, pra]
+    acquisition: bulk
+    destination: vendor/gretil
+    notes: Prefer official cumulative archives or their maintained institutional mirror.
+
+  - id: suttacentral-bilara
+    name: SuttaCentral Bilara Data
+    kind: repository
+    languages: [san, pra, lzh]
+    acquisition: git
+    repository: https://github.com/suttacentral/bilara-data.git
+    ref: published
+    include:
+      - root/san
+      - root/pra
+      - root/lzh
+    destination: vendor/suttacentral
+
+  - id: cbeta-xml
+    name: CBETA XML-P5
+    kind: repository
+    languages: [lzh]
+    acquisition: git
+    destination: vendor/cbeta
+    notes: Select principal Agama witnesses after fetch.
+
+  - id: gandhari
+    name: Gandhari.org
+    kind: catalog
+    languages: [gdh]
+    acquisition: manual
+    destination: null
+    redistribution: restricted_or_unclear
+
+  - id: dsbc
+    name: Digital Sanskrit Buddhist Canon
+    kind: corpus
+    languages: [san, bhs]
+    acquisition: manual
+    destination: null
+    redistribution: restricted
