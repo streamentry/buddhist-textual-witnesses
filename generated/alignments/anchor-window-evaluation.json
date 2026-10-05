@@ -1,0 +1,175 @@
+{
+  "details": [
+    {
+      "full_cover_rank": 1,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0001",
+        "DA 21#b0002"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0001",
+      "review_alignment_id": "review:dn1-da21:opening-01"
+    },
+    {
+      "full_cover_rank": 2,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0001",
+        "DA 21#b0002"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0002",
+      "review_alignment_id": "review:dn1-da21:opening-01"
+    },
+    {
+      "full_cover_rank": 1,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0003"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0003",
+      "review_alignment_id": "review:dn1-da21:monks-discussion-02"
+    },
+    {
+      "full_cover_rank": 1,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0003"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0004",
+      "review_alignment_id": "review:dn1-da21:monks-discussion-02"
+    },
+    {
+      "full_cover_rank": 2,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0004",
+        "DA 21#b0005"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0005",
+      "review_alignment_id": "review:dn1-da21:buddha-enters-hall-03"
+    },
+    {
+      "full_cover_rank": 1,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0004",
+        "DA 21#b0005"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0006",
+      "review_alignment_id": "review:dn1-da21:buddha-enters-hall-03"
+    },
+    {
+      "full_cover_rank": 1,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0006"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0007",
+      "review_alignment_id": "review:dn1-da21:reaction-to-praise-blame-04"
+    },
+    {
+      "full_cover_rank": 1,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0006"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0008",
+      "review_alignment_id": "review:dn1-da21:reaction-to-praise-blame-04"
+    },
+    {
+      "full_cover_rank": 1,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0006"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0009",
+      "review_alignment_id": "review:dn1-da21:reaction-to-praise-blame-04"
+    },
+    {
+      "full_cover_rank": 1,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0006"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0010",
+      "review_alignment_id": "review:dn1-da21:reaction-to-praise-blame-04"
+    },
+    {
+      "full_cover_rank": 1,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0007"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0011",
+      "review_alignment_id": "review:dn1-da21:minor-morality-05"
+    },
+    {
+      "full_cover_rank": 1,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0007"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0012",
+      "review_alignment_id": "review:dn1-da21:minor-morality-05"
+    },
+    {
+      "full_cover_rank": 1,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0007"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0013",
+      "review_alignment_id": "review:dn1-da21:minor-morality-05"
+    },
+    {
+      "full_cover_rank": 1,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0007"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0014",
+      "review_alignment_id": "review:dn1-da21:minor-morality-05"
+    },
+    {
+      "full_cover_rank": 1,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0007"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0015",
+      "review_alignment_id": "review:dn1-da21:minor-morality-05"
+    },
+    {
+      "full_cover_rank": 1,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0007"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0016",
+      "review_alignment_id": "review:dn1-da21:minor-morality-05"
+    },
+    {
+      "full_cover_rank": 1,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0007"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0017",
+      "review_alignment_id": "review:dn1-da21:minor-morality-05"
+    },
+    {
+      "full_cover_rank": 1,
+      "gold_chinese_unit_ids": [
+        "DA 21#b0007"
+      ],
+      "overlap_rank": 1,
+      "pali_unit_id": "DN 1#p0018",
+      "review_alignment_id": "review:dn1-da21:minor-morality-05"
+    }
+  ],
+  "full_cover_at_3": 1.0,
+  "gold_case_count": 18,
+  "mean_reciprocal_rank_overlap": 1.0,
+  "note": "Gold cases are model-reviewed seed alignments, not a human gold standard. Metrics are retrieval diagnostics only.",
+  "overlap_at_3": 1.0
+}

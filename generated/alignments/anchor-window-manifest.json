@@ -1,0 +1,18 @@
+{
+  "candidate_count": 13404,
+  "errors": [],
+  "evaluation": {
+    "full_cover_at_3": 1.0,
+    "gold_case_count": 18,
+    "mean_reciprocal_rank_overlap": 1.0,
+    "note": "Gold cases are model-reviewed seed alignments, not a human gold standard. Metrics are retrieval diagnostics only.",
+    "overlap_at_3": 1.0
+  },
+  "lexicon_entries": 26,
+  "max_width": 3,
+  "method": "lexicon_anchor_window_v1",
+  "pair_count": 31,
+  "schema_version": 1,
+  "status": "machine_candidates_only",
+  "top_k": 3
+}
