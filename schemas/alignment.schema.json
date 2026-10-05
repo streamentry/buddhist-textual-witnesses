@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cross-tradition source-unit alignment",
+  "type": "object",
+  "required": [
+    "alignment_id",
+    "work_id",
+    "chinese_witness_id",
+    "status",
+    "assertion",
+    "relation_type",
+    "scope",
+    "pali_unit_id",
+    "chinese_unit_id",
+    "method",
+    "review"
+  ],
+  "properties": {
+    "alignment_id": {"type": "string", "minLength": 1},
+    "work_id": {"type": "string", "minLength": 1},
+    "chinese_witness_id": {"type": "string", "minLength": 1},
+    "status": {
+      "enum": ["machine_candidate", "reviewed", "established", "rejected"]
+    },
+    "assertion": {
+      "enum": ["not_established", "reviewed_claim", "established_claim", "rejected"]
+    },
+    "relation_type": {
+      "enum": [
+        "shared_formula",
+        "possible_parallel_passage",
+        "parallel_passage",
+        "partial_overlap",
+        "shared_passage"
+      ]
+    },
+    "scope": {"type": "string"},
+    "pali_unit_id": {"type": "string"},
+    "chinese_unit_id": {"type": "string"},
+    "method": {
+      "type": "object",
+      "required": ["name", "kind", "ranking_score", "signals", "limitations"],
+      "properties": {
+        "name": {"type": "string"},
+        "kind": {"enum": ["lexical_rule", "structural_ranking", "manual"]},
+        "ranking_score": {"type": "number", "minimum": 0, "maximum": 1},
+        "signals": {"type": "object"},
+        "limitations": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "review": {
+      "type": "object",
+      "required": ["status", "reviewer_type", "reviewer", "decision", "notes"],
+      "properties": {
+        "status": {"enum": ["unreviewed", "reviewed"]},
+        "reviewer_type": {"type": ["string", "null"], "enum": ["human", "model", null]},
+        "reviewer": {"type": ["string", "null"]},
+        "decision": {
+          "type": ["string", "null"],
+          "enum": ["accepted", "rejected", "needs_work", null]
+        },
+        "notes": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
