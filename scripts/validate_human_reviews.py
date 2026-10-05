@@ -1,80 +1,42 @@
 #!/usr/bin/env python3
-"""Validate human reviews against a curated multi-witness case study."""
+"""Validate human review records and report current evidence freshness."""
 from __future__ import annotations
 
 import argparse
 import json
 import sys
 from pathlib import Path
-from typing import Any
 
-DECISIONS = {"accepted", "rejected", "needs_work"}
-ASSESSMENTS = {"agree", "revise", "uncertain"}
-
-
-def validate_review(
-    review: dict[str, Any],
-    case_study_id: str,
-    alignment_ids: set[str],
-) -> list[str]:
-    errors: list[str] = []
-    rid = review.get("review_id", "<missing-review>")
-
-    if review.get("case_study_id") != case_study_id:
-        errors.append(f"{rid}: wrong case_study_id")
-
-    alignment_id = review.get("alignment_id")
-    if alignment_id not in alignment_ids:
-        errors.append(f"{rid}: unknown alignment_id {alignment_id}")
-
-    reviewer = review.get("reviewer") or {}
-    if reviewer.get("reviewer_type") != "human":
-        errors.append(f"{rid}: reviewer_type must be human")
-    if not str(reviewer.get("name") or "").strip():
-        errors.append(f"{rid}: reviewer name is required")
-
-    if review.get("decision") not in DECISIONS:
-        errors.append(f"{rid}: invalid decision {review.get('decision')}")
-
-    assessments = review.get("assessments") or {}
-    for key in (
-        "source_units",
-        "relation_type",
-        "variant_notes",
-        "editorial_handling",
-    ):
-        if assessments.get(key) not in ASSESSMENTS:
-            errors.append(
-                f"{rid}: assessment {key} must be agree/revise/uncertain"
-            )
-
-    reviewed_on = str(review.get("reviewed_on") or "")
-    if len(reviewed_on) < 10 or reviewed_on == "YYYY-MM-DD":
-        errors.append(f"{rid}: reviewed_on must be a real date")
-
-    return errors
+from review_promotion_core import build_source_indexes, validate_review_record
 
 
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--pali-units", type=Path, required=True)
+    p.add_argument("--chinese-blocks", type=Path, required=True)
+    p.add_argument("--indic-units", type=Path, required=True)
     p.add_argument("--case-study", type=Path, required=True)
     p.add_argument("--reviews", type=Path, required=True)
+    p.add_argument("--require-fresh", action="store_true")
     args = p.parse_args(argv)
 
     case = json.loads(args.case_study.read_text(encoding="utf-8"))
     doc = json.loads(args.reviews.read_text(encoding="utf-8"))
+    indexes = build_source_indexes(args.pali_units, args.chinese_blocks, args.indic_units)
     case_id = case["case_study_id"]
-    alignment_ids = {
-        row["alignment_id"] for row in case.get("alignments", [])
-    }
+    alignments = {row["alignment_id"]: row for row in case.get("alignments", [])}
 
     errors: list[str] = []
     if doc.get("case_study_id") != case_id:
         errors.append("review document case_study_id does not match case study")
+    if doc.get("version") != 2:
+        errors.append("review document version must be 2")
 
     seen_review_ids: set[str] = set()
     seen_reviewer_alignment: set[tuple[str, str]] = set()
     accepted = 0
+    fresh_accepted = 0
+    stale_accepted = 0
 
     for review in doc.get("reviews", []):
         rid = review.get("review_id")
@@ -86,19 +48,26 @@ def main(argv: list[str] | None = None) -> int:
         seen_review_ids.add(rid)
 
         reviewer = review.get("reviewer") or {}
-        reviewer_key = str(
-            reviewer.get("identifier") or reviewer.get("name") or ""
-        )
+        reviewer_key = str(reviewer.get("reviewer_id") or "")
         pair = (reviewer_key, str(review.get("alignment_id")))
-        if pair in seen_reviewer_alignment:
-            errors.append(
-                f"{rid}: same reviewer has duplicate review for alignment"
-            )
+        if reviewer_key and pair in seen_reviewer_alignment:
+            errors.append(f"{rid}: same reviewer_id has duplicate review for alignment")
         seen_reviewer_alignment.add(pair)
 
-        errors.extend(validate_review(review, case_id, alignment_ids))
+        review_errors, fresh, _ = validate_review_record(
+            review,
+            case_id,
+            alignments,
+            indexes,
+            require_fresh=args.require_fresh,
+        )
+        errors.extend(review_errors)
         if review.get("decision") == "accepted":
             accepted += 1
+            if fresh:
+                fresh_accepted += 1
+            else:
+                stale_accepted += 1
 
     if errors:
         for error in errors:
@@ -109,9 +78,11 @@ def main(argv: list[str] | None = None) -> int:
         json.dumps(
             {
                 "case_study": case_id,
-                "alignment_count": len(alignment_ids),
+                "alignment_count": len(alignments),
                 "human_review_count": len(doc.get("reviews", [])),
                 "accepted_review_count": accepted,
+                "fresh_accepted_review_count": fresh_accepted,
+                "stale_accepted_review_count": stale_accepted,
                 "auto_promotions": 0,
             },
             indent=2,
