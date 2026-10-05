@@ -7,6 +7,10 @@ import json
 import sys
 from pathlib import Path
 
+HERE = Path(__file__).resolve().parent
+if str(HERE) not in sys.path:
+    sys.path.insert(0, str(HERE))
+
 from review_promotion_core import (
     build_source_indexes,
     validate_review_lineage,
