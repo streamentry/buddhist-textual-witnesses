@@ -398,7 +398,7 @@ async function buildReview(alignmentId) {{
   }}
   const now = new Date().toISOString();
   const date = now.slice(0,10);
-  const stamp = now.replace(/[^0-9]/g,"").slice(0,14);
+  const stamp = now.replace(/[^0-9]/g,"").slice(0,17);
   const previous = (alignment.existing_reviews || [])
     .filter(r => ((r.reviewer || {}).reviewer_id || "") === reviewerId)
     .slice(-1)[0] || null;
