@@ -112,7 +112,7 @@ def main(argv: list[str] | None = None) -> int:
             "",
             "Stable reviewer ID (required):",
             "",
-            "Affiliation / identifier:"
+            "Affiliation / identifier:",
             "",
             "Notes / proposed changes:",
             "",
