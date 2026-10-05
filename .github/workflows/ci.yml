@@ -10,7 +10,6 @@ on:
       - "data/crosswalks/**"
       - "data/alignments/**"
       - "data/case-studies/**"
-      - "data/case-studies/**"
       - ".github/workflows/ci.yml"
   pull_request:
     paths:
@@ -20,6 +19,7 @@ on:
       - "schemas/**"
       - "data/crosswalks/**"
       - "data/alignments/**"
+      - "data/case-studies/**"
       - ".github/workflows/ci.yml"
 
 jobs:
