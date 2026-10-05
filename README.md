@@ -164,7 +164,7 @@ Current generated source units:
 - **3,031** Pāli paragraph units
 - **42** benchmark-relevant Chinese discourse segments
 - **2,189** CBETA Chinese text blocks
-- **SF 36 (DN 14)** as the first reproducible Sanskrit edited-text witness: **943 segments**, including **496 segments with explicit `<supplied>` editorial markup**
+- **SF 36 (DN 14)** as the first reproducible Sanskrit edited-text witness: **943 segments → 396 source units** (**275 paragraphs, 83 headings, 38 blocks**), including **496 leaf segments with explicit `<supplied>` editorial markup**
 - Chinese block extraction coverage: **98.01% minimum**, **99.77% mean**
 
 Current machine review queue:
@@ -189,6 +189,23 @@ make alignment
 ```
 
 See `docs/ALIGNMENT_PIPELINE.md`.
+
+### DN 14 multi-witness vertical slice
+
+The first Pāli–Chinese–Sanskrit vertical slice is now curated under:
+
+`data/case-studies/dn14-mahapadana/alignments.json`
+
+It currently contains **6 model-reviewed multi-witness passage alignments** across:
+
+- DN 14 (Pāli)
+- DA 1 (Classical Chinese)
+- EA 48.4 (Classical Chinese)
+- SF 36 (Sanskrit)
+
+The generated report is `generated/case-studies/dn14-mahapadana.md`.
+
+A particularly useful variant is the seven-Buddha lifespan list: DN 14, SF 36 prose, and DA 1 prose agree on **80k/70k/60k/40k/30k/20k**; DA 1's verse changes Vipassī to **84k**, while EA 48.4 prose gives **84k/70k/60k/50k/40k/20k**. The project preserves all readings rather than harmonizing them.
 
 ## Repository layout
 
@@ -220,6 +237,8 @@ See `docs/ALIGNMENT_PIPELINE.md`.
 │   ├── generate_alignment_candidates.py
 │   ├── generate_anchor_window_candidates.py
 │   ├── validate_alignments.py
+│   ├── validate_multiwitness_alignments.py
+│   ├── render_multiwitness_case_study.py
 │   ├── validate_crosswalks.py
 │   └── render_crosswalks.py
 ├── docs/
@@ -231,12 +250,14 @@ See `docs/ALIGNMENT_PIPELINE.md`.
 │   └── README.md
 ├── data/
 │   ├── alignments/
+│   ├── case-studies/
 │   ├── crosswalks/
 │   └── texts/
 ├── generated/
 │   ├── agama-segments/
 │   ├── alignment-source/   # Pāli, Chinese, Indic derived source units
 │   ├── alignments/
+│   ├── case-studies/
 │   └── crosswalks/
 ├── tests/
 ├── Makefile

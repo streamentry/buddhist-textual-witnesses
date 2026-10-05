@@ -45,9 +45,11 @@ Build a small, high-confidence benchmark before scaling.
 
 - [x] First model-reviewed many-to-many batch: DN 1 ↔ DA 21
 - [ ] First human-reviewed established batch
+- [ ] Human review of the DN 14 multi-witness vertical slice
 - [x] Add model-reviewed bilingual retrieval-anchor lexicon for names, formulas, doctrinal terms, and precepts
 - [x] Add lexicon-assisted 1–3-block candidate windows and seed retrieval diagnostics
-- [x] Add first reproducible Sanskrit edited-text source units: SF 36, 943 segments, editorial markup preserved
+- [x] Add first reproducible Sanskrit edited-text source units: SF 36, 943 segments → 396 source units, editorial markup preserved
+- [x] First Pāli–Chinese–Sanskrit vertical slice: DN 14 / DA 1 / EA 48.4 / SF 36, 6 model-reviewed alignments
 - [ ] Expand Sanskrit/BHS/Gāndhārī source units beyond SF 36 where edited text can be reproduced and cited safely
 
 ## Phase 4 — Research interface

@@ -1,4 +1,4 @@
-.PHONY: test catalog fetch validate-crosswalks render-crosswalks benchmark agama-fetch agama-segments resolve-crosswalks agama pali-fetch pali-units indic-fetch indic-units chinese-alignment-units alignment-candidates anchor-window-candidates validate-alignments alignment
+.PHONY: test catalog fetch validate-crosswalks render-crosswalks benchmark agama-fetch agama-segments resolve-crosswalks agama pali-fetch pali-units indic-fetch indic-units chinese-alignment-units alignment-candidates anchor-window-candidates validate-alignments validate-case-study render-case-study case-study alignment
 
 fetch:
 	./scripts/fetch_sources.sh
@@ -109,5 +109,23 @@ validate-alignments:
 			data/alignments/reviewed.json \
 			data/alignments/model-reviewed.json
 
-alignment: test indic-units anchor-window-candidates validate-alignments
-	@echo "Pāli-Chinese-Indic alignment source layer and candidate queue are valid."
+validate-case-study:
+	python3 scripts/validate_multiwitness_alignments.py \
+		--pali-units generated/alignment-source/pali/units.jsonl \
+		--chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+		--indic-units generated/alignment-source/indic/units.jsonl \
+		--case-study data/case-studies/dn14-mahapadana/alignments.json
+
+render-case-study:
+	python3 scripts/render_multiwitness_case_study.py \
+		--pali-units generated/alignment-source/pali/units.jsonl \
+		--chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+		--indic-units generated/alignment-source/indic/units.jsonl \
+		--case-study data/case-studies/dn14-mahapadana/alignments.json \
+		--output generated/case-studies/dn14-mahapadana.md
+
+case-study: validate-case-study render-case-study
+	@echo "DN 14 multi-witness case study is valid."
+
+alignment: test indic-units anchor-window-candidates validate-alignments case-study
+	@echo "Pāli-Chinese-Indic alignment source layer, candidate queue, and case study are valid."

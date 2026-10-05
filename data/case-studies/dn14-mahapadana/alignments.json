@@ -1,0 +1,474 @@
+{
+  "version": 1,
+  "case_study_id": "dn14-mahapadana-multiwitness",
+  "work_id": "DN 14",
+  "title": "Mahāpadāna / Mahāvadāna multi-witness vertical slice",
+  "scope": "Initial model-reviewed alignment across Pāli DN 14, Chinese DA 1 and EA 48.4, and Sanskrit SF 36.",
+  "epistemic_policy": "These are model-reviewed source-unit correspondences for research triage. They preserve recension differences and editorial reconstruction. None is human-established.",
+  "witnesses": [
+    {
+      "language": "pli",
+      "witness_id": "DN 14",
+      "role": "Pāli anchor"
+    },
+    {
+      "language": "lzh",
+      "witness_id": "DA 1",
+      "role": "Chinese Dīrgha Āgama full parallel"
+    },
+    {
+      "language": "lzh",
+      "witness_id": "EA 48.4",
+      "role": "Chinese Ekottarika Āgama full parallel"
+    },
+    {
+      "language": "san",
+      "witness_id": "SF 36",
+      "role": "Sanskrit edited fragmentary witness"
+    }
+  ],
+  "alignments": [
+    {
+      "alignment_id": "mw:dn14:opening-setting:01",
+      "work_id": "DN 14",
+      "status": "model_reviewed",
+      "relation_type": "parallel_passage",
+      "scope": "opening_formula_and_setting",
+      "members": [
+        {
+          "member_id": "pli",
+          "language": "pli",
+          "witness_id": "DN 14",
+          "source_unit_ids": [
+            "DN 14#p0001"
+          ],
+          "coverage": "full",
+          "notes": "Opening formula and Jetavana setting; additionally specifies karerikuṭikā."
+        },
+        {
+          "member_id": "da",
+          "language": "lzh",
+          "witness_id": "DA 1",
+          "source_unit_ids": [
+            "DA 1#b0001",
+            "DA 1#b0002"
+          ],
+          "coverage": "full",
+          "notes": "Opening formula plus Śrāvastī/Jetavana setting."
+        },
+        {
+          "member_id": "ea",
+          "language": "lzh",
+          "witness_id": "EA 48.4",
+          "source_unit_ids": [
+            "EA 48.4#b0001",
+            "EA 48.4#b0002"
+          ],
+          "coverage": "full",
+          "notes": "Opening formula plus Śrāvastī/Jetavana/Anāthapiṇḍada setting."
+        },
+        {
+          "member_id": "sf",
+          "language": "san",
+          "witness_id": "SF 36",
+          "source_unit_ids": [
+            "SF 36#p0001"
+          ],
+          "coverage": "full",
+          "notes": "Opening formula and setting; several letters in the edition are supplied."
+        }
+      ],
+      "variants": [
+        {
+          "type": "structural",
+          "statement": "The witnesses share the opening and Jetavana setting, but differ in the granularity and wording of the immediate residence detail.",
+          "member_ids": [
+            "pli",
+            "da",
+            "ea",
+            "sf"
+          ]
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer_type": "model",
+        "reviewer": "GPT-5.6 Sol",
+        "decision": "accepted",
+        "confidence": "high",
+        "reviewed_on": "2026-10-05",
+        "notes": "Strong formulaic and narrative correspondence. No claim of verbal identity."
+      }
+    },
+    {
+      "alignment_id": "mw:dn14:monks-discussion:02",
+      "work_id": "DN 14",
+      "status": "model_reviewed",
+      "relation_type": "partial_overlap",
+      "scope": "monks_discuss_past_buddhas",
+      "members": [
+        {
+          "member_id": "pli",
+          "language": "pli",
+          "witness_id": "DN 14",
+          "source_unit_ids": [
+            "DN 14#p0002"
+          ],
+          "coverage": "partial",
+          "notes": "The discussion is summarized as concerning pubbenivāsa, without the detailed question found in the other recensions."
+        },
+        {
+          "member_id": "da",
+          "language": "lzh",
+          "witness_id": "DA 1",
+          "source_unit_ids": [
+            "DA 1#b0003"
+          ],
+          "coverage": "full",
+          "notes": "Detailed discussion of past Buddhas and whether the Tathāgata knows through understanding 法性 or information from devas."
+        },
+        {
+          "member_id": "ea",
+          "language": "lzh",
+          "witness_id": "EA 48.4",
+          "source_unit_ids": [
+            "EA 48.4#b0003"
+          ],
+          "coverage": "full",
+          "notes": "Detailed discussion of past Buddhas and the 法處/deva question."
+        },
+        {
+          "member_id": "sf",
+          "language": "san",
+          "witness_id": "SF 36",
+          "source_unit_ids": [
+            "SF 36#p0002",
+            "SF 36#p0003",
+            "SF 36#p0004"
+          ],
+          "coverage": "full",
+          "notes": "Expands the discussion into knowledge of past Buddhas, their qualities, and the dharmadhātu versus deva-report question."
+        }
+      ],
+      "variants": [
+        {
+          "type": "expansion",
+          "statement": "SF 36, DA 1, and EA 48.4 preserve an expanded discussion about knowledge of past Buddhas and a dharmadhātu/deva-report question; DN 14 at this point gives only the shorter pubbenivāsa topic.",
+          "member_ids": [
+            "pli",
+            "da",
+            "ea",
+            "sf"
+          ]
+        },
+        {
+          "type": "doctrinal_framing",
+          "statement": "The Sanskrit and Chinese recensions explicitly frame the question in terms of dharmadhātu / 法性 or 法處, a framing not stated in the corresponding Pāli opening discussion.",
+          "member_ids": [
+            "pli",
+            "da",
+            "ea",
+            "sf"
+          ]
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer_type": "model",
+        "reviewer": "GPT-5.6 Sol",
+        "decision": "accepted",
+        "confidence": "high",
+        "reviewed_on": "2026-10-05",
+        "notes": "Accepted as partial overlap because the Pāli unit is materially shorter than the Sanskrit and Chinese passages."
+      }
+    },
+    {
+      "alignment_id": "mw:dn14:buddha-hears-asks:03",
+      "work_id": "DN 14",
+      "status": "model_reviewed",
+      "relation_type": "parallel_passage",
+      "scope": "buddha_hears_approaches_and_asks",
+      "members": [
+        {
+          "member_id": "pli",
+          "language": "pli",
+          "witness_id": "DN 14",
+          "source_unit_ids": [
+            "DN 14#p0003"
+          ],
+          "coverage": "full",
+          "notes": "Buddha hears with purified divine ear, approaches, sits, and asks what the monks were discussing."
+        },
+        {
+          "member_id": "da",
+          "language": "lzh",
+          "witness_id": "DA 1",
+          "source_unit_ids": [
+            "DA 1#b0004",
+            "DA 1#b0005"
+          ],
+          "coverage": "full",
+          "notes": "Hearing/approach and question are split across two blocks."
+        },
+        {
+          "member_id": "ea",
+          "language": "lzh",
+          "witness_id": "EA 48.4",
+          "source_unit_ids": [
+            "EA 48.4#b0004"
+          ],
+          "coverage": "full",
+          "notes": "Hearing, approach, sitting in the middle, and question are compressed into one block."
+        },
+        {
+          "member_id": "sf",
+          "language": "san",
+          "witness_id": "SF 36",
+          "source_unit_ids": [
+            "SF 36#p0005",
+            "SF 36#p0006",
+            "SF 36#p0007"
+          ],
+          "coverage": "full",
+          "notes": "Marks the unfinished discussion, then divine-ear hearing/approach, then the Buddha's question."
+        }
+      ],
+      "variants": [
+        {
+          "type": "structural",
+          "statement": "The same narrative sequence is divided differently: one Pāli paragraph, two DA blocks, one EA block, and three Sanskrit paragraphs.",
+          "member_ids": [
+            "pli",
+            "da",
+            "ea",
+            "sf"
+          ]
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer_type": "model",
+        "reviewer": "GPT-5.6 Sol",
+        "decision": "accepted",
+        "confidence": "high",
+        "reviewed_on": "2026-10-05",
+        "notes": "Strong narrative and lexical correspondence despite differing segmentation."
+      }
+    },
+    {
+      "alignment_id": "mw:dn14:monks-report:04",
+      "work_id": "DN 14",
+      "status": "model_reviewed",
+      "relation_type": "structural_correspondence",
+      "scope": "monks_report_their_discussion",
+      "members": [
+        {
+          "member_id": "pli",
+          "language": "pli",
+          "witness_id": "DN 14",
+          "source_unit_ids": [
+            "DN 14#p0004"
+          ],
+          "coverage": "partial",
+          "notes": "Repeats only the abbreviated pubbenivāsa topic."
+        },
+        {
+          "member_id": "da",
+          "language": "lzh",
+          "witness_id": "DA 1",
+          "source_unit_ids": [
+            "DA 1#b0005"
+          ],
+          "coverage": "context",
+          "notes": "Says the monks answered fully, but does not repeat the detailed content in this block."
+        },
+        {
+          "member_id": "ea",
+          "language": "lzh",
+          "witness_id": "EA 48.4",
+          "source_unit_ids": [
+            "EA 48.4#b0005"
+          ],
+          "coverage": "full",
+          "notes": "Repeats the expanded discussion and dharmadhātu/deva question."
+        },
+        {
+          "member_id": "sf",
+          "language": "san",
+          "witness_id": "SF 36",
+          "source_unit_ids": [
+            "SF 36#p0008",
+            "SF 36#p0009"
+          ],
+          "coverage": "full",
+          "notes": "Repeats the expanded discussion and dharmadhātu/deva question in detail."
+        }
+      ],
+      "variants": [
+        {
+          "type": "compression",
+          "statement": "DA 1 replaces the repeated speech with a narrative statement that the monks answered fully; DN 14 repeats only the short topic, while EA 48.4 and SF 36 repeat the expanded question.",
+          "member_ids": [
+            "pli",
+            "da",
+            "ea",
+            "sf"
+          ]
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer_type": "model",
+        "reviewer": "GPT-5.6 Sol",
+        "decision": "accepted",
+        "confidence": "high",
+        "reviewed_on": "2026-10-05",
+        "notes": "Alignment is structural rather than full verbal correspondence."
+      }
+    },
+    {
+      "alignment_id": "mw:dn14:seven-buddhas-kalpas:05",
+      "work_id": "DN 14",
+      "status": "model_reviewed",
+      "relation_type": "parallel_passage",
+      "scope": "seven_buddhas_and_kalpa_chronology",
+      "members": [
+        {
+          "member_id": "pli",
+          "language": "pli",
+          "witness_id": "DN 14",
+          "source_unit_ids": [
+            "DN 14#p0009"
+          ],
+          "coverage": "full",
+          "notes": "Lists Vipassī through the present Buddha with 91/31-kalpa chronology."
+        },
+        {
+          "member_id": "da",
+          "language": "lzh",
+          "witness_id": "DA 1",
+          "source_unit_ids": [
+            "DA 1#b0011",
+            "DA 1#b0012"
+          ],
+          "coverage": "full",
+          "notes": "Prose list followed by verse restatement."
+        },
+        {
+          "member_id": "ea",
+          "language": "lzh",
+          "witness_id": "EA 48.4",
+          "source_unit_ids": [
+            "EA 48.4#b0009",
+            "EA 48.4#b0011"
+          ],
+          "coverage": "full",
+          "notes": "Prose list and verse restatement; the verse-introduction block is excluded as framing."
+        },
+        {
+          "member_id": "sf",
+          "language": "san",
+          "witness_id": "SF 36",
+          "source_unit_ids": [
+            "SF 36#p0013",
+            "SF 36#p0014"
+          ],
+          "coverage": "full",
+          "notes": "Prose list and damaged/reconstructed verse section; supplied text remains explicit in edition_text."
+        }
+      ],
+      "variants": [],
+      "review": {
+        "status": "reviewed",
+        "reviewer_type": "model",
+        "reviewer": "GPT-5.6 Sol",
+        "decision": "accepted",
+        "confidence": "high",
+        "reviewed_on": "2026-10-05",
+        "notes": "Strong agreement in sequence and chronology; names appear in language-specific forms."
+      }
+    },
+    {
+      "alignment_id": "mw:dn14:lifespans:06",
+      "work_id": "DN 14",
+      "status": "model_reviewed",
+      "relation_type": "parallel_passage",
+      "scope": "lifespans_of_the_seven_buddhas",
+      "members": [
+        {
+          "member_id": "pli",
+          "language": "pli",
+          "witness_id": "DN 14",
+          "source_unit_ids": [
+            "DN 14#p0012"
+          ],
+          "coverage": "full",
+          "notes": "80k/70k/60k/40k/30k/20k; present lifespan about 100 years."
+        },
+        {
+          "member_id": "da",
+          "language": "lzh",
+          "witness_id": "DA 1",
+          "source_unit_ids": [
+            "DA 1#b0013",
+            "DA 1#b0014"
+          ],
+          "coverage": "full",
+          "notes": "Prose agrees with Pāli/Sanskrit, but the following verse gives Vipassī 84k."
+        },
+        {
+          "member_id": "ea",
+          "language": "lzh",
+          "witness_id": "EA 48.4",
+          "source_unit_ids": [
+            "EA 48.4#b0030"
+          ],
+          "coverage": "full",
+          "notes": "Prose gives 84k/70k/60k/50k/40k/20k; present maximum 100."
+        },
+        {
+          "member_id": "sf",
+          "language": "san",
+          "witness_id": "SF 36",
+          "source_unit_ids": [
+            "SF 36#p0015",
+            "SF 36#p0016"
+          ],
+          "coverage": "full",
+          "notes": "Prose gives 80k/70k/60k/40k/30k/20k; the verse is fragmentary/supplied in places."
+        }
+      ],
+      "variants": [
+        {
+          "type": "numerical",
+          "statement": "DN 14, SF 36 prose, and DA 1 prose agree on 80k/70k/60k/40k/30k/20k. DA 1's verse changes Vipassī to 84k. EA 48.4 prose gives 84k/70k/60k/50k/40k/20k.",
+          "member_ids": [
+            "pli",
+            "da",
+            "ea",
+            "sf"
+          ]
+        },
+        {
+          "type": "structural",
+          "statement": "DA 1 and SF 36 preserve prose plus verse forms for this list, while the selected Pāli unit is prose and the selected EA member uses the prose list only.",
+          "member_ids": [
+            "pli",
+            "da",
+            "ea",
+            "sf"
+          ]
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer_type": "model",
+        "reviewer": "GPT-5.6 Sol",
+        "decision": "accepted",
+        "confidence": "high",
+        "reviewed_on": "2026-10-05",
+        "notes": "The numerical disagreement is preserved as witness evidence; no harmonized value is selected."
+      }
+    }
+  ]
+}

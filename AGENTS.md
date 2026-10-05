@@ -34,6 +34,9 @@ This repository supports textual-critical study of Buddhist sources across multi
 26. Retrieval evaluation against model-reviewed seed alignments is a diagnostic, not a human gold standard and not a scholarly confidence score.
 27. For Indic edited texts, preserve upstream editorial markup such as supplied, gap, and unclear annotations in the witness-facing field. Derived plain/search text must never replace the edition text.
 28. `not_textualized_in_selected_upstream` means only that this repository's selected reproducible source layer has no ingestible text for that witness. It is not a claim that no scholarly edition exists.
+29. Multi-witness alignments may mark a member as `context` when a witness signals that speech occurred but does not reproduce it. Do not mislabel narrative compression as textual absence.
+30. Preserve witness-specific numerical variants. Never harmonize numbers across recensions merely because a majority reading exists.
+31. In rendered Sanskrit, visual brackets for supplied text are presentation only. The source record must retain upstream editorial markup and supplied letters must never be silently treated as directly attested.
 
 ## Preferred workflow
 
@@ -49,4 +52,4 @@ This repository supports textual-critical study of Buddhist sources across multi
 
 ## Current priority
 
-Build reviewed many-to-many source-unit alignments on top of the resolved Pāli/Chinese source layer, then ingest directly attested Sanskrit/BHS/Gāndhārī fragment text where provenance and redistribution allow.
+Deepen the DN 14 multi-witness vertical slice, obtain human review, and then expand directly attested Sanskrit/BHS/Gāndhārī source units where provenance and redistribution allow.

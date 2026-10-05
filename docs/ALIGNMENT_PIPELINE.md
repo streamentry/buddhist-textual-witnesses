@@ -240,6 +240,7 @@ Outputs:
 ```text
 generated/alignment-source/indic/
 ├── segments.jsonl
+├── units.jsonl
 ├── availability.json
 └── manifest.json
 ```
@@ -250,3 +251,48 @@ Each Indic segment stores two distinct forms:
 - `search_text`: a derived text-only form for retrieval/alignment.
 
 This distinction is non-negotiable. Reconstructed/supplied letters must remain visible as editorial intervention in the witness layer even if the search layer strips markup.
+
+
+## DN 14 multi-witness vertical slice
+
+The first end-to-end Pāli–Chinese–Sanskrit case study is stored at:
+
+`data/case-studies/dn14-mahapadana/alignments.json`
+
+It uses a separate multi-witness schema because a research passage may contain more than one Chinese recension and an Indic fragment at the same time.
+
+Current witnesses:
+
+- DN 14, Pāli anchor;
+- DA 1, Dīrgha Āgama Chinese parallel;
+- EA 48.4, Ekottarika Āgama Chinese parallel;
+- SF 36, Sanskrit edited fragmentary witness.
+
+The initial six model-reviewed passage alignments cover:
+
+1. opening formula and setting;
+2. monks' discussion of past Buddhas;
+3. Buddha hearing, approaching, and asking;
+4. the monks' report of their discussion;
+5. seven Buddhas and kalpa chronology;
+6. lifespans of the seven Buddhas.
+
+The validator resolves every cited source-unit ID against generated Pāli, Chinese, and Sanskrit source layers. An `established` multi-witness alignment requires an accepted human review.
+
+The generated human-readable report is:
+
+`generated/case-studies/dn14-mahapadana.md`
+
+In that report, Sanskrit text inside `⟦…⟧` corresponds to upstream `<supplied>` markup. This display convention does not alter the stored edition text.
+
+### Example numerical variant
+
+The lifespan passage intentionally preserves disagreement:
+
+- DN 14: 80k / 70k / 60k / 40k / 30k / 20k;
+- SF 36 prose: same sequence;
+- DA 1 prose: same sequence;
+- DA 1 verse: Vipassī becomes 84k;
+- EA 48.4 prose: 84k / 70k / 60k / 50k / 40k / 20k.
+
+No harmonized value is emitted.

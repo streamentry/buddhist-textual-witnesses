@@ -12,14 +12,20 @@ on:
       - "scripts/generate_alignment_candidates.py"
       - "scripts/generate_anchor_window_candidates.py"
       - "scripts/validate_alignments.py"
+      - "scripts/validate_multiwitness_alignments.py"
+      - "scripts/render_multiwitness_case_study.py"
       - "schemas/alignment.schema.json"
+      - "schemas/multiwitness-alignment.schema.json"
       - "tests/test_pali_units.py"
       - "tests/test_indic_source_units.py"
       - "tests/test_chinese_alignment_units.py"
       - "tests/test_alignment_candidates.py"
       - "tests/test_anchor_window_candidates.py"
+      - "tests/test_multiwitness_alignments.py"
+      - "tests/test_render_multiwitness_case_study.py"
       - "config/indic-source-units.json"
       - "data/alignments/**"
+      - "data/case-studies/**"
       - "generated/crosswalks/first-20-resolved.json"
       - "sources/lock.json"
       - ".gitmodules"
@@ -120,12 +126,30 @@ jobs:
             --pali-units generated/alignment-source/pali/units.jsonl \
             --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
             --candidates \
-              generated/alignments/shared-formula-candidates.jsonl \
+              generated/alignments/
+            generated/case-studies/shared-formula-candidates.jsonl \
               generated/alignments/monotonic-candidates.jsonl \
               generated/alignments/anchor-window-candidates.jsonl \
             --reviewed \
               data/alignments/reviewed.json \
               data/alignments/model-reviewed.json
+
+      - name: Validate DN 14 multi-witness case study
+        run: |
+          python scripts/validate_multiwitness_alignments.py \
+            --pali-units generated/alignment-source/pali/units.jsonl \
+            --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+            --indic-units generated/alignment-source/indic/units.jsonl \
+            --case-study data/case-studies/dn14-mahapadana/alignments.json
+
+      - name: Render DN 14 multi-witness report
+        run: |
+          python scripts/render_multiwitness_case_study.py \
+            --pali-units generated/alignment-source/pali/units.jsonl \
+            --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+            --indic-units generated/alignment-source/indic/units.jsonl \
+            --case-study data/case-studies/dn14-mahapadana/alignments.json \
+            --output generated/case-studies/dn14-mahapadana.md
 
       - uses: actions/upload-artifact@v4
         with:
@@ -140,10 +164,10 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add generated/alignment-source generated/alignments
+          git add generated/alignment-source generated/alignments generated/case-studies
           if git diff --cached --quiet; then
             echo "Generated alignment layer is unchanged"
             exit 0
           fi
-          git commit -m "Refresh Pali-Chinese-Indic alignment source units"
+          git commit -m "Refresh alignment sources and multi-witness case studies"
           git push
