@@ -1,0 +1,2155 @@
+{
+  "version": 1,
+  "created": "2026-10-05",
+  "scope": "benchmark-20",
+  "title": "First 20 high-confidence Early Buddhist textual crosswalks",
+  "selection_rationale": "This benchmark starts with Dīgha Nikāya because SuttaCentral explicitly reports that its DN and MN correspondences had been thoroughly checked for accuracy and completeness. Every selected work has at least one Chinese full parallel plus an independent non-Pāli Indic witness identified in the comparative source: Sanskrit manuscript fragments for 19 works, a Gāndhārī Mahāparinirvāṇasūtra witness for DN 16, and a cross-tradition Prākrit Paesi witness for DN 23.",
+  "epistemic_policy": {
+    "exact_parallel_term": "not_used",
+    "reason": "Independent recensions are not assumed to be verbatim. The dataset uses full_textual_parallel, partial_textual_parallel, fragmentary_textual_parallel, shared_passage, and doctrinal_parallel.",
+    "absent_witness_rule": "not_identified_in_selected_sources means only that this benchmark did not identify a witness in its selected evidence set; it is not evidence of non-existence.",
+    "bhs_rule": "No witness is labeled Buddhist Hybrid Sanskrit merely from linguistic appearance. Use bhs only when an edition or scholarly source explicitly supports that classification."
+  },
+  "relation_classes": {
+    "full_textual_parallel": "Whole-discourse correspondence in the comparative source. The texts may still differ substantially in wording and content.",
+    "partial_textual_parallel": "Markedly incomplete whole-discourse agreement; only a limited portion corresponds.",
+    "fragmentary_textual_parallel": "A surviving manuscript fragment securely identified with the work/recension. This is orthogonal to full-vs-partial discourse correspondence.",
+    "shared_passage": "A passage-level correspondence without a whole-discourse claim.",
+    "doctrinal_parallel": "A conceptual/doctrinal similarity only; not evidence of textual descent by itself."
+  },
+  "crosswalks": [
+    {
+      "id": "work:dn1",
+      "rank": 1,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 1",
+        "title": "Brahmajāla",
+        "source_url": "https://suttacentral.net/dn1",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "T 21",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0021",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "DA 21",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": []
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SF 41",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 48",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 16",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [
+        {
+          "language": "lzh",
+          "canonical_id": "T 1548.126",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "container_id": "T1548.126",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        }
+      ],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn1-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn1.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn2",
+      "rank": 2,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 2",
+        "title": "Sāmaññaphala",
+        "source_url": "https://suttacentral.net/dn2",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "EA 43.7",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0125",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "T 22",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0022",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "DA 27",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": []
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SF 288",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 1",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 58",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [
+        {
+          "language": "lzh",
+          "canonical_id": "SA 154–163",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "container_id": "T0099",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "lzh",
+          "canonical_id": "T 1444.1",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "container_id": "T1444.1",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "lzh",
+          "canonical_id": "T 1442.13",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "container_id": "T1442.13",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "lzh",
+          "canonical_id": "T 1450.10",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "container_id": "T1450.10",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        }
+      ],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn2-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn2.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn3",
+      "rank": 3,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 3",
+        "title": "Ambaṭṭha",
+        "source_url": "https://suttacentral.net/dn3",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "T 20",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0020",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "DA 20",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": []
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SF 43",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 26",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn3-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn3.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn4",
+      "rank": 4,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 4",
+        "title": "Soṇadaṇḍa",
+        "source_url": "https://suttacentral.net/dn4",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "DA 22",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": []
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SF 42",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 56",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn4-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn4.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn5",
+      "rank": 5,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 5",
+        "title": "Kūṭadanta",
+        "source_url": "https://suttacentral.net/dn5",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "DA 23",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": []
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SF 52",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 30",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn5-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn5.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn8",
+      "rank": 6,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 8",
+        "title": "Mahāsīhanāda",
+        "source_url": "https://suttacentral.net/dn8",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "DA 25",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": []
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SF 295",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 51",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 50",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn8-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn8.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn11",
+      "rank": 7,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 11",
+        "title": "Kevaddha",
+        "source_url": "https://suttacentral.net/dn11",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "DA 24",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": []
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 81",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn11-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn11.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn12",
+      "rank": 8,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 12",
+        "title": "Lohicca",
+        "source_url": "https://suttacentral.net/dn12",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "DA 29",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": []
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 20",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn12-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn12.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn14",
+      "rank": 9,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 14",
+        "title": "Mahāpadāna",
+        "source_url": "https://suttacentral.net/dn14",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "EA 48.4",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0125",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "T 3",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0003",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "T 2",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0002",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "T 4",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0004",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "DA 1",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": [
+          {
+            "language": "pli",
+            "canonical_id": "SN 12.65",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ]
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SF 34",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 29",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 30",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 31",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 32",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 28",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 33",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 250",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 36",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 296",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 56",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 1",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn14-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn14.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn15",
+      "rank": 10,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 15",
+        "title": "Mahānidāna",
+        "source_url": "https://suttacentral.net/dn15",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "T 14",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0014",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "T 52",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0052",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "MA 97",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0026",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "DA 13",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": []
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SF 240",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 138",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 23",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn15-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn15.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn16",
+      "rank": 11,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 16",
+        "title": "Mahāparinibbāna",
+        "source_url": "https://suttacentral.net/dn16",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "T 5",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0005",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "T 6",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0006",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "T 7",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0007",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "T 1451.35",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T1451.35",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "DA 2",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": []
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SF 54",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 268",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 289",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 245",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 285",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 272",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 5",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": [
+          {
+            "language": "gdh",
+            "canonical_id": "Gandh frgm",
+            "relation_class": "fragmentary_textual_parallel",
+            "witness_extent": "fragment",
+            "confidence": "high",
+            "tradition": "Buddhist",
+            "evidence_basis": "Gāndhārī Mahāparinirvāṇasūtra fragments identified and edited by Allon & Salomon (2000); independently catalogued at Gandhari.org.",
+            "bibliography": [
+              "allon-salomon-2000",
+              "gandhari-ckm14"
+            ]
+          }
+        ]
+      },
+      "partial_parallels": [
+        {
+          "language": "pli",
+          "canonical_id": "SN 47.9",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "pli",
+          "canonical_id": "SN 51.10",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "pli",
+          "canonical_id": "AN 4.180",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "pli",
+          "canonical_id": "AN 4.76",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "pli",
+          "canonical_id": "AN 7.22–27",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "pli",
+          "canonical_id": "AN 8.70",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "pli",
+          "canonical_id": "AN 8.65",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "pli",
+          "canonical_id": "AN 8.66",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "pli",
+          "canonical_id": "AN 8.68–70",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "pli",
+          "canonical_id": "AN 8.69",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "pli",
+          "canonical_id": "Ud 6.1",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "pli",
+          "canonical_id": "Ud 8.5",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "pli",
+          "canonical_id": "Ud 8.6",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        }
+      ],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "identified"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn16-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn16.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions",
+        "allon-salomon-2000",
+        "gandhari-ckm14"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn18",
+      "rank": 12,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 18",
+        "title": "Janavasabha",
+        "source_url": "https://suttacentral.net/dn18",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "T 9",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0009",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "DA 4",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": []
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 37",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn18-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn18.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn19",
+      "rank": 13,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 19",
+        "title": "Mahāgovinda",
+        "source_url": "https://suttacentral.net/dn19",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "T 8",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0008",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "DA 3",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": []
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SF 39",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 292",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 53",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 144",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 38",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn19-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn19.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn20",
+      "rank": 14,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 20",
+        "title": "Mahāsamaya",
+        "source_url": "https://suttacentral.net/dn20",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "SA 1192",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0099",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "T 19",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0019",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "DA 19",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "SA2 105",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0100",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": [
+          {
+            "language": "pli",
+            "canonical_id": "SN 1.37",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ]
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SF 140",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 108",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 242",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 282",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 55",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 8",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn20-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn20.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn21",
+      "rank": 15,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 21",
+        "title": "Sakkapañha",
+        "source_url": "https://suttacentral.net/dn21",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "T 15",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0015",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "T 203.73",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0203.73",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "DA 14",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "MA 134",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0026",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": []
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SF 241",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 139",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 54",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn21-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn21.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn22",
+      "rank": 16,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 22",
+        "title": "Mahāsatipaṭṭhāna",
+        "source_url": "https://suttacentral.net/dn22",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "EA 12.1",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0125",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "MA 98",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0026",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": [
+          {
+            "language": "pli",
+            "canonical_id": "MN 10",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ]
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 11",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [
+        {
+          "language": "lzh",
+          "canonical_id": "T 32",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "container_id": "T0032",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "lzh",
+          "canonical_id": "MA 31",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "container_id": "T0026",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "pli",
+          "canonical_id": "MN 141",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        },
+        {
+          "language": "pli",
+          "canonical_id": "MN 119",
+          "relation_class": "partial_textual_parallel",
+          "confidence": "high",
+          "evidence_basis": "Marked with an asterisk in SuttaCentral's Dīgha correspondence table."
+        }
+      ],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn22-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn22.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn23",
+      "rank": 17,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 23",
+        "title": "Pāyāsi",
+        "source_url": "https://suttacentral.net/dn23",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "T 45",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0045",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "MA 71",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0026",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "DA 7",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": []
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [],
+        "gandhari_prakrit": [
+          {
+            "language": "pra",
+            "canonical_id": "Prak frgm",
+            "relation_class": "full_textual_parallel",
+            "witness_extent": "unspecified_in_index",
+            "confidence": "high",
+            "tradition": "Jain",
+            "evidence_basis": "SuttaCentral lists Bollée's Prākrit Paesi text as an unstarred full parallel and explicitly notes that it belongs to the Jain canon.",
+            "bibliography": [
+              "bollee-2002"
+            ]
+          }
+        ]
+      },
+      "partial_parallels": [],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "not_identified_in_selected_sources",
+        "gandhari_prakrit": "identified"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn23-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn23.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "bollee-2002"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn24",
+      "rank": 18,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 24",
+        "title": "Pāṭika",
+        "source_url": "https://suttacentral.net/dn24",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "DA 15",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": []
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SF 46",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SF 298",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 32",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn24-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn24.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn26",
+      "rank": 19,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 26",
+        "title": "Cakkavattisīhanāda",
+        "source_url": "https://suttacentral.net/dn26",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "DA 6",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "MA 70",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0026",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": []
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 62",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn26-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn26.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    },
+    {
+      "id": "work:dn27",
+      "rank": 20,
+      "anchor": {
+        "language": "pli",
+        "canonical_id": "DN 27",
+        "title": "Aggañña",
+        "source_url": "https://suttacentral.net/dn27",
+        "relation_class": "anchor"
+      },
+      "full_parallels": {
+        "chinese": [
+          {
+            "language": "lzh",
+            "canonical_id": "EA 40.1",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0125",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "T 10",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0010",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "MA 154",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0026",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          },
+          {
+            "language": "lzh",
+            "canonical_id": "DA 5",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "container_id": "T0001",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ],
+        "other_pali": [
+          {
+            "language": "pli",
+            "canonical_id": "AN 7.66",
+            "relation_class": "full_textual_parallel",
+            "confidence": "high",
+            "evidence_basis": "Unstarred full parallel in SuttaCentral's Dīgha correspondence table."
+          }
+        ]
+      },
+      "indic_witnesses": {
+        "sanskrit_bhs": [
+          {
+            "language": "san",
+            "canonical_id": "SF 277",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          },
+          {
+            "language": "san",
+            "canonical_id": "SHT Sutta 65",
+            "relation_class": "fragmentary_textual_parallel",
+            "confidence": "high",
+            "witness_extent": "fragment",
+            "evidence_basis": "Published Sanskrit fragment identified as a parallel in SuttaCentral. Fragmentary status describes manuscript survival, not a merely partial discourse relationship."
+          }
+        ],
+        "gandhari_prakrit": []
+      },
+      "partial_parallels": [],
+      "shared_passages": [],
+      "doctrinal_parallels": [],
+      "status": {
+        "chinese": "identified",
+        "sanskrit_bhs": "identified",
+        "gandhari_prakrit": "not_identified_in_selected_sources"
+      },
+      "overall_confidence": "high",
+      "confidence_rationale": "The anchor and full/partial correspondence classification follow SuttaCentral's reviewed Dīgha dataset. Non-Pāli manuscript fragments are kept distinct from partial parallels.",
+      "evidence": [
+        {
+          "source_id": "sc-dn-index-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html"
+        },
+        {
+          "source_id": "sc-methodology-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html"
+        },
+        {
+          "source_id": "sc-dn27-detail-2016",
+          "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn27.html"
+        }
+      ],
+      "bibliography": [
+        "sc-methodology-2016",
+        "sc-dn-index-2016",
+        "sht-series-and-sf-editions"
+      ],
+      "notes": "A 'full textual parallel' is a whole-discourse correspondence, not a claim of verbatim identity or proof that one recoverable archetype can be reconstructed."
+    }
+  ]
+}

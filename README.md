@@ -52,7 +52,7 @@ git submodule update --init --recursive --depth 1
 
 The upstream datasets are large. Expect a multi-gigabyte checkout.
 
-## Build the unified catalog
+## Build the unified corpus catalog
 
 ```bash
 make test
@@ -77,6 +77,38 @@ Generated outputs live in `catalog/`:
 
 BHS is labeled only when explicit metadata or a reviewed override supports that classification. Similar titles are never automatically treated as the same text. See `docs/CATALOG_PIPELINE.md`.
 
+## First 20 curated textual crosswalks
+
+The repository now includes a first research-grade benchmark under `data/crosswalks/`:
+
+```text
+Pāli anchor
+  ↕
+Chinese full/partial parallels
+  ↕
+Sanskrit manuscript witnesses
+  ↕
+Gāndhārī / Prākrit where attested
+```
+
+The first 20 use Dīgha Nikāya anchors because the comparative source explicitly reports DN/MN correspondence data as the most thoroughly checked part of that dataset.
+
+Files:
+
+- `data/crosswalks/first-20.json` — canonical machine-readable benchmark
+- `data/crosswalks/FIRST_20.md` — human-readable table
+- `data/crosswalks/bibliography.json` — bibliography records
+- `schemas/crosswalk.schema.json` — crosswalk contract
+- `scripts/validate_crosswalks.py` — scholarly guardrails
+
+Run:
+
+```bash
+make benchmark
+```
+
+The benchmark deliberately uses `full_textual_parallel`, not `exact_parallel`. Independent recensions may share a common ancestor while differing in wording and structure.
+
 ## Repository layout
 
 ```text
@@ -92,19 +124,22 @@ BHS is labeled only when explicit metadata or a reviewed override supports that 
 │   └── lock.json
 ├── schemas/
 │   ├── witness.schema.json
-│   └── catalog.schema.json
+│   ├── catalog.schema.json
+│   └── crosswalk.schema.json
 ├── scripts/
 │   ├── fetch_sources.sh
-│   └── build_catalog.py
+│   ├── build_catalog.py
+│   ├── validate_crosswalks.py
+│   └── render_crosswalks.py
 ├── docs/
 │   ├── METHODOLOGY.md
 │   └── CATALOG_PIPELINE.md
 ├── catalog/
 │   └── README.md
-├── tests/
-│   └── test_build_catalog.py
 ├── data/
+│   ├── crosswalks/
 │   └── texts/
+├── tests/
 ├── Makefile
 ├── SOURCES.md
 ├── AGENTS.md
@@ -115,31 +150,17 @@ BHS is labeled only when explicit metadata or a reviewed override supports that 
 
 `data/texts/t0825/` models **T0825 佛說甚深大迴向經** without pretending that a Sanskrit original has been identified. It separates the dated Dunhuang witness S.2154, the Korean canonical witness K0507, and Taishō/CBETA T0825.
 
-## Research target
-
-The long-term value is not merely storing texts. It is building auditable parallel maps:
-
-```text
-Pāli sutta
-  ↕
-Chinese Āgama parallel
-  ↕
-Sanskrit/BHS fragment or edition
-  ↕
-Gāndhārī/Prakrit fragment
-```
-
-Each link should record provenance, relationship type, scholarly basis, and uncertainty.
-
 ## Data philosophy
 
 - Never silently normalize away variant readings.
 - Never label a back-translation as an attested Sanskrit title.
 - Never call a modern edition a manuscript.
 - Never call a translation witness an Indic-language original.
+- Never treat a fragmentary manuscript as merely a “partial parallel”.
+- Never use “exact parallel” when the evidence only establishes a full discourse correspondence.
 - Keep manuscript date, text-composition date, translation date, and edition date separate.
 - Prefer stable identifiers over filenames.
-- Every normalized text must be traceable to an upstream source and retrieval revision.
+- Every normalized text and crosswalk must be traceable to evidence and upstream revision.
 
 ## Upstream rights
 

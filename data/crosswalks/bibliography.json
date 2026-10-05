@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "entries": {
+    "sc-methodology-2016": {
+      "type": "research_database_methodology",
+      "authors": [
+        "SuttaCentral project",
+        "Rod Bucknell",
+        "Bhikkhu Anālayo"
+      ],
+      "title": "Methodology: Full Parallel and Partial Parallel",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/methodology.html",
+      "note": "Defines full and partial parallels, distinguishes manuscript fragments from partial parallels, and states that DN/MN correspondence data had been thoroughly checked."
+    },
+    "sc-dn-index-2016": {
+      "type": "research_database",
+      "authors": [
+        "SuttaCentral project"
+      ],
+      "title": "Dīgha Nikāya comparative parallels table",
+      "url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn.html",
+      "note": "Primary correspondence table for the first benchmark."
+    },
+    "akanuma-1929": {
+      "type": "comparative_catalogue",
+      "author": "Chizen Akanuma",
+      "year": 1929,
+      "title": "The Comparative Catalogue of Chinese Āgamas & Pāli Nikāyas",
+      "note": "Foundational comparative catalogue; SuttaCentral describes its data as corrected and expanded by later scholarship."
+    },
+    "sht-series-and-sf-editions": {
+      "type": "manuscript_editions",
+      "title": "Sanskrithandschriften aus den Turfanfunden (SHT) and associated Sanskrit fragment editions",
+      "authors": [
+        "W. Clawiter",
+        "L. Holzmann",
+        "E. Waldschmidt",
+        "L. Sander",
+        "H. Bechert",
+        "K. Wille and others"
+      ],
+      "publisher": "Franz Steiner",
+      "years": "1965–",
+      "note": "Individual SF/SHT witness bibliography is available from each SuttaCentral DN detail record; this benchmark preserves the stable SF/SHT identifiers rather than pretending all fragments derive from one edition."
+    },
+    "allon-salomon-2000": {
+      "type": "critical_edition",
+      "authors": [
+        "Mark Allon",
+        "Richard Salomon"
+      ],
+      "year": 2000,
+      "title": "Kharoṣṭhī Fragments of a Gāndhārī Version of the Mahāparinirvāṇasūtra",
+      "container": "Buddhist Manuscripts, Volume I",
+      "pages": "243–273",
+      "publisher": "Hermes Academic Publishing",
+      "url": "https://gandhari.org/main/plugins/catalog/?itemID=2058"
+    },
+    "gandhari-ckm14": {
+      "type": "manuscript_catalog",
+      "title": "CKM 14 / British Library 12",
+      "project": "Gandhari.org",
+      "date_estimate": "1–100 CE",
+      "url": "https://gandhari.org/main/plugins/catalog/?itemID=2058",
+      "note": "Catalog record cites Allon & Salomon 2000 and records the British Library Kharoṣṭhī manuscript context."
+    },
+    "bollee-2002": {
+      "type": "critical_study",
+      "author": "Willem Bollée",
+      "year": 2002,
+      "title": "The Story of Paesi",
+      "publisher": "Harrassowitz",
+      "evidence_url": "https://www.dhammatalks.net/suttacentral/sc2016/sc/dn23.html",
+      "note": "SuttaCentral explicitly notes that this Prākrit witness belongs to the Jain canon."
+    }
+  }
+}

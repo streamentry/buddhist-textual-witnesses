@@ -10,14 +10,18 @@ This repository supports textual-critical study of Buddhist sources across multi
 2. A reconstructed form must be explicitly labeled `reconstructed`.
 3. Do not call a modern edition a manuscript.
 4. Do not infer an Indic original merely from a Chinese translation.
-5. Do not collapse textual, doctrinal, and thematic parallels into one category.
+5. Do not collapse textual, doctrinal, thematic, fragmentary, and partial relationships into one category.
 6. Preserve provenance for every imported or normalized record.
 7. Do not commit bulk upstream corpora unless their redistribution terms clearly allow it and the project explicitly decides to vendor them.
 8. Prefer stable upstream identifiers over local filenames.
 9. Record uncertainty instead of resolving it by guesswork.
 10. When evidence conflicts, keep both readings and document the disagreement.
 11. Never merge two upstream IDs into one `work_id` solely because their titles look similar. Add a reviewed crosswalk with bibliographic support.
-12. Label a witness `bhs` only from explicit upstream metadata or a reviewed language override, not from heuristic language guessing.
+12. Label a witness `bhs` only from explicit upstream metadata or a reviewed scholarly override, not from heuristic language guessing.
+13. Do not use `exact_parallel` for independent recensions. Use `full_textual_parallel` unless evidence truly establishes identity at the relevant textual level.
+14. A fragmentary manuscript witness is not automatically a `partial_textual_parallel`. Fragmentary describes physical/textual survival; partial describes the relationship between discourse contents.
+15. A Chinese discourse ID such as `DA 21` must not be collapsed into its whole canonical container `T0001`.
+16. Cross-tradition witnesses must retain their tradition label. In particular, the DN 23 Prākrit Paesi witness must remain marked as Jain.
 
 ## Preferred workflow
 
@@ -28,9 +32,9 @@ This repository supports textual-critical study of Buddhist sources across multi
 - Normalize into a separate derived record.
 - Map parallels with explicit relationship type.
 - Add confidence and bibliographic support.
-- Run `make test` before merge.
-- Rebuild the catalog after source pins, language overrides, or crosswalks change.
+- Run `make benchmark` before merging crosswalk changes.
+- Rebuild the corpus catalog after source pins, language overrides, or catalog crosswalks change.
 
 ## Current priority
 
-Start with Early Buddhist parallel sets where independent witnesses exist across Pāli, Chinese Āgama, Sanskrit/BHS, and Gāndhārī/Prakrit.
+Segment Chinese Āgama containers into individual discourse records so the first 20 curated crosswalks resolve to local source spans, then move to segment-level alignment.

@@ -1,0 +1,247 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Curated Buddhist Textual Crosswalk Benchmark",
+  "type": "object",
+  "required": [
+    "version",
+    "scope",
+    "crosswalks"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "scope": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "selection_rationale": {
+      "type": "string"
+    },
+    "epistemic_policy": {
+      "type": "object"
+    },
+    "relation_classes": {
+      "type": "object"
+    },
+    "crosswalks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/crosswalk"
+      }
+    }
+  },
+  "$defs": {
+    "witness": {
+      "type": "object",
+      "required": [
+        "language",
+        "canonical_id",
+        "relation_class"
+      ],
+      "properties": {
+        "language": {
+          "enum": [
+            "pli",
+            "lzh",
+            "san",
+            "bhs",
+            "pra",
+            "gdh",
+            "bo",
+            "other"
+          ]
+        },
+        "canonical_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "container_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "source_url": {
+          "type": "string"
+        },
+        "relation_class": {
+          "enum": [
+            "anchor",
+            "full_textual_parallel",
+            "partial_textual_parallel",
+            "fragmentary_textual_parallel",
+            "shared_passage",
+            "doctrinal_parallel"
+          ]
+        },
+        "witness_extent": {
+          "type": "string"
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "unknown"
+          ]
+        },
+        "tradition": {
+          "type": "string"
+        },
+        "evidence_basis": {
+          "type": "string"
+        },
+        "bibliography": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "crosswalk": {
+      "type": "object",
+      "required": [
+        "id",
+        "rank",
+        "anchor",
+        "full_parallels",
+        "indic_witnesses",
+        "partial_parallels",
+        "shared_passages",
+        "doctrinal_parallels",
+        "status",
+        "overall_confidence",
+        "evidence",
+        "bibliography"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^work:"
+        },
+        "rank": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "anchor": {
+          "$ref": "#/$defs/witness"
+        },
+        "full_parallels": {
+          "type": "object",
+          "required": [
+            "chinese",
+            "other_pali"
+          ],
+          "properties": {
+            "chinese": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/witness"
+              },
+              "minItems": 1
+            },
+            "other_pali": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/witness"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "indic_witnesses": {
+          "type": "object",
+          "required": [
+            "sanskrit_bhs",
+            "gandhari_prakrit"
+          ],
+          "properties": {
+            "sanskrit_bhs": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/witness"
+              }
+            },
+            "gandhari_prakrit": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/witness"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "partial_parallels": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/witness"
+          }
+        },
+        "shared_passages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/witness"
+          }
+        },
+        "doctrinal_parallels": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/witness"
+          }
+        },
+        "status": {
+          "type": "object"
+        },
+        "overall_confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "unknown"
+          ]
+        },
+        "confidence_rationale": {
+          "type": "string"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "source_id",
+              "url"
+            ],
+            "properties": {
+              "source_id": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "bibliography": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

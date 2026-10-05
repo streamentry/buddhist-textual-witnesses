@@ -16,7 +16,7 @@ It does **not** copy raw texts out of their upstream repositories and it does no
 - `upstream/suttacentral-bilara/root/san/**` — Sanskrit root texts
 - `upstream/suttacentral-bilara/root/pra/**` — Prakrit root texts
 - `upstream/gretil-mirror/.../corpustei/*.xml` — TEI editions whose own GRETIL metadata identifies them as Buddhist
-- Six configured CBETA Āgama witnesses: T0001, T0026, T0099, T0100, T0101, T0125
+- Six configured CBETA Āgama containers: T0001, T0026, T0099, T0100, T0101, T0125
 
 Exact source revisions come from `sources/lock.json`.
 
@@ -31,6 +31,34 @@ Running `make catalog` writes:
 
 The outputs are deterministic for the same upstream revisions and configuration.
 
+## Curated crosswalk layer
+
+The generated corpus catalog and the curated textual-crosswalk benchmark are deliberately separate layers.
+
+`data/crosswalks/first-20.json` records scholarly equivalence claims such as:
+
+```text
+DN 1
+  ↔ DA 21 (inside T0001)
+  ↔ T 21
+  ↔ SF 41 / SF 48 / SHT Sutta 16
+```
+
+This separation matters because current CBETA ingestion indexes whole XML canon containers, while a crosswalk often targets one discourse *inside* a container. Until a segment-level Āgama extractor exists, the project must not map all of `T0001` to `DN 1`.
+
+The next pipeline milestone is therefore:
+
+```text
+CBETA T0001
+  -> DA 1
+  -> DA 2
+  -> ...
+  -> DA 21
+  -> ...
+```
+
+with exact local source spans and preserved CBETA provenance.
+
 ## Canonical IDs and work IDs
 
 The pipeline preserves source-native IDs:
@@ -41,20 +69,7 @@ The pipeline preserves source-native IDs:
 
 A `work_id` groups witnesses believed to represent the same work. By default it is source-qualified, for example `suttacentral:sf36` or `gretil:sa_AryAnityatAsUtra`.
 
-Only curated entries in `config/catalog.json -> crosswalks` may merge two upstream IDs under one project work ID. This is deliberate: title similarity is not evidence of textual identity.
-
-Example:
-
-```json
-{
-  "crosswalks": {
-    "suttacentral:sf36": "work:mahavadana",
-    "gretil:sa_example": "work:mahavadana"
-  }
-}
-```
-
-Add such mappings only with bibliographic support.
+Only curated entries may merge two upstream IDs under one project work ID. Title similarity is not evidence of textual identity.
 
 ## Sanskrit vs Buddhist Hybrid Sanskrit
 
@@ -63,19 +78,9 @@ The pipeline includes Buddhist Sanskrit material from GRETIL and Sanskrit materi
 It labels a witness `bhs` only when:
 
 1. upstream metadata explicitly says “Buddhist Hybrid Sanskrit”, or
-2. `config/catalog.json -> language_overrides` explicitly marks the witness as BHS.
+2. a reviewed language override explicitly marks the witness as BHS.
 
-It does **not** infer BHS from word forms. Many texts commonly discussed as BHS or mixed Sanskrit may therefore remain labeled `san` until reviewed. That false-negative bias is intentional.
-
-Example override:
-
-```json
-{
-  "language_overrides": {
-    "gretil:sa_someText": "bhs"
-  }
-}
-```
+It does **not** infer BHS from word forms. That false-negative bias is intentional.
 
 ## Buddhist filtering in GRETIL
 
@@ -85,7 +90,7 @@ No keyword search of the scripture body is used.
 
 ## CBETA scope
 
-This stage intentionally selects the major Āgama collections rather than all of Taishō:
+This stage intentionally selects the major Āgama containers rather than all of Taishō:
 
 | ID | Collection |
 |---|---|
@@ -104,15 +109,10 @@ The list is explicit in `config/catalog.json`, so expansion is reviewable rather
 make fetch
 make test
 make catalog
+make benchmark
 ```
 
-Or directly:
-
-```bash
-python3 scripts/build_catalog.py --strict
-```
-
-`--strict` verifies that all three upstream sources are present and that each emits at least one witness. By default the script also checks that checked-out submodule SHAs match `sources/lock.json`.
+`make benchmark` validates the first 20 scholarly crosswalks and verifies that the generated Markdown view has not drifted from the canonical JSON.
 
 ## Updating sources
 
@@ -120,5 +120,5 @@ Do not silently build against moving branches. Update the submodule gitlink and 
 
 ## GitHub Actions
 
-- `CI` runs unit tests without downloading the large corpora.
-- `Refresh catalog` is manual. It checks out submodules, builds the catalog, uploads the result as an artifact, and commits changed catalog files back to the selected branch.
+- `CI` runs unit tests and crosswalk validation without downloading the large corpora.
+- `Refresh catalog` is manual. It checks out submodules, builds the corpus catalog, uploads the result as an artifact, and commits changed catalog files back to the selected branch.

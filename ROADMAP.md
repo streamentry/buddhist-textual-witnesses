@@ -11,19 +11,24 @@
 - [x] Unit-test catalog filtering and grouping in CI
 - [x] Manual workflow to rebuild and commit the generated catalog
 - [x] First case study: T0825
-- [ ] Validate curated witness JSON against schema in CI
+- [x] Crosswalk schema and standard-library validator
+- [ ] Validate all curated per-text witness JSON against schema in CI
 - [ ] Add reviewed BHS language overrides where scholarship supports them
 
 ## Phase 2 — Early Buddhist parallel graph
 
 Build a small, high-confidence benchmark before scaling.
 
-- [ ] Choose 20 well-studied Pāli ↔ Chinese Āgama parallels
-- [ ] Add Sanskrit/BHS witnesses where extant
-- [ ] Add Gāndhārī/Prakrit witnesses where extant
-- [ ] Record bibliographic support for every parallel link
-- [ ] Add curated `crosswalks` that group equivalent upstream IDs into shared work IDs
-- [ ] Distinguish exact, partial, shared-passage, and doctrinal parallels
+- [x] Choose 20 well-studied Pāli ↔ Chinese textual parallels
+- [x] Add Sanskrit witnesses where extant
+- [x] Add Gāndhārī/Prakrit witnesses where extant
+- [x] Record bibliographic support for every crosswalk
+- [x] Distinguish full, partial, fragmentary, shared-passage, and doctrinal relations
+- [x] Add automated validation preventing “exact parallel” overclaiming
+- [x] Preserve Chinese discourse IDs separately from their Taishō container IDs
+- [ ] Segment DA/MA/SA/EA CBETA XML into individual discourse records
+- [ ] Resolve the first 20 crosswalk IDs directly to local segment-level source paths
+- [ ] Extend the benchmark to 50 high-confidence works after the segment layer is stable
 
 ## Phase 3 — Alignment
 
