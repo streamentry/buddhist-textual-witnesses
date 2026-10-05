@@ -95,7 +95,7 @@ The builder checks that block extraction covers at least 90% of the normalized d
 
 ## 3. Machine candidates
 
-Two candidate layers are generated.
+Three candidate layers are generated.
 
 ### Shared opening formula
 
@@ -120,12 +120,28 @@ The ranking score combines:
 
 This is deliberately weak. It exists to order a review queue, not to make a textual-critical claim.
 
+### Lexicon-assisted candidate windows
+
+A small reviewed seed lexicon in `data/alignments/lexicon.json` provides weighted Pāli ↔ Classical Chinese retrieval anchors for proper names, stock formulas, doctrinal vocabulary, and precepts. These entries are **search anchors**, not dictionary claims or proof of common ancestry.
+
+For each Pāli paragraph, the retriever scores every consecutive Chinese window of 1–3 blocks using:
+
+- saturated bilingual-anchor evidence;
+- a weak monotonic position prior.
+
+It keeps the top 3 windows. This explicitly supports one-to-many retrieval when a Chinese recension compresses several Pāli paragraphs into one block, or when one Pāli unit corresponds to several Chinese blocks.
+
+The current model-reviewed DN 1 ↔ DA 21 batch is used only as a falsification/retrieval diagnostic. The pipeline reports `overlap@3`, `full-cover@3`, and overlap MRR. These metrics do **not** create scholarly confidence.
+
 Outputs:
 
 ```text
 generated/alignments/
 ├── shared-formula-candidates.jsonl
 ├── monotonic-candidates.jsonl
+├── anchor-window-candidates.jsonl
+├── anchor-window-evaluation.json
+├── anchor-window-manifest.json
 └── manifest.json
 ```
 
@@ -197,7 +213,6 @@ make validate-alignments
 
 The next layer should add stronger signals without weakening the epistemic boundary:
 
-1. reviewed bilingual anchor lexicon for names, locations, doctrinal terms, and repeated formulas;
-2. candidate windows rather than single-block guesses;
-3. Sanskrit/BHS/Gāndhārī fragment source units where actual edited text is legally and reproducibly available;
-4. a human review UI showing Pāli, Chinese, Indic witnesses, provenance, and variant notes side by side.
+1. Sanskrit/BHS/Gāndhārī fragment source units where actual edited text is legally and reproducibly available;
+2. stronger sequence/window retrieval with a larger independently reviewed seed set;
+3. a human review UI showing Pāli, Chinese, Indic witnesses, provenance, and variant notes side by side.

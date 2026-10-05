@@ -1,0 +1,396 @@
+{
+  "version": 1,
+  "scope": "Seed Pāli ↔ Classical Chinese alignment anchors; initially reviewed against DN 1 ↔ DA 21 and reusable only as search signals.",
+  "epistemic_policy": "Entries are candidate-ranking anchors, not claims of exhaustive or context-free lexical equivalence.",
+  "entries": [
+    {
+      "id": "formula-evam-me-sutam",
+      "category": "formula",
+      "pali": [
+        "evaṁ me sutaṁ"
+      ],
+      "lzh": [
+        "如是我聞",
+        "聞如是",
+        "我聞如是"
+      ],
+      "weight": 4,
+      "scope": "general_formula",
+      "notes": "Canonical opening formula; alignment evidence only at formula level."
+    },
+    {
+      "id": "name-suppiya",
+      "category": "proper_name",
+      "pali": [
+        "suppiya"
+      ],
+      "lzh": [
+        "善念"
+      ],
+      "weight": 4,
+      "scope": "dn1",
+      "notes": "DN 1 / DA 21 teacher name correspondence."
+    },
+    {
+      "id": "name-brahmadatta",
+      "category": "proper_name",
+      "pali": [
+        "brahmadatta"
+      ],
+      "lzh": [
+        "梵摩達"
+      ],
+      "weight": 4,
+      "scope": "dn1",
+      "notes": "DN 1 / DA 21 disciple name correspondence."
+    },
+    {
+      "id": "criticism-buddha",
+      "category": "formula",
+      "pali": [
+        "buddhassa avaṇṇaṁ"
+      ],
+      "lzh": [
+        "毀謗佛",
+        "毀謗如來"
+      ],
+      "weight": 3,
+      "scope": "general_phrase",
+      "notes": "Praise/blame formula anchor."
+    },
+    {
+      "id": "criticism-dhamma",
+      "category": "formula",
+      "pali": [
+        "dhammassa avaṇṇaṁ"
+      ],
+      "lzh": [
+        "毀謗法"
+      ],
+      "weight": 3,
+      "scope": "general_phrase",
+      "notes": "Praise/blame formula anchor."
+    },
+    {
+      "id": "criticism-sangha",
+      "category": "formula",
+      "pali": [
+        "saṅghassa avaṇṇaṁ"
+      ],
+      "lzh": [
+        "毀謗僧",
+        "毀謗眾僧",
+        "毀謗比丘僧"
+      ],
+      "weight": 3,
+      "scope": "general_phrase",
+      "notes": "Praise/blame formula anchor."
+    },
+    {
+      "id": "praise-buddha",
+      "category": "formula",
+      "pali": [
+        "buddhassa vaṇṇaṁ"
+      ],
+      "lzh": [
+        "稱讚佛",
+        "稱讚如來",
+        "讚嘆佛",
+        "讚嘆如來"
+      ],
+      "weight": 3,
+      "scope": "general_phrase",
+      "notes": "Praise/blame formula anchor."
+    },
+    {
+      "id": "praise-dhamma",
+      "category": "formula",
+      "pali": [
+        "dhammassa vaṇṇaṁ"
+      ],
+      "lzh": [
+        "稱讚法",
+        "讚嘆法"
+      ],
+      "weight": 3,
+      "scope": "general_phrase",
+      "notes": "Praise/blame formula anchor."
+    },
+    {
+      "id": "praise-sangha",
+      "category": "formula",
+      "pali": [
+        "saṅghassa vaṇṇaṁ"
+      ],
+      "lzh": [
+        "稱讚僧",
+        "稱讚眾僧",
+        "稱讚比丘僧",
+        "讚嘆眾僧"
+      ],
+      "weight": 3,
+      "scope": "general_phrase",
+      "notes": "Praise/blame formula anchor."
+    },
+    {
+      "id": "many-monks",
+      "category": "phrase",
+      "pali": [
+        "sambahulānaṁ bhikkhūnaṁ",
+        "sambahulā bhikkhū"
+      ],
+      "lzh": [
+        "眾多比丘",
+        "諸比丘"
+      ],
+      "weight": 1.5,
+      "scope": "general",
+      "notes": "Broad narrative anchor; lower weight because common."
+    },
+    {
+      "id": "wonder-acchariya",
+      "category": "formula",
+      "pali": [
+        "acchariyaṁ"
+      ],
+      "lzh": [
+        "甚奇",
+        "希有",
+        "奇"
+      ],
+      "weight": 1.5,
+      "scope": "general",
+      "notes": "Wonder formula."
+    },
+    {
+      "id": "wonder-abbhuta",
+      "category": "formula",
+      "pali": [
+        "abbhutaṁ"
+      ],
+      "lzh": [
+        "甚特",
+        "未曾有",
+        "特"
+      ],
+      "weight": 1.5,
+      "scope": "general",
+      "notes": "Wonder formula."
+    },
+    {
+      "id": "address-monks",
+      "category": "formula",
+      "pali": [
+        "bhikkhū āmantesi",
+        "bhikkhave"
+      ],
+      "lzh": [
+        "告諸比丘",
+        "諸比丘"
+      ],
+      "weight": 1,
+      "scope": "general",
+      "notes": "Very common discourse formula; deliberately low weight."
+    },
+    {
+      "id": "anger",
+      "category": "doctrinal_term",
+      "pali": [
+        "āghāto",
+        "kupitā"
+      ],
+      "lzh": [
+        "忿",
+        "忿結",
+        "瞋"
+      ],
+      "weight": 1.5,
+      "scope": "general",
+      "notes": "Reaction to criticism."
+    },
+    {
+      "id": "joy",
+      "category": "doctrinal_term",
+      "pali": [
+        "ānando",
+        "somanassaṁ",
+        "ānandino"
+      ],
+      "lzh": [
+        "歡喜",
+        "慶幸"
+      ],
+      "weight": 1.5,
+      "scope": "general",
+      "notes": "Reaction to praise."
+    },
+    {
+      "id": "ordinary-person",
+      "category": "doctrinal_term",
+      "pali": [
+        "puthujjano",
+        "puthujjana"
+      ],
+      "lzh": [
+        "凡夫"
+      ],
+      "weight": 2,
+      "scope": "general",
+      "notes": "Ordinary person."
+    },
+    {
+      "id": "morality",
+      "category": "doctrinal_term",
+      "pali": [
+        "sīlaṁ",
+        "sīlamattakaṁ",
+        "sīla"
+      ],
+      "lzh": [
+        "戒",
+        "戒行"
+      ],
+      "weight": 2,
+      "scope": "general",
+      "notes": "Morality/precept vocabulary; context-sensitive."
+    },
+    {
+      "id": "abstain-killing",
+      "category": "precept",
+      "pali": [
+        "pāṇātipātaṁ",
+        "pāṇātipātā"
+      ],
+      "lzh": [
+        "滅殺",
+        "除殺",
+        "捨殺"
+      ],
+      "weight": 2.5,
+      "scope": "general",
+      "notes": "First precept / abstention from killing."
+    },
+    {
+      "id": "abstain-stealing",
+      "category": "precept",
+      "pali": [
+        "adinnādānaṁ",
+        "adinnādānā"
+      ],
+      "lzh": [
+        "不與取",
+        "盜"
+      ],
+      "weight": 2.5,
+      "scope": "general",
+      "notes": "Abstention from taking what is not given."
+    },
+    {
+      "id": "celibacy",
+      "category": "precept",
+      "pali": [
+        "abrahmacariyaṁ",
+        "brahmacārī"
+      ],
+      "lzh": [
+        "婬欲",
+        "梵行"
+      ],
+      "weight": 2,
+      "scope": "general",
+      "notes": "Celibacy/sexual restraint vocabulary."
+    },
+    {
+      "id": "false-speech",
+      "category": "precept",
+      "pali": [
+        "musāvādaṁ",
+        "musāvādā"
+      ],
+      "lzh": [
+        "妄語"
+      ],
+      "weight": 2.5,
+      "scope": "general",
+      "notes": "False speech."
+    },
+    {
+      "id": "divisive-speech",
+      "category": "precept",
+      "pali": [
+        "pisuṇaṁ vācaṁ",
+        "pisuṇāya vācāya"
+      ],
+      "lzh": [
+        "兩舌"
+      ],
+      "weight": 2.5,
+      "scope": "general",
+      "notes": "Divisive speech."
+    },
+    {
+      "id": "harsh-speech",
+      "category": "precept",
+      "pali": [
+        "pharusaṁ vācaṁ",
+        "pharusāya vācāya"
+      ],
+      "lzh": [
+        "惡口",
+        "麤言"
+      ],
+      "weight": 2.5,
+      "scope": "general",
+      "notes": "Harsh speech."
+    },
+    {
+      "id": "idle-chatter",
+      "category": "precept",
+      "pali": [
+        "samphappalāpaṁ",
+        "samphappalāpā"
+      ],
+      "lzh": [
+        "綺語"
+      ],
+      "weight": 2.5,
+      "scope": "general",
+      "notes": "Idle/frivolous speech."
+    },
+    {
+      "id": "samana-gotama",
+      "category": "proper_title",
+      "pali": [
+        "samaṇo gotamo",
+        "samaṇaṁ gotamaṁ"
+      ],
+      "lzh": [
+        "沙門瞿曇"
+      ],
+      "weight": 3,
+      "scope": "general",
+      "notes": "Śramaṇa Gotama title/name."
+    },
+    {
+      "id": "tathagata",
+      "category": "proper_title",
+      "pali": [
+        "tathāgata",
+        "tathāgatassa"
+      ],
+      "lzh": [
+        "如來"
+      ],
+      "weight": 1.5,
+      "scope": "general",
+      "notes": "Tathāgata title; low-medium weight because frequent."
+    }
+  ],
+  "review": {
+    "status": "model_reviewed_seed",
+    "reviewer_type": "model",
+    "reviewer": "GPT-5.6 Sol",
+    "reviewed_on": "2026-10-05",
+    "limitations": "Seed lexicon is intentionally small and uneven. It must not be treated as a dictionary or as proof of textual descent."
+  }
+}

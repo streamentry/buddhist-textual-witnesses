@@ -30,6 +30,8 @@ This repository supports textual-critical study of Buddhist sources across multi
 22. A model-reviewed alignment is not an established alignment. Only an accepted human review may set `status=established`.
 23. A shared stock formula such as `Evaṁ me sutaṁ ↔ 如是我聞` establishes only the formula-level correspondence unless additional passage evidence is reviewed.
 24. Positional/length similarity is a review-queue heuristic, not textual evidence. Structural-ranking output may never be promoted directly to `established`.
+25. Bilingual lexicon entries are retrieval anchors only. Never treat a lexicon match as proof of textual descent, translation equivalence in every context, or an established passage alignment.
+26. Retrieval evaluation against model-reviewed seed alignments is a diagnostic, not a human gold standard and not a scholarly confidence score.
 
 ## Preferred workflow
 

@@ -8,6 +8,7 @@ Generated candidates live under `generated/alignments/`.
 
 - `reviewed.json` — human-reviewed/established layer. It intentionally starts empty.
 - `model-reviewed.json` — model-assisted comparative reviews. These may record accepted model judgments but are **not established scholarship**.
+- `lexicon.json` — weighted bilingual retrieval anchors. It is a search aid, not a dictionary and not textual evidence by itself.
 
 ## Many-to-many model
 

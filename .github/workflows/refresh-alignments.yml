@@ -7,11 +7,13 @@ on:
       - "scripts/build_pali_units.py"
       - "scripts/build_chinese_alignment_units.py"
       - "scripts/generate_alignment_candidates.py"
+      - "scripts/generate_anchor_window_candidates.py"
       - "scripts/validate_alignments.py"
       - "schemas/alignment.schema.json"
       - "tests/test_pali_units.py"
       - "tests/test_chinese_alignment_units.py"
       - "tests/test_alignment_candidates.py"
+      - "tests/test_anchor_window_candidates.py"
       - "data/alignments/**"
       - "generated/crosswalks/first-20-resolved.json"
       - "sources/lock.json"
@@ -62,6 +64,19 @@ jobs:
         run: |
           rm -rf generated/alignments
           python scripts/generate_alignment_candidates.py             --pali-units generated/alignment-source/pali/units.jsonl             --chinese-blocks generated/alignment-source/chinese/blocks.jsonl             --resolved-crosswalks generated/crosswalks/first-20-resolved.json             --output generated/alignments             --strict
+
+      - name: Generate lexicon-assisted candidate windows
+        run: |
+          python scripts/generate_anchor_window_candidates.py \
+            --pali-units generated/alignment-source/pali/units.jsonl \
+            --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+            --resolved-crosswalks generated/crosswalks/first-20-resolved.json \
+            --lexicon data/alignments/lexicon.json \
+            --reviewed-seed data/alignments/model-reviewed.json \
+            --output generated/alignments \
+            --top-k 3 \
+            --max-width 3 \
+            --strict
 
       - name: Validate epistemic guardrails
         run: |

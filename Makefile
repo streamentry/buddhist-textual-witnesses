@@ -1,4 +1,4 @@
-.PHONY: test catalog fetch validate-crosswalks render-crosswalks benchmark agama-fetch agama-segments resolve-crosswalks agama pali-fetch pali-units chinese-alignment-units alignment-candidates validate-alignments alignment
+.PHONY: test catalog fetch validate-crosswalks render-crosswalks benchmark agama-fetch agama-segments resolve-crosswalks agama pali-fetch pali-units chinese-alignment-units alignment-candidates anchor-window-candidates validate-alignments alignment
 
 fetch:
 	./scripts/fetch_sources.sh
@@ -71,6 +71,18 @@ alignment-candidates: pali-units chinese-alignment-units
 		--output generated/alignments \
 		--strict
 
+anchor-window-candidates: alignment-candidates
+	python3 scripts/generate_anchor_window_candidates.py \
+		--pali-units generated/alignment-source/pali/units.jsonl \
+		--chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+		--resolved-crosswalks generated/crosswalks/first-20-resolved.json \
+		--lexicon data/alignments/lexicon.json \
+		--reviewed-seed data/alignments/model-reviewed.json \
+		--output generated/alignments \
+		--top-k 3 \
+		--max-width 3 \
+		--strict
+
 validate-alignments:
 	python3 scripts/validate_alignments.py \
 		--pali-units generated/alignment-source/pali/units.jsonl \
@@ -78,7 +90,8 @@ validate-alignments:
 		--candidates \
 			generated/alignments/shared-formula-candidates.jsonl \
 			generated/alignments/monotonic-candidates.jsonl \
+			generated/alignments/anchor-window-candidates.jsonl \
 		--reviewed data/alignments/reviewed.json data/alignments/model-reviewed.json
 
-alignment: test alignment-candidates validate-alignments
+alignment: test anchor-window-candidates validate-alignments
 	@echo "Pāli-Chinese alignment source layer and candidate queue are valid."
