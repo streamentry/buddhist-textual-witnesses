@@ -9,6 +9,7 @@
     "review_id": {"type": "string","minLength": 1},
     "case_study_id": {"type": "string","minLength": 1},
     "alignment_id": {"type": "string","minLength": 1},
+    "supersedes_review_id": {"type": ["string","null"]},
     "reviewer": {
       "type": "object",
       "required": ["reviewer_type","name","reviewer_id"],
