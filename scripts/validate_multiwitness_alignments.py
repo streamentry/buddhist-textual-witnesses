@@ -117,14 +117,10 @@ def validate_alignment(
     status = row.get("status")
     review = row.get("review") or {}
     if status == "established":
-        if review.get("status") != "reviewed":
-            errors.append(f"{aid}: established requires reviewed status")
-        if review.get("reviewer_type") != "human":
-            errors.append(f"{aid}: established requires human reviewer")
-        if review.get("decision") != "accepted":
-            errors.append(f"{aid}: established requires accepted decision")
-        if not review.get("reviewer"):
-            errors.append(f"{aid}: established requires reviewer identity")
+        errors.append(
+            f"{aid}: established is derived from the promotion ledger; "
+            "case-study rows must not set it directly"
+        )
 
     if status == "model_reviewed":
         if review.get("status") != "reviewed":

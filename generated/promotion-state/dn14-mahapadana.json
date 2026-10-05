@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "case_study_id": "dn14-mahapadana-multiwitness",
+  "policy_version": "human-review-promotion-v1",
+  "review_schema_version": 2,
+  "derivation": "Current status is derived from immutable review evidence plus explicit promotion events; case-study rows are never mutated to established.",
+  "counts": {
+    "model_reviewed": 9
+  },
+  "alignments": [
+    {
+      "alignment_id": "mw:dn14:opening-setting:01",
+      "derived_status": "model_reviewed",
+      "fresh_accepted_review_ids": [],
+      "stale_accepted_review_ids": [],
+      "superseded_review_ids": [],
+      "valid_promotion_ids": []
+    },
+    {
+      "alignment_id": "mw:dn14:monks-discussion:02",
+      "derived_status": "model_reviewed",
+      "fresh_accepted_review_ids": [],
+      "stale_accepted_review_ids": [],
+      "superseded_review_ids": [],
+      "valid_promotion_ids": []
+    },
+    {
+      "alignment_id": "mw:dn14:buddha-hears-asks:03",
+      "derived_status": "model_reviewed",
+      "fresh_accepted_review_ids": [],
+      "stale_accepted_review_ids": [],
+      "superseded_review_ids": [],
+      "valid_promotion_ids": []
+    },
+    {
+      "alignment_id": "mw:dn14:monks-report:04",
+      "derived_status": "model_reviewed",
+      "fresh_accepted_review_ids": [],
+      "stale_accepted_review_ids": [],
+      "superseded_review_ids": [],
+      "valid_promotion_ids": []
+    },
+    {
+      "alignment_id": "mw:dn14:seven-buddhas-kalpas:05",
+      "derived_status": "model_reviewed",
+      "fresh_accepted_review_ids": [],
+      "stale_accepted_review_ids": [],
+      "superseded_review_ids": [],
+      "valid_promotion_ids": []
+    },
+    {
+      "alignment_id": "mw:dn14:lifespans:06",
+      "derived_status": "model_reviewed",
+      "fresh_accepted_review_ids": [],
+      "stale_accepted_review_ids": [],
+      "superseded_review_ids": [],
+      "valid_promotion_ids": []
+    },
+    {
+      "alignment_id": "mw:dn14:caste:07",
+      "derived_status": "model_reviewed",
+      "fresh_accepted_review_ids": [],
+      "stale_accepted_review_ids": [],
+      "superseded_review_ids": [],
+      "valid_promotion_ids": []
+    },
+    {
+      "alignment_id": "mw:dn14:family-name-loss:08",
+      "derived_status": "model_reviewed",
+      "fresh_accepted_review_ids": [],
+      "stale_accepted_review_ids": [],
+      "superseded_review_ids": [],
+      "valid_promotion_ids": []
+    },
+    {
+      "alignment_id": "mw:dn14:bodhi-tree-loss:09",
+      "derived_status": "model_reviewed",
+      "fresh_accepted_review_ids": [],
+      "stale_accepted_review_ids": [],
+      "superseded_review_ids": [],
+      "valid_promotion_ids": []
+    }
+  ]
+}

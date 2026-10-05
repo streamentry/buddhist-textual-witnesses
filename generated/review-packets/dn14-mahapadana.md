@@ -1,7 +1,7 @@
 # Human review packet: Mahāpadāna / Mahāvadāna multi-witness vertical slice
 
 This packet is a review surface, not a scholarly verdict.
-Model-reviewed alignments remain non-established until a human review is recorded separately.
+Model-reviewed alignments remain non-established until an evidence-bound human review and a separate explicit promotion are recorded.
 
 ## Review protocol
 
@@ -11,7 +11,7 @@ For each alignment, check four things:
 3. Are the variant notes accurate and non-harmonizing?
 4. Is editorial reconstruction/textual loss handled transparently?
 
-Record machine-readable decisions in data/reviews/dn14-mahapadana/reviews.json using review-template.json.
+Prefer the offline review UI to prepare machine-readable schema-v2 JSON because it binds the exact displayed evidence. Commit decisions to data/reviews/dn14-mahapadana/reviews.json; accepted review still does not establish an alignment.
 
 ## 1. Opening Formula And Setting
 
@@ -65,6 +65,8 @@ Model note: Opening formula and setting; several letters in the edition are supp
 Decision: accepted / rejected / needs_work
 
 Reviewer:
+
+Stable reviewer ID (required):
 
 Affiliation / identifier:
 
@@ -126,6 +128,8 @@ Decision: accepted / rejected / needs_work
 
 Reviewer:
 
+Stable reviewer ID (required):
+
 Affiliation / identifier:
 
 Notes / proposed changes:
@@ -184,6 +188,8 @@ Model note: Marks the unfinished discussion, then divine-ear hearing/approach, t
 Decision: accepted / rejected / needs_work
 
 Reviewer:
+
+Stable reviewer ID (required):
 
 Affiliation / identifier:
 
@@ -244,6 +250,8 @@ Decision: accepted / rejected / needs_work
 
 Reviewer:
 
+Stable reviewer ID (required):
+
 Affiliation / identifier:
 
 Notes / proposed changes:
@@ -298,6 +306,8 @@ Model note: Prose list and damaged/reconstructed verse section; supplied text re
 Decision: accepted / rejected / needs_work
 
 Reviewer:
+
+Stable reviewer ID (required):
 
 Affiliation / identifier:
 
@@ -359,6 +369,8 @@ Decision: accepted / rejected / needs_work
 
 Reviewer:
 
+Stable reviewer ID (required):
+
 Affiliation / identifier:
 
 Notes / proposed changes:
@@ -417,6 +429,8 @@ Model note: Same caste pattern; all three Sanskrit leaf segments contain supplie
 Decision: accepted / rejected / needs_work
 
 Reviewer:
+
+Stable reviewer ID (required):
 
 Affiliation / identifier:
 
@@ -478,6 +492,8 @@ Decision: accepted / rejected / needs_work
 
 Reviewer:
 
+Stable reviewer ID (required):
+
 Affiliation / identifier:
 
 Notes / proposed changes:
@@ -536,6 +552,8 @@ Model note: The edited source unit explicitly states that the Sanskrit text is c
 Decision: accepted / rejected / needs_work
 
 Reviewer:
+
+Stable reviewer ID (required):
 
 Affiliation / identifier:
 

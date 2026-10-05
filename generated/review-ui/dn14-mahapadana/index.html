@@ -101,6 +101,7 @@ button.secondary { background:var(--accent-soft);color:var(--ink);border:1px sol
   <div class="notice">
     <strong>Boundary:</strong> this page never writes to the repository and never promotes an alignment.
     It only prepares a human-review JSON record for you to copy, inspect, and commit through the normal review process.
+    Each generated review is cryptographically bound to the alignment claim and exact source-unit views shown here.
     Highlighted Sanskrit letters are editorially supplied in the upstream edition.
     Example: <span class="supplied">supplied text</span>.
   </div>
@@ -122,6 +123,54 @@ function esc(value) {
 function slug(value) {
   return String(value || "reviewer").toLowerCase()
     .normalize("NFKD").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"") || "reviewer";
+}
+
+function canonical(value) {
+  if (value === null || typeof value !== "object") return JSON.stringify(value);
+  if (Array.isArray(value)) return "[" + value.map(canonical).join(",") + "]";
+  return "{" + Object.keys(value).sort().map(k => JSON.stringify(k) + ":" + canonical(value[k])).join(",") + "}";
+}
+
+async function digest(value) {
+  const bytes = new TextEncoder().encode(canonical(value));
+  const hash = new Uint8Array(await crypto.subtle.digest("SHA-256", bytes));
+  return "sha256:" + Array.from(hash).map(b => b.toString(16).padStart(2,"0")).join("");
+}
+
+function alignmentClaimPayload(a) {
+  const out = {};
+  Object.keys(a).forEach(k => {
+    if (["status","review","existing_reviews","review_evidence"].includes(k)) return;
+    if (k === "members") {
+      out.members = a.members.map(m => {
+        const member = {};
+        Object.keys(m).forEach(mk => { if (mk !== "units") member[mk] = m[mk]; });
+        return member;
+      });
+    } else {
+      out[k] = a[k];
+    }
+  });
+  return out;
+}
+
+async function evidenceForAlignment(a) {
+  const source_units = [];
+  for (const member of a.members) {
+    for (const unit of member.units) {
+      source_units.push({
+        language: member.language,
+        witness_id: member.witness_id,
+        source_unit_id: unit.source_id,
+        digest: await digest({source_id:unit.source_id,text_html:unit.text_html,meta:unit.meta})
+      });
+    }
+  }
+  return {
+    evidence_version: 1,
+    alignment_claim_digest: await digest(alignmentClaimPayload(a)),
+    source_units
+  };
 }
 
 function unitMeta(unit) {
@@ -157,12 +206,13 @@ function reviewForm(a) {
   const key = a.alignment_id.replace(/[^a-zA-Z0-9]/g,"_");
   const existing = (a.existing_reviews || []).map(r =>
     '<div class="existing-review"><strong>' + esc(r.decision) + '</strong> · ' +
-    esc((r.reviewer || {}).name || "unknown") + ' · ' + esc(r.reviewed_on || "") + '</div>'
+    esc((r.reviewer || {}).name || "unknown") + ' · ' + esc(r.reviewed_at || "") + '</div>'
   ).join("");
   return '<div class="card"><h3>Human review</h3>' +
     (existing ? '<div><p>Existing committed reviews:</p>' + existing + '</div>' : '<p class="provenance">No committed human review for this alignment yet.</p>') +
     '<div class="review-form" data-review-form="' + esc(a.alignment_id) + '">' +
       '<div class="field"><label>Reviewer name</label><input data-f="name" placeholder="Required human name"></div>' +
+      '<div class="field"><label>Stable reviewer ID</label><input data-f="reviewer_id" placeholder="Required, e.g. orcid:... or github:..."></div>' +
       '<div class="field"><label>Affiliation</label><input data-f="affiliation" placeholder="Optional"></div>' +
       '<div class="field"><label>Identifier (ORCID etc.)</label><input data-f="identifier" placeholder="Optional"></div>' +
       '<div class="field"><label>Decision</label><select data-f="decision"><option>needs_work</option><option>accepted</option><option>rejected</option></select></div>' +
@@ -191,35 +241,50 @@ function renderAlignment(a) {
     '</section>';
 }
 
-function buildReview(alignmentId) {
+async function buildReview(alignmentId) {
   const form = document.querySelector('[data-review-form="' + CSS.escape(alignmentId) + '"]');
+  const alignment = DATA.alignments.find(a => a.alignment_id === alignmentId);
   const value = name => form.querySelector('[data-f="' + name + '"]').value.trim();
   const reviewerName = value("name");
-  if (!reviewerName) {
-    alert("Reviewer name is required. The UI will not invent a human identity.");
+  const reviewerId = value("reviewer_id");
+  if (!reviewerName || !reviewerId) {
+    alert("Reviewer name and stable reviewer ID are required. The UI will not invent a human identity.");
     return;
   }
-  const date = new Date().toISOString().slice(0,10);
+  const assessments = {
+    source_units: value("source_units"),
+    relation_type: value("relation_type"),
+    variant_notes: value("variant_notes"),
+    editorial_handling: value("editorial_handling")
+  };
+  if (value("decision") === "accepted" && Object.values(assessments).some(v => v !== "agree")) {
+    alert("An accepted review requires all four assessments to be agree.");
+    return;
+  }
+  const now = new Date().toISOString();
+  const stamp = now.replace(/[^0-9]/g,"").slice(0,17);
+  const previous = (alignment.existing_reviews || [])
+    .filter(r => ((r.reviewer || {}).reviewer_id || "") === reviewerId)
+    .slice(-1)[0] || null;
   const review = {
-    review_id: "review:" + slug(reviewerName) + ":" + alignmentId + ":" + date,
+    review_schema_version: 2,
+    review_id: "review:" + slug(reviewerId) + ":" + alignmentId + ":" + stamp,
     case_study_id: DATA.case_study_id,
     alignment_id: alignmentId,
+    supersedes_review_id: previous ? previous.review_id : null,
     reviewer: {
       reviewer_type: "human",
       name: reviewerName,
+      reviewer_id: reviewerId,
       affiliation: value("affiliation") || null,
       identifier: value("identifier") || null
     },
     decision: value("decision"),
-    assessments: {
-      source_units: value("source_units"),
-      relation_type: value("relation_type"),
-      variant_notes: value("variant_notes"),
-      editorial_handling: value("editorial_handling")
-    },
-    reviewed_on: date,
+    assessments,
+    reviewed_at: now,
     notes: value("notes"),
-    proposed_changes: null
+    proposed_changes: null,
+    evidence: await evidenceForAlignment(alignment)
   };
   form.querySelector('[data-json="' + CSS.escape(alignmentId) + '"]').value = JSON.stringify(review,null,2);
 }
@@ -250,10 +315,10 @@ document.getElementById("reviewCount").textContent = DATA.review_count + " commi
 renderNav("");
 if (activeId) selectAlignment(activeId);
 document.getElementById("filter").addEventListener("input", e => renderNav(e.target.value));
-document.querySelectorAll("[data-build]").forEach(btn => btn.addEventListener("click", () => buildReview(btn.dataset.build)));
+document.querySelectorAll("[data-build]").forEach(btn => btn.addEventListener("click", async () => await buildReview(btn.dataset.build)));
 document.querySelectorAll("[data-copy]").forEach(btn => btn.addEventListener("click", async () => {
   const out = document.querySelector('[data-json="' + CSS.escape(btn.dataset.copy) + '"]');
-  if (!out.value.trim()) buildReview(btn.dataset.copy);
+  if (!out.value.trim()) await buildReview(btn.dataset.copy);
   if (out.value.trim()) {
     try { await navigator.clipboard.writeText(out.value); btn.textContent = "Copied"; setTimeout(() => btn.textContent = "Copy JSON",1200); }
     catch (_) { out.focus(); out.select(); }

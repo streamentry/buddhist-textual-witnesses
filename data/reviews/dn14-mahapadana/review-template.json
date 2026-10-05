@@ -1,10 +1,13 @@
 {
+  "review_schema_version": 2,
   "review_id": "review:replace-me",
   "case_study_id": "dn14-mahapadana-multiwitness",
   "alignment_id": "mw:replace-me",
+  "supersedes_review_id": null,
   "reviewer": {
     "reviewer_type": "human",
     "name": "REPLACE_ME",
+    "reviewer_id": "REPLACE_WITH_STABLE_ID",
     "affiliation": null,
     "identifier": null
   },
@@ -15,7 +18,12 @@
     "variant_notes": "uncertain",
     "editorial_handling": "uncertain"
   },
-  "reviewed_on": "YYYY-MM-DD",
+  "reviewed_at": "YYYY-MM-DDTHH:MM:SS+00:00",
   "notes": "",
-  "proposed_changes": null
+  "proposed_changes": null,
+  "evidence": {
+    "evidence_version": 1,
+    "alignment_claim_digest": "sha256:REPLACE_ME",
+    "source_units": []
+  }
 }

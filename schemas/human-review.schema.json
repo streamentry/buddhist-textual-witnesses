@@ -1,118 +1,64 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Human review of a multi-witness alignment",
+  "$id": "https://streamentry.github.io/buddhist-textual-witnesses/schemas/human-review.schema.json",
+  "title": "Evidence-bound human alignment review",
   "type": "object",
-  "required": [
-    "review_id",
-    "case_study_id",
-    "alignment_id",
-    "reviewer",
-    "decision",
-    "assessments",
-    "reviewed_on",
-    "notes"
-  ],
+  "required": ["review_schema_version","review_id","case_study_id","alignment_id","reviewer","decision","assessments","reviewed_at","evidence"],
   "properties": {
-    "review_id": {
-      "type": "string",
-      "minLength": 1
-    },
-    "case_study_id": {
-      "type": "string",
-      "minLength": 1
-    },
-    "alignment_id": {
-      "type": "string",
-      "minLength": 1
-    },
+    "review_schema_version": {"const": 2},
+    "review_id": {"type": "string","minLength": 1},
+    "case_study_id": {"type": "string","minLength": 1},
+    "alignment_id": {"type": "string","minLength": 1},
+    "supersedes_review_id": {"type": ["string","null"]},
     "reviewer": {
       "type": "object",
-      "required": [
-        "reviewer_type",
-        "name"
-      ],
+      "required": ["reviewer_type","name","reviewer_id"],
       "properties": {
-        "reviewer_type": {
-          "const": "human"
-        },
-        "name": {
-          "type": "string",
-          "minLength": 1
-        },
-        "affiliation": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "identifier": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
+        "reviewer_type": {"const": "human"},
+        "name": {"type": "string","minLength": 1},
+        "reviewer_id": {"type": "string","minLength": 1},
+        "affiliation": {"type": ["string","null"]},
+        "identifier": {"type": ["string","null"]}
       },
       "additionalProperties": false
     },
-    "decision": {
-      "enum": [
-        "accepted",
-        "rejected",
-        "needs_work"
-      ]
-    },
+    "decision": {"enum": ["accepted","rejected","needs_work"]},
     "assessments": {
       "type": "object",
-      "required": [
-        "source_units",
-        "relation_type",
-        "variant_notes",
-        "editorial_handling"
-      ],
+      "required": ["source_units","relation_type","variant_notes","editorial_handling"],
       "properties": {
-        "source_units": {
-          "enum": [
-            "agree",
-            "revise",
-            "uncertain"
-          ]
-        },
-        "relation_type": {
-          "enum": [
-            "agree",
-            "revise",
-            "uncertain"
-          ]
-        },
-        "variant_notes": {
-          "enum": [
-            "agree",
-            "revise",
-            "uncertain"
-          ]
-        },
-        "editorial_handling": {
-          "enum": [
-            "agree",
-            "revise",
-            "uncertain"
-          ]
-        }
+        "source_units": {"enum": ["agree","revise","uncertain"]},
+        "relation_type": {"enum": ["agree","revise","uncertain"]},
+        "variant_notes": {"enum": ["agree","revise","uncertain"]},
+        "editorial_handling": {"enum": ["agree","revise","uncertain"]}
       },
       "additionalProperties": false
     },
-    "reviewed_on": {
-      "type": "string",
-      "minLength": 10
-    },
-    "notes": {
-      "type": "string"
-    },
-    "proposed_changes": {
-      "type": [
-        "object",
-        "null"
-      ]
+    "reviewed_at": {"type": "string","format": "date-time"},
+    "notes": {"type": "string"},
+    "proposed_changes": {},
+    "evidence": {
+      "type": "object",
+      "required": ["evidence_version","alignment_claim_digest","source_units"],
+      "properties": {
+        "evidence_version": {"const": 1},
+        "alignment_claim_digest": {"type": "string","pattern": "^sha256:[0-9a-f]{64}$"},
+        "source_units": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["language","witness_id","source_unit_id","digest"],
+            "properties": {
+              "language": {"type": "string"},
+              "witness_id": {"type": "string"},
+              "source_unit_id": {"type": "string"},
+              "digest": {"type": "string","pattern": "^sha256:[0-9a-f]{64}$"}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false

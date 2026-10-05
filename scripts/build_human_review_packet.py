@@ -43,7 +43,7 @@ def main(argv: list[str] | None = None) -> int:
         f"# Human review packet: {case['title']}",
         "",
         "This packet is a review surface, not a scholarly verdict.",
-        "Model-reviewed alignments remain non-established until a human review is recorded separately.",
+        "Model-reviewed alignments remain non-established until an evidence-bound human review and a separate explicit promotion are recorded.",
         "",
         "## Review protocol",
         "",
@@ -53,7 +53,7 @@ def main(argv: list[str] | None = None) -> int:
         "3. Are the variant notes accurate and non-harmonizing?",
         "4. Is editorial reconstruction/textual loss handled transparently?",
         "",
-        "Record machine-readable decisions in data/reviews/dn14-mahapadana/reviews.json using review-template.json.",
+        "Prefer the offline review UI to prepare machine-readable schema-v2 JSON because it binds the exact displayed evidence. Commit decisions to data/reviews/dn14-mahapadana/reviews.json; accepted review still does not establish an alignment.",
         "",
     ]
 
@@ -110,7 +110,9 @@ def main(argv: list[str] | None = None) -> int:
             "",
             "Reviewer:",
             "",
-            "Affiliation / identifier:",
+            "Stable reviewer ID (required):",
+            "",
+            "Affiliation / identifier:"
             "",
             "Notes / proposed changes:",
             "",

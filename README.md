@@ -210,7 +210,25 @@ Two human-review surfaces are generated:
 - `generated/review-packets/dn14-mahapadana.md` — printable/auditable Markdown packet.
 - `generated/review-ui/dn14-mahapadana/index.html` — self-contained offline side-by-side review UI.
 
-The HTML UI shows Pāli, both Chinese witnesses, and Sanskrit in parallel, highlights editorially supplied Sanskrit, exposes source provenance/revisions, surfaces variant claims, and prepares schema-shaped human-review JSON. It **never writes to the repository and never promotes an alignment**. Machine-readable human decisions belong in `data/reviews/dn14-mahapadana/reviews.json`; it intentionally starts empty.
+The HTML UI shows Pāli, both Chinese witnesses, and Sanskrit in parallel, highlights editorially supplied Sanskrit, exposes source provenance/revisions, surfaces variant claims, and prepares evidence-bound human-review JSON. It **never writes to the repository and never promotes an alignment**. Machine-readable human decisions belong in `data/reviews/dn14-mahapadana/reviews.json`; it intentionally starts empty.
+
+### Human Review Promotion Protocol v1
+
+DN 14 uses an explicit two-phase scholarly transition:
+
+```text
+model_reviewed
+→ accepted fresh human review
+→ promotion_required
+→ explicit human promotion
+→ established
+```
+
+Human reviews use schema v2 and bind the exact alignment claim plus the exact source-unit views shown in the offline UI with SHA-256 digests. A stable `reviewer_id` is required, and `accepted` is valid only when all four assessment dimensions are `agree`.
+
+Review and promotion ledgers are append-only. A correction is a new review with `supersedes_review_id`, never an in-place rewrite. Promotions live separately in `data/promotions/dn14-mahapadana/promotions.json` and bind one exact review record and evidence digest. If the source text, locator, pinned revision, or alignment claim later changes, the historical event remains auditable but current state becomes `review_stale` until fresh human review and promotion occur.
+
+`established` is therefore **derived state**, not a mutable field in the case-study file. Direct `status: established` in a multi-witness case-study row is rejected by validation. The current derived state is committed at `generated/promotion-state/dn14-mahapadana.json`.
 
 A particularly useful variant is the seven-Buddha lifespan list: DN 14, SF 36 prose, and DA 1 prose agree on **80k/70k/60k/40k/30k/20k**; DA 1's verse changes Vipassī to **84k**, while EA 48.4 prose gives **84k/70k/60k/50k/40k/20k**. The project preserves all readings rather than harmonizing them.
 
@@ -232,6 +250,8 @@ The slice also models **textual loss as evidence**: SF 36 explicitly marks the *
 ├── schemas/
 │   ├── witness.schema.json
 │   ├── catalog.schema.json
+│   ├── human-review.schema.json
+│   ├── promotion.schema.json
 │   └── crosswalk.schema.json
 ├── scripts/
 │   ├── fetch_sources.sh
@@ -261,6 +281,8 @@ The slice also models **textual loss as evidence**: SF 36 explicitly marks the *
 ├── data/
 │   ├── alignments/
 │   ├── case-studies/
+│   ├── reviews/
+│   ├── promotions/
 │   ├── crosswalks/
 │   └── texts/
 ├── generated/
@@ -269,6 +291,7 @@ The slice also models **textual loss as evidence**: SF 36 explicitly marks the *
 │   ├── alignments/
 │   ├── case-studies/
 │   ├── review-ui/
+│   ├── promotion-state/
 │   └── crosswalks/
 ├── tests/
 ├── Makefile

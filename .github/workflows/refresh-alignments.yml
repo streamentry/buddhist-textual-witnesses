@@ -2,6 +2,8 @@ name: Refresh alignment source units
 
 on:
   push:
+    branches:
+      - "main"
     paths:
       - "scripts/fetch_pali_bilara.sh"
       - "scripts/fetch_indic_bilara.sh"
@@ -48,6 +50,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -164,8 +167,32 @@ jobs:
       - name: Validate human reviews
         run: |
           python scripts/validate_human_reviews.py \
+            --pali-units generated/alignment-source/pali/units.jsonl \
+            --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+            --indic-units generated/alignment-source/indic/units.jsonl \
             --case-study data/case-studies/dn14-mahapadana/alignments.json \
             --reviews data/reviews/dn14-mahapadana/reviews.json
+
+      - name: Validate explicit promotions
+        run: |
+          python scripts/validate_promotions.py \
+            --pali-units generated/alignment-source/pali/units.jsonl \
+            --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+            --indic-units generated/alignment-source/indic/units.jsonl \
+            --case-study data/case-studies/dn14-mahapadana/alignments.json \
+            --reviews data/reviews/dn14-mahapadana/reviews.json \
+            --promotions data/promotions/dn14-mahapadana/promotions.json
+
+      - name: Build derived promotion state
+        run: |
+          python scripts/build_promotion_state.py \
+            --pali-units generated/alignment-source/pali/units.jsonl \
+            --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+            --indic-units generated/alignment-source/indic/units.jsonl \
+            --case-study data/case-studies/dn14-mahapadana/alignments.json \
+            --reviews data/reviews/dn14-mahapadana/reviews.json \
+            --promotions data/promotions/dn14-mahapadana/promotions.json \
+            --output generated/promotion-state/dn14-mahapadana.json
 
       - name: Build DN 14 human review packet
         run: |
@@ -196,6 +223,7 @@ jobs:
             generated/case-studies/
             generated/review-packets/
             generated/review-ui/
+            generated/promotion-state/
 
       - name: Commit generated alignment layer
         shell: bash
@@ -203,7 +231,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add generated/alignment-source generated/alignments generated/case-studies generated/review-packets generated/review-ui
+          git add generated/alignment-source generated/alignments generated/case-studies generated/review-packets generated/review-ui generated/promotion-state
           if git diff --cached --quiet; then
             echo "Generated alignment layer is unchanged"
             exit 0

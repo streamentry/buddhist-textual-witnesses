@@ -11,6 +11,10 @@ on:
       - "data/alignments/**"
       - "data/case-studies/**"
       - "data/reviews/**"
+      - "data/promotions/**"
+      - "generated/promotion-state/**"
+      - "generated/review-ui/**"
+      - "Makefile"
       - ".github/workflows/ci.yml"
   pull_request:
     paths:
@@ -21,6 +25,11 @@ on:
       - "data/crosswalks/**"
       - "data/alignments/**"
       - "data/case-studies/**"
+      - "data/reviews/**"
+      - "data/promotions/**"
+      - "generated/promotion-state/**"
+      - "generated/review-ui/**"
+      - "Makefile"
       - ".github/workflows/ci.yml"
 
 jobs:
@@ -30,6 +39,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: false
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -43,8 +53,52 @@ jobs:
             --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
             --indic-units generated/alignment-source/indic/units.jsonl \
             --case-study data/case-studies/dn14-mahapadana/alignments.json
+      - name: Validate append-only audit ledgers
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [ -n "$BASE_SHA" ] && git cat-file -e "$BASE_SHA:data/reviews/dn14-mahapadana/reviews.json" 2>/dev/null; then
+            git show "$BASE_SHA:data/reviews/dn14-mahapadana/reviews.json" > "$RUNNER_TEMP/reviews-base.json"
+            python scripts/validate_append_only_ledger.py \
+              --base "$RUNNER_TEMP/reviews-base.json" \
+              --current data/reviews/dn14-mahapadana/reviews.json \
+              --array-key reviews \
+              --id-key review_id
+          fi
+          if [ -n "$BASE_SHA" ] && git cat-file -e "$BASE_SHA:data/promotions/dn14-mahapadana/promotions.json" 2>/dev/null; then
+            git show "$BASE_SHA:data/promotions/dn14-mahapadana/promotions.json" > "$RUNNER_TEMP/promotions-base.json"
+            python scripts/validate_append_only_ledger.py \
+              --base "$RUNNER_TEMP/promotions-base.json" \
+              --current data/promotions/dn14-mahapadana/promotions.json \
+              --array-key promotions \
+              --id-key promotion_id
+          fi
       - name: Validate human reviews
         run: |
           python scripts/validate_human_reviews.py \
+            --pali-units generated/alignment-source/pali/units.jsonl \
+            --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+            --indic-units generated/alignment-source/indic/units.jsonl \
             --case-study data/case-studies/dn14-mahapadana/alignments.json \
             --reviews data/reviews/dn14-mahapadana/reviews.json
+      - name: Validate explicit promotions
+        run: |
+          python scripts/validate_promotions.py \
+            --pali-units generated/alignment-source/pali/units.jsonl \
+            --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+            --indic-units generated/alignment-source/indic/units.jsonl \
+            --case-study data/case-studies/dn14-mahapadana/alignments.json \
+            --reviews data/reviews/dn14-mahapadana/reviews.json \
+            --promotions data/promotions/dn14-mahapadana/promotions.json
+      - name: Verify derived promotion state
+        run: |
+          python scripts/build_promotion_state.py \
+            --pali-units generated/alignment-source/pali/units.jsonl \
+            --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+            --indic-units generated/alignment-source/indic/units.jsonl \
+            --case-study data/case-studies/dn14-mahapadana/alignments.json \
+            --reviews data/reviews/dn14-mahapadana/reviews.json \
+            --promotions data/promotions/dn14-mahapadana/promotions.json \
+            --output "$RUNNER_TEMP/dn14-promotion-state.json"
+          diff -u generated/promotion-state/dn14-mahapadana.json "$RUNNER_TEMP/dn14-promotion-state.json"
