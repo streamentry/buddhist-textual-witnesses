@@ -1,0 +1,563 @@
+{
+  "not_textualized_count": 60,
+  "policy": {
+    "absent_status": "not_textualized_in_selected_upstream",
+    "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere."
+  },
+  "schema_version": 1,
+  "selected_witness_count": 61,
+  "source_revision": "f5ce35f517ae7c1cd9994c33f62c99860c200064",
+  "text_available_count": 1,
+  "witnesses": [
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 41",
+      "work_id": "DN 1"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 48",
+      "work_id": "DN 1"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 16",
+      "work_id": "DN 1"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 288",
+      "work_id": "DN 2"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 1",
+      "work_id": "DN 2"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 58",
+      "work_id": "DN 2"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 43",
+      "work_id": "DN 3"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 26",
+      "work_id": "DN 3"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 42",
+      "work_id": "DN 4"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 56",
+      "work_id": "DN 4"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 52",
+      "work_id": "DN 5"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 30",
+      "work_id": "DN 5"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 295",
+      "work_id": "DN 8"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 51",
+      "work_id": "DN 8"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 50",
+      "work_id": "DN 8"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 81",
+      "work_id": "DN 11"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 20",
+      "work_id": "DN 12"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 34",
+      "work_id": "DN 14"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 29",
+      "work_id": "DN 14"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 30",
+      "work_id": "DN 14"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 31",
+      "work_id": "DN 14"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 32",
+      "work_id": "DN 14"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 28",
+      "work_id": "DN 14"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 33",
+      "work_id": "DN 14"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 250",
+      "work_id": "DN 14"
+    },
+    {
+      "html_path": "html/san/sutta/sf/sf36_html.json",
+      "language": "san",
+      "provider": "SuttaCentral Bilara",
+      "root_path": "root/san/sutta/sf/sf36_root-san.json",
+      "segments": 943,
+      "status": "text_available",
+      "witness_id": "SF 36",
+      "work_id": "DN 14"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 296",
+      "work_id": "DN 14"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 56",
+      "work_id": "DN 14"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 1",
+      "work_id": "DN 14"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 240",
+      "work_id": "DN 15"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 138",
+      "work_id": "DN 15"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 23",
+      "work_id": "DN 15"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 54",
+      "work_id": "DN 16"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 268",
+      "work_id": "DN 16"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 289",
+      "work_id": "DN 16"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 245",
+      "work_id": "DN 16"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 285",
+      "work_id": "DN 16"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 272",
+      "work_id": "DN 16"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 5",
+      "work_id": "DN 16"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 37",
+      "work_id": "DN 18"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 39",
+      "work_id": "DN 19"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 292",
+      "work_id": "DN 19"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 53",
+      "work_id": "DN 19"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 144",
+      "work_id": "DN 19"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 38",
+      "work_id": "DN 19"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 140",
+      "work_id": "DN 20"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 108",
+      "work_id": "DN 20"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 242",
+      "work_id": "DN 20"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 282",
+      "work_id": "DN 20"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 55",
+      "work_id": "DN 20"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 8",
+      "work_id": "DN 20"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 241",
+      "work_id": "DN 21"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 139",
+      "work_id": "DN 21"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 54",
+      "work_id": "DN 21"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 11",
+      "work_id": "DN 22"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 46",
+      "work_id": "DN 24"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 298",
+      "work_id": "DN 24"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 32",
+      "work_id": "DN 24"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 62",
+      "work_id": "DN 26"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SF 277",
+      "work_id": "DN 27"
+    },
+    {
+      "language": "san",
+      "note": "Absence from this selected reproducible upstream is not evidence that an edition or manuscript text does not exist elsewhere.",
+      "provider": "SuttaCentral Bilara",
+      "segments": 0,
+      "status": "not_textualized_in_selected_upstream",
+      "witness_id": "SHT Sutta 65",
+      "work_id": "DN 27"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "errors": [],
+  "schema_version": 1,
+  "segment_count": 943,
+  "segments_with_gap": 0,
+  "segments_with_supplied": 496,
+  "segments_with_unclear": 0,
+  "source_revision": "f5ce35f517ae7c1cd9994c33f62c99860c200064",
+  "witnesses_with_text": [
+    "SF 36"
+  ]
+}
