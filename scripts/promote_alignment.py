@@ -12,6 +12,7 @@ from pathlib import Path
 from review_promotion_core import (
     PROMOTION_POLICY_VERSION,
     PROMOTION_SCHEMA_VERSION,
+    active_review_ids,
     build_source_indexes,
     evidence_digest,
     review_digest,
@@ -65,6 +66,12 @@ def main(argv: list[str] | None = None) -> int:
         return 1
     if review.get("alignment_id") != args.alignment_id:
         print("ERROR: review does not belong to requested alignment", file=sys.stderr)
+        return 1
+    if args.review_id not in active_review_ids(review_doc.get("reviews", [])):
+        print(
+            "ERROR: review has been superseded and cannot be used for a new promotion",
+            file=sys.stderr,
+        )
         return 1
 
     errors, fresh, reasons = validate_review_record(
