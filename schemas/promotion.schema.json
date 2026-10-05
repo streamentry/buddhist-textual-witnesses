@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://streamentry.github.io/buddhist-textual-witnesses/schemas/promotion.schema.json",
+  "title": "Explicit alignment promotion event",
+  "type": "object",
+  "required": ["promotion_schema_version","promotion_id","case_study_id","alignment_id","review_id","review_digest","evidence_digest","decision","promoter","promoted_at","policy_version"],
+  "properties": {
+    "promotion_schema_version": {"const": 1},
+    "promotion_id": {"type": "string","minLength": 1},
+    "case_study_id": {"type": "string","minLength": 1},
+    "alignment_id": {"type": "string","minLength": 1},
+    "review_id": {"type": "string","minLength": 1},
+    "review_digest": {"type": "string","pattern": "^sha256:[0-9a-f]{64}$"},
+    "evidence_digest": {"type": "string","pattern": "^sha256:[0-9a-f]{64}$"},
+    "decision": {"const": "established"},
+    "promoter": {
+      "type": "object",
+      "required": ["actor_type","name","actor_id"],
+      "properties": {
+        "actor_type": {"const": "human"},
+        "name": {"type": "string","minLength": 1},
+        "actor_id": {"type": "string","minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "promoted_at": {"type": "string","format": "date-time"},
+    "policy_version": {"const": "human-review-promotion-v1"},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}
