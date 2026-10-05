@@ -9,6 +9,8 @@ import re
 from pathlib import Path
 from typing import Any
 
+from review_promotion_core import build_source_indexes, evidence_for_alignment
+
 SUPPLIED_RE = re.compile(r"<supplied>(.*?)</supplied>", re.S)
 TAG_RE = re.compile(r"<[^>]+>")
 
@@ -83,6 +85,7 @@ def case_payload(
     case: dict[str, Any],
     reviews: dict[str, Any],
     idx: dict[str, dict[str, Any]],
+    source_indexes: dict[str, dict[str, dict[str, Any]]],
 ) -> dict[str, Any]:
     review_map: dict[str, list[dict[str, Any]]] = {}
     for review in reviews.get("reviews", []):
@@ -109,6 +112,9 @@ def case_payload(
                 "members": members,
                 "existing_reviews": review_map.get(
                     alignment["alignment_id"], []
+                ),
+                "review_evidence": evidence_for_alignment(
+                    alignment, source_indexes
                 ),
             }
         )
@@ -235,6 +241,7 @@ button.secondary {{ background:var(--accent-soft);color:var(--ink);border:1px so
   <div class="notice">
     <strong>Boundary:</strong> this page never writes to the repository and never promotes an alignment.
     It only prepares a human-review JSON record for you to copy, inspect, and commit through the normal review process.
+    Each generated review is cryptographically bound to the alignment claim and exact source-unit views shown here.
     Highlighted Sanskrit letters are editorially supplied in the upstream edition.
     Example: <span class="supplied">supplied text</span>.
   </div>
@@ -291,12 +298,13 @@ function reviewForm(a) {{
   const key = a.alignment_id.replace(/[^a-zA-Z0-9]/g,"_");
   const existing = (a.existing_reviews || []).map(r =>
     '<div class="existing-review"><strong>' + esc(r.decision) + '</strong> · ' +
-    esc((r.reviewer || {{}}).name || "unknown") + ' · ' + esc(r.reviewed_on || "") + '</div>'
+    esc((r.reviewer || {{}}).name || "unknown") + ' · ' + esc(r.reviewed_at || "") + '</div>'
   ).join("");
   return '<div class="card"><h3>Human review</h3>' +
     (existing ? '<div><p>Existing committed reviews:</p>' + existing + '</div>' : '<p class="provenance">No committed human review for this alignment yet.</p>') +
     '<div class="review-form" data-review-form="' + esc(a.alignment_id) + '">' +
       '<div class="field"><label>Reviewer name</label><input data-f="name" placeholder="Required human name"></div>' +
+      '<div class="field"><label>Stable reviewer ID</label><input data-f="reviewer_id" placeholder="Required, e.g. orcid:... or github:..."></div>' +
       '<div class="field"><label>Affiliation</label><input data-f="affiliation" placeholder="Optional"></div>' +
       '<div class="field"><label>Identifier (ORCID etc.)</label><input data-f="identifier" placeholder="Optional"></div>' +
       '<div class="field"><label>Decision</label><select data-f="decision"><option>needs_work</option><option>accepted</option><option>rejected</option></select></div>' +
@@ -327,33 +335,44 @@ function renderAlignment(a) {{
 
 function buildReview(alignmentId) {{
   const form = document.querySelector('[data-review-form="' + CSS.escape(alignmentId) + '"]');
+  const alignment = DATA.alignments.find(a => a.alignment_id === alignmentId);
   const value = name => form.querySelector('[data-f="' + name + '"]').value.trim();
   const reviewerName = value("name");
-  if (!reviewerName) {{
-    alert("Reviewer name is required. The UI will not invent a human identity.");
+  const reviewerId = value("reviewer_id");
+  if (!reviewerName || !reviewerId) {{
+    alert("Reviewer name and stable reviewer ID are required. The UI will not invent a human identity.");
     return;
   }}
-  const date = new Date().toISOString().slice(0,10);
+  const assessments = {{
+    source_units: value("source_units"),
+    relation_type: value("relation_type"),
+    variant_notes: value("variant_notes"),
+    editorial_handling: value("editorial_handling")
+  }};
+  if (value("decision") === "accepted" && Object.values(assessments).some(v => v !== "agree")) {{
+    alert("An accepted review requires all four assessments to be agree.");
+    return;
+  }}
+  const now = new Date().toISOString();
+  const date = now.slice(0,10);
   const review = {{
-    review_id: "review:" + slug(reviewerName) + ":" + alignmentId + ":" + date,
+    review_schema_version: 2,
+    review_id: "review:" + slug(reviewerId) + ":" + alignmentId + ":" + date,
     case_study_id: DATA.case_study_id,
     alignment_id: alignmentId,
     reviewer: {{
       reviewer_type: "human",
       name: reviewerName,
+      reviewer_id: reviewerId,
       affiliation: value("affiliation") || null,
       identifier: value("identifier") || null
     }},
     decision: value("decision"),
-    assessments: {{
-      source_units: value("source_units"),
-      relation_type: value("relation_type"),
-      variant_notes: value("variant_notes"),
-      editorial_handling: value("editorial_handling")
-    }},
-    reviewed_on: date,
+    assessments,
+    reviewed_at: now,
     notes: value("notes"),
-    proposed_changes: null
+    proposed_changes: null,
+    evidence: alignment.review_evidence
   }};
   form.querySelector('[data-json="' + CSS.escape(alignmentId) + '"]').value = JSON.stringify(review,null,2);
 }}
@@ -410,9 +429,12 @@ def main(argv: list[str] | None = None) -> int:
     args = p.parse_args(argv)
 
     idx = build_index(args.pali_units, args.chinese_blocks, args.indic_units)
+    source_indexes = build_source_indexes(
+        args.pali_units, args.chinese_blocks, args.indic_units
+    )
     case = json.loads(args.case_study.read_text(encoding="utf-8"))
     reviews = json.loads(args.reviews.read_text(encoding="utf-8"))
-    payload = case_payload(case, reviews, idx)
+    payload = case_payload(case, reviews, idx, source_indexes)
     page = build_page(payload)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(page, encoding="utf-8")
