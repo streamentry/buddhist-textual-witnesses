@@ -3,6 +3,7 @@
   "review_id": "review:replace-me",
   "case_study_id": "dn14-mahapadana-multiwitness",
   "alignment_id": "mw:replace-me",
+  "supersedes_review_id": null,
   "reviewer": {
     "reviewer_type": "human",
     "name": "REPLACE_ME",
