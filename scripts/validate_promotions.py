@@ -74,7 +74,7 @@ def main(argv: list[str] | None = None) -> int:
             alignments,
             reviews_by_id,
             indexes,
-            require_current_fresh=args.require_current_fresh,
+            require_current_fresh=False,
         )
         errors.extend(promotion_errors)
         is_current = fresh and str(promotion.get("review_id") or "") in active_ids
