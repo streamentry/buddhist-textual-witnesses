@@ -9,8 +9,10 @@ from pathlib import Path
 
 from review_promotion_core import (
     PROMOTION_POLICY_VERSION,
+    active_review_ids,
     build_source_indexes,
     validate_promotion_record,
+    validate_review_lineage,
 )
 
 
@@ -31,11 +33,14 @@ def main(argv: list[str] | None = None) -> int:
     indexes = build_source_indexes(args.pali_units, args.chinese_blocks, args.indic_units)
     case_id = case["case_study_id"]
     alignments = {row["alignment_id"]: row for row in case.get("alignments", [])}
+    review_rows = review_doc.get("reviews", [])
     reviews_by_id = {
-        row["review_id"]: row for row in review_doc.get("reviews", []) if row.get("review_id")
+        row["review_id"]: row for row in review_rows if row.get("review_id")
     }
+    active_ids = active_review_ids(review_rows)
 
     errors: list[str] = []
+    errors.extend(validate_review_lineage(review_rows))
     if promotion_doc.get("version") != 1:
         errors.append("promotion document version must be 1")
     if promotion_doc.get("case_study_id") != case_id:
@@ -72,7 +77,12 @@ def main(argv: list[str] | None = None) -> int:
             require_current_fresh=args.require_current_fresh,
         )
         errors.extend(promotion_errors)
-        if fresh:
+        is_current = fresh and str(promotion.get("review_id") or "") in active_ids
+        if args.require_current_fresh and not is_current:
+            errors.append(
+                f"{pid}: referenced review is stale or superseded for current promotion"
+            )
+        if is_current:
             current_fresh += 1
         else:
             historical_stale += 1
