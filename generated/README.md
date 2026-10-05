@@ -14,4 +14,5 @@ Do not hand-edit generated files. Change source configuration, scripts, source p
 
 Current Indic snapshot: SF 36 contributes 943 edited Sanskrit segments grouped into 396 auditable source units. The availability registry audits all 61 Sanskrit/SHT witness IDs in the first-20 benchmark and keeps unavailable-in-this-upstream distinct from nonexistent.
 
-- review-packets/ contains generated human-review surfaces. They are derived from curated case-study data and human review records; they are not themselves review decisions.
+- review-packets/ contains generated Markdown human-review surfaces. They are derived from curated case-study data and human review records; they are not themselves review decisions.
+- review-ui/ contains self-contained offline HTML review interfaces. They are read-only with respect to repository state and only prepare review JSON for explicit human handling.

@@ -205,7 +205,12 @@ It currently contains **9 model-reviewed multi-witness passage alignments** acro
 
 The generated report is `generated/case-studies/dn14-mahapadana.md`.
 
-A separate human-review surface is generated at `generated/review-packets/dn14-mahapadana.md`. Machine-readable human decisions belong in `data/reviews/dn14-mahapadana/reviews.json`; it intentionally starts empty.
+Two human-review surfaces are generated:
+
+- `generated/review-packets/dn14-mahapadana.md` — printable/auditable Markdown packet.
+- `generated/review-ui/dn14-mahapadana/index.html` — self-contained offline side-by-side review UI.
+
+The HTML UI shows Pāli, both Chinese witnesses, and Sanskrit in parallel, highlights editorially supplied Sanskrit, exposes source provenance/revisions, surfaces variant claims, and prepares schema-shaped human-review JSON. It **never writes to the repository and never promotes an alignment**. Machine-readable human decisions belong in `data/reviews/dn14-mahapadana/reviews.json`; it intentionally starts empty.
 
 A particularly useful variant is the seven-Buddha lifespan list: DN 14, SF 36 prose, and DA 1 prose agree on **80k/70k/60k/40k/30k/20k**; DA 1's verse changes Vipassī to **84k**, while EA 48.4 prose gives **84k/70k/60k/50k/40k/20k**. The project preserves all readings rather than harmonizing them.
 
@@ -243,6 +248,7 @@ The slice also models **textual loss as evidence**: SF 36 explicitly marks the *
 │   ├── validate_alignments.py
 │   ├── validate_multiwitness_alignments.py
 │   ├── render_multiwitness_case_study.py
+│   ├── build_multiwitness_review_ui.py
 │   ├── validate_crosswalks.py
 │   └── render_crosswalks.py
 ├── docs/
@@ -262,6 +268,7 @@ The slice also models **textual loss as evidence**: SF 36 explicitly marks the *
 │   ├── alignment-source/   # Pāli, Chinese, Indic derived source units
 │   ├── alignments/
 │   ├── case-studies/
+│   ├── review-ui/
 │   └── crosswalks/
 ├── tests/
 ├── Makefile

@@ -46,6 +46,7 @@ Build a small, high-confidence benchmark before scaling.
 - [x] First model-reviewed many-to-many batch: DN 1 ↔ DA 21
 - [ ] First human-reviewed established batch
 - [x] Generate DN 14 human-review packet and machine-readable human-review schema
+- [x] Generate self-contained DN 14 side-by-side review UI with provenance, variant display, supplied-text highlighting, and review JSON export
 - [ ] Obtain first accepted human review for the DN 14 multi-witness vertical slice
 - [x] Add model-reviewed bilingual retrieval-anchor lexicon for names, formulas, doctrinal terms, and precepts
 - [x] Add lexicon-assisted 1–3-block candidate windows and seed retrieval diagnostics

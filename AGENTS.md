@@ -40,6 +40,8 @@ This repository supports textual-critical study of Buddhist sources across multi
 32. `lost_text_marker` is valid only when the cited source unit explicitly records textual loss. Never use it merely because a witness has not yet been ingested or aligned.
 33. Human reviews must live in the dedicated review layer and identify a real human reviewer. A model must never populate `reviewer_type: human` or fabricate reviewer identity.
 34. An accepted human review makes an alignment eligible for explicit promotion; no generator may silently mutate `model_reviewed` to `established`.
+35. Review UIs are read-only research surfaces. They may prepare review JSON for a human, but must never write review records, invent reviewer identity, or auto-promote alignment status.
+36. Any review JSON prepared by a UI must still pass the canonical human-review validator before it is treated as a repository review record.
 
 ## Preferred workflow
 
@@ -55,4 +57,4 @@ This repository supports textual-critical study of Buddhist sources across multi
 
 ## Current priority
 
-Deepen the DN 14 multi-witness vertical slice, obtain human review, and then expand directly attested Sanskrit/BHS/Gāndhārī source units where provenance and redistribution allow.
+Use the DN 14 side-by-side review surface to obtain the first real human review, while expanding directly attested Sanskrit/BHS/Gāndhārī source units only where provenance and redistribution allow.
