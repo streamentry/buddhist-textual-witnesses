@@ -236,6 +236,7 @@ button.secondary {{ background:var(--accent-soft);color:var(--ink);border:1px so
     <strong>Boundary:</strong> this page never writes to the repository and never promotes an alignment.
     It only prepares a human-review JSON record for you to copy, inspect, and commit through the normal review process.
     Highlighted Sanskrit letters are editorially supplied in the upstream edition.
+    Example: <span class="supplied">supplied text</span>.
   </div>
   <div id="content"></div>
 </main>
