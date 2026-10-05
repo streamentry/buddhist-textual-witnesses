@@ -4,6 +4,7 @@
   "type": "object",
   "required": [
     "canonical_id",
+    "record_kind",
     "collection",
     "container_id",
     "number",
@@ -13,22 +14,74 @@
     "locator"
   ],
   "properties": {
-    "canonical_id": {"type": "string"},
-    "collection": {"enum": ["DA", "MA", "SA", "SA2", "EA"]},
-    "container_id": {"enum": ["T0001", "T0026", "T0099", "T0100", "T0125"]},
-    "number": {"type": "integer", "minimum": 1},
-    "title": {"type": ["string", "null"]},
-    "mulu_text": {"type": "string"},
-    "head_text": {"type": ["string", "null"]},
-    "hierarchy": {"type": "array", "items": {"type": "object"}},
+    "canonical_id": {
+      "type": "string"
+    },
+    "collection": {
+      "enum": [
+        "DA",
+        "MA",
+        "SA",
+        "SA2",
+        "EA"
+      ]
+    },
+    "container_id": {
+      "enum": [
+        "T0001",
+        "T0026",
+        "T0099",
+        "T0100",
+        "T0125"
+      ]
+    },
+    "number": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mulu_text": {
+      "type": "string"
+    },
+    "head_text": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hierarchy": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
     "source": {
       "type": "object",
-      "required": ["project", "path", "revision", "url"],
+      "required": [
+        "project",
+        "path",
+        "revision",
+        "url"
+      ],
       "properties": {
-        "project": {"const": "CBETA XML-P5 / Taishō"},
-        "path": {"type": "string"},
-        "revision": {"type": "string", "minLength": 40},
-        "url": {"type": "string"}
+        "project": {
+          "const": "CBETA XML-P5 / Taishō"
+        },
+        "path": {
+          "type": "string"
+        },
+        "revision": {
+          "type": "string",
+          "minLength": 40
+        },
+        "url": {
+          "type": "string"
+        }
       },
       "additionalProperties": false
     },
@@ -46,19 +99,57 @@
         "normalized_text_chars"
       ],
       "properties": {
-        "xpath": {"type": "string"},
-        "segment_ordinal": {"type": "integer", "minimum": 1},
-        "start_lb": {"type": "string"},
-        "end_lb": {"type": "string"},
-        "start_ref": {"type": "string"},
-        "end_ref": {"type": "string"},
-        "start_juan": {"type": ["string", "null"]},
-        "end_juan": {"type": ["string", "null"]},
-        "xml_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
-        "normalized_text_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
-        "normalized_text_chars": {"type": "integer", "minimum": 1}
+        "xpath": {
+          "type": "string"
+        },
+        "segment_ordinal": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "start_lb": {
+          "type": "string"
+        },
+        "end_lb": {
+          "type": "string"
+        },
+        "start_ref": {
+          "type": "string"
+        },
+        "end_ref": {
+          "type": "string"
+        },
+        "start_juan": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "end_juan": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "xml_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "normalized_text_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "normalized_text_chars": {
+          "type": "integer",
+          "minimum": 1
+        }
       },
       "additionalProperties": false
+    },
+    "record_kind": {
+      "enum": [
+        "canonical",
+        "supplement"
+      ]
     }
   },
   "additionalProperties": false

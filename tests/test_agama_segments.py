@@ -99,6 +99,30 @@ class AgamaSegmentTests(unittest.TestCase):
             "mulu' and @type='經'", rows[0]["locator"]["xpath"]
         )
 
+    def test_ea_jing_outside_pin_is_preserved_as_supplement(self):
+        xml = f"""<TEI xmlns="{TEI}" xmlns:cb="{CB}"><text><body>
+        <lb ed="T" n="0001a01"/>
+        <cb:div type="jing"><cb:mulu type="經">5（卷末附文）</cb:mulu>
+        <lb ed="T" n="0001a02"/><p>附文</p></cb:div>
+        </body></text></TEI>"""
+        path = self.root / "ea-supplement.xml"
+        write(path, xml)
+        cfg = {
+            "prefix": "EA",
+            "container_id": "T0125",
+            "path": "ea-supplement.xml",
+            "id_mode": "chapter.item",
+            "expected_segments": 1,
+            "expected_canonical_segments": 0,
+            "expected_supplements": 1,
+        }
+        rows = builder.build_collection(
+            path, cfg, "a" * 40, "https://github.com/cbeta-org/xml-p5.git"
+        )
+        self.assertEqual(rows[0]["record_kind"], "supplement")
+        self.assertEqual(rows[0]["canonical_id"], "T0125 supplement 1")
+        self.assertEqual(builder.validate_collection(rows, cfg), [])
+
     def test_text_hash_uses_lemma_and_skips_notes(self):
         xml = f"""<TEI xmlns="{TEI}" xmlns:cb="{CB}"><text><body>
         <lb ed="T" n="0001a01"/>

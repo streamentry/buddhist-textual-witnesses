@@ -8,17 +8,17 @@ Raw CBETA text is **not duplicated** in this repository. The generated layer sto
 
 ## Collections
 
-| Project ID | Taishō container | ID mode | Expected discourse nodes |
-|---|---|---|---:|
-| DA | T0001 | global | 30 |
-| MA | T0026 | global | 222 |
-| SA | T0099 | global | 1,355 |
-| SA2 | T0100 | global | 364 |
-| EA | T0125 | chapter.item | 472 |
+| Project ID | Taishō container | ID mode | Structural `經` nodes | Canonical discourses | Supplements |
+|---|---|---|---:|---:|---:|
+| DA | T0001 | global | 30 | 30 | 0 |
+| MA | T0026 | global | 222 | 222 | 0 |
+| SA | T0099 | global | 1,355 | 1,355 | 0 |
+| SA2 | T0100 | global | 364 | 364 | 0 |
+| EA | T0125 | chapter.item | 472 | 471 | 1 |
 
-Total expected records: **2,443**.
+Total: **2,443 structural segments = 2,442 canonical discourse segments + 1 supplement**.
 
-These counts were verified against the pinned CBETA 2026.R2 XML before the extractor was implemented.
+The T0125 non-canonical node is explicitly labelled `5（卷末附文）` by CBETA and sits outside every `品`. It is preserved as `T0125 supplement 1`; the pipeline does not invent an `EA x.5` identifier for it.
 
 ## Structural rule
 
@@ -64,7 +64,7 @@ generated/
     └── first-20-resolved.json
 ```
 
-Each discourse record includes:
+Each structural segment record includes a `record_kind` of `canonical` or `supplement`, plus:
 
 - canonical ID and container
 - title / `mulu` / `head`
