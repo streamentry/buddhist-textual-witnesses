@@ -29,6 +29,19 @@ def source_indexes(
     return {"pli": pali, "lzh": chinese, "san": indic}
 
 
+def source_editorial_features(source: dict[str, Any]) -> set[str]:
+    features: set[str] = set()
+    markup = source.get("editorial_markup") or {}
+    summary = source.get("editorial_summary") or {}
+    if markup.get("has_supplied") or summary.get("segments_with_supplied", 0):
+        features.add("supplied")
+    if markup.get("has_gap") or summary.get("segments_with_gap", 0):
+        features.add("gap")
+    if markup.get("has_unclear") or summary.get("segments_with_unclear", 0):
+        features.add("unclear")
+    return features
+
+
 def validate_alignment(
     row: dict[str, Any],
     indexes: dict[str, dict[str, dict[str, Any]]],
@@ -56,6 +69,7 @@ def validate_alignment(
         if not isinstance(source_ids, list) or not source_ids:
             errors.append(f"{aid}/{mid}: source_unit_ids must be non-empty")
             continue
+        resolved_sources = []
         for source_id in source_ids:
             if source_id not in indexes[language]:
                 errors.append(
@@ -63,6 +77,7 @@ def validate_alignment(
                 )
                 continue
             source = indexes[language][source_id]
+            resolved_sources.append(source)
             expected_witness = member.get("witness_id")
             actual_witness = (
                 source.get("witness_id")
@@ -77,6 +92,28 @@ def validate_alignment(
                 errors.append(
                     f"{aid}/{mid}: unit {source_id} belongs to "
                     f"{actual_witness}, not {expected_witness}"
+                )
+
+        declared_features = member.get("editorial_features")
+        if not isinstance(declared_features, list):
+            errors.append(f"{aid}/{mid}: editorial_features must be an array")
+        else:
+            if len(set(declared_features)) != len(declared_features):
+                errors.append(f"{aid}/{mid}: duplicate editorial_features")
+            allowed_features = {"supplied", "gap", "unclear"}
+            unknown_features = set(declared_features) - allowed_features
+            if unknown_features:
+                errors.append(
+                    f"{aid}/{mid}: unsupported editorial_features "
+                    + ", ".join(sorted(unknown_features))
+                )
+            actual_features: set[str] = set()
+            for source in resolved_sources:
+                actual_features.update(source_editorial_features(source))
+            if set(declared_features) != actual_features:
+                errors.append(
+                    f"{aid}/{mid}: editorial_features {sorted(declared_features)} "
+                    f"do not match source evidence {sorted(actual_features)}"
                 )
 
         if member.get("coverage") == "lost_text_marker":
@@ -113,29 +150,23 @@ def validate_alignment(
         if member.get("coverage") == "lost_text_marker"
     }
     relation_member_ids = row.get("relation_member_ids")
-    if relation_member_ids is not None:
-        if not isinstance(relation_member_ids, list) or len(relation_member_ids) < 2:
-            errors.append(
-                f"{aid}: relation_member_ids must contain at least two members"
-            )
-        else:
-            if len(set(relation_member_ids)) != len(relation_member_ids):
-                errors.append(f"{aid}: duplicate relation_member_ids")
-            for member_id in relation_member_ids:
-                if member_id not in known_members:
-                    errors.append(
-                        f"{aid}: relation_member_ids references unknown member {member_id}"
-                    )
-                if member_id in lost_member_ids:
-                    errors.append(
-                        f"{aid}: lost_text_marker member {member_id} cannot participate "
-                        "in the asserted textual relation"
-                    )
-    elif lost_member_ids:
+    if not isinstance(relation_member_ids, list) or len(relation_member_ids) < 2:
         errors.append(
-            f"{aid}: alignments containing lost_text_marker require relation_member_ids "
-            "to scope the asserted relation to surviving evidence"
+            f"{aid}: relation_member_ids must explicitly contain at least two members"
         )
+    else:
+        if len(set(relation_member_ids)) != len(relation_member_ids):
+            errors.append(f"{aid}: duplicate relation_member_ids")
+        for member_id in relation_member_ids:
+            if member_id not in known_members:
+                errors.append(
+                    f"{aid}: relation_member_ids references unknown member {member_id}"
+                )
+            if member_id in lost_member_ids:
+                errors.append(
+                    f"{aid}: lost_text_marker member {member_id} cannot participate "
+                    "in the asserted textual relation"
+                )
 
     variants = row.get("variants", [])
     for variant in variants:

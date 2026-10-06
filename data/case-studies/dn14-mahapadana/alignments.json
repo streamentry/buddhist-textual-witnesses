@@ -43,7 +43,8 @@
             "DN 14#p0001"
           ],
           "coverage": "full",
-          "notes": "Opening formula and Jetavana setting; additionally specifies karerikuṭikā."
+          "notes": "Opening formula and Jetavana setting; additionally specifies karerikuṭikā.",
+          "editorial_features": []
         },
         {
           "member_id": "da",
@@ -54,7 +55,8 @@
             "DA 1#b0002"
           ],
           "coverage": "full",
-          "notes": "Opening formula plus Śrāvastī/Jetavana setting."
+          "notes": "Opening formula plus Śrāvastī/Jetavana setting.",
+          "editorial_features": []
         },
         {
           "member_id": "ea",
@@ -65,7 +67,8 @@
             "EA 48.4#b0002"
           ],
           "coverage": "full",
-          "notes": "Opening formula plus Śrāvastī/Jetavana/Anāthapiṇḍada setting."
+          "notes": "Opening formula plus Śrāvastī/Jetavana/Anāthapiṇḍada setting.",
+          "editorial_features": []
         },
         {
           "member_id": "sf",
@@ -75,7 +78,10 @@
             "SF 36#p0001"
           ],
           "coverage": "full",
-          "notes": "Opening formula and setting; several letters in the edition are supplied."
+          "notes": "Opening formula and setting; several letters in the edition are supplied.",
+          "editorial_features": [
+            "supplied"
+          ]
         }
       ],
       "variants": [
@@ -98,7 +104,13 @@
         "confidence": "high",
         "reviewed_on": "2026-10-05",
         "notes": "Strong formulaic and narrative correspondence. No claim of verbal identity."
-      }
+      },
+      "relation_member_ids": [
+        "pli",
+        "da",
+        "ea",
+        "sf"
+      ]
     },
     {
       "alignment_id": "mw:dn14:monks-discussion:02",
@@ -115,7 +127,8 @@
             "DN 14#p0002"
           ],
           "coverage": "partial",
-          "notes": "The discussion is summarized as concerning pubbenivāsa, without the detailed question found in the other recensions."
+          "notes": "The discussion is summarized as concerning pubbenivāsa, without the detailed question found in the other recensions.",
+          "editorial_features": []
         },
         {
           "member_id": "da",
@@ -125,7 +138,8 @@
             "DA 1#b0003"
           ],
           "coverage": "full",
-          "notes": "Detailed discussion of past Buddhas and whether the Tathāgata knows through understanding 法性 or information from devas; the Chinese term is preserved without asserting one-to-one equivalence with Sanskrit dharmadhātu."
+          "notes": "Detailed discussion of past Buddhas and whether the Tathāgata knows through understanding 法性 or information from devas; the Chinese term is preserved without asserting one-to-one equivalence with Sanskrit dharmadhātu.",
+          "editorial_features": []
         },
         {
           "member_id": "ea",
@@ -135,7 +149,8 @@
             "EA 48.4#b0003"
           ],
           "coverage": "full",
-          "notes": "Detailed discussion of past Buddhas and the 法處/deva question in this opening block; the later repeated report uses 法界. These Chinese terms are preserved rather than normalized into a single Sanskrit equivalent."
+          "notes": "Detailed discussion of past Buddhas and the 法處/deva question in this opening block; the later repeated report uses 法界. These Chinese terms are preserved rather than normalized into a single Sanskrit equivalent.",
+          "editorial_features": []
         },
         {
           "member_id": "sf",
@@ -147,7 +162,10 @@
             "SF 36#p0004"
           ],
           "coverage": "full",
-          "notes": "Expands the discussion into knowledge of past Buddhas, their qualities, and the dharmadhātu versus deva-report question."
+          "notes": "Expands the discussion into knowledge of past Buddhas, their qualities, and the dharmadhātu versus deva-report question.",
+          "editorial_features": [
+            "supplied"
+          ]
         }
       ],
       "variants": [
@@ -180,7 +198,13 @@
         "confidence": "high",
         "reviewed_on": "2026-10-05",
         "notes": "Accepted as partial overlap because the Pāli unit is materially shorter than the Sanskrit and Chinese passages. The dharmadhātu / 法性 / 法處 wording is kept witness-specific; lexical equivalence is deliberately left unasserted."
-      }
+      },
+      "relation_member_ids": [
+        "pli",
+        "da",
+        "ea",
+        "sf"
+      ]
     },
     {
       "alignment_id": "mw:dn14:buddha-hears-asks:03",
@@ -197,7 +221,8 @@
             "DN 14#p0003"
           ],
           "coverage": "full",
-          "notes": "Buddha hears with purified divine ear, approaches, sits, and asks what the monks were discussing."
+          "notes": "Buddha hears with purified divine ear, approaches, sits, and asks what the monks were discussing.",
+          "editorial_features": []
         },
         {
           "member_id": "da",
@@ -208,7 +233,8 @@
             "DA 1#b0005"
           ],
           "coverage": "full",
-          "notes": "Hearing/approach and question are split across two blocks."
+          "notes": "Hearing/approach and question are split across two blocks.",
+          "editorial_features": []
         },
         {
           "member_id": "ea",
@@ -218,7 +244,8 @@
             "EA 48.4#b0004"
           ],
           "coverage": "full",
-          "notes": "Hearing, approach, sitting in the middle, and question are compressed into one block."
+          "notes": "Hearing, approach, sitting in the middle, and question are compressed into one block.",
+          "editorial_features": []
         },
         {
           "member_id": "sf",
@@ -230,7 +257,10 @@
             "SF 36#p0007"
           ],
           "coverage": "full",
-          "notes": "Marks the unfinished discussion, then divine-ear hearing/approach, then the Buddha's question."
+          "notes": "Marks the unfinished discussion, then divine-ear hearing/approach, then the Buddha's question.",
+          "editorial_features": [
+            "supplied"
+          ]
         }
       ],
       "variants": [
@@ -253,7 +283,13 @@
         "confidence": "high",
         "reviewed_on": "2026-10-05",
         "notes": "Strong narrative and lexical correspondence despite differing segmentation."
-      }
+      },
+      "relation_member_ids": [
+        "pli",
+        "da",
+        "ea",
+        "sf"
+      ]
     },
     {
       "alignment_id": "mw:dn14:monks-report:04",
@@ -270,7 +306,8 @@
             "DN 14#p0004"
           ],
           "coverage": "partial",
-          "notes": "Repeats only the abbreviated pubbenivāsa topic."
+          "notes": "Repeats only the abbreviated pubbenivāsa topic.",
+          "editorial_features": []
         },
         {
           "member_id": "da",
@@ -280,7 +317,8 @@
             "DA 1#b0005"
           ],
           "coverage": "context",
-          "notes": "Says the monks answered fully, but does not repeat the detailed content in this block."
+          "notes": "Says the monks answered fully, but does not repeat the detailed content in this block.",
+          "editorial_features": []
         },
         {
           "member_id": "ea",
@@ -290,7 +328,8 @@
             "EA 48.4#b0005"
           ],
           "coverage": "full",
-          "notes": "Repeats the expanded discussion and dharmadhātu/deva question."
+          "notes": "Repeats the expanded discussion and dharmadhātu/deva question.",
+          "editorial_features": []
         },
         {
           "member_id": "sf",
@@ -301,7 +340,10 @@
             "SF 36#p0009"
           ],
           "coverage": "full",
-          "notes": "Repeats the expanded discussion and dharmadhātu/deva question in detail."
+          "notes": "Repeats the expanded discussion and dharmadhātu/deva question in detail.",
+          "editorial_features": [
+            "supplied"
+          ]
         }
       ],
       "variants": [
@@ -324,7 +366,13 @@
         "confidence": "high",
         "reviewed_on": "2026-10-05",
         "notes": "Alignment is structural rather than full verbal correspondence."
-      }
+      },
+      "relation_member_ids": [
+        "pli",
+        "da",
+        "ea",
+        "sf"
+      ]
     },
     {
       "alignment_id": "mw:dn14:seven-buddhas-kalpas:05",
@@ -341,7 +389,8 @@
             "DN 14#p0009"
           ],
           "coverage": "full",
-          "notes": "Lists Vipassī through the present Buddha with 91/31-kalpa chronology."
+          "notes": "Lists Vipassī through the present Buddha with 91/31-kalpa chronology.",
+          "editorial_features": []
         },
         {
           "member_id": "da",
@@ -352,7 +401,8 @@
             "DA 1#b0012"
           ],
           "coverage": "full",
-          "notes": "Prose list followed by verse restatement."
+          "notes": "Prose list followed by verse restatement.",
+          "editorial_features": []
         },
         {
           "member_id": "ea",
@@ -363,7 +413,8 @@
             "EA 48.4#b0011"
           ],
           "coverage": "full",
-          "notes": "Prose list and verse restatement; the verse-introduction block is excluded as framing."
+          "notes": "Prose list and verse restatement; the verse-introduction block is excluded as framing.",
+          "editorial_features": []
         },
         {
           "member_id": "sf",
@@ -374,7 +425,10 @@
             "SF 36#p0014"
           ],
           "coverage": "full",
-          "notes": "Prose list and damaged/reconstructed verse section; supplied text remains explicit in edition_text."
+          "notes": "Prose list and damaged/reconstructed verse section; supplied text remains explicit in edition_text.",
+          "editorial_features": [
+            "supplied"
+          ]
         }
       ],
       "variants": [
@@ -397,7 +451,13 @@
         "confidence": "high",
         "reviewed_on": "2026-10-05",
         "notes": "Strong agreement in sequence and chronology; names appear in language-specific forms."
-      }
+      },
+      "relation_member_ids": [
+        "pli",
+        "da",
+        "ea",
+        "sf"
+      ]
     },
     {
       "alignment_id": "mw:dn14:lifespans:06",
@@ -414,7 +474,8 @@
             "DN 14#p0012"
           ],
           "coverage": "full",
-          "notes": "80k/70k/60k/40k/30k/20k; present lifespan about 100 years."
+          "notes": "80k/70k/60k/40k/30k/20k; present lifespan about 100 years.",
+          "editorial_features": []
         },
         {
           "member_id": "da",
@@ -425,7 +486,8 @@
             "DA 1#b0014"
           ],
           "coverage": "full",
-          "notes": "Both prose and verse are framed as 人壽, the human lifespan in the time of each Buddha, rather than explicitly as the Buddha's own lifespan. Prose gives 80k/70k/60k/40k/30k/20k; the verse gives Vipassī 84k."
+          "notes": "Both prose and verse are framed as 人壽, the human lifespan in the time of each Buddha, rather than explicitly as the Buddha's own lifespan. Prose gives 80k/70k/60k/40k/30k/20k; the verse gives Vipassī 84k.",
+          "editorial_features": []
         },
         {
           "member_id": "ea",
@@ -435,7 +497,8 @@
             "EA 48.4#b0030"
           ],
           "coverage": "full",
-          "notes": "Prose gives 84k/70k/60k/50k/40k/20k; present maximum 100."
+          "notes": "Prose gives 84k/70k/60k/50k/40k/20k; present maximum 100.",
+          "editorial_features": []
         },
         {
           "member_id": "sf",
@@ -446,7 +509,10 @@
             "SF 36#p0016"
           ],
           "coverage": "full",
-          "notes": "Prose gives 80k/70k/60k/40k/30k/20k; the verse is fragmentary/supplied in places."
+          "notes": "Prose gives 80k/70k/60k/40k/30k/20k; the verse is fragmentary/supplied in places.",
+          "editorial_features": [
+            "supplied"
+          ]
         }
       ],
       "variants": [
@@ -489,7 +555,13 @@
         "confidence": "medium_high",
         "reviewed_on": "2026-10-05",
         "notes": "The four witnesses place comparable numerical lists at the same narrative locus, but DA 1 frames the values as human lifespan (人壽) in each Buddha's era while DN 14 and SF 36 frame Buddha lifespans and EA 48.4 frames Tathāgata lifespans. The row is therefore classified conservatively as structural correspondence rather than a full textual parallel."
-      }
+      },
+      "relation_member_ids": [
+        "pli",
+        "da",
+        "ea",
+        "sf"
+      ]
     },
     {
       "alignment_id": "mw:dn14:caste:07",
@@ -506,7 +578,8 @@
             "DN 14#p0010"
           ],
           "coverage": "full",
-          "notes": "First three and the present Buddha are kṣatriya; the middle three are brāhmaṇa."
+          "notes": "First three and the present Buddha are kṣatriya; the middle three are brāhmaṇa.",
+          "editorial_features": []
         },
         {
           "member_id": "da",
@@ -516,7 +589,8 @@
             "DA 1#b0015"
           ],
           "coverage": "full",
-          "notes": "Same caste pattern, with clan-name information embedded in the same prose block."
+          "notes": "Same caste pattern, with clan-name information embedded in the same prose block.",
+          "editorial_features": []
         },
         {
           "member_id": "ea",
@@ -526,7 +600,8 @@
             "EA 48.4#b0012"
           ],
           "coverage": "full",
-          "notes": "Same caste pattern in a dedicated prose block."
+          "notes": "Same caste pattern in a dedicated prose block.",
+          "editorial_features": []
         },
         {
           "member_id": "sf",
@@ -536,7 +611,10 @@
             "SF 36#p0017"
           ],
           "coverage": "full",
-          "notes": "Same caste pattern; all three Sanskrit leaf segments contain supplied reconstruction."
+          "notes": "Same caste pattern; all three Sanskrit leaf segments contain supplied reconstruction.",
+          "editorial_features": [
+            "supplied"
+          ]
         }
       ],
       "variants": [
@@ -559,7 +637,13 @@
         "confidence": "high",
         "reviewed_on": "2026-10-05",
         "notes": "The caste sequence is stable across the selected witnesses; DA 1 packages extra clan information into the same block."
-      }
+      },
+      "relation_member_ids": [
+        "pli",
+        "da",
+        "ea",
+        "sf"
+      ]
     },
     {
       "alignment_id": "mw:dn14:family-name-loss:08",
@@ -576,7 +660,8 @@
             "DN 14#p0011"
           ],
           "coverage": "full",
-          "notes": "Koṇḍañña for the first three, Kassapa for the middle three, Gotama for the present Buddha."
+          "notes": "Koṇḍañña for the first three, Kassapa for the middle three, Gotama for the present Buddha.",
+          "editorial_features": []
         },
         {
           "member_id": "da",
@@ -586,7 +671,8 @@
             "DA 1#b0015"
           ],
           "coverage": "full",
-          "notes": "Clan names appear in the same prose block as caste."
+          "notes": "Clan names appear in the same prose block as caste.",
+          "editorial_features": []
         },
         {
           "member_id": "ea",
@@ -597,7 +683,8 @@
             "EA 48.4#b0018"
           ],
           "coverage": "full",
-          "notes": "EA preserves two complete nearby clan-name sequences that are internally incompatible: b0015 gives Gotama for the first three, Kassapa for the middle three, and Gotama for the present Buddha; b0018 gives 拘鄰若 for the first three, 婆羅墮 for the middle three, and 拘鄰若 for the present Buddha."
+          "notes": "EA preserves two complete nearby clan-name sequences that are internally incompatible: b0015 gives Gotama for the first three, Kassapa for the middle three, and Gotama for the present Buddha; b0018 gives 拘鄰若 for the first three, 婆羅墮 for the middle three, and 拘鄰若 for the present Buddha.",
+          "editorial_features": []
         },
         {
           "member_id": "sf",
@@ -607,7 +694,8 @@
             "SF 36#p0019"
           ],
           "coverage": "lost_text_marker",
-          "notes": "The edited source unit explicitly states that the Sanskrit text is completely lost under the Family Name subsection."
+          "notes": "The edited source unit explicitly states that the Sanskrit text is completely lost under the Family Name subsection.",
+          "editorial_features": []
         }
       ],
       "variants": [
@@ -665,7 +753,8 @@
             "DN 14#p0013"
           ],
           "coverage": "full",
-          "notes": "Lists the awakening trees for the seven Buddhas."
+          "notes": "Lists the awakening trees for the seven Buddhas.",
+          "editorial_features": []
         },
         {
           "member_id": "da",
@@ -675,7 +764,8 @@
             "DA 1#b0017"
           ],
           "coverage": "full",
-          "notes": "Chinese list of awakening trees."
+          "notes": "Chinese list of awakening trees.",
+          "editorial_features": []
         },
         {
           "member_id": "ea",
@@ -685,7 +775,8 @@
             "EA 48.4#b0021"
           ],
           "coverage": "full",
-          "notes": "Chinese list of awakening trees."
+          "notes": "Chinese list of awakening trees.",
+          "editorial_features": []
         },
         {
           "member_id": "sf",
@@ -695,7 +786,8 @@
             "SF 36#p0020"
           ],
           "coverage": "lost_text_marker",
-          "notes": "The edited source unit explicitly states that the Sanskrit text is completely lost under the Bodhi Trees subsection."
+          "notes": "The edited source unit explicitly states that the Sanskrit text is completely lost under the Bodhi Trees subsection.",
+          "editorial_features": []
         }
       ],
       "variants": [

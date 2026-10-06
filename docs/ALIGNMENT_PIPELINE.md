@@ -284,6 +284,8 @@ The validator resolves every cited source-unit ID against generated Pāli, Chine
 
 When a row preserves a textual-loss locus alongside surviving witnesses, `relation_member_ids` explicitly scopes the row-level `relation_type` to the witnesses that actually preserve wording. A `lost_text_marker` member cannot appear in `relation_member_ids`, and every such member requires a `textual_loss` variant claim. This lets the graph preserve the lost locus without implying that absent Sanskrit wording participates in a textual parallel.
 
+This scope is now explicit on **every** multi-witness alignment, not only loss cases. Each member also declares `editorial_features` (`supplied`, `gap`, `unclear`), and validation derives the expected feature set from the pinned source units. A case-study claim therefore fails validation if, for example, it cites a Sanskrit unit containing `<supplied>` while declaring no supplied material.
+
 The generated human-readable report is:
 
 `generated/case-studies/dn14-mahapadana.md`

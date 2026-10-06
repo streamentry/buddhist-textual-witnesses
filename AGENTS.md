@@ -42,6 +42,8 @@ This repository supports textual-critical study of Buddhist sources across multi
 34. An accepted human review makes an alignment eligible for explicit promotion; no generator may silently mutate `model_reviewed` to `established`.
 35. Review UIs are read-only research surfaces. They may prepare review JSON for a human, but must never write review records, invent reviewer identity, or auto-promote alignment status.
 36. Any review JSON prepared by a UI must still pass the canonical human-review validator before it is treated as a repository review record.
+37. Every multi-witness relation must explicitly list `relation_member_ids`; never infer relation scope from mere presence in `members`.
+38. Every multi-witness member must declare `editorial_features` (`supplied`, `gap`, `unclear`) exactly as present in the cited source units. Empty means no such feature is attested in the selected units, not that the whole witness is pristine.
 
 ## Preferred workflow
 
