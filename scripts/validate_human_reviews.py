@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate human reviews against a curated multi-witness case study."""
+"""Validate human reviews against current alignment evidence."""
 from __future__ import annotations
 
 import argparse
@@ -8,6 +8,12 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from review_evidence import (
+    alignment_evidence_digest,
+    alignment_source_revisions,
+    build_source_index,
+)
+
 DECISIONS = {"accepted", "rejected", "needs_work"}
 ASSESSMENTS = {"agree", "revise", "uncertain"}
 
@@ -15,7 +21,8 @@ ASSESSMENTS = {"agree", "revise", "uncertain"}
 def validate_review(
     review: dict[str, Any],
     case_study_id: str,
-    alignment_ids: set[str],
+    alignments: dict[str, dict[str, Any]],
+    source_index: dict[str, dict[str, Any]],
 ) -> list[str]:
     errors: list[str] = []
     rid = review.get("review_id", "<missing-review>")
@@ -24,7 +31,8 @@ def validate_review(
         errors.append(f"{rid}: wrong case_study_id")
 
     alignment_id = review.get("alignment_id")
-    if alignment_id not in alignment_ids:
+    alignment = alignments.get(str(alignment_id))
+    if alignment is None:
         errors.append(f"{rid}: unknown alignment_id {alignment_id}")
 
     reviewer = review.get("reviewer") or {}
@@ -52,6 +60,23 @@ def validate_review(
     if len(reviewed_on) < 10 or reviewed_on == "YYYY-MM-DD":
         errors.append(f"{rid}: reviewed_on must be a real date")
 
+    if alignment is not None:
+        current_digest = alignment_evidence_digest(
+            case_study_id, alignment, source_index
+        )
+        snapshot = review.get("evidence_snapshot") or {}
+        if snapshot.get("digest") != current_digest:
+            errors.append(
+                f"{rid}: evidence_snapshot.digest is missing or stale"
+            )
+        expected_revisions = alignment_source_revisions(
+            alignment, source_index
+        )
+        if snapshot.get("source_revisions") != expected_revisions:
+            errors.append(
+                f"{rid}: evidence_snapshot.source_revisions is missing or stale"
+            )
+
     return errors
 
 
@@ -59,14 +84,20 @@ def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--case-study", type=Path, required=True)
     p.add_argument("--reviews", type=Path, required=True)
+    p.add_argument("--pali-units", type=Path, required=True)
+    p.add_argument("--chinese-blocks", type=Path, required=True)
+    p.add_argument("--indic-units", type=Path, required=True)
     args = p.parse_args(argv)
 
     case = json.loads(args.case_study.read_text(encoding="utf-8"))
     doc = json.loads(args.reviews.read_text(encoding="utf-8"))
     case_id = case["case_study_id"]
-    alignment_ids = {
-        row["alignment_id"] for row in case.get("alignments", [])
+    alignments = {
+        row["alignment_id"]: row for row in case.get("alignments", [])
     }
+    source_index = build_source_index(
+        args.pali_units, args.chinese_blocks, args.indic_units
+    )
 
     errors: list[str] = []
     if doc.get("case_study_id") != case_id:
@@ -96,7 +127,11 @@ def main(argv: list[str] | None = None) -> int:
             )
         seen_reviewer_alignment.add(pair)
 
-        errors.extend(validate_review(review, case_id, alignment_ids))
+        errors.extend(
+            validate_review(
+                review, case_id, alignments, source_index
+            )
+        )
         if review.get("decision") == "accepted":
             accepted += 1
 
@@ -109,10 +144,11 @@ def main(argv: list[str] | None = None) -> int:
         json.dumps(
             {
                 "case_study": case_id,
-                "alignment_count": len(alignment_ids),
+                "alignment_count": len(alignments),
                 "human_review_count": len(doc.get("reviews", [])),
                 "accepted_review_count": accepted,
                 "auto_promotions": 0,
+                "evidence_snapshots_verified": True,
             },
             indent=2,
         )
