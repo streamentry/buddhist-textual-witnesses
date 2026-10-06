@@ -8,6 +8,7 @@
     "status",
     "relation_type",
     "members",
+    "relation_member_ids",
     "variants",
     "review"
   ],
@@ -49,7 +50,8 @@
           "language",
           "witness_id",
           "source_unit_ids",
-          "coverage"
+          "coverage",
+          "editorial_features"
         ],
         "properties": {
           "member_id": {
@@ -86,6 +88,17 @@
               "string",
               "null"
             ]
+          },
+          "editorial_features": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "supplied",
+                "gap",
+                "unclear"
+              ]
+            }
           }
         },
         "additionalProperties": false
