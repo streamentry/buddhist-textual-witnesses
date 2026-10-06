@@ -301,6 +301,10 @@ Units: SF 36#p0013, SF 36#p0014
 
 Model note: Prose list and damaged/reconstructed verse section; supplied text remains explicit in edition_text.
 
+### Model variant claims
+
+- structural: DA 1, EA 48.4, and SF 36 preserve a prose chronology followed by a verse restatement in the selected units, while the selected Pāli member is prose only. The Sanskrit verse is substantially fragmentary and editorially supplied.
+
 ### Human review worksheet
 
 - [ ] source units: agree / revise / uncertain
@@ -469,7 +473,7 @@ Units: DA 1#b0015
 
 Model note: Clan names appear in the same prose block as caste.
 
-### EA 48.4 · lzh · partial
+### EA 48.4 · lzh · full
 
 Units: EA 48.4#b0015, EA 48.4#b0018
 

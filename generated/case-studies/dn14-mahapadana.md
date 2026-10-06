@@ -249,6 +249,9 @@ Units: SF 36#p0013, SF 36#p0014
 > itaḥ sa e⟦kanavataḥ ka⟧lp⟦o yasmiṃ kalpe Vipaś⟧y⟦ī⟧ samyaksaṃbuddho loke utpannaḥ itaḥ sa ekatriṃśattamaḥ kalpo ⟦yasmiṃ kalp⟧e ⟦Śikhī ca Viśvabhuk ca samyaksaṃbuddhau loka utpannau asminn eva⟧ Bhadrakalpe c⟦at⟧v⟦āraḥ samyaksaṃ⟧buddhā loke utpannā Krakasundaḥ Kanaka⟦mun⟧i⟦ḥ K⟧āś⟦ya⟧p⟦o vayaṃ cāpy etarhi Śākyamuniḥ iyam atra dharmatā tasmād idam ucyate ||⟧ X kaś ca kal⟦p⟧o ^ ^ ^ X yadā Vipaśyī udapādi _ X ⟦|⟧ X ^ ^ ^ ^ _ X X ^ ^ ^ ^ _ X ⟦1⟧ ⟦Viśva⟧bhu⟦ja⟧ṃ ^ ^ ^ _ X v⟦i⟧nāyakāḥ Krakasun⟦d⟧ ^ _ X ⟦|⟧ X ^ ^ ^ ^ _ X X ^ ^ ^ ^ _ X ⟦2 ||⟧
 
 Note: Prose list and damaged/reconstructed verse section; supplied text remains explicit in edition_text.
+
+### Variant notes
+
 - **structural**: DA 1, EA 48.4, and SF 36 preserve a prose chronology followed by a verse restatement in the selected units, while the selected Pāli member is prose only. The Sanskrit verse is substantially fragmentary and editorially supplied.
 
 ### Review note
@@ -377,7 +380,7 @@ Units: DA 1#b0015
 
 Note: Clan names appear in the same prose block as caste.
 
-### EA 48.4 · lzh · partial
+### EA 48.4 · lzh · full
 
 Units: EA 48.4#b0015, EA 48.4#b0018
 
