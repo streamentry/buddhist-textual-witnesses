@@ -30,6 +30,11 @@ class MultiWitnessValidatorTests(unittest.TestCase):
                     "unit_id": "SF 36#p0001",
                     "witness_id": "SF 36",
                     "search_text": "evaṃ mayā śrutam",
+                    "editorial_summary": {
+                        "segments_with_supplied": 1,
+                        "segments_with_gap": 0,
+                        "segments_with_unclear": 0,
+                    },
                 },
                 "SF 36#p0019": {
                     "unit_id": "SF 36#p0019",
@@ -52,6 +57,7 @@ class MultiWitnessValidatorTests(unittest.TestCase):
                     "witness_id": "DN 14",
                     "source_unit_ids": ["DN 14#p0001"],
                     "coverage": "full",
+                    "editorial_features": [],
                 },
                 {
                     "member_id": "san",
@@ -59,8 +65,10 @@ class MultiWitnessValidatorTests(unittest.TestCase):
                     "witness_id": "SF 36",
                     "source_unit_ids": ["SF 36#p0001"],
                     "coverage": "full",
+                    "editorial_features": ["supplied"],
                 },
             ],
+            "relation_member_ids": ["pli", "san"],
             "variants": [],
             "review": {
                 "status": "reviewed",
@@ -96,6 +104,7 @@ class MultiWitnessValidatorTests(unittest.TestCase):
                 "witness_id": "DA 1",
                 "source_unit_ids": ["DA 1#b0001"],
                 "coverage": "full",
+                "editorial_features": [],
             }
         )
         row["members"][1]["coverage"] = "lost_text_marker"
@@ -105,8 +114,8 @@ class MultiWitnessValidatorTests(unittest.TestCase):
         )
 
         row["members"][1]["source_unit_ids"] = ["SF 36#p0019"]
+        row["members"][1]["editorial_features"] = []
         errors = mod.validate_alignment(row, self.indexes)
-        self.assertTrue(any("require relation_member_ids" in e for e in errors))
         self.assertTrue(any("requires a textual_loss variant claim" in e for e in errors))
 
         row["relation_member_ids"] = ["pli", "da"]
@@ -132,6 +141,7 @@ class MultiWitnessValidatorTests(unittest.TestCase):
         )
         row["members"][1]["coverage"] = "lost_text_marker"
         row["members"][1]["source_unit_ids"] = ["SF 36#p0019"]
+        row["members"][1]["editorial_features"] = []
         row["relation_member_ids"] = ["pli", "san"]
         row["variants"] = [
             {
@@ -144,6 +154,18 @@ class MultiWitnessValidatorTests(unittest.TestCase):
         self.assertTrue(
             any("cannot participate in the asserted textual relation" in e for e in errors)
         )
+
+    def test_relation_scope_is_always_explicit(self):
+        row = self.base()
+        del row["relation_member_ids"]
+        errors = mod.validate_alignment(row, self.indexes)
+        self.assertTrue(any("must explicitly contain" in e for e in errors))
+
+    def test_editorial_features_must_match_source_evidence(self):
+        row = self.base()
+        row["members"][1]["editorial_features"] = []
+        errors = mod.validate_alignment(row, self.indexes)
+        self.assertTrue(any("do not match source evidence" in e for e in errors))
 
     def test_unknown_variant_member_fails(self):
         row = self.base()
