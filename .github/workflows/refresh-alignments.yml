@@ -15,6 +15,8 @@ on:
       - "scripts/validate_multiwitness_alignments.py"
       - "scripts/render_multiwitness_case_study.py"
       - "scripts/validate_human_reviews.py"
+      - "scripts/validate_promotions.py"
+      - "scripts/review_evidence.py"
       - "scripts/build_human_review_packet.py"
       - "scripts/build_multiwitness_review_ui.py"
       - "schemas/alignment.schema.json"
@@ -28,6 +30,7 @@ on:
       - "tests/test_multiwitness_alignments.py"
       - "tests/test_render_multiwitness_case_study.py"
       - "tests/test_human_reviews.py"
+      - "tests/test_review_promotion.py"
       - "tests/test_multiwitness_review_ui.py"
       - "config/indic-source-units.json"
       - "data/alignments/**"
@@ -165,7 +168,20 @@ jobs:
         run: |
           python scripts/validate_human_reviews.py \
             --case-study data/case-studies/dn14-mahapadana/alignments.json \
-            --reviews data/reviews/dn14-mahapadana/reviews.json
+            --reviews data/reviews/dn14-mahapadana/reviews.json \
+            --pali-units generated/alignment-source/pali/units.jsonl \
+            --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+            --indic-units generated/alignment-source/indic/units.jsonl
+
+      - name: Validate explicit promotions
+        run: |
+          python scripts/validate_promotions.py \
+            --case-study data/case-studies/dn14-mahapadana/alignments.json \
+            --reviews data/reviews/dn14-mahapadana/reviews.json \
+            --promotions data/reviews/dn14-mahapadana/promotions.json \
+            --pali-units generated/alignment-source/pali/units.jsonl \
+            --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+            --indic-units generated/alignment-source/indic/units.jsonl
 
       - name: Build DN 14 human review packet
         run: |
@@ -198,6 +214,7 @@ jobs:
             generated/review-ui/
 
       - name: Commit generated alignment layer
+        if: github.ref == 'refs/heads/main'
         shell: bash
         run: |
           set -euo pipefail
