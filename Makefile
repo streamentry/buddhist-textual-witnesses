@@ -1,4 +1,4 @@
-.PHONY: test catalog fetch validate-crosswalks render-crosswalks benchmark agama-fetch agama-segments resolve-crosswalks agama pali-fetch pali-units indic-fetch indic-units chinese-alignment-units alignment-candidates anchor-window-candidates validate-alignments validate-case-study render-case-study validate-human-reviews review-packet review-ui case-study alignment
+.PHONY: test catalog fetch validate-crosswalks render-crosswalks benchmark agama-fetch agama-segments resolve-crosswalks agama pali-fetch pali-units indic-fetch indic-units chinese-alignment-units alignment-candidates anchor-window-candidates validate-alignments validate-case-study render-case-study validate-human-reviews validate-promotions review-packet review-ui case-study alignment
 
 fetch:
 	./scripts/fetch_sources.sh
@@ -127,7 +127,19 @@ render-case-study:
 validate-human-reviews:
 	python3 scripts/validate_human_reviews.py \
 		--case-study data/case-studies/dn14-mahapadana/alignments.json \
-		--reviews data/reviews/dn14-mahapadana/reviews.json
+		--reviews data/reviews/dn14-mahapadana/reviews.json \
+		--pali-units generated/alignment-source/pali/units.jsonl \
+		--chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+		--indic-units generated/alignment-source/indic/units.jsonl
+
+validate-promotions:
+	python3 scripts/validate_promotions.py \
+		--case-study data/case-studies/dn14-mahapadana/alignments.json \
+		--reviews data/reviews/dn14-mahapadana/reviews.json \
+		--promotions data/reviews/dn14-mahapadana/promotions.json \
+		--pali-units generated/alignment-source/pali/units.jsonl \
+		--chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+		--indic-units generated/alignment-source/indic/units.jsonl
 
 review-packet:
 	python3 scripts/build_human_review_packet.py \
@@ -147,7 +159,7 @@ review-ui:
 		--reviews data/reviews/dn14-mahapadana/reviews.json \
 		--output generated/review-ui/dn14-mahapadana/index.html
 
-case-study: validate-case-study render-case-study validate-human-reviews review-packet review-ui
+case-study: validate-case-study render-case-study validate-human-reviews validate-promotions review-packet review-ui
 	@echo "DN 14 multi-witness case study, review packet, and offline review UI are valid."
 
 alignment: test indic-units anchor-window-candidates validate-alignments case-study
