@@ -403,7 +403,7 @@
       "alignment_id": "mw:dn14:lifespans:06",
       "work_id": "DN 14",
       "status": "model_reviewed",
-      "relation_type": "parallel_passage",
+      "relation_type": "structural_correspondence",
       "scope": "lifespan_lists_in_the_seven_buddha_sequence",
       "members": [
         {
@@ -486,9 +486,9 @@
         "reviewer_type": "model",
         "reviewer": "GPT-5.6 Sol",
         "decision": "accepted",
-        "confidence": "high",
+        "confidence": "medium_high",
         "reviewed_on": "2026-10-05",
-        "notes": "The numerical disagreements are preserved as witness evidence, and DA 1's distinct human-lifespan framing is preserved rather than silently treated as a Buddha-lifespan statement."
+        "notes": "The four witnesses place comparable numerical lists at the same narrative locus, but DA 1 frames the values as human lifespan (人壽) in each Buddha's era while DN 14 and SF 36 frame Buddha lifespans and EA 48.4 frames Tathāgata lifespans. The row is therefore classified conservatively as structural correspondence rather than a full textual parallel."
       }
     },
     {
