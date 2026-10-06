@@ -155,27 +155,18 @@ def validate_alignment(
             f"{aid}: relation_member_ids must explicitly contain at least two members"
         )
     else:
-            errors.append(
-                f"{aid}: relation_member_ids must contain at least two members"
-            )
-        else:
-            if len(set(relation_member_ids)) != len(relation_member_ids):
-                errors.append(f"{aid}: duplicate relation_member_ids")
-            for member_id in relation_member_ids:
-                if member_id not in known_members:
-                    errors.append(
-                        f"{aid}: relation_member_ids references unknown member {member_id}"
-                    )
-                if member_id in lost_member_ids:
-                    errors.append(
-                        f"{aid}: lost_text_marker member {member_id} cannot participate "
-                        "in the asserted textual relation"
-                    )
-    elif lost_member_ids:
-        errors.append(
-            f"{aid}: alignments containing lost_text_marker require relation_member_ids "
-            "to scope the asserted relation to surviving evidence"
-        )
+        if len(set(relation_member_ids)) != len(relation_member_ids):
+            errors.append(f"{aid}: duplicate relation_member_ids")
+        for member_id in relation_member_ids:
+            if member_id not in known_members:
+                errors.append(
+                    f"{aid}: relation_member_ids references unknown member {member_id}"
+                )
+            if member_id in lost_member_ids:
+                errors.append(
+                    f"{aid}: lost_text_marker member {member_id} cannot participate "
+                    "in the asserted textual relation"
+                )
 
     variants = row.get("variants", [])
     for variant in variants:
