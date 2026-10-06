@@ -1,21 +1,33 @@
 # Human reviews for DN 14 / Mahāpadāna
 
-Human review records are deliberately separate from the model-reviewed case-study alignments.
+Human review records are deliberately separate from model-reviewed alignments and from explicit promotions.
 
 Files:
 
-- reviews.json — committed human review decisions; starts empty.
-- review-template.json — copy one record per alignment you review.
+- `reviews.json` — committed human review decisions; starts empty.
+- `review-template.json` — review record shape.
+- `promotions.json` — explicit promotion events; starts empty.
+- `promotion-template.json` — promotion record shape.
 
-A human review does not silently mutate the case-study file. Accepted reviews make an alignment eligible for explicit promotion in a later, auditable change.
+## Boundary
+
+```text
+model review != human review
+accepted human review != established
+accepted human review + current evidence + explicit human promotion = established
+```
+
+Each review carries an `evidence_snapshot` generated from the exact alignment claim and referenced source-unit records. If those records or pinned revisions drift, the review becomes stale for promotion.
 
 Use either generated review surface:
 
-- generated/review-packets/dn14-mahapadana.md
-- generated/review-ui/dn14-mahapadana/index.html
+- `generated/review-packets/dn14-mahapadana.md`
+- `generated/review-ui/dn14-mahapadana/index.html`
 
-The HTML review UI is self-contained and offline-first. It displays the pinned Pāli, Chinese, and Sanskrit source units side by side, preserves Sanskrit supplied text visibly, exposes provenance, and prepares review JSON for copy/inspection. It does not write to the repository or fabricate reviewer identity.
+The HTML UI is self-contained and offline-first. It prepares review JSON including the current evidence digest and source revisions. It never writes to the repository, fabricates reviewer identity, or promotes an alignment.
 
-The Markdown packet remains the plain-text audit/review surface.
+Promotion is a separate, auditable human action validated by `scripts/validate_promotions.py`. Established status is derived from valid promotion events; the curated case-study alignment remains unchanged.
 
-Current review status: 0 human reviews, 0 established alignments.
+See `docs/HUMAN_REVIEW_PROMOTION.md`.
+
+Current committed state: **0 human reviews, 0 promotions, 0 established alignments**.
