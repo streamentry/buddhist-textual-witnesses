@@ -369,6 +369,7 @@ function renderAlignment(a) {{
   return '<section class="alignment" data-alignment="' + esc(a.alignment_id) + '">' +
     '<div class="card"><h2>' + esc(a.scope.replace(/_/g," ")) + '</h2>' +
       '<div class="meta-row"><span class="badge">' + esc(a.relation_type) + '</span><span class="badge">' + esc(a.status) + '</span><span class="badge">confidence ' + esc(a.review.confidence) + '</span></div>' +
+      '<p class="provenance">Relation applies to: ' + esc((a.relation_member_ids || a.members.map(m => m.member_id)).join(", ")) + '</p>' +
       '<p>' + esc(a.review.notes || "") + '</p></div>' +
     '<div class="witness-grid">' + members.map(witnessCard).join("") + '</div>' +
     '<div class="card"><h3>Variant claims to review</h3><div class="variants">' + (variants || '<p class="provenance">No model variant claim for this alignment.</p>') + '</div></div>' +
