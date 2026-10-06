@@ -8,6 +8,10 @@ import sys
 from pathlib import Path
 from typing import Any
 
+HERE = Path(__file__).resolve().parent
+if str(HERE) not in sys.path:
+    sys.path.insert(0, str(HERE))
+
 from review_evidence import (
     alignment_evidence_digest,
     alignment_source_revisions,
