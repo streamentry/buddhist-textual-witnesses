@@ -16,6 +16,10 @@
     "editorial_handling": "uncertain"
   },
   "reviewed_on": "YYYY-MM-DD",
+  "evidence_snapshot": {
+    "digest": "sha256:REPLACE_ME",
+    "source_revisions": []
+  },
   "notes": "",
   "proposed_changes": null
 }
