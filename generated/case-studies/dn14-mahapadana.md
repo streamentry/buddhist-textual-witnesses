@@ -21,6 +21,7 @@ Initial model-reviewed alignment across Pāli DN 14, Chinese DA 1 and EA 48.4, a
 
 - Alignment: mw:dn14:opening-setting:01
 - Relation: **parallel_passage**
+- Relation members: **pli, da, ea, sf**
 - Status: **model_reviewed**
 - Review confidence: **high**
 
@@ -68,6 +69,7 @@ Strong formulaic and narrative correspondence. No claim of verbal identity.
 
 - Alignment: mw:dn14:monks-discussion:02
 - Relation: **partial_overlap**
+- Relation members: **pli, da, ea, sf**
 - Status: **model_reviewed**
 - Review confidence: **high**
 
@@ -85,7 +87,7 @@ Units: DA 1#b0003
 
 > 時，諸比丘 於乞食後集花林堂，各共議言：「諸賢比丘！ 唯無上尊為最奇特，神通遠達，威力弘大， 乃知過去無數諸佛，入於涅槃，斷諸結使， 消滅戱論。又知彼佛劫數多少，名號、姓字， 所生種族，其所飲食，壽命脩短，所更苦樂。 又知彼佛有如是戒，有如是法，有如是慧， 有如是解，有如是住。云何，諸賢！如來為善 別法性，知如是事，為諸天來語，乃知此事？」
 
-Note: Detailed discussion of past Buddhas and whether the Tathāgata knows through understanding 法性 or information from devas.
+Note: Detailed discussion of past Buddhas and whether the Tathāgata knows through understanding 法性 or information from devas; the Chinese term is preserved without asserting one-to-one equivalence with Sanskrit dharmadhātu.
 
 ### EA 48.4 · lzh · full
 
@@ -93,7 +95,7 @@ Units: EA 48.4#b0003
 
 > 爾時，眾多比丘集普會講堂，各生此念： 「今如來甚奇！甚特！過去取般涅槃者，亦復知 彼姓名、種族、持戒、翼從，皆悉分明，三昧，智慧、 解脫、解脫見慧，身壽有長短，皆悉知之。云何， 諸賢！為是如來分別法處，極為清淨，知彼 諸佛姓字所出之處乎？為是諸天來至佛所 而告此耶？」
 
-Note: Detailed discussion of past Buddhas and the 法處/deva question.
+Note: Detailed discussion of past Buddhas and the 法處/deva question in this opening block; the later repeated report uses 法界. These Chinese terms are preserved rather than normalized into a single Sanskrit equivalent.
 
 ### SF 36 · san · full
 
@@ -106,16 +108,17 @@ Note: Expands the discussion into knowledge of past Buddhas, their qualities, an
 ### Variant notes
 
 - **expansion**: SF 36, DA 1, and EA 48.4 preserve an expanded discussion about knowledge of past Buddhas and a dharmadhātu/deva-report question; DN 14 at this point gives only the shorter pubbenivāsa topic.
-- **doctrinal_framing**: The Sanskrit and Chinese recensions explicitly frame the question in terms of dharmadhātu / 法性 or 法處, a framing not stated in the corresponding Pāli opening discussion.
+- **doctrinal_framing**: SF 36 explicitly has dharmadhātu, DA 1 has 法性, and EA 48.4 has 法處 in the opening discussion (with 法界 in the later repeated report). The witnesses share an analogous question frame about how the Tathāgata knows past Buddhas, but this alignment does not assert that these terms are lexically or doctrinally identical.
 
 ### Review note
 
-Accepted as partial overlap because the Pāli unit is materially shorter than the Sanskrit and Chinese passages.
+Accepted as partial overlap because the Pāli unit is materially shorter than the Sanskrit and Chinese passages. The dharmadhātu / 法性 / 法處 wording is kept witness-specific; lexical equivalence is deliberately left unasserted.
 
 ## 3. Buddha Hears Approaches And Asks
 
 - Alignment: mw:dn14:buddha-hears-asks:03
 - Relation: **parallel_passage**
+- Relation members: **pli, da, ea, sf**
 - Status: **model_reviewed**
 - Review confidence: **high**
 
@@ -163,6 +166,7 @@ Strong narrative and lexical correspondence despite differing segmentation.
 
 - Alignment: mw:dn14:monks-report:04
 - Relation: **structural_correspondence**
+- Relation members: **pli, da, ea, sf**
 - Status: **model_reviewed**
 - Review confidence: **high**
 
@@ -210,6 +214,7 @@ Alignment is structural rather than full verbal correspondence.
 
 - Alignment: mw:dn14:seven-buddhas-kalpas:05
 - Relation: **parallel_passage**
+- Relation members: **pli, da, ea, sf**
 - Status: **model_reviewed**
 - Review confidence: **high**
 
@@ -244,17 +249,19 @@ Units: SF 36#p0013, SF 36#p0014
 > itaḥ sa e⟦kanavataḥ ka⟧lp⟦o yasmiṃ kalpe Vipaś⟧y⟦ī⟧ samyaksaṃbuddho loke utpannaḥ itaḥ sa ekatriṃśattamaḥ kalpo ⟦yasmiṃ kalp⟧e ⟦Śikhī ca Viśvabhuk ca samyaksaṃbuddhau loka utpannau asminn eva⟧ Bhadrakalpe c⟦at⟧v⟦āraḥ samyaksaṃ⟧buddhā loke utpannā Krakasundaḥ Kanaka⟦mun⟧i⟦ḥ K⟧āś⟦ya⟧p⟦o vayaṃ cāpy etarhi Śākyamuniḥ iyam atra dharmatā tasmād idam ucyate ||⟧ X kaś ca kal⟦p⟧o ^ ^ ^ X yadā Vipaśyī udapādi _ X ⟦|⟧ X ^ ^ ^ ^ _ X X ^ ^ ^ ^ _ X ⟦1⟧ ⟦Viśva⟧bhu⟦ja⟧ṃ ^ ^ ^ _ X v⟦i⟧nāyakāḥ Krakasun⟦d⟧ ^ _ X ⟦|⟧ X ^ ^ ^ ^ _ X X ^ ^ ^ ^ _ X ⟦2 ||⟧
 
 Note: Prose list and damaged/reconstructed verse section; supplied text remains explicit in edition_text.
+- **structural**: DA 1, EA 48.4, and SF 36 preserve a prose chronology followed by a verse restatement in the selected units, while the selected Pāli member is prose only. The Sanskrit verse is substantially fragmentary and editorially supplied.
 
 ### Review note
 
 Strong agreement in sequence and chronology; names appear in language-specific forms.
 
-## 6. Lifespans Of The Seven Buddhas
+## 6. Lifespan Lists In The Seven Buddha Sequence
 
 - Alignment: mw:dn14:lifespans:06
-- Relation: **parallel_passage**
+- Relation: **structural_correspondence**
+- Relation members: **pli, da, ea, sf**
 - Status: **model_reviewed**
-- Review confidence: **high**
+- Review confidence: **medium_high**
 
 ### DN 14 · pli · full
 
@@ -270,7 +277,7 @@ Units: DA 1#b0013, DA 1#b0014
 
 > 「汝等當知，毘婆尸佛時，人壽八萬歲。尸棄佛 時，人壽七萬歲。毘舍婆佛時，人壽六萬歲。拘 樓孫佛時，人壽四萬歲。拘那含佛時，人壽三 萬歲。迦葉佛時，人壽二萬歲。我今出世，人壽 百歲，少出多減。」佛時頌曰： 「毘婆尸時人，壽八萬四千； 尸棄佛時人，壽命七萬歲； 毘舍婆時人，壽命六萬歲； 拘樓孫時人，壽命四萬歲； 拘那含時人，壽命三萬歲； 迦葉佛時人，壽命二萬歲； 如我今時人，壽命不過百。
 
-Note: Prose agrees with Pāli/Sanskrit, but the following verse gives Vipassī 84k.
+Note: Both prose and verse are framed as 人壽, the human lifespan in the time of each Buddha, rather than explicitly as the Buddha's own lifespan. Prose gives 80k/70k/60k/40k/30k/20k; the verse gives Vipassī 84k.
 
 ### EA 48.4 · lzh · full
 
@@ -290,17 +297,19 @@ Note: Prose gives 80k/70k/60k/40k/30k/20k; the verse is fragmentary/supplied in 
 
 ### Variant notes
 
-- **numerical**: DN 14, SF 36 prose, and DA 1 prose agree on 80k/70k/60k/40k/30k/20k. DA 1's verse changes Vipassī to 84k. EA 48.4 prose gives 84k/70k/60k/50k/40k/20k.
+- **numerical**: DN 14 and SF 36 prose explicitly give Buddha lifespans of 80k/70k/60k/40k/30k/20k; EA 48.4 explicitly gives Tathāgata lifespans of 84k/70k/60k/50k/40k/20k. DA 1 gives human lifespan (人壽) in each Buddha's era: prose 80k/70k/60k/40k/30k/20k, while its verse changes Vipassī-era human lifespan to 84k. The numerical resemblance is preserved without equating these differently framed subjects.
 - **structural**: DA 1 and SF 36 preserve prose plus verse forms for this list, while the selected Pāli unit is prose and the selected EA member uses the prose list only.
+- **semantic**: DA 1 frames the quantities as human lifespan (人壽) in each Buddha's era, whereas DN 14 and SF 36 frame them as the Buddha's lifespan and EA 48.4 as the Tathāgata's lifespan. This semantic subject difference must not be normalized away.
 
 ### Review note
 
-The numerical disagreement is preserved as witness evidence; no harmonized value is selected.
+The four witnesses place comparable numerical lists at the same narrative locus, but DA 1 frames the values as human lifespan (人壽) in each Buddha's era while DN 14 and SF 36 frame Buddha lifespans and EA 48.4 frames Tathāgata lifespans. The row is therefore classified conservatively as structural correspondence rather than a full textual parallel.
 
 ## 7. Caste Of The Seven Buddhas
 
 - Alignment: mw:dn14:caste:07
 - Relation: **parallel_passage**
+- Relation members: **pli, da, ea, sf**
 - Status: **model_reviewed**
 - Review confidence: **high**
 
@@ -348,6 +357,7 @@ The caste sequence is stable across the selected witnesses; DA 1 packages extra 
 
 - Alignment: mw:dn14:family-name-loss:08
 - Relation: **recension_divergence**
+- Relation members: **pli, da, ea**
 - Status: **model_reviewed**
 - Review confidence: **medium_high**
 
@@ -373,7 +383,7 @@ Units: EA 48.4#b0015, EA 48.4#b0018
 
 > 「毘婆尸如來姓瞿曇，式詰如來亦出瞿曇， 比舍羅婆亦出瞿曇，迦葉如來出迦葉姓， 拘樓孫、拘那含牟尼亦出迦葉姓，同上 而無異，我今如來姓瞿曇。」 「比丘當知，毘婆尸如來姓拘鄰若，式詰如 來亦出拘鄰若，毘舍羅婆如來亦出拘鄰 若，拘屢孫如來出婆羅墮，拘那含牟尼如來 亦出婆羅墮，迦葉如來亦出婆羅墮，如 我今如來、至真、等正覺出於拘鄰若。」
 
-Note: EA preserves two distinct nearby clan-name statements that are not identical to each other.
+Note: EA preserves two complete nearby clan-name sequences that are internally incompatible: b0015 gives Gotama for the first three, Kassapa for the middle three, and Gotama for the present Buddha; b0018 gives 拘鄰若 for the first three, 婆羅墮 for the middle three, and 拘鄰若 for the present Buddha.
 
 ### SF 36 · san · lost_text_marker
 
@@ -386,16 +396,18 @@ Note: The edited source unit explicitly states that the Sanskrit text is complet
 ### Variant notes
 
 - **textual_loss**: SF 36 has no surviving Sanskrit wording for the Family Name subsection in the selected edition; the source unit explicitly marks the text as completely lost.
-- **structural**: EA 48.4 preserves more than one nearby clan-name statement, while the selected Pāli and DA 1 prose present one main sequence.
+- **structural**: EA 48.4 preserves two complete nearby clan-name sequences that disagree with one another, while the selected Pāli and DA 1 prose present one main sequence each. The internal EA disagreement is retained rather than reconciled.
+- **lexical**: EA 48.4 b0015 reads the first three Buddhas as Gotama and the middle three as Kassapa (with present Gotama), while b0018 reads the first three as 拘鄰若 and the middle three as 婆羅墮 (with present 拘鄰若). These are incompatible clan-name series within the same recension and are not harmonized.
 
 ### Review note
 
-Alignment is to the thematic subsection. Sanskrit is represented by an explicit loss marker, not reconstructed wording.
+Recension divergence is assessed from the surviving Pāli, DA 1, and EA 48.4 wording. SF 36 contributes only an explicit Family Name loss locus and is not treated as surviving textual evidence for the relation.
 
 ## 9. Bodhi Trees With Sanskrit Textual Loss
 
 - Alignment: mw:dn14:bodhi-tree-loss:09
 - Relation: **parallel_passage**
+- Relation members: **pli, da, ea**
 - Status: **model_reviewed**
 - Review confidence: **high**
 
@@ -437,4 +449,4 @@ Note: The edited source unit explicitly states that the Sanskrit text is complet
 
 ### Review note
 
-Pāli and both Chinese witnesses preserve the list; the Sanskrit edition contributes a documented loss locus rather than reconstructed content.
+The parallel-passage relation applies to the surviving Pāli, DA 1, and EA 48.4 lists. SF 36 contributes only an explicit Bodhi Trees loss locus, not surviving or reconstructed Sanskrit wording.

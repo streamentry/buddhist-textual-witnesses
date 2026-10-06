@@ -29,6 +29,7 @@ class ReviewUiTests(unittest.TestCase):
                 "work_id": "DN 14",
                 "status": "model_reviewed",
                 "relation_type": "parallel_passage",
+                "relation_member_ids": ["sf", "pli"],
                 "scope": "opening",
                 "members": [{
                     "member_id": "sf",
@@ -54,6 +55,8 @@ class ReviewUiTests(unittest.TestCase):
         self.assertIn("reviewer_type", page)
         self.assertIn('"human"', page)
         self.assertIn("The UI will not invent a human identity.", page)
+        self.assertIn("Relation applies to:", page)
+        self.assertIn("relation_member_ids", page)
         self.assertNotIn("<script src=", page.lower())
 
     def test_sanskrit_renderer_escapes_and_marks_supplied(self):

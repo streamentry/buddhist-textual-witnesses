@@ -83,6 +83,13 @@ def main(argv: list[str] | None = None) -> int:
             "",
             f"- Alignment: {alignment['alignment_id']}",
             f"- Relation: **{alignment['relation_type']}**",
+            (
+                "- Relation members: **"
+                + ", ".join(alignment.get("relation_member_ids", [
+                    member["member_id"] for member in alignment["members"]
+                ]))
+                + "**"
+            ),
             f"- Status: **{alignment['status']}**",
             f"- Review confidence: **{alignment['review']['confidence']}**",
             "",

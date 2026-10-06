@@ -63,6 +63,12 @@ def main(argv: list[str] | None = None) -> int:
             "",
             f"Alignment ID: {alignment['alignment_id']}",
             f"Model relation: {alignment['relation_type']}",
+            (
+                "Relation applies to: "
+                + ", ".join(alignment.get("relation_member_ids", [
+                    member["member_id"] for member in alignment["members"]
+                ]))
+            ),
             f"Model confidence: {alignment['review']['confidence']}",
             "",
         ]

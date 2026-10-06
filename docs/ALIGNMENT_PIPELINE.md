@@ -282,23 +282,25 @@ The initial nine model-reviewed passage alignments cover:
 
 The validator resolves every cited source-unit ID against generated Pāli, Chinese, and Sanskrit source layers. Multi-witness case-study rows are never allowed to set `status: established` directly; `established` is a derived state produced only from an evidence-bound accepted human review plus a separate explicit promotion event. A member marked `coverage: lost_text_marker` must resolve to a source unit that explicitly signals textual loss; the marker cannot be used as a generic stand-in for missing data.
 
+When a row preserves a textual-loss locus alongside surviving witnesses, `relation_member_ids` explicitly scopes the row-level `relation_type` to the witnesses that actually preserve wording. A `lost_text_marker` member cannot appear in `relation_member_ids`, and every such member requires a `textual_loss` variant claim. This lets the graph preserve the lost locus without implying that absent Sanskrit wording participates in a textual parallel.
+
 The generated human-readable report is:
 
 `generated/case-studies/dn14-mahapadana.md`
 
 In that report, Sanskrit text inside `⟦…⟧` corresponds to upstream `<supplied>` markup. This display convention does not alter the stored edition text.
 
-### Example numerical variant
+### Example numerical and semantic variant
 
-The lifespan passage intentionally preserves disagreement:
+The lifespan-list locus intentionally preserves both numerical disagreement and a difference in what is being measured:
 
-- DN 14: 80k / 70k / 60k / 40k / 30k / 20k;
-- SF 36 prose: same sequence;
-- DA 1 prose: same sequence;
-- DA 1 verse: Vipassī becomes 84k;
-- EA 48.4 prose: 84k / 70k / 60k / 50k / 40k / 20k.
+- DN 14 explicitly gives the Buddhas' lifespans: 80k / 70k / 60k / 40k / 30k / 20k;
+- SF 36 prose likewise gives Buddha lifespans with the same sequence;
+- DA 1 prose instead says **人壽**, human lifespan in each Buddha's era: 80k / 70k / 60k / 40k / 30k / 20k;
+- DA 1 verse still describes human lifespan but changes Vipassī's era to 84k;
+- EA 48.4 explicitly gives Tathāgata lifespans: 84k / 70k / 60k / 50k / 40k / 20k.
 
-No harmonized value is emitted.
+Because the semantic subject is not identical across all four witnesses, the current multi-witness row is conservatively classified as `structural_correspondence`, not `parallel_passage`. No harmonized value or subject is emitted.
 
 ### Textual loss as first-class evidence
 
@@ -307,7 +309,7 @@ The DN 14 slice now includes two Sanskrit loss loci from SF 36:
 - **Family Name** → `SF 36#p0019`
 - **Bodhi Trees** → `SF 36#p0020`
 
-In both cases the edited Sanskrit source explicitly states that the text is completely lost. The alignment layer keeps those loci in the graph with `coverage: lost_text_marker`, allowing surviving Pāli and Chinese witnesses to remain comparable without inventing Sanskrit wording.
+In both cases the edited Sanskrit source explicitly states that the text is completely lost. The alignment layer keeps those loci in the graph with `coverage: lost_text_marker`, allowing surviving Pāli and Chinese witnesses to remain comparable without inventing Sanskrit wording. Their row-level relations are scoped with `relation_member_ids` to the surviving Pāli and Chinese witnesses only.
 
 ## Human review and explicit promotion
 

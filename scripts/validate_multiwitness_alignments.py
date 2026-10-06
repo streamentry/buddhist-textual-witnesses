@@ -107,12 +107,54 @@ def validate_alignment(
         errors.append(f"{aid}: alignment must contain at least two languages")
 
     known_members = set(member_ids)
-    for variant in row.get("variants", []):
+    lost_member_ids = {
+        member.get("member_id")
+        for member in members
+        if member.get("coverage") == "lost_text_marker"
+    }
+    relation_member_ids = row.get("relation_member_ids")
+    if relation_member_ids is not None:
+        if not isinstance(relation_member_ids, list) or len(relation_member_ids) < 2:
+            errors.append(
+                f"{aid}: relation_member_ids must contain at least two members"
+            )
+        else:
+            if len(set(relation_member_ids)) != len(relation_member_ids):
+                errors.append(f"{aid}: duplicate relation_member_ids")
+            for member_id in relation_member_ids:
+                if member_id not in known_members:
+                    errors.append(
+                        f"{aid}: relation_member_ids references unknown member {member_id}"
+                    )
+                if member_id in lost_member_ids:
+                    errors.append(
+                        f"{aid}: lost_text_marker member {member_id} cannot participate "
+                        "in the asserted textual relation"
+                    )
+    elif lost_member_ids:
+        errors.append(
+            f"{aid}: alignments containing lost_text_marker require relation_member_ids "
+            "to scope the asserted relation to surviving evidence"
+        )
+
+    variants = row.get("variants", [])
+    for variant in variants:
         for member_id in variant.get("member_ids", []):
             if member_id not in known_members:
                 errors.append(
                     f"{aid}: variant references unknown member {member_id}"
                 )
+
+    for member_id in lost_member_ids:
+        if not any(
+            variant.get("type") == "textual_loss"
+            and member_id in variant.get("member_ids", [])
+            for variant in variants
+        ):
+            errors.append(
+                f"{aid}: lost_text_marker member {member_id} requires a textual_loss "
+                "variant claim"
+            )
 
     status = row.get("status")
     review = row.get("review") or {}

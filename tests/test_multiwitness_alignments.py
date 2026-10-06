@@ -87,8 +87,17 @@ class MultiWitnessValidatorTests(unittest.TestCase):
         errors = mod.validate_alignment(row, self.indexes)
         self.assertTrue(any("derived from the promotion ledger" in e for e in errors))
 
-    def test_lost_text_marker_requires_explicit_loss_source(self):
+    def test_lost_text_marker_requires_explicit_loss_and_relation_scope(self):
         row = self.base()
+        row["members"].append(
+            {
+                "member_id": "da",
+                "language": "lzh",
+                "witness_id": "DA 1",
+                "source_unit_ids": ["DA 1#b0001"],
+                "coverage": "full",
+            }
+        )
         row["members"][1]["coverage"] = "lost_text_marker"
         errors = mod.validate_alignment(row, self.indexes)
         self.assertTrue(
@@ -97,7 +106,44 @@ class MultiWitnessValidatorTests(unittest.TestCase):
 
         row["members"][1]["source_unit_ids"] = ["SF 36#p0019"]
         errors = mod.validate_alignment(row, self.indexes)
-        self.assertEqual(errors, [])
+        self.assertTrue(any("require relation_member_ids" in e for e in errors))
+        self.assertTrue(any("requires a textual_loss variant claim" in e for e in errors))
+
+        row["relation_member_ids"] = ["pli", "da"]
+        row["variants"] = [
+            {
+                "type": "textual_loss",
+                "statement": "Sanskrit wording is lost.",
+                "member_ids": ["san"],
+            }
+        ]
+        self.assertEqual(mod.validate_alignment(row, self.indexes), [])
+
+    def test_lost_text_member_cannot_participate_in_asserted_relation(self):
+        row = self.base()
+        row["members"].append(
+            {
+                "member_id": "da",
+                "language": "lzh",
+                "witness_id": "DA 1",
+                "source_unit_ids": ["DA 1#b0001"],
+                "coverage": "full",
+            }
+        )
+        row["members"][1]["coverage"] = "lost_text_marker"
+        row["members"][1]["source_unit_ids"] = ["SF 36#p0019"]
+        row["relation_member_ids"] = ["pli", "san"]
+        row["variants"] = [
+            {
+                "type": "textual_loss",
+                "statement": "Sanskrit wording is lost.",
+                "member_ids": ["san"],
+            }
+        ]
+        errors = mod.validate_alignment(row, self.indexes)
+        self.assertTrue(
+            any("cannot participate in the asserted textual relation" in e for e in errors)
+        )
 
     def test_unknown_variant_member_fails(self):
         row = self.base()
