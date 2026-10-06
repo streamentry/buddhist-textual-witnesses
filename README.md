@@ -212,6 +212,14 @@ Two human-review surfaces are generated:
 
 The HTML UI shows Pāli, both Chinese witnesses, and Sanskrit in parallel, highlights editorially supplied Sanskrit, exposes source provenance/revisions, surfaces variant claims, and prepares evidence-bound human-review JSON. It **never writes to the repository and never promotes an alignment**. Machine-readable human decisions belong in `data/reviews/dn14-mahapadana/reviews.json`; it intentionally starts empty.
 
+Reviewer workflow and risk notes are documented in `docs/DN14_HUMAN_REVIEW_GUIDE.md`. A review JSON prepared by the UI can be checked without mutation using:
+
+```bash
+python scripts/record_human_review.py --review /path/to/review.json
+```
+
+Only after inspecting the dry-run result should a human reviewer append it with `--write`. The recorder validates current evidence freshness, reviewer identity requirements, append-only lineage, and promotion eligibility; it never creates a promotion.
+
 ### Human Review Promotion Protocol v1
 
 DN 14 uses an explicit two-phase scholarly transition:
@@ -230,7 +238,7 @@ Review and promotion ledgers are append-only. A correction is a new review with 
 
 `established` is therefore **derived state**, not a mutable field in the case-study file. Direct `status: established` in a multi-witness case-study row is rejected by validation. The current derived state is committed at `generated/promotion-state/dn14-mahapadana.json`.
 
-A particularly useful variant is the seven-Buddha lifespan list: DN 14, SF 36 prose, and DA 1 prose agree on **80k/70k/60k/40k/30k/20k**; DA 1's verse changes Vipassī to **84k**, while EA 48.4 prose gives **84k/70k/60k/50k/40k/20k**. The project preserves all readings rather than harmonizing them.
+A particularly useful variant is the seven-Buddha lifespan list. DN 14 and SF 36 explicitly give Buddha lifespans of **80k/70k/60k/40k/30k/20k**, while EA 48.4 explicitly gives Tathāgata lifespans of **84k/70k/60k/50k/40k/20k**. DA 1 instead frames its values as **人壽**, human lifespan in each Buddha's era: its prose gives **80k/70k/60k/40k/30k/20k**, and its verse changes the Vipassī-era value to **84k**. The current row is therefore `structural_correspondence`, not a harmonized lifespan parallel.
 
 The slice also models **textual loss as evidence**: SF 36 explicitly marks the *Family Name* and *Bodhi Trees* Sanskrit text as completely lost. Those loci remain aligned through `coverage: lost_text_marker` rather than being omitted or silently reconstructed.
 
