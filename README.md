@@ -212,6 +212,8 @@ Two human-review surfaces are generated:
 
 The HTML UI shows Pāli, both Chinese witnesses, and Sanskrit in parallel, highlights editorially supplied Sanskrit, exposes source provenance/revisions, surfaces variant claims, and prepares schema-shaped human-review JSON. It **never writes to the repository and never promotes an alignment**. Machine-readable human decisions belong in `data/reviews/dn14-mahapadana/reviews.json`; it intentionally starts empty.
 
+Human reviews are bound to the exact displayed evidence with a SHA-256 snapshot over the alignment claim and referenced source-unit records. A source or alignment change makes the old review stale for promotion. Establishment is a separate explicit human action recorded in `data/reviews/dn14-mahapadana/promotions.json`; `established` is derived from a valid promotion and is never silently written back into the model-reviewed case study. See `docs/HUMAN_REVIEW_PROMOTION.md`.
+
 A particularly useful variant is the seven-Buddha lifespan list: DN 14, SF 36 prose, and DA 1 prose agree on **80k/70k/60k/40k/30k/20k**; DA 1's verse changes Vipassī to **84k**, while EA 48.4 prose gives **84k/70k/60k/50k/40k/20k**. The project preserves all readings rather than harmonizing them.
 
 The slice also models **textual loss as evidence**: SF 36 explicitly marks the *Family Name* and *Bodhi Trees* Sanskrit text as completely lost. Those loci remain aligned through `coverage: lost_text_marker` rather than being omitted or silently reconstructed.
