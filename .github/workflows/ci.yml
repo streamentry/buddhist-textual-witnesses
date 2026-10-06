@@ -47,4 +47,16 @@ jobs:
         run: |
           python scripts/validate_human_reviews.py \
             --case-study data/case-studies/dn14-mahapadana/alignments.json \
-            --reviews data/reviews/dn14-mahapadana/reviews.json
+            --reviews data/reviews/dn14-mahapadana/reviews.json \
+            --pali-units generated/alignment-source/pali/units.jsonl \
+            --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+            --indic-units generated/alignment-source/indic/units.jsonl
+      - name: Validate explicit promotions
+        run: |
+          python scripts/validate_promotions.py \
+            --case-study data/case-studies/dn14-mahapadana/alignments.json \
+            --reviews data/reviews/dn14-mahapadana/reviews.json \
+            --promotions data/reviews/dn14-mahapadana/promotions.json \
+            --pali-units generated/alignment-source/pali/units.jsonl \
+            --chinese-blocks generated/alignment-source/chinese/blocks.jsonl \
+            --indic-units generated/alignment-source/indic/units.jsonl
