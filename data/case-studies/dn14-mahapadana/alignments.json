@@ -125,7 +125,7 @@
             "DA 1#b0003"
           ],
           "coverage": "full",
-          "notes": "Detailed discussion of past Buddhas and whether the Tathāgata knows through understanding 法性 or information from devas."
+          "notes": "Detailed discussion of past Buddhas and whether the Tathāgata knows through understanding 法性 or information from devas; the Chinese term is preserved without asserting one-to-one equivalence with Sanskrit dharmadhātu."
         },
         {
           "member_id": "ea",
@@ -135,7 +135,7 @@
             "EA 48.4#b0003"
           ],
           "coverage": "full",
-          "notes": "Detailed discussion of past Buddhas and the 法處/deva question."
+          "notes": "Detailed discussion of past Buddhas and the 法處/deva question in this opening block; the later repeated report uses 法界. These Chinese terms are preserved rather than normalized into a single Sanskrit equivalent."
         },
         {
           "member_id": "sf",
@@ -163,7 +163,7 @@
         },
         {
           "type": "doctrinal_framing",
-          "statement": "The Sanskrit and Chinese recensions explicitly frame the question in terms of dharmadhātu / 法性 or 法處, a framing not stated in the corresponding Pāli opening discussion.",
+          "statement": "SF 36 explicitly has dharmadhātu, DA 1 has 法性, and EA 48.4 has 法處 in the opening discussion (with 法界 in the later repeated report). The witnesses share an analogous question frame about how the Tathāgata knows past Buddhas, but this alignment does not assert that these terms are lexically or doctrinally identical.",
           "member_ids": [
             "pli",
             "da",
@@ -179,7 +179,7 @@
         "decision": "accepted",
         "confidence": "high",
         "reviewed_on": "2026-10-05",
-        "notes": "Accepted as partial overlap because the Pāli unit is materially shorter than the Sanskrit and Chinese passages."
+        "notes": "Accepted as partial overlap because the Pāli unit is materially shorter than the Sanskrit and Chinese passages. The dharmadhātu / 法性 / 法處 wording is kept witness-specific; lexical equivalence is deliberately left unasserted."
       }
     },
     {
@@ -377,7 +377,18 @@
           "notes": "Prose list and damaged/reconstructed verse section; supplied text remains explicit in edition_text."
         }
       ],
-      "variants": [],
+      "variants": [
+        {
+          "type": "structural",
+          "statement": "DA 1, EA 48.4, and SF 36 preserve a prose chronology followed by a verse restatement in the selected units, while the selected Pāli member is prose only. The Sanskrit verse is substantially fragmentary and editorially supplied.",
+          "member_ids": [
+            "pli",
+            "da",
+            "ea",
+            "sf"
+          ]
+        }
+      ],
       "review": {
         "status": "reviewed",
         "reviewer_type": "model",
@@ -393,7 +404,7 @@
       "work_id": "DN 14",
       "status": "model_reviewed",
       "relation_type": "parallel_passage",
-      "scope": "lifespans_of_the_seven_buddhas",
+      "scope": "lifespan_lists_in_the_seven_buddha_sequence",
       "members": [
         {
           "member_id": "pli",
@@ -414,7 +425,7 @@
             "DA 1#b0014"
           ],
           "coverage": "full",
-          "notes": "Prose agrees with Pāli/Sanskrit, but the following verse gives Vipassī 84k."
+          "notes": "Both prose and verse are framed as 人壽, the human lifespan in the time of each Buddha, rather than explicitly as the Buddha's own lifespan. Prose gives 80k/70k/60k/40k/30k/20k; the verse gives Vipassī 84k."
         },
         {
           "member_id": "ea",
@@ -441,7 +452,7 @@
       "variants": [
         {
           "type": "numerical",
-          "statement": "DN 14, SF 36 prose, and DA 1 prose agree on 80k/70k/60k/40k/30k/20k. DA 1's verse changes Vipassī to 84k. EA 48.4 prose gives 84k/70k/60k/50k/40k/20k.",
+          "statement": "DN 14 and SF 36 prose explicitly give Buddha lifespans of 80k/70k/60k/40k/30k/20k; EA 48.4 explicitly gives Tathāgata lifespans of 84k/70k/60k/50k/40k/20k. DA 1 gives human lifespan (人壽) in each Buddha's era: prose 80k/70k/60k/40k/30k/20k, while its verse changes Vipassī-era human lifespan to 84k. The numerical resemblance is preserved without equating these differently framed subjects.",
           "member_ids": [
             "pli",
             "da",
@@ -458,6 +469,16 @@
             "ea",
             "sf"
           ]
+        },
+        {
+          "type": "semantic",
+          "statement": "DA 1 frames the quantities as human lifespan (人壽) in each Buddha's era, whereas DN 14 and SF 36 frame them as the Buddha's lifespan and EA 48.4 as the Tathāgata's lifespan. This semantic subject difference must not be normalized away.",
+          "member_ids": [
+            "pli",
+            "da",
+            "ea",
+            "sf"
+          ]
         }
       ],
       "review": {
@@ -467,7 +488,7 @@
         "decision": "accepted",
         "confidence": "high",
         "reviewed_on": "2026-10-05",
-        "notes": "The numerical disagreement is preserved as witness evidence; no harmonized value is selected."
+        "notes": "The numerical disagreements are preserved as witness evidence, and DA 1's distinct human-lifespan framing is preserved rather than silently treated as a Buddha-lifespan statement."
       }
     },
     {
@@ -575,8 +596,8 @@
             "EA 48.4#b0015",
             "EA 48.4#b0018"
           ],
-          "coverage": "partial",
-          "notes": "EA preserves two distinct nearby clan-name statements that are not identical to each other."
+          "coverage": "full",
+          "notes": "EA preserves two complete nearby clan-name sequences that are internally incompatible: b0015 gives Gotama for the first three, Kassapa for the middle three, and Gotama for the present Buddha; b0018 gives 拘鄰若 for the first three, 婆羅墮 for the middle three, and 拘鄰若 for the present Buddha."
         },
         {
           "member_id": "sf",
@@ -599,11 +620,18 @@
         },
         {
           "type": "structural",
-          "statement": "EA 48.4 preserves more than one nearby clan-name statement, while the selected Pāli and DA 1 prose present one main sequence.",
+          "statement": "EA 48.4 preserves two complete nearby clan-name sequences that disagree with one another, while the selected Pāli and DA 1 prose present one main sequence each. The internal EA disagreement is retained rather than reconciled.",
           "member_ids": [
             "ea",
             "pli",
             "da"
+          ]
+        },
+        {
+          "type": "lexical",
+          "statement": "EA 48.4 b0015 reads the first three Buddhas as Gotama and the middle three as Kassapa (with present Gotama), while b0018 reads the first three as 拘鄰若 and the middle three as 婆羅墮 (with present 拘鄰若). These are incompatible clan-name series within the same recension and are not harmonized.",
+          "member_ids": [
+            "ea"
           ]
         }
       ],
@@ -614,8 +642,13 @@
         "decision": "accepted",
         "confidence": "medium_high",
         "reviewed_on": "2026-10-05",
-        "notes": "Alignment is to the thematic subsection. Sanskrit is represented by an explicit loss marker, not reconstructed wording."
-      }
+        "notes": "Recension divergence is assessed from the surviving Pāli, DA 1, and EA 48.4 wording. SF 36 contributes only an explicit Family Name loss locus and is not treated as surviving textual evidence for the relation."
+      },
+      "relation_member_ids": [
+        "pli",
+        "da",
+        "ea"
+      ]
     },
     {
       "alignment_id": "mw:dn14:bodhi-tree-loss:09",
@@ -681,8 +714,13 @@
         "decision": "accepted",
         "confidence": "high",
         "reviewed_on": "2026-10-05",
-        "notes": "Pāli and both Chinese witnesses preserve the list; the Sanskrit edition contributes a documented loss locus rather than reconstructed content."
-      }
+        "notes": "The parallel-passage relation applies to the surviving Pāli, DA 1, and EA 48.4 lists. SF 36 contributes only an explicit Bodhi Trees loss locus, not surviving or reconstructed Sanskrit wording."
+      },
+      "relation_member_ids": [
+        "pli",
+        "da",
+        "ea"
+      ]
     }
   ]
 }
