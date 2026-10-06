@@ -9,6 +9,8 @@ import re
 from pathlib import Path
 from typing import Any
 
+from review_evidence import alignment_evidence_digest, alignment_source_revisions
+
 SUPPLIED_RE = re.compile(r"<supplied>(.*?)</supplied>", re.S)
 TAG_RE = re.compile(r"<[^>]+>")
 
@@ -110,6 +112,14 @@ def case_payload(
                 "existing_reviews": review_map.get(
                     alignment["alignment_id"], []
                 ),
+                "evidence_snapshot": {
+                    "digest": alignment_evidence_digest(
+                        case["case_study_id"], alignment, idx
+                    ),
+                    "source_revisions": alignment_source_revisions(
+                        alignment, idx
+                    ),
+                },
             }
         )
     return {
@@ -234,7 +244,7 @@ button.secondary {{ background:var(--accent-soft);color:var(--ink);border:1px so
 <main>
   <div class="notice">
     <strong>Boundary:</strong> this page never writes to the repository and never promotes an alignment.
-    It only prepares a human-review JSON record for you to copy, inspect, and commit through the normal review process.
+    It only prepares a human-review JSON record, including an evidence digest tied to the displayed source units, for you to copy, inspect, and commit through the normal review process.
     Highlighted Sanskrit letters are editorially supplied in the upstream edition.
     Example: <span class="supplied">supplied text</span>.
   </div>
@@ -326,6 +336,7 @@ function renderAlignment(a) {{
 }}
 
 function buildReview(alignmentId) {{
+  const a = DATA.alignments.find(row => row.alignment_id === alignmentId);
   const form = document.querySelector('[data-review-form="' + CSS.escape(alignmentId) + '"]');
   const value = name => form.querySelector('[data-f="' + name + '"]').value.trim();
   const reviewerName = value("name");
@@ -352,6 +363,7 @@ function buildReview(alignmentId) {{
       editorial_handling: value("editorial_handling")
     }},
     reviewed_on: date,
+    evidence_snapshot: a.evidence_snapshot,
     notes: value("notes"),
     proposed_changes: null
   }};
